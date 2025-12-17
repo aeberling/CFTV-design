@@ -44,6 +44,52 @@
         .nav-sub.proposed { background: #c6f6d5; border: 1px solid #9ae6b4; }
         .nav-sub.proposed.tertiary { background: #f0fff4; border: 1px solid #9ae6b4; }
         .nav-sub.proposed.quaternary { background: #fff; border: 1px dashed #68d391; margin-left: 12px; width: calc(100% - 12px); }
+
+        /* Hover tooltip for page content */
+        .nav-sub-wrapper { position: relative; width: 100%; }
+        .nav-sub.has-content { cursor: pointer; }
+        .nav-sub.has-content::after { content: " ⓘ"; font-size: 10px; opacity: 0.6; }
+        .page-content-tooltip {
+            display: none;
+            position: absolute;
+            left: 105%;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 11px;
+            white-space: nowrap;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            min-width: 160px;
+        }
+        .page-content-tooltip::before {
+            content: "";
+            position: absolute;
+            left: -8px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 4px solid transparent;
+            border-right-color: #2d3748;
+        }
+        .page-content-tooltip .tooltip-title {
+            font-weight: 600;
+            color: #9ae6b4;
+            margin-bottom: 6px;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .page-content-tooltip .tooltip-item {
+            padding: 3px 0;
+            border-bottom: 1px solid #4a5568;
+        }
+        .page-content-tooltip .tooltip-item:last-child {
+            border-bottom: none;
+        }
+        .nav-sub-wrapper:hover .page-content-tooltip { display: block; }
         
         /* Labels */
         .label { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10px; font-weight: 600; margin-left: 5px; }
@@ -265,6 +311,12 @@
     <div class="secondary-nav" style="justify-content: flex-end; padding: 10px 20px; background: #1a202c;">
         <div class="nav-level-label" style="flex: 1; color: #a0aec0; margin: 0;">Utility Bar (persistent)</div>
         <div class="secondary-nav-item">
+            <div class="secondary-nav-main utility" style="padding: 6px 12px; font-size: 12px;">News & Events</div>
+        </div>
+        <div class="secondary-nav-item">
+            <div class="secondary-nav-main utility" style="padding: 6px 12px; font-size: 12px;">Contact</div>
+        </div>
+        <div class="secondary-nav-item">
             <div class="secondary-nav-main utility" style="padding: 6px 12px; font-size: 12px;">🔍 Search</div>
         </div>
         <div class="secondary-nav-item">
@@ -286,86 +338,154 @@
                 <div class="nav-sub-container">
                     <div class="connector"></div>
                     <div class="nav-sub proposed">Our Mission</div>
-                    <div class="nav-sub proposed">Our Impact</div>
-                    <div class="nav-sub proposed">Meet Our Team</div>
-                    <div class="nav-sub proposed">Board of Directors</div>
-                    <div class="nav-sub proposed">News & Events <span class="label label-merged">merged</span></div>
+                    <div class="nav-sub proposed">Impact Stories</div>
+                    <div class="nav-sub-wrapper">
+                        <div class="nav-sub proposed has-content">Meet Our Team</div>
+                        <div class="page-content-tooltip">
+                            <div class="tooltip-title">Page Content</div>
+                            <div class="tooltip-item">Staff</div>
+                            <div class="tooltip-item">Board of Directors</div>
+                        </div>
+                    </div>
                     <div class="nav-sub proposed">Annual Reports</div>
                     <div class="nav-sub proposed">Strategic Plan</div>
-                    <div class="nav-sub proposed">Contact</div>
+                    <div class="nav-sub proposed">Operation Independence</div>
                 </div>
             </div>
-            
+
             <!-- GIVE -->
             <div class="nav-item">
                 <div class="nav-main proposed">Give</div>
                 <div class="nav-sub-container">
                     <div class="connector"></div>
-                    <div class="nav-sub proposed">Donate Now</div>
-                    <div class="nav-sub proposed">Ways to Give</div>
-                    <div class="nav-sub proposed tertiary">↳ Planned Giving</div>
-                    <div class="nav-sub proposed tertiary">↳ Stock & Securities</div>
-                    <div class="nav-sub proposed tertiary">↳ DAF Transfers</div>
-                    <div class="nav-sub proposed">Tin Cup Challenge</div>
-                    <div class="nav-sub proposed tertiary">↳ Event Day</div>
-                    <div class="nav-sub proposed tertiary">↳ Tin Cup Giving</div>
-                    <div class="nav-sub proposed tertiary">↳ Become a Challenger</div>
-                    <div class="nav-sub proposed tertiary">↳ Current Challengers</div>
-                    <div class="nav-sub proposed">Memorial Funds</div>
-                    <div class="nav-sub proposed">Donor Resources</div>
+                    <div class="nav-sub-wrapper">
+                        <div class="nav-sub proposed has-content">Ways to Give</div>
+                        <div class="page-content-tooltip" style="white-space: normal; max-width: 280px;">
+                            <div class="tooltip-title">Page Content</div>
+                            <div class="tooltip-item"><strong>Donate Now</strong> – CC, check, stock, wire, funds, bonds, business interests, estate assets, life insurance, mutual fund shares, oil/gas/mineral/timber rights, private securities, publicly traded securities, real property, retirement assets, tangible personal property, trust assets</div>
+                            <div class="tooltip-item">Give to the Community Foundation</div>
+                            <div class="tooltip-item">Become a Tin Cup Challenger</div>
+                            <div class="tooltip-item">Planned Giving</div>
+                            <div class="tooltip-item">Start a Fund (links to Start a Fund page)</div>
+                        </div>
+                    </div>
+                    <div class="nav-sub-wrapper">
+                        <div class="nav-sub proposed has-content">Become a Tin Cup Challenger</div>
+                        <div class="page-content-tooltip">
+                            <div class="tooltip-title">Page Content</div>
+                            <div class="tooltip-item">Event Day (minimal, link to TCC site)</div>
+                            <div class="tooltip-item">Tin Cup Giving</div>
+                            <div class="tooltip-item">Become a Challenger</div>
+                            <div class="tooltip-item">Current Challengers</div>
+                        </div>
+                    </div>
+                    <div class="nav-sub-wrapper">
+                        <div class="nav-sub proposed has-content">Start a Fund</div>
+                        <div class="page-content-tooltip">
+                            <div class="tooltip-title">Page Content</div>
+                            <div class="tooltip-item">Fund Types & Structures</div>
+                            <div class="tooltip-item">Donor-Advised</div>
+                            <div class="tooltip-item">Memorial Funds</div>
+                            <div class="tooltip-item">Scholarships</div>
+                            <div class="tooltip-item">Agency Funds</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
+
             <!-- GRANTS & SCHOLARSHIPS -->
             <div class="nav-item">
                 <div class="nav-main proposed">Grants & Scholarships</div>
                 <div class="nav-sub-container">
                     <div class="connector"></div>
-                    <div class="nav-sub proposed">Competitive Grants</div>
-                    <div class="nav-sub proposed tertiary">↳ Program Schedule</div>
-                    <div class="nav-sub proposed">Youth Philanthropy</div>
-                    <div class="nav-sub proposed tertiary">↳ Program Schedule</div>
-                    <div class="nav-sub proposed">Opportunity Fund <span class="label label-new">new</span></div>
-                    <div class="nav-sub proposed">Scholarships</div>
-                    <div class="nav-sub proposed tertiary">↳ Blake Chapman Flight Scholarship</div>
-                    <div class="nav-sub proposed">Start a Fund</div>
-                    <div class="nav-sub proposed tertiary">↳ Fund Types & Structures</div>
-                    <div class="nav-sub proposed tertiary">↳ Agency Funds</div>
-                    <div class="nav-sub proposed">Manage Your Fund</div>
-                    <div class="nav-sub proposed tertiary">↳ Fund Management</div>
-                    <div class="nav-sub proposed tertiary">↳ Funding Portal</div>
+                    <div class="nav-sub-wrapper">
+                        <div class="nav-sub proposed has-content">Tin Cup Challenge</div>
+                        <div class="page-content-tooltip">
+                            <div class="tooltip-title">Page Content</div>
+                            <div class="tooltip-item">Program Schedule</div>
+                        </div>
+                    </div>
+                    <div class="nav-sub-wrapper">
+                        <div class="nav-sub proposed has-content">Competitive Grants</div>
+                        <div class="page-content-tooltip">
+                            <div class="tooltip-title">Page Content</div>
+                            <div class="tooltip-item">Program Schedule</div>
+                        </div>
+                    </div>
+                    <div class="nav-sub-wrapper">
+                        <div class="nav-sub proposed has-content">Youth Philanthropy</div>
+                        <div class="page-content-tooltip">
+                            <div class="tooltip-title">Page Content</div>
+                            <div class="tooltip-item">Program Schedule</div>
+                        </div>
+                    </div>
+                    <div class="nav-sub proposed">Opportunity Fund</div>
+                    <div class="nav-sub-wrapper">
+                        <div class="nav-sub proposed has-content">Scholarships</div>
+                        <div class="page-content-tooltip">
+                            <div class="tooltip-title">Page Content</div>
+                            <div class="tooltip-item">Blake Chapman Flight Scholarship</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
+
             <!-- FOR NONPROFITS -->
             <div class="nav-item">
                 <div class="nav-main proposed">For Nonprofits</div>
                 <div class="nav-sub-container">
                     <div class="connector"></div>
-                    <div class="nav-sub proposed">Apply for Grants <span class="label label-new">new</span></div>
-                    <div class="nav-sub proposed">Tin Cup for Nonprofits</div>
-                    <div class="nav-sub proposed">Workshops & Training</div>
-                    <div class="nav-sub proposed tertiary">↳ Past Workshops</div>
-                    <div class="nav-sub proposed">Newsgroup / Listserv <span class="label label-renamed">renamed</span></div>
-                    <div class="nav-sub proposed">Rentals & Reservations</div>
-                    <div class="nav-sub proposed tertiary">↳ Conference Room</div>
-                    <div class="nav-sub proposed tertiary">↳ Tents, Tables & Chairs</div>
+                    <div class="nav-sub-wrapper">
+                        <div class="nav-sub proposed has-content">Apply for Grants</div>
+                        <div class="page-content-tooltip">
+                            <div class="tooltip-title">Page Content</div>
+                            <div class="tooltip-item">Youth Philanthropy</div>
+                            <div class="tooltip-item">Competitive Grants</div>
+                            <div class="tooltip-item">Tin Cup Challenge</div>
+                            <div class="tooltip-item">Opportunity Fund</div>
+                        </div>
+                    </div>
                     <div class="nav-sub proposed">Nonprofit Directory</div>
+                    <div class="nav-sub-wrapper">
+                        <div class="nav-sub proposed has-content">Workshops & Training</div>
+                        <div class="page-content-tooltip">
+                            <div class="tooltip-title">Page Content</div>
+                            <div class="tooltip-item">Past Workshops</div>
+                        </div>
+                    </div>
+                    <div class="nav-sub-wrapper">
+                        <div class="nav-sub proposed has-content">Rentals & Reservations</div>
+                        <div class="page-content-tooltip">
+                            <div class="tooltip-title">Page Content</div>
+                            <div class="tooltip-item">Conference Room</div>
+                            <div class="tooltip-item">Tents, Tables & Chairs</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
+
             <!-- GET INVOLVED -->
             <div class="nav-item">
                 <div class="nav-main proposed">Get Involved</div>
                 <div class="nav-sub-container">
                     <div class="connector"></div>
-                    <div class="nav-sub proposed">Operation Independence</div>
-                    <div class="nav-sub proposed">Nonprofit Jobs</div>
-                    <div class="nav-sub proposed tertiary">↳ Post a Position</div>
-                    <div class="nav-sub proposed">Volunteer</div>
-                    <div class="nav-sub proposed tertiary">↳ Post a Need</div>
+                    <div class="nav-sub proposed">Nonprofit Directory</div>
+                    <div class="nav-sub proposed">Newsgroup / Listserv</div>
+                    <div class="nav-sub-wrapper">
+                        <div class="nav-sub proposed has-content">Volunteer</div>
+                        <div class="page-content-tooltip">
+                            <div class="tooltip-title">Page Content</div>
+                            <div class="tooltip-item">Post a Need</div>
+                        </div>
+                    </div>
+                    <div class="nav-sub-wrapper">
+                        <div class="nav-sub proposed has-content">Nonprofit Jobs</div>
+                        <div class="page-content-tooltip">
+                            <div class="tooltip-title">Page Content</div>
+                            <div class="tooltip-item">Post a Position</div>
+                        </div>
+                    </div>
                     <div class="nav-sub proposed">Become a Challenger</div>
-                    <div class="nav-sub proposed">Impact Stories <span class="label label-new">new</span></div>
                 </div>
             </div>
         </div>
@@ -379,7 +499,7 @@
         <div class="change-content">
             <div class="change-title"><span class="audience-tag audience-donor">DONORS</span> "I want to give money"</div>
             <div class="change-desc">
-                <strong>Give →</strong> Donate Now, Ways to Give (Planned Giving, Stock, DAF), Tin Cup Challenge (Event Day, Giving, Challengers), Memorial Funds, Donor Resources
+                <strong>Give →</strong> Ways to Give (Donate Now, Planned Giving, Start a Fund link), Become a Tin Cup Challenger, Start a Fund (Fund Types, Donor-Advised, Memorial, Scholarships, Agency Funds)
             </div>
         </div>
     </div>
@@ -387,7 +507,7 @@
         <div class="change-content">
             <div class="change-title"><span class="audience-tag audience-fundholder">FUND HOLDERS</span> "I have a fund and need to manage it"</div>
             <div class="change-desc">
-                <strong>Grants & Scholarships →</strong> Start a Fund (Fund Types, Agency Funds), Manage Your Fund (Fund Management, Funding Portal)
+                <strong>Give →</strong> Start a Fund (Fund Types & Structures, Donor-Advised, Memorial Funds, Scholarships, Agency Funds)
             </div>
         </div>
     </div>
@@ -395,8 +515,8 @@
         <div class="change-content">
             <div class="change-title"><span class="audience-tag audience-nonprofit">NONPROFITS</span> "I need funding or resources"</div>
             <div class="change-desc">
-                <strong>Grants & Scholarships →</strong> Competitive Grants, Youth Philanthropy, Opportunity Fund, Scholarships<br>
-                <strong>For Nonprofits →</strong> Apply for Grants, Tin Cup for Nonprofits, Workshops, Newsgroup, Rentals, Directory
+                <strong>Grants & Scholarships →</strong> Tin Cup Challenge, Competitive Grants, Youth Philanthropy, Opportunity Fund, Scholarships<br>
+                <strong>For Nonprofits →</strong> Apply for Grants, Nonprofit Directory, Workshops & Training, Rentals & Reservations
             </div>
         </div>
     </div>
@@ -404,8 +524,8 @@
         <div class="change-content">
             <div class="change-title"><span class="audience-tag audience-public">GENERAL PUBLIC</span> "I want to get involved or find info"</div>
             <div class="change-desc">
-                <strong>Get Involved →</strong> Operation Independence, Nonprofit Jobs (Post a Position), Volunteer (Post a Need), Become a Challenger, Impact Stories<br>
-                <strong>About →</strong> Mission, Impact, Team, Board, News & Events, Reports, Strategic Plan, Contact
+                <strong>Get Involved →</strong> Nonprofit Directory, Newsgroup / Listserv, Volunteer, Nonprofit Jobs, Become a Challenger<br>
+                <strong>About →</strong> Mission, Impact Stories, Meet Our Team (staff + board), Annual Reports, Strategic Plan, Operation Independence
             </div>
         </div>
     </div>
@@ -414,24 +534,23 @@
 <!-- CHANGE NOTES -->
 <h2>📝 Summary of Changes</h2>
 <div class="changes-container">
-    
+
     <div class="change-category">
         <h3>🏗️ Structural Changes</h3>
-        
+
         <div class="change-item structural">
             <div class="change-content">
                 <div class="change-title">1. Single Navigation Level</div>
-                <div class="change-desc">Eliminated secondary nav. All content now accessible from one primary navigation. Only Login, Search, and Donate remain in a slim utility bar.</div>
+                <div class="change-desc">Eliminated secondary nav. All content now accessible from one primary navigation. Utility bar contains News & Events, Contact, Search, Login, and Donate.</div>
             </div>
         </div>
-        
+
         <div class="change-item structural">
             <div class="change-content">
-                <div class="change-title">2. Eliminated Duplicates</div>
+                <div class="change-title">2. Consolidated Team Pages</div>
                 <div class="change-desc">
-                    • <strong>Tin Cup:</strong> Lives under "Give" only (it's a fundraiser)<br>
-                    • <strong>News:</strong> Merged into single "News & Events" under About<br>
-                    • <strong>Challengers:</strong> Primary link under Give → Tin Cup; secondary link under Get Involved
+                    • <strong>Meet Our Team:</strong> Now combines Staff and Board of Directors on one page<br>
+                    • <strong>News & Events:</strong> Moved to utility bar for easy access
                 </div>
             </div>
         </div>
@@ -439,78 +558,71 @@
         <div class="change-item structural">
             <div class="change-content">
                 <div class="change-title">3. Replaced "Community Impact" with "Get Involved"</div>
-                <div class="change-desc">"Community Impact" was vague and mixed foundation news with public engagement. News/Events moved to About. Jobs, Volunteer, and Operation Independence moved to action-oriented "Get Involved" section.</div>
+                <div class="change-desc">"Community Impact" was vague and mixed foundation news with public engagement. "Get Involved" now contains: Nonprofit Directory, Newsgroup/Listserv, Volunteer, Nonprofit Jobs, and Become a Challenger.</div>
             </div>
         </div>
-        
+
         <div class="change-item structural">
             <div class="change-content">
                 <div class="change-title">4. Reorganized Fund-Related Content</div>
-                <div class="change-desc">Moved Fund Types, Fund Management, Funding Portal, and Agency Funds from "Ways to Give" to "Grants & Scholarships" under new groupings: "Start a Fund" and "Manage Your Fund".</div>
+                <div class="change-desc">"Start a Fund" now lives under Give with Fund Types & Structures, Donor-Advised, Memorial Funds, Scholarships, and Agency Funds as page content.</div>
             </div>
         </div>
     </div>
-    
+
     <div class="change-category">
         <h3>🔄 Key Relocations</h3>
-        
+
         <div class="change-item consolidation">
             <div class="change-content">
-                <div class="change-title">Tin Cup Challenge → Give</div>
-                <div class="change-desc">Tin Cup is the foundation's flagship giving event. It belongs with donation options, not grants. All sub-pages (Event Day, Tin Cup Giving, Challengers) move with it.</div>
+                <div class="change-title">Tin Cup Challenge → Both Give and Grants & Scholarships</div>
+                <div class="change-desc">"Become a Tin Cup Challenger" lives under Give for donors. "Tin Cup Challenge" with Program Schedule lives under Grants & Scholarships for nonprofits seeking funding.</div>
             </div>
         </div>
-        
+
         <div class="change-item consolidation">
             <div class="change-content">
-                <div class="change-title">Jobs & Volunteer → Get Involved</div>
-                <div class="change-desc">These are public engagement features for people wanting to participate in the community—not foundation news/updates.</div>
+                <div class="change-title">Operation Independence → About</div>
+                <div class="change-desc">Moved from Get Involved to About section as it's more about the foundation's programs.</div>
             </div>
         </div>
-        
+
         <div class="change-item consolidation">
             <div class="change-content">
-                <div class="change-title">Agency Funds → Grants & Scholarships</div>
-                <div class="change-desc">Agency Funds are for nonprofits managing endowments through CFTV. This fits better with fund-related content than under "Nonprofit Resources".</div>
+                <div class="change-title">Newsgroup / Listserv → Get Involved</div>
+                <div class="change-desc">Moved from For Nonprofits to Get Involved for broader community engagement.</div>
             </div>
         </div>
-        
+
         <div class="change-item consolidation">
             <div class="change-content">
-                <div class="change-title">"Messaging" → "Newsgroup / Listserv"</div>
-                <div class="change-desc">Renamed to clearly describe what it is. The sub-page "Nonprofit Newsgroup/Listserv" becomes the main name.</div>
+                <div class="change-title">Nonprofit Directory → Both For Nonprofits and Get Involved</div>
+                <div class="change-desc">Appears in both sections to serve nonprofits looking for resources and community members looking to connect.</div>
             </div>
         </div>
     </div>
-    
+
     <div class="change-category">
-        <h3>✨ New Additions</h3>
-        
+        <h3>✨ Key Features</h3>
+
         <div class="change-item ux">
             <div class="change-content">
-                <div class="change-title">Opportunity Fund</div>
-                <div class="change-desc">This emergency grant fund exists but wasn't in navigation. Added under Grants & Scholarships.</div>
+                <div class="change-title">Apply for Grants Hub</div>
+                <div class="change-desc">Central page under "For Nonprofits" linking to Youth Philanthropy, Competitive Grants, Tin Cup Challenge, and Opportunity Fund.</div>
             </div>
         </div>
-        
+
         <div class="change-item ux">
             <div class="change-content">
-                <div class="change-title">Apply for Grants</div>
-                <div class="change-desc">Direct link under "For Nonprofits" to immediately surface the grant application process.</div>
+                <div class="change-title">Ways to Give Page</div>
+                <div class="change-desc">Comprehensive donation page with Donate Now button (accepting all payment types), Give to the Community Foundation, Become a Tin Cup Challenger, Planned Giving, and Start a Fund link.</div>
             </div>
         </div>
-        
+
         <div class="change-item ux">
             <div class="change-content">
                 <div class="change-title">Impact Stories</div>
-                <div class="change-desc">New page under "Get Involved" to showcase grant outcomes and inspire community participation.</div>
-            </div>
-        </div>
-        
-        <div class="change-item ux">
-            <div class="change-content">
-                <div class="change-title">"Start a Fund" & "Manage Your Fund" Groupings</div>
-                <div class="change-desc">Organized fund-related pages into two clear categories for prospective and existing fund holders.</div>
+                <div class="change-desc">Under About to showcase grant outcomes and foundation impact.</div>
             </div>
         </div>
     </div>
@@ -554,14 +666,14 @@
             <tr>
                 <td>Secondary → About</td>
                 <td>Meet Our Team</td>
-                <td>About → Meet Our Team</td>
-                <td>—</td>
+                <td>About → Meet Our Team (includes Board)</td>
+                <td><span class="label label-merged">merged</span></td>
             </tr>
             <tr>
                 <td>Secondary → About</td>
                 <td>Board of Directors</td>
-                <td>About → Board of Directors</td>
-                <td>—</td>
+                <td>About → Meet Our Team (combined)</td>
+                <td><span class="label label-merged">merged</span></td>
             </tr>
             <tr>
                 <td>Secondary → About</td>
@@ -613,7 +725,7 @@
             <tr>
                 <td>Community Impact</td>
                 <td>Operation Independence</td>
-                <td>Get Involved → Operation Independence</td>
+                <td>About → Operation Independence</td>
                 <td><span class="label label-moved">moved</span></td>
             </tr>
             <tr>
@@ -648,62 +760,44 @@
             <tr>
                 <td>Ways to Give → Overview</td>
                 <td>Donations</td>
-                <td>Give → Donate Now</td>
-                <td><span class="label label-renamed">renamed</span></td>
+                <td>Give → Ways to Give (Donate Now section)</td>
+                <td><span class="label label-merged">merged</span></td>
             </tr>
             <tr>
                 <td>Ways to Give → Overview</td>
                 <td>Planned Giving</td>
-                <td>Give → Ways to Give → Planned Giving</td>
-                <td>—</td>
+                <td>Give → Ways to Give (page content)</td>
+                <td><span class="label label-merged">merged</span></td>
             </tr>
             <tr>
                 <td>Ways to Give → Overview</td>
                 <td>Community Challengers</td>
-                <td>Give → Tin Cup → Become a Challenger</td>
-                <td><span class="label label-moved">nested</span></td>
+                <td>Give → Become a Tin Cup Challenger</td>
+                <td><span class="label label-moved">moved</span></td>
             </tr>
             <tr>
                 <td>Ways to Give → Overview</td>
                 <td>Funds & Scholarships</td>
-                <td>Grants & Scholarships → Start a Fund</td>
+                <td>Give → Start a Fund</td>
                 <td><span class="label label-moved">moved</span></td>
             </tr>
             <tr>
                 <td>Ways to Give → Overview</td>
-                <td>Fund Management</td>
-                <td>Grants & Scholarships → Manage Your Fund</td>
-                <td><span class="label label-moved">moved</span></td>
+                <td>Fund Types & Structures</td>
+                <td>Give → Start a Fund (page content)</td>
+                <td><span class="label label-merged">merged</span></td>
             </tr>
             <tr>
                 <td>Ways to Give → Overview</td>
-                <td>Funding Portal</td>
-                <td>Grants & Scholarships → Manage Your Fund</td>
-                <td><span class="label label-moved">moved</span></td>
+                <td>Memorial Funds</td>
+                <td>Give → Start a Fund (page content)</td>
+                <td><span class="label label-merged">merged</span></td>
             </tr>
             <tr>
                 <td>Ways to Give → Overview</td>
                 <td>Gifting Options</td>
                 <td>Give → Ways to Give (consolidated)</td>
                 <td><span class="label label-merged">merged</span></td>
-            </tr>
-            <tr>
-                <td>Ways to Give → Overview</td>
-                <td>Fund Types & Structures</td>
-                <td>Grants & Scholarships → Start a Fund</td>
-                <td><span class="label label-moved">moved</span></td>
-            </tr>
-            <tr>
-                <td>Ways to Give → Overview</td>
-                <td>Memorial Funds</td>
-                <td>Give → Memorial Funds</td>
-                <td>—</td>
-            </tr>
-            <tr>
-                <td>Ways to Give → Overview</td>
-                <td>Donor Resources</td>
-                <td>Give → Donor Resources</td>
-                <td>—</td>
             </tr>
             
             <!-- GRANTS & SCHOLARSHIPS -->
@@ -749,38 +843,32 @@
             <tr>
                 <td>Grants & Scholarships</td>
                 <td>Tin Cup Challenge</td>
-                <td>Give → Tin Cup Challenge</td>
-                <td><span class="label label-moved">moved</span></td>
-            </tr>
-            <tr>
-                <td>Grants → Tin Cup</td>
-                <td>Nonprofits</td>
-                <td>For Nonprofits → Tin Cup for Nonprofits</td>
-                <td><span class="label label-moved">moved</span></td>
+                <td>Grants & Scholarships → Tin Cup Challenge (for nonprofits)<br>Give → Become a Tin Cup Challenger (for donors)</td>
+                <td><span class="label label-moved">split</span></td>
             </tr>
             <tr>
                 <td>Grants → Tin Cup</td>
                 <td>Event Day</td>
-                <td>Give → Tin Cup → Event Day</td>
-                <td><span class="label label-moved">moved</span></td>
+                <td>Give → Become a Tin Cup Challenger (page content, minimal)</td>
+                <td><span class="label label-merged">merged</span></td>
             </tr>
             <tr>
                 <td>Grants → Tin Cup</td>
                 <td>Tin Cup Giving</td>
-                <td>Give → Tin Cup → Tin Cup Giving</td>
-                <td><span class="label label-moved">moved</span></td>
+                <td>Give → Become a Tin Cup Challenger (page content)</td>
+                <td><span class="label label-merged">merged</span></td>
             </tr>
             <tr>
                 <td>Grants → Tin Cup</td>
                 <td>Join Challengers</td>
-                <td>Give → Tin Cup → Become a Challenger</td>
-                <td><span class="label label-renamed">renamed</span></td>
+                <td>Give → Become a Tin Cup Challenger (page content)</td>
+                <td><span class="label label-merged">merged</span></td>
             </tr>
             <tr>
                 <td>Grants → Tin Cup</td>
                 <td>Current Challengers</td>
-                <td>Give → Tin Cup → Current Challengers</td>
-                <td><span class="label label-moved">moved</span></td>
+                <td>Give → Become a Tin Cup Challenger (page content)</td>
+                <td><span class="label label-merged">merged</span></td>
             </tr>
             
             <!-- NONPROFIT RESOURCES -->
@@ -802,14 +890,14 @@
             <tr>
                 <td>Nonprofit Resources</td>
                 <td>Messaging</td>
-                <td>For Nonprofits → Newsgroup / Listserv</td>
-                <td><span class="label label-renamed">renamed</span></td>
+                <td>Get Involved → Newsgroup / Listserv</td>
+                <td><span class="label label-moved">moved</span></td>
             </tr>
             <tr>
                 <td>Nonprofit Resources → Messaging</td>
                 <td>Nonprofit Newsgroup/Listserv</td>
-                <td>(Promoted to parent level name)</td>
-                <td><span class="label label-merged">promoted</span></td>
+                <td>Get Involved → Newsgroup / Listserv</td>
+                <td><span class="label label-moved">moved</span></td>
             </tr>
             <tr>
                 <td>Nonprofit Resources</td>
@@ -832,7 +920,7 @@
             <tr>
                 <td>Nonprofit Resources</td>
                 <td>Agency Funds</td>
-                <td>Grants & Scholarships → Start a Fund → Agency Funds</td>
+                <td>Give → Start a Fund (page content)</td>
                 <td><span class="label label-moved">moved</span></td>
             </tr>
             
@@ -855,25 +943,19 @@
             <tr style="background: #f0fff4;">
                 <td>—</td>
                 <td>Impact Stories</td>
-                <td>Get Involved → Impact Stories</td>
+                <td>About → Impact Stories</td>
                 <td><span class="label label-new">new</span></td>
             </tr>
             <tr style="background: #f0fff4;">
                 <td>—</td>
                 <td>Start a Fund</td>
-                <td>Grants & Scholarships → Start a Fund</td>
-                <td><span class="label label-new">new grouping</span></td>
-            </tr>
-            <tr style="background: #f0fff4;">
-                <td>—</td>
-                <td>Manage Your Fund</td>
-                <td>Grants & Scholarships → Manage Your Fund</td>
-                <td><span class="label label-new">new grouping</span></td>
+                <td>Give → Start a Fund</td>
+                <td><span class="label label-new">new page</span></td>
             </tr>
             <tr style="background: #f0fff4;">
                 <td>—</td>
                 <td>Nonprofit Directory</td>
-                <td>For Nonprofits → Nonprofit Directory</td>
+                <td>For Nonprofits → Nonprofit Directory<br>Get Involved → Nonprofit Directory</td>
                 <td><span class="label label-new">surfaced</span></td>
             </tr>
         </tbody>
@@ -885,32 +967,32 @@
 <div class="changes-container">
     <div class="change-item">
         <div class="change-content">
-            <div class="change-title">1. Tin Cup Belongs With Giving</div>
-            <div class="change-desc">The Tin Cup Challenge is your flagship fundraising event where people give money to nonprofits. It was misplaced under "Grants & Scholarships" (where money goes out). Moving it to "Give" creates a logical flow: Want to donate? → Give → Tin Cup Challenge.</div>
+            <div class="change-title">1. Tin Cup Serves Two Audiences</div>
+            <div class="change-desc">Donors see "Become a Tin Cup Challenger" under Give. Nonprofits see "Tin Cup Challenge" with Program Schedule under Grants & Scholarships. Same event, different entry points based on user intent.</div>
         </div>
     </div>
     <div class="change-item">
         <div class="change-content">
-            <div class="change-title">2. Fund Administration ≠ Giving Methods</div>
-            <div class="change-desc">"Ways to Give" had 10 items mixing donation methods with fund management tools. A first-time donor doesn't need "Fund Management" or "Funding Portal"—those are for existing fund holders. Separated these into "Start a Fund" and "Manage Your Fund" under Grants & Scholarships.</div>
+            <div class="change-title">2. Start a Fund is About Giving</div>
+            <div class="change-desc">"Start a Fund" now lives under Give where donors can easily find it. The page consolidates Fund Types & Structures, Donor-Advised, Memorial Funds, Scholarships, and Agency Funds in one place.</div>
         </div>
     </div>
     <div class="change-item">
         <div class="change-content">
-            <div class="change-title">3. "Get Involved" is Action-Oriented</div>
-            <div class="change-desc">"Community Impact" was passive and mixed news with engagement. "Get Involved" tells visitors exactly what they can do: find jobs, volunteer, become a challenger, read impact stories. Foundation news moves to "About" where organizational info belongs.</div>
+            <div class="change-title">3. "Get Involved" is Community-Focused</div>
+            <div class="change-desc">"Get Involved" is for community engagement: Nonprofit Directory, Newsgroup/Listserv, Volunteer, Nonprofit Jobs, and Become a Challenger. Operation Independence moved to About as it's more about the foundation's programs.</div>
         </div>
     </div>
     <div class="change-item">
         <div class="change-content">
-            <div class="change-title">4. Clear Labels Reduce Confusion</div>
-            <div class="change-desc">"Messaging" → "Newsgroup / Listserv" tells users exactly what it is. "Nonprofit Workshops" → "Workshops & Training" is more comprehensive. "Join Challengers" → "Become a Challenger" is more inviting.</div>
+            <div class="change-title">4. Streamlined About Section</div>
+            <div class="change-desc">About now contains: Our Mission, Impact Stories, Meet Our Team (staff + board combined), Annual Reports, Strategic Plan, and Operation Independence. News & Events and Contact moved to utility bar.</div>
         </div>
     </div>
     <div class="change-item">
         <div class="change-content">
-            <div class="change-title">5. Every Page Has One Home</div>
-            <div class="change-desc">No more duplicate Tin Cup or News links. Each page appears in exactly one place. Cross-references (like "Become a Challenger" appearing in both Give and Get Involved) link to the same destination.</div>
+            <div class="change-title">5. Apply for Grants Hub</div>
+            <div class="change-desc">Nonprofits seeking funding have a clear path: For Nonprofits → Apply for Grants, which links to Youth Philanthropy, Competitive Grants, Tin Cup Challenge, and Opportunity Fund.</div>
         </div>
     </div>
 </div>
