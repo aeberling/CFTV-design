@@ -8,74 +8,85 @@
 
 ## Changes Needed
 
-### Header
-
-1. **"Donate Now" button** — Change text to "Give Now" and link to the GoDonate URL
-
-### Utility Navigation
-
-2. **"Donate" link** — Change text to "Give" and link to the GoDonate URL
-
 ### Homepage — Hero Section
 
-2. **"Give Now" button** — Link to the GoDonate URL
+1. **Hero height** — Way too tall. Reduce height by ~75%. Everything in the hero (including the scholarship info on the right side) should be fully visible without scrolling.
+2. **"Give Now" button** — Change text to just "Give"
 3. **"Create a Fund" button** — Link to the Start a Fund page
-4. **"Apply for Grants" button** — Link to the Apply for Grants page (`https://cftv-design-xdd70.kinsta.page/nonprofits/apply-for-grants/`)
-5. **"Learn More" button** — Link to the Scholarships page
-6. **Hero teal triangle (right side) — Scholarship text bug** — There are two sets of text overlapping on top of one another. Needs to be fixed.
-
-### Homepage — Flip Cards Section
-
-7. **Donors card "Give Now"** — Link to the GoDonate URL
-8. **Donors card "Create a Fund"** — Link to the Start a Fund page
-9. **Donors card "Leave a Legacy"** — Correct, no changes needed
-10. **"For Community" card "Attend Events"** — Link to the News & Events page
-
-### Homepage — Our Programs Section
-
-11. **Tin Cup Challenge box** — Link to `tincupchallenge.org`
-
-### Homepage — Create a Fund Section
-
-12. **"Create a Fund" button** — Link to the Start a Fund page
-
-### Global — "Give Before December 31st" Section
-
-13. **"Donate Now" button** — Change text to "Give Now" and link to the GoDonate URL
-14. **"Become a Challenger" section** — Leave as-is for now
-
-### Footer
-
-15. **"Give Now" link** — Link to the GoDonate URL
-16. **"Start a Fund" link** — Link to the Start a Fund page
-
-### Give Page
-
-18. **"How to Give" section — heading and text color** — Too light/hard to read. Make darker and more noticeable.
-19. **"Why Give Here" section — "Donate Now" button** — Change text to "Give Now" and link to the GoDonate URL
-20. **"How to Give" section — "Donate Online" button** — Change text to "Give Online"
-
-### General / All Pages
-
-21. **Page hero sections** — No images are showing on any secondary page top sections. Note for Nick: Is this by design for now, or do these need images?
-22. **Page layout structure** — Main navigation pages (e.g., Give, Nonprofits, About, etc.) should keep the existing Z-shape layout. Sub-pages underneath those (e.g., Become a Challenger, Start a Fund, Leave a Legacy, Memorial Funds, Scholarships, etc.) do NOT need to follow the Z-shape — these should have more dynamic, flexible layouts.
-
-### Funds & Scholarships Page
-
-23. **"Create a Fund" button** — Link to the Start a Fund page
-24. **Memorial Funds & Scholarship cards — triangle alignment** — The decorative triangles at the bottom of the cards should touch the bottom edge. The Memorial Funds card (far left) looks correct. The second and third cards have only one line of text, causing the triangles to misalign. All cards need consistent triangle positioning regardless of text length.
-
-### About Page
-
-25. **Staff & Board section — image sizes** — Images need size limits/constraints. Currently too large or inconsistent.
+4. **"Apply for Grants" button** — Link to the Apply for Grants page
+5. **Scholarships "Apply Now" button (right side triangle)** — Link to the Scholarships page (not Funds & Scholarships)
 
 ### News & Events Page
 
-26. **Images** — Way too large/unwieldy. Need to be significantly smaller with size limits applied.
+6. **Community Calendar section** — Change the section background color to white.
+7. **Latest News "Show More" button** — Remove the outline/border from this button.
 
-### General / Footer Issue
+### Global — Language Change
 
-27. **Extra section below footer** — On some pages (e.g., Contact page), there's an unexpected section beneath the footer with a bunch of links and a mailing address. Not sure what this is or why it's there. Appears inconsistently across pages. Needs investigation — likely should be removed.
+8. **Replace "Donate" with "Give" sitewide** — The client prefers "Give" over "Donate." Apply everywhere:
+   - "Donate Now" buttons → "Give Now"
+   - "Donate Online" buttons → "Give Online"
+   - The "Donate" page should be renamed to "Give"
 
+### Header
 
+9. **"Give Now" button** — Link to the GoDonate (AkoyaGo) URL
+
+### Contact Page
+
+10. **Contact info icon boxes** — The small boxes next to "Visit Us," "Call Us," "Email," and "Office Hours" should each be a different color pulled from the logo/style guide. Use the darker brand colors (e.g., dark purple, red, blue, etc.).
+
+### Login Pop-out
+
+11. **Button color** — Replace the pink with a darker purple from the brand palette.
+12. **Link hover color** — Use the lighter purple instead of pink.
+
+### Utility Navigation
+
+13. **Remove "Donate" / "Give" link** — Not needed since the Give Now button is right below it in the header.
+
+### Homepage — Flip Cards Section
+
+14. **Donors card "Create a Fund" button** — Link to the Start a Fund page
+15. **Community card "Attend Events" button** — Link to the News & Events page
+
+### Homepage — Our Programs Section
+
+16. **Tin Cup Challenge card** — Link to `tincupchallenge.org`
+
+### Homepage — Create a Fund Section
+
+17. **"Create a Fund" button** — Link to the Start a Fund page
+
+### Global — "Give Before December 31st" Section
+
+18. **Button** — Link to the GoDonate (AkoyaGo) URL
+
+### Footer
+
+19. **"Give Now" link** — Link to the GoDonate (AkoyaGo) URL
+20. **"Create a Fund" link** — Link to the Start a Fund page
+21. **"Apply for Grants" link** — Link to the Apply for Grants page
+
+### Give Page
+
+22. **"Give to a Purpose" cards — triangle alignment** — The decorative triangle should always sit flush at the bottom corner of the card regardless of text length. Cards with one line of text (Competitive Grants, Youth Philanthropy) show a blue gap below the triangle. Cards with two lines (General Fund, Opportunity Fund) look correct. Fix so all cards match.
+23. **"More Ways to Give" section — Start-A-Fund card** — Same triangle gap issue. Triangle should be flush in the bottom corner.
+24. **Card triangles color (Give to a Purpose / More Ways to Give)** — The pink triangle on these cards should be changed to the darker orangey-red brand color.
+
+### Funds & Scholarships Page
+
+25. **"Create a Fund" button** — Link to the Start a Fund page
+
+### Become a Challenger Page
+
+26. **Challenger levels / giving tiers** — Update the tier names and amounts to match what's on `https://tincupchallenge.org/challengers/`
+
+### Start a Fund Page
+
+27. **"Fund Holder Portal" button** — Update link to `https://gofund.akoyago.com/cftetonvalley/Identity/Account/Login?ReturnUrl=%2Fcftetonvalley%2F`
+
+### Workshops & Training Page
+
+28. **Upcoming Workshops section** — Remove the four bullet points and replace with a "View Events" button that links to the News & Events page.
 
