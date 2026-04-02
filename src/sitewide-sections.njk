@@ -1,0 +1,1135 @@
+---
+layout: base.njk
+title: Sitewide Sections
+description: Component library and section catalog for Community Foundation of Teton Valley
+permalink: /sitewide-sections/
+excludeFromSitemap: true
+---
+
+{#
+  SITEWIDE SECTIONS CATALOG
+  =========================
+  This page serves as a living component library for all reusable sections.
+
+  Purpose:
+  - Document all available sections with live examples
+  - Provide reference for content editors
+  - Enable easy handoff to WordPress/other platforms
+
+  Maintained by: /section-catalog agent
+
+  Categories:
+  - Hero: Full-width hero/banner sections
+  - Layout: Multi-column layouts, content splits
+  - Cards: Card grids, event cards, location cards
+  - Content: Text-heavy sections, timelines, FAQs
+  - Media: Image galleries, video sections
+  - CTA: Call-to-action sections
+  - Forms: Contact forms, newsletter signups
+  - Navigation: Headers, footers (reference only)
+#}
+
+<main class="sitewide-sections">
+
+  {# Page Header #}
+  <header class="sitewide-sections__header">
+    <div class="container">
+      <h1>Section Catalog</h1>
+      <p>Live examples of all reusable sections. Click category to jump to section.</p>
+
+      <nav class="sitewide-sections__nav">
+        <a href="#hero">Hero</a>
+        <a href="#layout">Layout</a>
+        <a href="#cards">Cards</a>
+        <a href="#content">Content</a>
+        <a href="#media">Media</a>
+        <a href="#cta">CTA</a>
+        <a href="#forms">Forms</a>
+        <a href="#navigation">Navigation</a>
+      </nav>
+    </div>
+  </header>
+
+  {# ============================================
+     CATEGORY: Hero Sections
+     Full-width hero/banner sections
+     ============================================ #}
+  <section class="sitewide-sections__category" id="hero">
+    <div class="container">
+      <h2>Hero Sections</h2>
+      <p>Full-width hero banners for page headers and landing sections.</p>
+    </div>
+
+    <!-- ============================================
+         SECTION: Hero Split
+         Category: Hero
+         Description: Split hero with static CTA left and seasonal slider right
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.hero-split</h3>
+        <p>Split-screen hero with static content/CTAs on the left and a seasonal promotional slider on the right. Left panel has heading, description, and up to 3 CTA buttons (each with title + URL fields — if a button field is empty, that button is hidden). Right panel uses a repeater field for seasonal slides; each slide has a background image, heading, text, and optional button. If any field in a slide is not filled out, that element is hidden on the front end.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Left Panel:</dt>
+          <dd>Heading, description, 3 button fields (title + URL each) — conditional display</dd>
+          <dt>Right Panel:</dt>
+          <dd>Repeater: slides (background image, heading, text, button title, button URL)</dd>
+          <dt>Image:</dt>
+          <dd>Right panel background per slide (CSS background-image)</dd>
+          <dt>Conditional:</dt>
+          <dd>Empty button fields or slide fields are hidden from front end</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        {% include "hero.njk" %}
+      </div>
+    </article>
+
+    <!-- ============================================
+         SECTION: Page Hero
+         Category: Hero
+         Description: Full-width background image hero with overlay, heading, and text
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.page-hero</h3>
+        <p>Full-width background image hero with dark overlay, centered heading, and description text. Used for subpage banners. Configure via front matter: heroHeading, heroText, heroImage. If any field is empty, that element is hidden.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Image:</dt>
+          <dd>Full-width background (CSS background-image, cover)</dd>
+          <dt>Fields:</dt>
+          <dd>heroHeading, heroText, heroImage (front matter)</dd>
+          <dt>Conditional:</dt>
+          <dd>All fields — if empty, element is hidden</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        <section class="page-hero" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%271920%27 height=%27400%27 viewBox=%270 0 1920 400%27%3E%3Crect fill=%27%23cccccc%27 width=%271920%27 height=%27400%27/%3E%3Ctext fill=%27%23999999%27 font-family=%27sans-serif%27 font-size=%2724%27 x=%2750%25%27 y=%2750%25%27 text-anchor=%27middle%27 dy=%27.3em%27%3E1920 x 400%3C/text%3E%3C/svg%3E');">
+          <div class="page-hero__overlay"></div>
+          <div class="container">
+            <div class="page-hero__content">
+              <h1 class="page-hero__heading">Page Heading</h1>
+              <p class="page-hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+
+  </section>
+
+  {# ============================================
+     CATEGORY: Layout Sections
+     Multi-column layouts, content splits
+     ============================================ #}
+  <section class="sitewide-sections__category" id="layout">
+    <div class="container">
+      <h2>Layout Sections</h2>
+      <p>Multi-column layouts for combining text, images, and other content.</p>
+    </div>
+
+    <!-- ============================================
+         SECTION: Content Split
+         Category: Layout
+         Description: 50/50 square columns — image + content, with optional reverse
+         Modifiers: --reverse (image right, content left)
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.content-split</h3>
+        <p>Two-column 50/50 layout with square proportions. Image column and content column (eyebrow, heading, text, up to 2 buttons). Use <code>--reverse</code> modifier to flip image to the right side. Background color of content panel is selectable from style guide palette. If any field (eyebrow, button, etc.) is not filled out, that element is hidden.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Modifiers:</dt>
+          <dd>--reverse (image right, content left)</dd>
+          <dt>Image:</dt>
+          <dd>5:4 aspect ratio, object-fit: cover</dd>
+          <dt>Background:</dt>
+          <dd>Content panel: selectable from style guide colors (default: --color-dusk)</dd>
+          <dt>Optional:</dt>
+          <dd>Eyebrow, buttons — hidden if empty</dd>
+          <dt>Conditional:</dt>
+          <dd>All optional fields — if empty, element is hidden</dd>
+        </dl>
+      </header>
+
+      {# Default: image left, content right #}
+      <div class="sitewide-sections__example">
+        <section class="content-split">
+          <div class="content-split__image content-split__image--center">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='960' height='640' viewBox='0 0 960 640'%3E%3Crect fill='%23cccccc' width='960' height='640'/%3E%3Ctext fill='%23999999' font-family='sans-serif' font-size='24' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3E960 x 640%3C/text%3E%3C/svg%3E" alt="Placeholder" loading="lazy">
+          </div>
+          <div class="content-split__content">
+            <span class="content-split__eyebrow">Eyebrow</span>
+            <h2 class="content-split__heading">Section Heading</h2>
+            <p class="content-split__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            <div class="content-split__buttons">
+              <a href="#" class="theme_btn theme_btn_bg">Button Text <span></span></a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {# Reversed: content left, image right + alternate background color #}
+      <div class="sitewide-sections__example">
+        <section class="content-split content-split--reverse">
+          <div class="content-split__image content-split__image--center">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='960' height='640' viewBox='0 0 960 640'%3E%3Crect fill='%23cccccc' width='960' height='640'/%3E%3Ctext fill='%23999999' font-family='sans-serif' font-size='24' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3E960 x 640%3C/text%3E%3C/svg%3E" alt="Placeholder" loading="lazy">
+          </div>
+          <div class="content-split__content" style="background: var(--color-dark-pine);">
+            <span class="content-split__eyebrow">Eyebrow</span>
+            <h2 class="content-split__heading">Section Heading</h2>
+            <p class="content-split__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            <div class="content-split__buttons">
+              <a href="#" class="theme_btn theme_btn_bg">Button Text <span></span></a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <!-- ============================================
+         SECTION: Content Split — Image Modifiers
+         Category: Layout
+         Description: Alternate image display modes for content-split sections
+         Modifiers: --contain (centered chart/graphic), --badge (small centered badge)
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.content-split__image--contain / --badge</h3>
+        <p>Image modifiers for the content-split section. Use <code>--contain</code> when the image is a chart or graphic that should display fully (not cropped). Use <code>--badge</code> for small images like accreditation seals that should be centered at a fixed size. Both override the default 5:4 cover behavior. On mobile, the aspect ratio adjusts to auto with compact padding so images don't float in empty space.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Modifiers:</dt>
+          <dd>--contain (85% width, object-fit: contain), --badge (195px fixed, centered)</dd>
+          <dt>Background:</dt>
+          <dd>Image panel: --color-grey-bg (default)</dd>
+          <dt>Mobile:</dt>
+          <dd>Aspect ratio overridden to auto, min-height 200px, images scale down</dd>
+          <dt>Use with:</dt>
+          <dd>.content-split (add modifier to .content-split__image element)</dd>
+        </dl>
+      </header>
+
+      {# --contain: for charts, graphics, reports #}
+      <div class="sitewide-sections__example">
+        <section class="content-split">
+          <div class="content-split__image content-split__image--contain">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600' viewBox='0 0 800 600'%3E%3Crect fill='%23e8e5e3' width='800' height='600'/%3E%3Ccircle cx='400' cy='300' r='200' fill='none' stroke='%23c64436' stroke-width='30'/%3E%3Ccircle cx='400' cy='300' r='200' fill='none' stroke='%23dc8b88' stroke-width='30' stroke-dasharray='400 860'/%3E%3Ctext fill='%23425e69' font-family='sans-serif' font-size='18' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3EChart / Graphic%3C/text%3E%3C/svg%3E" alt="Placeholder chart" loading="lazy">
+          </div>
+          <div class="content-split__content" style="background: var(--color-dark-pine);">
+            <span class="content-split__eyebrow">Eyebrow</span>
+            <h2 class="content-split__heading">Contain Modifier</h2>
+            <p class="content-split__text">Use for charts, infographics, or images that should not be cropped. The image scales to 85% width and centers within a grey background panel.</p>
+            <div class="content-split__buttons">
+              <a href="#" class="theme_btn theme_btn_bg">Button Text <span></span></a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {# --badge: for accreditation seals, small logos #}
+      <div class="sitewide-sections__example">
+        <section class="content-split content-split--reverse">
+          <div class="content-split__image content-split__image--badge">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='195' height='196' viewBox='0 0 195 196'%3E%3Ccircle cx='97' cy='98' r='90' fill='%233d3453'/%3E%3Ccircle cx='97' cy='98' r='70' fill='none' stroke='%23c64436' stroke-width='3'/%3E%3Ctext fill='white' font-family='sans-serif' font-size='12' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3EBadge%3C/text%3E%3C/svg%3E" alt="Placeholder badge" loading="lazy">
+          </div>
+          <div class="content-split__content" style="background: var(--color-graphite);">
+            <span class="content-split__eyebrow">Eyebrow</span>
+            <h2 class="content-split__heading">Badge Modifier</h2>
+            <p class="content-split__text">Use for accreditation seals, certification badges, or small logo images. Fixed at 195px width, centered in the panel.</p>
+            <div class="content-split__buttons">
+              <a href="#" class="theme_btn theme_btn_bg">Button Text <span></span></a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <!-- ============================================
+         SECTION: Impact Story
+         Category: Layout
+         Description: 50/50 edge-to-edge layout with image left, content right
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.impact-story-area</h3>
+        <p>Full-width 50/50 split with edge-to-edge image on one side and text content on the other. Used for featured impact stories. If any field (eyebrow, button, etc.) is not filled out, that element is hidden on the front end.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Image:</dt>
+          <dd>Full-height column (object-fit: cover)</dd>
+          <dt>Modifiers:</dt>
+          <dd>--reverse (image right, content left)</dd>
+          <dt>Optional:</dt>
+          <dd>Sub-title label, CTA button — hidden if empty</dd>
+          <dt>Conditional:</dt>
+          <dd>All optional fields — if empty, element is hidden</dd>
+        </dl>
+      </header>
+      {# Default: image left, content right #}
+      <div class="sitewide-sections__example">
+        <section class="impact-story-area">
+          <div class="row g-0 align-items-stretch">
+            <div class="col-xl-6 col-lg-6">
+              <div class="about-img__thumb">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='960' height='640' viewBox='0 0 960 640'%3E%3Crect fill='%23cccccc' width='960' height='640'/%3E%3Ctext fill='%23999999' font-family='sans-serif' font-size='24' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3E960 x 640%3C/text%3E%3C/svg%3E" alt="Placeholder">
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 d-flex align-items-center">
+              <div class="about-wrapper pl-50 pr-50 pt-50 pb-50">
+                <div class="section-title mb-25">
+                  <span class="sub-title">Eyebrow</span>
+                  <h2>Section Heading</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <a href="#" class="theme_btn theme_btn_bg mt-25">Button Text <span></span></a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {# Reversed: content left, image right #}
+      <div class="sitewide-sections__example">
+        <section class="impact-story-area impact-story-area--reverse">
+          <div class="row g-0 align-items-stretch">
+            <div class="col-xl-6 col-lg-6">
+              <div class="about-img__thumb">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='960' height='640' viewBox='0 0 960 640'%3E%3Crect fill='%23cccccc' width='960' height='640'/%3E%3Ctext fill='%23999999' font-family='sans-serif' font-size='24' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3E960 x 640%3C/text%3E%3C/svg%3E" alt="Placeholder">
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 d-flex align-items-center">
+              <div class="about-wrapper pl-50 pr-50 pt-50 pb-50">
+                <div class="section-title mb-25">
+                  <span class="sub-title">Eyebrow</span>
+                  <h2>Section Heading (Reversed)</h2>
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <a href="#" class="theme_btn theme_btn_bg mt-25">Button Text <span></span></a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <!-- ============================================
+         SECTION: Fund Spotlight
+         Category: Layout
+         Description: Two-column layout with testimonial left and fund types list right
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.fund-spotlight</h3>
+        <p>Two-column layout with a donor testimonial quote on the left and a list of fund types with arrow links on the right. Section heading centered above. Right column uses a repeater field for listing items (title + URL each). If any field is empty, that element is hidden.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Children:</dt>
+          <dd>.fund-testimonial, .fund-types, .fund-type-item</dd>
+          <dt>Right Column:</dt>
+          <dd>Repeater: listing items (title + URL each)</dd>
+          <dt>Optional:</dt>
+          <dd>Testimonial quote, attribution name, CTA button — hidden if empty</dd>
+          <dt>Conditional:</dt>
+          <dd>All optional fields — if empty, element is hidden</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        <section class="fund-spotlight pt-80 pb-80">
+          <div class="container">
+            <div class="section-title text-center mb-50">
+              <h2>Section Heading</h2>
+            </div>
+            <div class="row">
+              <div class="col-xl-6 col-lg-6 d-flex align-items-center">
+                <div class="fund-testimonial">
+                  <div class="quote-icon">&ldquo;</div>
+                  <blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</blockquote>
+                  <div class="attribution">&mdash; Attribution Name</div>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6">
+                {# Fund Types: Repeater field — add as many listing items as needed #}
+                <div class="fund-types">
+                  <h4>List Heading</h4>
+                  <a href="#" class="fund-type-item">
+                    <span>List Item One</span>
+                    <span class="arrow"></span>
+                  </a>
+                  <a href="#" class="fund-type-item">
+                    <span>List Item Two</span>
+                    <span class="arrow"></span>
+                  </a>
+                  <a href="#" class="fund-type-item">
+                    <span>List Item Three</span>
+                    <span class="arrow"></span>
+                  </a>
+                  <a href="#" class="fund-type-item">
+                    <span>List Item Four</span>
+                    <span class="arrow"></span>
+                  </a>
+                  <a href="#" class="fund-type-item">
+                    <span>List Item Five</span>
+                    <span class="arrow"></span>
+                  </a>
+                  <a href="#" class="fund-type-item">
+                    <span>List Item Six</span>
+                    <span class="arrow"></span>
+                  </a>
+                  <div class="fund-cta-btn">
+                    <a href="#" class="theme_btn theme_btn_bg">Button Text <span></span></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+
+  </section>
+
+  {# ============================================
+     CATEGORY: Card Sections
+     Card grids, event cards, location cards
+     ============================================ #}
+  <section class="sitewide-sections__category" id="cards">
+    <div class="container">
+      <h2>Card Sections</h2>
+      <p>Card-based layouts for displaying collections of items.</p>
+    </div>
+
+    <!-- ============================================
+         SECTION: Quick Links
+         Category: Cards
+         Description: Eyebrow + heading + 3-column card grid with title, text, and arrow link
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.quick-links</h3>
+        <p>Section with eyebrow, heading, and a 3-column grid of image cards. Each card has a photo, dark teal bottom bar with title, description, and arrow link. Grey background with hover lift effect. If any field is not filled out, that element is hidden.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Cards:</dt>
+          <dd>3 (responsive: stacks on mobile)</dd>
+          <dt>Image:</dt>
+          <dd>4:3 aspect ratio, object-fit: cover</dd>
+          <dt>Optional:</dt>
+          <dd>Eyebrow text, description text — hidden if empty</dd>
+          <dt>Conditional:</dt>
+          <dd>All optional fields — if empty, element is hidden</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        <section class="quick-links">
+          <div class="container">
+            <p class="quick-links__eyebrow">Eyebrow</p>
+            <h2 class="quick-links__heading">Section Heading</h2>
+            <div class="quick-links__grid">
+              <a href="#" class="quick-links__card">
+                <div class="quick-links__card-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='450' viewBox='0 0 600 450'%3E%3Crect fill='%23cccccc' width='600' height='450'/%3E%3Ctext fill='%23999999' font-family='sans-serif' font-size='24' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3E600 x 450%3C/text%3E%3C/svg%3E" alt="Placeholder" loading="lazy">
+                </div>
+                <div class="quick-links__card-bottom">
+                  <div>
+                    <h3 class="quick-links__card-title">Card Title</h3>
+                    <p class="quick-links__card-text">Lorem ipsum dolor sit amet consectetur.</p>
+                  </div>
+
+                </div>
+              </a>
+              <a href="#" class="quick-links__card">
+                <div class="quick-links__card-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='450' viewBox='0 0 600 450'%3E%3Crect fill='%23cccccc' width='600' height='450'/%3E%3Ctext fill='%23999999' font-family='sans-serif' font-size='24' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3E600 x 450%3C/text%3E%3C/svg%3E" alt="Placeholder" loading="lazy">
+                </div>
+                <div class="quick-links__card-bottom">
+                  <div>
+                    <h3 class="quick-links__card-title">Card Title</h3>
+                    <p class="quick-links__card-text">Lorem ipsum dolor sit amet consectetur.</p>
+                  </div>
+
+                </div>
+              </a>
+              <a href="#" class="quick-links__card">
+                <div class="quick-links__card-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='450' viewBox='0 0 600 450'%3E%3Crect fill='%23cccccc' width='600' height='450'/%3E%3Ctext fill='%23999999' font-family='sans-serif' font-size='24' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3E600 x 450%3C/text%3E%3C/svg%3E" alt="Placeholder" loading="lazy">
+                </div>
+                <div class="quick-links__card-bottom">
+                  <div>
+                    <h3 class="quick-links__card-title">Card Title</h3>
+                    <p class="quick-links__card-text">Lorem ipsum dolor sit amet consectetur.</p>
+                  </div>
+
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <!-- ============================================
+         SECTION: Flip Cards
+         Category: Cards
+         Description: 3-column interactive flip cards with front/back content
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.flip-cards-area</h3>
+        <p>Three interactive flip cards. Front shows choosable icon (FontAwesome), title, and subtitle. Back shows title and 1–3 CTA buttons (repeater field, max 3 per card). Text and buttons are centered vertically on the back. Flips on hover/tap/focus. If any field is not filled out, that element is hidden.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Cards:</dt>
+          <dd>3 (responsive: stacks on mobile)</dd>
+          <dt>Front:</dt>
+          <dd>Icon (choosable FontAwesome class), title, subtitle — each hidden if empty</dd>
+          <dt>Back:</dt>
+          <dd>Title + repeater: 1–3 buttons (title + URL each, max 3) — centered vertically</dd>
+          <dt>Interaction:</dt>
+          <dd>Hover (desktop), tap (mobile), focus-within (a11y)</dd>
+          <dt>Conditional:</dt>
+          <dd>All fields — if empty, element is hidden</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        <section class="flip-cards-area">
+          <div class="container">
+            <div class="row">
+              {# Card 1: 3 buttons, choosable icon #}
+              <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="flip-card" tabindex="0">
+                  <div class="flip-card__inner">
+                    <div class="flip-card__front">
+                      <div class="card-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                      <h3>Card Title</h3>
+                      <p>Short subtitle text</p>
+                    </div>
+                    <div class="flip-card__back">
+                      <h4>Card Title</h4>
+                      {# Repeater: 1-3 buttons per card #}
+                      <a href="#" class="flip-btn">Link One</a>
+                      <a href="#" class="flip-btn">Link Two</a>
+                      <a href="#" class="flip-btn">Link Three</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {# Card 2: 2 buttons, different icon #}
+              <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="flip-card" tabindex="0">
+                  <div class="flip-card__inner">
+                    <div class="flip-card__front">
+                      <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
+                      <h3>Card Title</h3>
+                      <p>Short subtitle text</p>
+                    </div>
+                    <div class="flip-card__back">
+                      <h4>Card Title</h4>
+                      <a href="#" class="flip-btn">Link One</a>
+                      <a href="#" class="flip-btn">Link Two</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {# Card 3: 1 button, different icon #}
+              <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="flip-card" tabindex="0">
+                  <div class="flip-card__inner">
+                    <div class="flip-card__front">
+                      <div class="card-icon"><i class="fas fa-users"></i></div>
+                      <h3>Card Title</h3>
+                      <p>Short subtitle text</p>
+                    </div>
+                    <div class="flip-card__back">
+                      <h4>Card Title</h4>
+                      <a href="#" class="flip-btn">Link One</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <!-- ============================================
+         SECTION: Signature Programs
+         Category: Cards
+         Description: 3-column program cards with image, title, description
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.programs-area</h3>
+        <p>Three-column card grid showcasing signature programs. Each card has an image, linked title, and description text.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Cards:</dt>
+          <dd>3 (responsive: stacks on mobile)</dd>
+          <dt>Image:</dt>
+          <dd>Card images (cropped via overflow hidden)</dd>
+          <dt>Children:</dt>
+          <dd>.cases, .cases__box--img, .cases__content</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        <section class="programs-area pt-80 pb-50">
+          <div class="container">
+            <div class="section-title text-center mb-50">
+              <h2>Section Heading</h2>
+            </div>
+            <div class="row">
+              <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="cases mb-30">
+                  <div class="cases__box pos-rel">
+                    <div class="cases__box--img">
+                      <a href="#"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect fill='%23cccccc' width='600' height='400'/%3E%3Ctext fill='%23999999' font-family='sans-serif' font-size='24' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3E600 x 400%3C/text%3E%3C/svg%3E" alt="Placeholder"></a>
+                    </div>
+                  </div>
+                  <div class="cases__content">
+                    <h3><a href="#">Card Title</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="cases mb-30">
+                  <div class="cases__box pos-rel">
+                    <div class="cases__box--img">
+                      <a href="#"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect fill='%23cccccc' width='600' height='400'/%3E%3Ctext fill='%23999999' font-family='sans-serif' font-size='24' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3E600 x 400%3C/text%3E%3C/svg%3E" alt="Placeholder"></a>
+                    </div>
+                  </div>
+                  <div class="cases__content">
+                    <h3><a href="#">Card Title</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="cases mb-30">
+                  <div class="cases__box pos-rel">
+                    <div class="cases__box--img">
+                      <a href="#"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect fill='%23cccccc' width='600' height='400'/%3E%3Ctext fill='%23999999' font-family='sans-serif' font-size='24' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3E600 x 400%3C/text%3E%3C/svg%3E" alt="Placeholder"></a>
+                    </div>
+                  </div>
+                  <div class="cases__content">
+                    <h3><a href="#">Card Title</a></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <!-- ============================================
+         SECTION: Team Preview
+         Category: Cards
+         Description: 4-column team member photo grid with name and role
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.team-preview</h3>
+        <p>Section with eyebrow, heading, description, and a 4-column grid of team member cards. Each card has a square photo, name, and role/title. Grey background with white cards and hover lift effect. Used on the About page as a preview linking to a full Staff &amp; Board page. If any field is not filled out, that element is hidden.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Cards:</dt>
+          <dd>4-column grid (responsive: 2-column on tablet/mobile)</dd>
+          <dt>Image:</dt>
+          <dd>Square aspect (1:1), object-fit: cover</dd>
+          <dt>Fields per card:</dt>
+          <dd>Photo, name, role/title — each hidden if empty</dd>
+          <dt>Section fields:</dt>
+          <dd>Eyebrow, heading, description text, CTA button — each hidden if empty</dd>
+          <dt>Background:</dt>
+          <dd>Section: --color-grey-bg, Cards: white</dd>
+          <dt>Mobile:</dt>
+          <dd>2-column grid, reduced padding and font sizes</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        <section class="team-preview">
+          <div class="container">
+            <div class="team-preview__header">
+              <span class="team-preview__eyebrow">Eyebrow</span>
+              <h2 class="team-preview__heading">Section Heading</h2>
+              <p class="team-preview__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+            </div>
+            <div class="team-preview__grid">
+              <div class="team-preview__card">
+                <div class="team-preview__card-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Crect fill='%23cccccc' width='400' height='400'/%3E%3Ccircle cx='200' cy='160' r='60' fill='%23999'/%3E%3Cellipse cx='200' cy='340' rx='100' ry='80' fill='%23999'/%3E%3C/svg%3E" alt="Placeholder" loading="lazy">
+                </div>
+                <div class="team-preview__card-info">
+                  <h3 class="team-preview__card-name">Team Member</h3>
+                  <p class="team-preview__card-role">Role / Title</p>
+                </div>
+              </div>
+              <div class="team-preview__card">
+                <div class="team-preview__card-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Crect fill='%23cccccc' width='400' height='400'/%3E%3Ccircle cx='200' cy='160' r='60' fill='%23999'/%3E%3Cellipse cx='200' cy='340' rx='100' ry='80' fill='%23999'/%3E%3C/svg%3E" alt="Placeholder" loading="lazy">
+                </div>
+                <div class="team-preview__card-info">
+                  <h3 class="team-preview__card-name">Team Member</h3>
+                  <p class="team-preview__card-role">Role / Title</p>
+                </div>
+              </div>
+              <div class="team-preview__card">
+                <div class="team-preview__card-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Crect fill='%23cccccc' width='400' height='400'/%3E%3Ccircle cx='200' cy='160' r='60' fill='%23999'/%3E%3Cellipse cx='200' cy='340' rx='100' ry='80' fill='%23999'/%3E%3C/svg%3E" alt="Placeholder" loading="lazy">
+                </div>
+                <div class="team-preview__card-info">
+                  <h3 class="team-preview__card-name">Team Member</h3>
+                  <p class="team-preview__card-role">Role / Title</p>
+                </div>
+              </div>
+              <div class="team-preview__card">
+                <div class="team-preview__card-image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Crect fill='%23cccccc' width='400' height='400'/%3E%3Ccircle cx='200' cy='160' r='60' fill='%23999'/%3E%3Cellipse cx='200' cy='340' rx='100' ry='80' fill='%23999'/%3E%3C/svg%3E" alt="Placeholder" loading="lazy">
+                </div>
+                <div class="team-preview__card-info">
+                  <h3 class="team-preview__card-name">Team Member</h3>
+                  <p class="team-preview__card-role">Role / Title</p>
+                </div>
+              </div>
+            </div>
+            <div class="team-preview__action">
+              <a href="#" class="theme_btn theme_btn_bg">Button Text <span></span></a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+
+  </section>
+
+  {# ============================================
+     CATEGORY: Content Sections
+     Text-heavy sections, timelines, FAQs
+     ============================================ #}
+  <section class="sitewide-sections__category" id="content">
+    <div class="container">
+      <h2>Content Sections</h2>
+      <p>Text-focused sections for articles, timelines, and informational content.</p>
+    </div>
+
+    <!-- ============================================
+         SECTION: Impact Stats
+         Category: Content
+         Description: 4-column counter stats with icons and animated numbers
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.impact-stats-area</h3>
+        <p>Four-column statistics counter with editable icons, animated numbers, number modifiers (e.g. +, M+, K), and labels. Each stat has: icon (choosable FontAwesome class), number, modifier text after number, and description label. Background color and icon color are selectable from style guide palette. If any field is empty, that element is hidden.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Stats:</dt>
+          <dd>4 columns, each with: icon, number, modifier (suffix), label</dd>
+          <dt>Editable per stat:</dt>
+          <dd>Icon (FontAwesome class), number, modifier (e.g. "+", "M+", "K+"), label text</dd>
+          <dt>Background:</dt>
+          <dd>Selectable from style guide colors (default: --color-dusk)</dd>
+          <dt>Icon Color:</dt>
+          <dd>Selectable from style guide colors (default: --color-cirrus)</dd>
+          <dt>Animation:</dt>
+          <dd>counterUp on scroll</dd>
+          <dt>Conditional:</dt>
+          <dd>All fields — if empty, element is hidden</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        {% include "impact-stats.njk" %}
+      </div>
+    </article>
+
+  </section>
+
+  {# ============================================
+     CATEGORY: Media Sections
+     Image galleries, video sections
+     ============================================ #}
+  <section class="sitewide-sections__category" id="media">
+    <div class="container">
+      <h2>Media Sections</h2>
+      <p>Image galleries, video embeds, and media-focused layouts.</p>
+    </div>
+
+    <!-- ============================================
+         SECTION: Instagram Feed
+         Category: Media
+         Description: 6-column edge-to-edge Instagram image grid
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.instagram-feed</h3>
+        <p>Full-width, edge-to-edge 6-column grid of Instagram images with hover zoom effect. Centered label above the grid. All images link to Instagram profile.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Items:</dt>
+          <dd>6 images</dd>
+          <dt>Image:</dt>
+          <dd>Square aspect, WebP format</dd>
+          <dt>Children:</dt>
+          <dd>.instagram-feed__label, .instagram-feed__grid, .instagram-feed__item</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        {% include "instagram-feed.njk" %}
+      </div>
+    </article>
+
+  </section>
+
+  {# ============================================
+     CATEGORY: CTA Sections
+     Call-to-action sections
+     ============================================ #}
+  <section class="sitewide-sections__category" id="cta">
+    <div class="container">
+      <h2>Call-to-Action Sections</h2>
+      <p>Conversion-focused sections with prominent calls to action.</p>
+    </div>
+
+    <!-- ============================================
+         SECTION: CTA Banner
+         Category: CTA
+         Description: Full-width banner with heading, optional text, and outlined button
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.cta-banner</h3>
+        <p>Full-width CTA banner with heading (supports accent color span), optional description text, and an outlined button. Heading and button sit side-by-side on desktop, stack on mobile. Background color selectable from style guide palette. If any field (description, button) is not filled out, that element is hidden.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Background:</dt>
+          <dd>Selectable from style guide colors (default: --color-dark-pine)</dd>
+          <dt>Optional:</dt>
+          <dd>Description text, button, accent color word — hidden if empty</dd>
+          <dt>Conditional:</dt>
+          <dd>All optional fields — if empty, element is hidden</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        <section class="cta-banner">
+          <div class="container">
+            <div class="cta-banner__content">
+              <h2 class="cta-banner__heading">Heading text <span>with accent</span> words.</h2>
+              <p class="cta-banner__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+            </div>
+            <div class="cta-banner__action">
+              <a href="#" class="theme_btn theme_btn_bg theme_btn--light">Button Text <span></span></a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <!-- ============================================
+         SECTION: Seasonal CTA
+         Category: CTA
+         Description: Centered CTA banner that rotates content by season
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.seasonal-cta</h3>
+        <p>Full-width CTA with centered heading, description, and button. Content rotates seasonally: spring/summer (Tin Cup Challenge), fall (Grant Season), winter (Year-End Giving). Background color selectable from style guide palette. If any field is not filled out, that element is hidden.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Background:</dt>
+          <dd>Selectable from style guide colors (default: --color-plum)</dd>
+          <dt>Content:</dt>
+          <dd>Rotates via JS by season</dd>
+          <dt>Optional:</dt>
+          <dd>Description text, button — hidden if empty</dd>
+          <dt>Conditional:</dt>
+          <dd>All optional fields — if empty, element is hidden</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        {% include "seasonal-cta.njk" %}
+      </div>
+    </article>
+
+    <!-- ============================================
+         SECTION: Challenger Banner
+         Category: CTA
+         Description: Compact inline CTA banner with heading and button
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.challenger-banner</h3>
+        <p>Compact, single-row CTA banner with heading and button side-by-side. Used for secondary calls to action like "Become a Challenger." Background color selectable from style guide palette. If button is not filled out, it is hidden.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Background:</dt>
+          <dd>Selectable from style guide colors (default: --color-dark-pine)</dd>
+          <dt>Layout:</dt>
+          <dd>Heading + button inline, centered</dd>
+          <dt>Conditional:</dt>
+          <dd>Button — hidden if empty</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        {% include "challenger-banner.njk" %}
+      </div>
+    </article>
+
+  </section>
+
+  {# ============================================
+     CATEGORY: Form Sections
+     Contact forms, newsletter signups
+     ============================================ #}
+  <section class="sitewide-sections__category" id="forms">
+    <div class="container">
+      <h2>Form Sections</h2>
+      <p>Contact forms, newsletter signups, and other input sections.</p>
+    </div>
+
+    <!-- ============================================
+         SECTION: Footer Newsletter
+         Category: Forms
+         Description: Centered email subscription form
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.footer-newsletter</h3>
+        <p>Centered newsletter subscription form with label, email input, and submit button. Located within the footer but usable as a standalone component.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Fields:</dt>
+          <dd>Email (required)</dd>
+          <dt>Button:</dt>
+          <dd>"Subscribe"</dd>
+          <dt>Note:</dt>
+          <dd>Currently embedded in footer; can be extracted as standalone block for WordPress</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        <div class="footer-newsletter" style="background: var(--color-graphite, #1d292e); padding: 2rem;">
+          <label for="catalog-email">Subscribe to Our Newsletter</label>
+          <form class="newsletter-form" action="#" method="post">
+            <input type="email" id="catalog-email" name="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  {# ============================================
+     CATEGORY: Navigation
+     Headers, footers, utility nav (reference only)
+     ============================================ #}
+  <section class="sitewide-sections__category" id="navigation">
+    <div class="container">
+      <h2>Navigation</h2>
+      <p>Headers, footers, and utility navigation. These are reference entries — live examples are visible sitewide.</p>
+    </div>
+
+    <!-- ============================================
+         SECTION: Subpage Nav
+         Category: Navigation
+         Description: Horizontal anchor link bar for subpage sections
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.subpage-nav</h3>
+        <p>Horizontal bar of anchor links for navigating to sections within a subpage. Centered, uppercase labels with hover underline. In WordPress, this section provides a dropdown to select which menu (Appearance &rarr; Menus) it pulls from.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Menu Source:</dt>
+          <dd>Dropdown selector: Appearance &rarr; Menus (select which registered menu to display)</dd>
+          <dt>Interaction:</dt>
+          <dd>Hover underline in primary color, smooth scroll to anchors</dd>
+          <dt>Children:</dt>
+          <dd>.subpage-nav__list</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        <nav class="subpage-nav">
+          <div class="container">
+            <ul class="subpage-nav__list">
+              <li><a href="#workshops">Workshops & Training</a></li>
+              <li><a href="#resources">Nonprofit Resources</a></li>
+              <li><a href="#grants">Apply for Grants</a></li>
+              <li><a href="#dates">Dates & Deadlines</a></li>
+              <li><a href="#tcc">Tin Cup Registration</a></li>
+              <li><a href="#agency">Agency Funds</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </article>
+
+    <!-- ============================================
+         SECTION: Utility Nav
+         Category: Navigation
+         Description: Top utility bar with secondary links and donate button
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.utility-nav</h3>
+        <p>Top utility bar with secondary navigation links and a highlighted Donate button. Hidden on mobile. In WordPress, this section provides a dropdown to select which menu (Appearance &rarr; Menus) it pulls from.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Menu Source:</dt>
+          <dd>Dropdown selector: Appearance &rarr; Menus (select which registered menu to display)</dd>
+          <dt>Visibility:</dt>
+          <dd>Desktop only (hidden below lg breakpoint)</dd>
+          <dt>Children:</dt>
+          <dd>.utility-links, .utility-donate</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        {% include "utility-nav.njk" %}
+      </div>
+    </article>
+
+    <!-- ============================================
+         SECTION: Header
+         Category: Navigation
+         Description: Main site header with logo, navigation, and CTA
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>#top-menu (header)</h3>
+        <p>Main site header with logo, primary navigation, and "Donate Now" CTA button. Includes mobile hamburger menu and slide-out sidebar. In WordPress, this section provides a dropdown to select which menu (Appearance &rarr; Menus) it pulls from for the primary nav.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Menu Source:</dt>
+          <dd>Dropdown selector: Appearance &rarr; Menus (select which registered menu to display)</dd>
+          <dt>Logo:</dt>
+          <dd>cftv-logo.webp (max-height 60px)</dd>
+          <dt>Mobile:</dt>
+          <dd>Hamburger menu with .slide-bar sidebar</dd>
+          <dt>Children:</dt>
+          <dd>.main-header-area, .main-menu, .slide-bar</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        {% include "header.njk" %}
+      </div>
+    </article>
+
+    <!-- ============================================
+         SECTION: Footer
+         Category: Navigation
+         Description: 4-column footer with org info, links, contact, and newsletter
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.cftv-footer</h3>
+        <p>Four-column footer with organization info + social links, link columns, and Contact info. Includes centered newsletter form and copyright/EIN line. In WordPress, each link column provides a dropdown to select which menu (Appearance &rarr; Menus) it pulls from.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Menu Source:</dt>
+          <dd>Dropdown selector per column: Appearance &rarr; Menus (select which registered menu to display)</dd>
+          <dt>Columns:</dt>
+          <dd>4 (Org info, 2 link columns from menus, Contact)</dd>
+          <dt>Children:</dt>
+          <dd>.footer-newsletter, .footer-social, .footer-ein, .copy-right-area</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        {% include "footer.njk" %}
+      </div>
+    </article>
+
+  </section>
+
+</main>
+
+<style>
+  /* Disable sticky header on this page */
+  .sitewide-sections .main-header-area.sticky {
+    position: static !important;
+  }
+
+  /* Sitewide Sections Page Styles */
+  .sitewide-sections__header {
+    padding: 4rem 0;
+    background: var(--color-grey-bg, #e5cec3);
+    text-align: center;
+  }
+
+  .sitewide-sections__nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .sitewide-sections__nav a {
+    padding: 0.5rem 1rem;
+    background: var(--color-primary, #dd8b88);
+    color: white;
+    text-decoration: none;
+    border-radius: 0;
+  }
+
+  .sitewide-sections__category {
+    padding: 4rem 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .sitewide-sections__category h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .sitewide-sections__category > p {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .sitewide-sections__item {
+    margin: 3rem 0;
+  }
+
+  .sitewide-sections__item-header {
+    padding: 1.5rem;
+    margin: 0 auto;
+    max-width: 1140px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+  }
+
+  .sitewide-sections__item-header h3 {
+    font-family: monospace;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .sitewide-sections__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+  }
+
+  .sitewide-sections__meta dt {
+    font-weight: bold;
+  }
+
+  .sitewide-sections__meta dd {
+    margin-left: 0.25rem;
+    color: #666;
+  }
+
+  .sitewide-sections__example {
+    /* No padding or constraints — sections render full-bleed like on the actual pages */
+  }
+
+  .sitewide-sections__example--contained {
+    padding: 2rem;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+</style>

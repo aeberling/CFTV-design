@@ -1,0 +1,144 @@
+---
+layout: base.njk
+title: "Mission & Values - Community Foundation of Teton Valley"
+description: "Our mission is to enhance lives through philanthropic leadership — championing nonprofits, empowering donors, and promoting a culture of giving in Teton Valley."
+permalink: /about/mission-values/
+heroHeading: "Mission & Values"
+heroText: "We elevate lives through the power of generosity — championing nonprofits, empowering donors, and serving as a catalyst for positive change in Teton Valley."
+heroImage: "/assets/images/about/hero-about.webp"
+subpageNavItems:
+  - { id: "mission", label: "Our Mission" }
+  - { id: "values", label: "Our Values" }
+  - { id: "history", label: "Our History" }
+---
+<!-- PAGE: about/mission-values
+     background: solid-white
+     theme: light
+     notes: Mission & Values sub-page under About with mission statement, values list, history, impact stats, and accreditation
+-->
+
+{% include "utility-nav.njk" %}
+{% include "header.njk" %}
+
+<main>
+  {% include "page-hero.njk" %}
+  {% include "subpage-nav.njk" %}
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Enhancing Lives Through Philanthropic Leadership"
+       content: "Our mission is to enhance lives through philanthropic leadership..." (310 chars)
+       image: hero-about.webp (5:4, object-fit: cover)
+       button: none
+       background: default (--color-dusk)
+       modifier: none (image left, content right)
+       notes: Two paragraph blocks, no button. Mission statement section.
+  -->
+  <section class="content-split" id="mission">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/about/hero-about.webp" alt="Community Foundation of Teton Valley team gathered at a local community event" loading="lazy">
+    </div>
+    <div class="content-split__content">
+      <span class="content-split__eyebrow">Our Mission</span>
+      <h2 class="content-split__heading">Enhancing Lives Through Philanthropic Leadership</h2>
+      <p class="content-split__text">Our mission is to enhance lives through philanthropic leadership by providing excellent donor services, making impactful grants to benefit the community, ensuring sustainability within the philanthropic sector, and serving as a leader, catalyst, and resource.</p>
+      <p class="content-split__text">The Foundation manages community assets and coordinates community-wide giving over an 8-week period that culminates in the annual Tin Cup Challenge Fun Run, a major fundraising event for local nonprofits.</p>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "What Guides Us"
+       content: "Everything we do is rooted in our commitment to Teton Valley..." (155 chars)
+       image: make-a-difference.webp (5:4, object-fit: cover)
+       button: none
+       background: --color-dark-pine
+       modifier: --reverse (image right, content left)
+       notes: Includes bullet list (content-split__list) with 5 core values
+  -->
+  <section class="content-split content-split--reverse" id="values">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/home/make-a-difference.webp" alt="Teton Valley community members volunteering together at a local nonprofit event" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-dark-pine);">
+      <span class="content-split__eyebrow">Our Values</span>
+      <h2 class="content-split__heading">What Guides Us</h2>
+      <p class="content-split__text">Everything we do is rooted in our commitment to Teton Valley and the people who call it home. We believe in the power of community and the transformative impact of generosity.</p>
+      <ul class="content-split__list">
+        <li>Championing nonprofits serving Teton Valley</li>
+        <li>Empowering donors to maximize their impact</li>
+        <li>Promoting a culture of giving in our community</li>
+        <li>Serving as a catalyst for positive change</li>
+        <li>Ensuring transparency and accountability</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Growing Together Since 2007"
+       content: "The Community Foundation of Teton Valley was established..." (337 chars)
+       image: areas-of-impact-chart.webp (--contain modifier, object-fit: contain)
+       button: none
+       background: --color-plum
+       modifier: none (image left, content right) + --contain image modifier
+       notes: Two paragraph blocks, no button. Image uses --contain modifier for chart display.
+  -->
+  <section class="content-split" id="history">
+    <div class="content-split__image content-split__image--contain">
+      <img src="/assets/images/about/areas-of-impact-chart.webp" alt="Community Foundation of Teton Valley areas of impact chart showing community investment" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-plum);">
+      <span class="content-split__eyebrow">Our History</span>
+      <h2 class="content-split__heading">Growing Together Since 2007</h2>
+      <p class="content-split__text">The Community Foundation of Teton Valley was established to serve as a permanent philanthropic resource for the Teton Valley community. Since our founding, we have grown to manage over 50 funds, support 85+ nonprofits, and distribute millions in grants and scholarships.</p>
+      <p class="content-split__text">As an affiliate of the Community Foundation of Jackson Hole, we bring professional fund management and grantmaking expertise to our community while maintaining a deep local focus on the needs and opportunities unique to Teton Valley.</p>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: impact-stats
+       stats: 4 (Granted, Nonprofits Supported, Scholarships Awarded, Funds Managed)
+       background: default (--color-dusk)
+       animation: counterUp on scroll
+       note: Reused from homepage — same include
+  -->
+  {% include "impact-stats.njk" %}
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "National Standards Accredited"
+       content: "The Community Foundation is in good standing with the Council on Foundations..." (218 chars)
+       image: accreditation-badge.webp (--badge modifier, fixed 195px width)
+       button: none
+       background: --color-graphite
+       modifier: --reverse (image right, content left) + --badge image modifier
+       notes: Uses --badge modifier to center small accreditation seal in image panel
+  -->
+  <section class="content-split content-split--reverse">
+    <div class="content-split__image content-split__image--badge">
+      <img src="/assets/images/about/accreditation-badge.webp" alt="Council on Foundations national standards accreditation badge" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-graphite);">
+      <span class="content-split__eyebrow">Accreditation</span>
+      <h2 class="content-split__heading">National Standards Accredited</h2>
+      <p class="content-split__text">The Community Foundation is in good standing with the Council on Foundations National Standards. This accreditation reflects our commitment to the highest standards of organizational and financial integrity, achieved through a rigorous peer review process.</p>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: cta-banner
+       heading: "Ready to make an impact in Teton Valley?"
+       accent_word: "make an impact" (wrapped in span)
+       content: "Learn how you can support our community through giving, volunteering, or partnering with us."
+       button: "Get in Touch" -> /contact/
+       background: default (--color-dark-pine)
+  -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__heading">Ready to <span>make an impact</span> in Teton Valley?</h2>
+        <p class="cta-banner__text">Learn how you can support our community through giving, volunteering, or partnering with us.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="/contact/" class="theme_btn theme_btn_bg theme_btn--light">Get in Touch <span></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "footer.njk" %}

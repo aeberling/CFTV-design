@@ -1,0 +1,48 @@
+<!-- IMPLEMENTATION: hero-split
+     LEFT PANEL (static):
+       - h1 heading
+       - description text
+       - 3 button fields (title + URL each) — if a button field is empty, hide it
+     RIGHT PANEL (seasonal slider):
+       - Repeater field for slides (background image, heading, text, button title, button URL)
+       - If any field in a slide is empty, hide that element
+       - Slick slider with auto-rotate
+     WP BLOCK: 3 button groups (title + url), repeater for right panel slides
+-->
+<section class="hero-split">
+  <div class="hero-split__static">
+    <h1 class="wow fadeInUp2 animated" data-wow-delay=".1s">Give local.<br>Create lasting impact.</h1>
+    <p class="wow fadeInUp2 animated" data-wow-delay=".3s">Your Community Foundation connects generosity to the causes, nonprofits, and people who make Teton Valley thrive.</p>
+    {# Buttons: up to 3 — each hidden if title/url not provided #}
+    <div class="hero-split__buttons wow fadeInUp2 animated" data-wow-delay=".5s">
+      <a href="/give/" class="theme_btn theme_btn_bg">Give Now <span></span></a>
+      <a href="/funds-scholarships/" class="theme_btn theme_btn3">Create a Fund <span></span></a>
+      <a href="/nonprofits/" class="theme_btn theme_btn3">Apply for Grants <span></span></a>
+    </div>
+  </div>
+  <div class="hero-split__right">
+    {# Seasonal Slider: repeater field — each slide has image, heading, text, button #}
+    <div class="hero-split__slider">
+      {# Slide 1 #}
+      <div class="hero-split__slide">
+        <div class="hero-split__image" style="background-image: url('/assets/images/hero/scholarship.webp');"></div>
+        <div class="hero-split__teal"></div>
+        <div class="hero-split__right-content">
+          <h2>Scholarships<br>Now Open</h2>
+          <p>Apply for scholarships supporting Teton Valley students.</p>
+          <a href="/funds-scholarships/" class="theme_btn theme_btn_bg">Apply Now <span></span></a>
+        </div>
+      </div>
+      {# Slide 2 #}
+      <div class="hero-split__slide">
+        <div class="hero-split__image" style="background-image: url('/assets/images/hero/scholarship.webp');"></div>
+        <div class="hero-split__teal"></div>
+        <div class="hero-split__right-content">
+          <h2>Tin Cup<br>Challenge</h2>
+          <p>Double your impact during our annual giving event.</p>
+          <a href="/give/" class="theme_btn theme_btn_bg">Learn More <span></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

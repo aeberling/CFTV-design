@@ -1,0 +1,315 @@
+---
+layout: base.njk
+title: "Style Guide - Community Foundation of Teton Valley"
+description: "Brand style guide for CFTV"
+permalink: /style-guide/
+---
+
+<style>
+  .style-guide {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    font-family: 'Karla', sans-serif;
+  }
+
+  .style-guide h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #3d3454;
+    margin-bottom: 10px;
+  }
+
+  .style-guide h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #3d3454;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #bdc8d2;
+  }
+
+  .style-guide h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #3d3454;
+    margin-bottom: 16px;
+    margin-top: 0;
+  }
+
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .color-card {
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .color-swatch {
+    height: 140px;
+  }
+
+  .color-info {
+    padding: 16px;
+    background: #fff;
+  }
+
+  .color-name {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 4px;
+    color: #1d292e;
+  }
+
+  .color-var {
+    font-size: 12px;
+    color: #415e68;
+    font-family: monospace;
+    margin-bottom: 2px;
+  }
+
+  .color-hex {
+    font-size: 14px;
+    color: #415e68;
+    font-family: monospace;
+  }
+
+  .typography-sample {
+    padding: 30px;
+    background: #f8f7f6;
+    margin-bottom: 16px;
+  }
+
+  .typography-label {
+    font-size: 13px;
+    color: #415e68;
+    font-family: monospace;
+    margin-bottom: 20px;
+  }
+</style>
+
+<div class="style-guide">
+  <h1>CFTV Style Guide</h1>
+  <p style="color: #415e68; margin-bottom: 50px; font-size: 18px;">Brand colors, typography, and design tokens for the Community Foundation of Teton Valley.</p>
+
+  <h2>Color Palette</h2>
+
+  <!-- Primary Colors -->
+  <h3>Primary</h3>
+  <div class="color-grid">
+
+    <div class="color-card">
+      <div class="color-swatch" style="background-color: #3d3454;"></div>
+      <div class="color-info">
+        <div class="color-name">Dusk</div>
+        <div class="color-var">--color-dusk</div>
+        <div class="color-hex">#3d3454</div>
+      </div>
+    </div>
+
+    <div class="color-card">
+      <div class="color-swatch" style="background-color: #644b62;"></div>
+      <div class="color-info">
+        <div class="color-name">Plum</div>
+        <div class="color-var">--color-plum</div>
+        <div class="color-hex">#644b62</div>
+      </div>
+    </div>
+
+    <div class="color-card">
+      <div class="color-swatch" style="background-color: #dd8b88;"></div>
+      <div class="color-info">
+        <div class="color-name">Poppy</div>
+        <div class="color-var">--color-poppy</div>
+        <div class="color-hex">#dd8b88</div>
+      </div>
+    </div>
+
+    <div class="color-card">
+      <div class="color-swatch" style="background-color: #bdc8d2;"></div>
+      <div class="color-info">
+        <div class="color-name">Cirrus</div>
+        <div class="color-var">--color-cirrus</div>
+        <div class="color-hex">#bdc8d2</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Neutral Colors -->
+  <h3>Neutral</h3>
+  <div class="color-grid">
+
+    <div class="color-card">
+      <div class="color-swatch" style="background-color: #a8886c;"></div>
+      <div class="color-info">
+        <div class="color-name">Clay</div>
+        <div class="color-var">--color-clay</div>
+        <div class="color-hex">#a8886c</div>
+      </div>
+    </div>
+
+    <div class="color-card">
+      <div class="color-swatch" style="background-color: #1d292e;"></div>
+      <div class="color-info">
+        <div class="color-name">Graphite</div>
+        <div class="color-var">--color-graphite</div>
+        <div class="color-hex">#1d292e</div>
+      </div>
+    </div>
+
+    <div class="color-card">
+      <div class="color-swatch" style="background-color: #dbdcdd;"></div>
+      <div class="color-info">
+        <div class="color-name">Fog</div>
+        <div class="color-var">--color-fog</div>
+        <div class="color-hex">#dbdcdd</div>
+      </div>
+    </div>
+
+    <div class="color-card">
+      <div class="color-swatch" style="background-color: #e5cec3;"></div>
+      <div class="color-info">
+        <div class="color-name">Sand</div>
+        <div class="color-var">--color-sand</div>
+        <div class="color-hex">#e5cec3</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Accent Colors -->
+  <h3>Accent</h3>
+  <div class="color-grid" style="margin-bottom: 60px;">
+
+    <div class="color-card">
+      <div class="color-swatch" style="background-color: #164154;"></div>
+      <div class="color-info">
+        <div class="color-name">Dark Pine</div>
+        <div class="color-var">--color-dark-pine</div>
+        <div class="color-hex">#164154</div>
+      </div>
+    </div>
+
+    <div class="color-card">
+      <div class="color-swatch" style="background-color: #415e68;"></div>
+      <div class="color-info">
+        <div class="color-name">Pine</div>
+        <div class="color-var">--color-pine</div>
+        <div class="color-hex">#415e68</div>
+      </div>
+    </div>
+
+    <div class="color-card">
+      <div class="color-swatch" style="background-color: #415e68;"></div>
+      <div class="color-info">
+        <div class="color-name">Nimbus</div>
+        <div class="color-var">--color-nimbus</div>
+        <div class="color-hex">#415e68</div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>Typography</h2>
+
+  <h3>Company Name — DM Serif Display</h3>
+  <div class="typography-sample">
+    <p style="font-family: 'DM Serif Display', serif; font-size: 42px; color: #3d3454; margin: 0;">Community Foundation of Teton Valley</p>
+  </div>
+  <p class="typography-label">font-family: 'DM Serif Display', serif &nbsp;|&nbsp; --font-display</p>
+
+  <h3>Tagline — DM Serif Text Italic</h3>
+  <div class="typography-sample">
+    <p style="font-family: 'DM Serif Text', serif; font-style: italic; font-size: 24px; color: #644b62; margin: 0;">Connecting generosity to the causes, nonprofits, and people who make Teton Valley thrive.</p>
+  </div>
+  <p class="typography-label">font-family: 'DM Serif Text', serif; font-style: italic &nbsp;|&nbsp; --font-tagline</p>
+
+  <h3>Headings — Barlow Condensed</h3>
+  <div class="typography-sample">
+    <p style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 42px; color: #3d3454; margin: 0 0 8px;">Heading One — 700</p>
+    <p style="font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 32px; color: #3d3454; margin: 0 0 8px;">Heading Two — 600</p>
+    <p style="font-family: 'Barlow Condensed', sans-serif; font-weight: 500; font-size: 24px; color: #3d3454; margin: 0;">Heading Three — 500</p>
+  </div>
+  <p class="typography-label">font-family: 'Barlow Condensed', sans-serif &nbsp;|&nbsp; --font-heading</p>
+
+  <h3>Body — Karla</h3>
+  <div class="typography-sample">
+    <p style="font-family: 'Karla', sans-serif; font-weight: 400; font-size: 16px; color: #415e68; margin: 0 0 8px;">Regular 400 — The Community Foundation of Teton Valley works to elevate lives through the power of generosity.</p>
+    <p style="font-family: 'Karla', sans-serif; font-weight: 600; font-size: 16px; color: #415e68; margin: 0;">Semi-Bold 600 — Supporting nonprofits, donors, and community initiatives since 2007.</p>
+  </div>
+  <p class="typography-label" style="margin-bottom: 60px;">font-family: 'Karla', sans-serif &nbsp;|&nbsp; --font-body</p>
+
+  <h2>Buttons</h2>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 40px; margin-bottom: 60px;">
+
+    <!-- On Light Backgrounds -->
+    <div>
+      <h3>On Light Backgrounds</h3>
+      <div style="display: flex; gap: 16px; flex-wrap: wrap; padding: 30px; background: #e5cec3;">
+        <a href="#" class="theme_btn theme_btn_bg">Primary Button <span></span></a>
+        <a href="#" class="theme_btn theme_btn3">Secondary Button <span></span></a>
+      </div>
+      <p style="font-size: 13px; color: #415e68; margin-top: 8px; font-family: monospace;">.theme_btn .theme_btn_bg &nbsp;|&nbsp; .theme_btn .theme_btn3</p>
+    </div>
+
+    <!-- On Dark/Colored Backgrounds -->
+    <div>
+      <h3>On Dark / Colored Backgrounds</h3>
+      <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+        <div style="padding: 30px; background: #3d3454;">
+          <a href="#" class="theme_btn theme_btn_bg">Default on Dark <span></span></a>
+        </div>
+        <div style="padding: 30px; background: #dd8b88;">
+          <a href="#" class="theme_btn theme_btn_bg theme_btn--light" style="background: #fff !important; color: #1d292e !important;">Light Button <span></span></a>
+        </div>
+        <div style="padding: 30px; background: #164154;">
+          <a href="#" class="theme_btn theme_btn_bg theme_btn--light" style="background: #fff !important; color: #1d292e !important;">Light Button <span></span></a>
+        </div>
+      </div>
+      <p style="font-size: 13px; color: #415e68; margin-top: 8px; font-family: monospace;">.theme_btn .theme_btn_bg .theme_btn--light</p>
+    </div>
+
+  </div>
+
+  <h3>Usage Guidelines</h3>
+  <table style="width: 100%; border-collapse: collapse; margin-bottom: 60px; font-size: 14px;">
+    <thead>
+      <tr style="border-bottom: 2px solid #bdc8d2; text-align: left;">
+        <th style="padding: 10px 16px; font-family: 'Barlow Condensed', sans-serif;">Variant</th>
+        <th style="padding: 10px 16px; font-family: 'Barlow Condensed', sans-serif;">Class</th>
+        <th style="padding: 10px 16px; font-family: 'Barlow Condensed', sans-serif;">Use On</th>
+        <th style="padding: 10px 16px; font-family: 'Barlow Condensed', sans-serif;">Usage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 10px 16px;">Primary</td>
+        <td style="padding: 10px 16px; font-family: monospace; font-size: 13px;">.theme_btn .theme_btn_bg</td>
+        <td style="padding: 10px 16px;">Light backgrounds, dark backgrounds</td>
+        <td style="padding: 10px 16px;">Main CTAs, form submissions</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 10px 16px;">Secondary</td>
+        <td style="padding: 10px 16px; font-family: monospace; font-size: 13px;">.theme_btn .theme_btn3</td>
+        <td style="padding: 10px 16px;">Light backgrounds</td>
+        <td style="padding: 10px 16px;">Secondary actions alongside primary</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #eee;">
+        <td style="padding: 10px 16px;">Light</td>
+        <td style="padding: 10px 16px; font-family: monospace; font-size: 13px;">.theme_btn .theme_btn_bg .theme_btn--light</td>
+        <td style="padding: 10px 16px;">Colored backgrounds (Poppy, Dark Pine, etc.)</td>
+        <td style="padding: 10px 16px;">CTAs on sections where primary won't contrast</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

@@ -1,0 +1,47 @@
+<!-- IMPLEMENTATION: impact-stats
+     WP BLOCK FIELDS PER STAT:
+       - icon: FontAwesome class (choosable)
+       - number: counter value
+       - modifier: suffix text after number (e.g. "M+", "+", "K+") — if empty, hidden
+       - label: description text below number — if empty, hidden
+     SECTION FIELDS:
+       - background_color: style guide color picker (default: --color-dusk)
+       - icon_color: style guide color picker (default: --color-cirrus)
+     stats: 4 (Granted, Nonprofits Supported, Scholarships Awarded, Funds Managed)
+     animation: counterUp on scroll
+     note: Placeholder numbers — final stats TBD
+-->
+<section class="counter-area counter-area-02 impact-stats-area pos-rel">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+        <div class="counetrs text-center wow fadeInUp2 animated" data-wow-delay=".1s">
+          <div class="counetrs__icon mb-20"><i class="fas fa-dollar-sign"></i></div>
+          <h1><span class="counter">4.5</span>M+</h1>
+          <p>Granted Since 2007</p>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+        <div class="counetrs text-center wow fadeInUp2 animated" data-wow-delay=".3s">
+          <div class="counetrs__icon mb-20"><i class="fas fa-handshake"></i></div>
+          <h1><span class="counter">85</span>+</h1>
+          <p>Nonprofits Supported</p>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+        <div class="counetrs text-center wow fadeInUp2 animated" data-wow-delay=".5s">
+          <div class="counetrs__icon mb-20"><i class="fas fa-graduation-cap"></i></div>
+          <h1><span class="counter">120</span>+</h1>
+          <p>Scholarships Awarded</p>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6">
+        <div class="counetrs text-center wow fadeInUp2 animated" data-wow-delay=".7s">
+          <div class="counetrs__icon mb-20"><i class="fas fa-folder-open"></i></div>
+          <h1><span class="counter">50</span>+</h1>
+          <p>Funds Managed</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,107 @@
+---
+layout: base.njk
+title: "Grant Writing Workshop - Community Foundation of Teton Valley"
+description: "A hands-on workshop for local nonprofits to strengthen their grant applications. Open to all Teton Valley organizations."
+permalink: /news-events/nonprofit-workshop-grant-writing/
+heroHeading: "News & Events"
+heroText: ""
+heroImage: "/assets/images/home/make-a-difference.webp"
+---
+<!-- PAGE: news-events/event-detail
+     background: solid-white
+     theme: light
+     notes: Individual event detail page. In WordPress, this is the single-tribe_events.php template (The Events Calendar) or a custom single-event template. Static build shows one sample event.
+-->
+
+{% include "utility-nav.njk" %}
+{% include "header.njk" %}
+
+<main>
+  {% include "page-hero.njk" %}
+
+  <!-- IMPLEMENTATION: event-detail
+       wordpress_template: single-tribe_events.php or custom event CPT template
+       fields: title, featured_image, event_date, event_time, venue, address, content (WYSIWYG), registration_link (optional)
+       sidebar: none
+       background: white
+  -->
+  <article class="post-detail">
+    <div class="container">
+      <div class="post-detail__inner">
+
+        <div class="post-detail__meta">
+          <span class="post-card__tag post-card__tag--event">Event</span>
+        </div>
+
+        <h1 class="post-detail__title">Grant Writing Workshop</h1>
+
+        <div class="event-detail__info">
+          <div class="event-detail__info-item">
+            <i class="far fa-calendar-alt" aria-hidden="true"></i>
+            <div>
+              <strong>Date</strong>
+              <span>Saturday, April 12, 2025</span>
+            </div>
+          </div>
+          <div class="event-detail__info-item">
+            <i class="far fa-clock" aria-hidden="true"></i>
+            <div>
+              <strong>Time</strong>
+              <span>10:00 AM – 12:00 PM</span>
+            </div>
+          </div>
+          <div class="event-detail__info-item">
+            <i class="far fa-map-marker-alt" aria-hidden="true"></i>
+            <div>
+              <strong>Location</strong>
+              <span>CFTV Office, Driggs, ID</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="post-detail__featured-image">
+          <img src="/assets/images/home/make-a-difference.webp" alt="Nonprofit workshop attendees in a collaborative grant writing session" loading="lazy">
+        </div>
+
+        <div class="post-detail__content">
+          <p>Join the Community Foundation for a hands-on Grant Writing Workshop designed to help Teton Valley nonprofits strengthen their applications and increase their chances of securing funding.</p>
+
+          <p>This workshop covers the fundamentals of compelling grant proposals — from crafting a clear narrative to building a realistic budget. Whether you're new to grant writing or looking to sharpen your skills, this session is for you.</p>
+
+          <h2>What You'll Learn</h2>
+          <ul>
+            <li>How to align your project with funder priorities</li>
+            <li>Writing a compelling needs statement</li>
+            <li>Building budgets that tell a story</li>
+            <li>Common mistakes and how to avoid them</li>
+            <li>Tips specific to the CFTV Competitive Grant application</li>
+          </ul>
+
+          <h2>Who Should Attend</h2>
+          <p>This workshop is open to staff and board members of any 501(c)(3) nonprofit serving the Teton Valley region. No prior grant writing experience is required.</p>
+
+          <p>Space is limited. Please register by April 5 to reserve your spot.</p>
+        </div>
+
+        <div class="post-detail__back">
+          <a href="/news-events/#events" class="theme_btn theme_btn_bg">Back to Events <span aria-hidden="true"></span></a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__heading">Stay <span>in the loop</span></h2>
+        <p class="cta-banner__text">Subscribe to our newsletter for grant announcements, event invites, and community stories.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="/get-involved/subscribe/" class="theme_btn theme_btn_bg theme_btn--light">Subscribe <span aria-hidden="true"></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "footer.njk" %}

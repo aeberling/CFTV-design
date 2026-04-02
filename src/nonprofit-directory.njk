@@ -1,0 +1,179 @@
+---
+layout: base.njk
+title: "Nonprofit Directory - Community Foundation of Teton Valley"
+description: "Browse 60+ Teton Valley nonprofit organizations. Find causes aligned with your passions, connect with local nonprofits, and support your community."
+permalink: /nonprofit-directory/
+heroHeading: "Nonprofit Directory"
+heroText: "Connecting community members, donors, and volunteers with local organizations serving Teton Valley."
+subpageNavItems:
+  - { id: "directory", label: "Browse Directory" }
+  - { id: "join", label: "Join the Directory" }
+---
+<!-- PAGE: nonprofit-directory
+     WP_CPT: nonprofits
+     WP_TAXONOMY: sector
+     WP_NOTES: This page will be powered by a Custom Post Type (CPT) called "Nonprofits" with a custom taxonomy "Sector".
+       - CPT: nonprofits (singular: Nonprofit, plural: Nonprofits)
+       - Taxonomy: sector (hierarchical, like categories)
+       - Fields (ACF or similar):
+         * Logo (image field, displayed at 200x200, object-fit: contain)
+         * Website URL (url field)
+         * Email (email field, optional)
+         * Phone (text field, optional)
+         * Address (text field, optional — used to generate Google Maps link)
+         * Tax ID / EIN (text field, optional)
+         * Facebook URL (url field, optional)
+         * Instagram URL (url field, optional)
+         * LinkedIn URL (url field, optional)
+         * Twitter/X URL (url field, optional)
+         * YouTube URL (url field, optional)
+         * GuideStar URL (url field, optional)
+       - Archive template: This page layout with sector filter + card grid
+       - Single template: Not needed for initial launch (cards link to external website)
+       - The filter bar uses the "sector" taxonomy terms
+       - Card grid should use WP_Query with orderby=title, order=ASC
+       - Sector filter: AJAX or query parameter filtering by sector term slug
+       - Consider FacetWP or SearchWP plugin for enhanced filtering
+-->
+
+{% include "utility-nav.njk" %}
+{% include "header.njk" %}
+
+<main>
+  {% include "page-hero.njk" %}
+  {% include "subpage-nav.njk" %}
+
+  <!-- IMPLEMENTATION: nonprofit-directory
+       WP_BLOCK: custom/nonprofit-directory
+       WP_QUERY: post_type=nonprofits, orderby=title, order=ASC
+       WP_FILTER: taxonomy=sector, AJAX filter with term buttons
+       layout: Filter bar + responsive card grid (3-col desktop, 2-col tablet, 1-col mobile)
+       cards: Clickable card (opens website) + Logo (200x200 contain) + name + sector badge + social icon links
+       background: --color-grey-bg
+  -->
+  <section class="np-directory" id="directory">
+    <div class="container">
+      <div class="np-directory__header">
+        <span class="np-directory__eyebrow">Browse by Sector</span>
+        <h2 class="np-directory__heading">{{ nonprofits.items | length }} Local Organizations</h2>
+      </div>
+
+      <!-- WP_NOTE: Filter buttons generated from get_terms('sector'). "All" resets the filter. -->
+      <div class="np-directory__filters" role="group" aria-label="Filter nonprofits by sector">
+        <button class="np-directory__filter is-active" data-filter="all">All</button>
+        {% for sector in nonprofits.sectors %}
+          <button class="np-directory__filter" data-filter="{{ sector | lower | replace(' & ', '-') | replace(' ', '-') }}">{{ sector }}</button>
+        {% endfor %}
+      </div>
+
+      <!-- WP_NOTE: Grid populated by WP_Query loop. Each card is a single nonprofit CPT post.
+           Card body is a link to the nonprofit website. Social icons are separate links layered on top. -->
+      <div class="np-directory__grid">
+        {% for np in nonprofits.items %}
+          <div class="np-directory__card" data-sector="{{ np.sector | lower | replace(' & ', '-') | replace(' ', '-') }}">
+            {% if np.website %}
+              <a href="{{ np.website }}" class="np-directory__card-link" target="_blank" rel="noopener noreferrer" aria-label="Visit {{ np.name }} website">
+            {% else %}
+              <div class="np-directory__card-link np-directory__card-link--no-url">
+            {% endif %}
+              <div class="np-directory__card-logo">
+                {% if np.logo %}
+                  <img src="{{ np.logo }}" alt="{{ np.name }} logo" loading="lazy" width="200" height="200">
+                {% else %}
+                  <div class="np-directory__card-placeholder">
+                    <i class="flaticon-heart"></i>
+                  </div>
+                {% endif %}
+              </div>
+              <div class="np-directory__card-info">
+                <h3 class="np-directory__card-name">{{ np.name }}</h3>
+                <span class="np-directory__card-sector">{{ np.sector }}</span>
+              </div>
+            {% if np.website %}
+              </a>
+            {% else %}
+              </div>
+            {% endif %}
+            {% if np.email or np.phone or np.address or np.website or np.facebook or np.instagram or np.linkedin or np.twitter or np.youtube or np.guidestar %}
+              <div class="np-directory__card-social">
+                {% if np.email %}
+                  <a href="mailto:{{ np.email }}" class="np-directory__social-icon" aria-label="Email {{ np.name }}"><i class="fal fa-envelope"></i></a>
+                {% endif %}
+                {% if np.phone %}
+                  <a href="tel:{{ np.phone }}" class="np-directory__social-icon" aria-label="Call {{ np.name }}"><i class="fal fa-phone"></i></a>
+                {% endif %}
+                {% if np.address %}
+                  <a href="https://www.google.com/maps/search/{{ np.address | urlencode }}" class="np-directory__social-icon" target="_blank" rel="noopener noreferrer" aria-label="{{ np.name }} location"><i class="fal fa-map-marker-alt"></i></a>
+                {% endif %}
+                {% if np.website %}
+                  <a href="{{ np.website }}" class="np-directory__social-icon" target="_blank" rel="noopener noreferrer" aria-label="Visit {{ np.name }} website"><i class="fal fa-link"></i></a>
+                {% endif %}
+                {% if np.linkedin %}
+                  <a href="{{ np.linkedin }}" class="np-directory__social-icon" target="_blank" rel="noopener noreferrer" aria-label="{{ np.name }} on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                {% endif %}
+                {% if np.facebook %}
+                  <a href="{{ np.facebook }}" class="np-directory__social-icon" target="_blank" rel="noopener noreferrer" aria-label="{{ np.name }} on Facebook"><i class="fab fa-facebook-f"></i></a>
+                {% endif %}
+                {% if np.instagram %}
+                  <a href="{{ np.instagram }}" class="np-directory__social-icon" target="_blank" rel="noopener noreferrer" aria-label="{{ np.name }} on Instagram"><i class="fab fa-instagram"></i></a>
+                {% endif %}
+                {% if np.twitter %}
+                  <a href="{{ np.twitter }}" class="np-directory__social-icon" target="_blank" rel="noopener noreferrer" aria-label="{{ np.name }} on Twitter"><i class="fab fa-twitter"></i></a>
+                {% endif %}
+                {% if np.youtube %}
+                  <a href="{{ np.youtube }}" class="np-directory__social-icon" target="_blank" rel="noopener noreferrer" aria-label="{{ np.name }} on YouTube"><i class="fab fa-youtube"></i></a>
+                {% endif %}
+                {% if np.guidestar %}
+                  <a href="{{ np.guidestar }}" class="np-directory__social-icon" target="_blank" rel="noopener noreferrer" aria-label="{{ np.name }} on GuideStar"><i class="fas fa-chart-line"></i></a>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+
+      <p class="np-directory__count-label"><span class="np-directory__visible-count">{{ nonprofits.items | length }}</span> of {{ nonprofits.items | length }} organizations shown</p>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Join the Nonprofit Directory"
+       content: "Are you a Teton Valley nonprofit?..."
+       image: community/hikers-trail.webp (5:4, object-fit: cover)
+       button: "Request to Join" -> /contact/
+       background: --color-graphite
+       modifier: none (image left, content right)
+  -->
+  <section class="content-split" id="join">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/community/hikers-trail.webp" alt="Hikers on a trail through lush greenery in Teton Valley" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-graphite);">
+      <span class="content-split__eyebrow">Nonprofits</span>
+      <h2 class="content-split__heading">Join the Nonprofit Directory</h2>
+      <p class="content-split__text">Are you a Teton Valley nonprofit? Join our directory to increase your visibility, connect with donors and volunteers, and post opportunities. The directory is free for all qualifying 501(c)(3) organizations serving Teton Valley.</p>
+      <div class="content-split__buttons">
+        <a href="/contact/" class="theme_btn theme_btn_bg">Request to Join <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: cta-banner
+       heading: "Looking for a specific nonprofit?"
+       accent_word: "specific nonprofit"
+       button: "Contact Us" -> /contact/
+  -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__heading">Looking for a <span>specific nonprofit</span>?</h2>
+        <p class="cta-banner__text">Contact us and we'll connect you directly.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="/contact/" class="theme_btn theme_btn_bg theme_btn--light">Contact Us <span></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "footer.njk" %}

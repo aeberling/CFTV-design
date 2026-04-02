@@ -1,0 +1,143 @@
+---
+layout: base.njk
+title: "Memorial Funds - Community Foundation of Teton Valley"
+description: "Honor friends and loved ones by supporting Teton Valley nonprofits in their memory through a memorial fund at the Community Foundation."
+permalink: /funds-scholarships/memorial-funds/
+heroHeading: "Memorial Funds"
+heroText: "Honor friends and loved ones by giving to causes near and dear to their hearts. Memorial funds provide lasting support for the Teton Valley community."
+heroImage: "/assets/images/funds/trails-pathways-grant.webp"
+subpageNavItems:
+  - { id: "about", label: "About Memorial Funds" }
+  - { id: "current-funds", label: "Current Funds" }
+  - { id: "start-a-fund", label: "Start a Memorial Fund" }
+---
+<!-- PAGE: funds-scholarships/memorial-funds
+     background: solid-white
+     theme: light
+     notes: Memorial Funds sub-page under Funds & Scholarships. Lists current memorial funds with donate links and info on starting a new one.
+-->
+
+{% include "utility-nav.njk" %}
+{% include "header.njk" %}
+
+<main>
+  {% include "page-hero.njk" %}
+  {% include "subpage-nav.njk" %}
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Honor a Life, Support a Cause"
+       content: "Memorial funds allow you to honor loved ones by supporting the nonprofits and causes..." (198 chars)
+       image: trails-pathways-grant.webp (5:4, object-fit: cover)
+       button: "Start a Memorial Fund" -> /contact/
+       background: default (--color-dusk)
+       modifier: none (image left, content right)
+  -->
+  <section class="content-split" id="about">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/funds/trails-pathways-grant.webp" alt="Teton Valley trails and pathways supported by community memorial fund donations" loading="lazy">
+    </div>
+    <div class="content-split__content">
+      <span class="content-split__eyebrow">Remembrance</span>
+      <h2 class="content-split__heading">Honor a Life, Support a Cause</h2>
+      <p class="content-split__text">Memorial funds allow you to honor loved ones by supporting the nonprofits and causes that mattered most to them. Each fund creates a lasting tribute while making a meaningful impact on the Teton Valley community.</p>
+      <p class="content-split__text">The Community Foundation manages memorial funds with the same professional stewardship and investment expertise applied to all of our funds, ensuring your tribute endures.</p>
+      <div class="content-split__buttons">
+        <a href="/contact/" class="theme_btn theme_btn_bg">Start a Memorial Fund <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Andy Tyson Memorial Fund"
+       content: "Tax-deductible contributions to the Andy Tyson Memorial Fund will serve mountain communities..." (304 chars)
+       image: grants-awards-ceremony.webp (5:4, object-fit: cover)
+       button: "Donate to This Fund" -> #
+       background: --color-dark-pine
+       modifier: --reverse (image right, content left)
+       notes: First of current memorial funds. Andy Tyson (1968-2015).
+  -->
+  <section class="content-split content-split--reverse" id="current-funds">
+    <div class="content-split__image content-split__image--center">
+      <img src="https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:300/h:300/q:60/rt:fill/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/memorial-funds/atyson2-300x300-1.jpg" alt="Andy Tyson memorial photo" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-dark-pine);">
+      <span class="content-split__eyebrow">Memorial Fund</span>
+      <h2 class="content-split__heading">Andy Tyson Memorial Fund</h2>
+      <p class="content-split__text">Tax-deductible contributions to the Andy Tyson Memorial Fund serve mountain communities in the developing world through projects that promote the appreciation of their environment and opportunities for the development of outdoor skills. The goal of this fund is to provide resources for expeditions, training in mountain skills, and to match outside expertise with local interest.</p>
+      <div class="content-split__buttons">
+        <a href="https://godonate.akoyago.com/cftetonvalley/fund/community-foundation-of-teton-valley" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg">Donate to This Fund <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "A.J. Linnell Memorial Trail Fund"
+       content: "The A.J. Linnell Memorial Trail Fund supports the construction and maintenance of biking and hiking trails..." (346 chars)
+       image: trails-pathways-grant.webp (5:4, object-fit: cover)
+       button: "Donate to This Fund" -> #
+       background: --color-plum
+       modifier: none (image left, content right)
+       notes: A.J. Linnell (1975-2015). Fund supports trails connecting neighborhoods with backcountry.
+  -->
+  <section class="content-split">
+    <div class="content-split__image content-split__image--center">
+      <img src="https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/rt:fill/w:309/h:309/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/memorial-funds/5537f02545718.image_.jpg" alt="A.J. Linnell memorial photo" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-plum);">
+      <span class="content-split__eyebrow">Memorial Fund</span>
+      <h2 class="content-split__heading">A.J. Linnell Memorial Trail Fund</h2>
+      <p class="content-split__text">The A.J. Linnell Memorial Trail Fund supports the construction and maintenance of biking and hiking trails in Teton Valley that connect neighborhoods with the peaks and valleys that A.J. loved. A cyclist, educator, city councilor, mountain guide, and environmentalist, A.J. envisioned a trails system that would provide easy access to the backcountry from downtown Victor, making the quiet and beauty of the wilderness available to all.</p>
+      <div class="content-split__buttons">
+        <a href="https://godonate.akoyago.com/cftetonvalley/fund/community-foundation-of-teton-valley" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg">Donate to This Fund <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Start a Memorial Fund"
+       content: "Create a lasting tribute to someone special while supporting meaningful community programs..." (173 chars)
+       image: community/canal-view-northside-trail.webp (5:4, object-fit: cover)
+       button: "Contact Us" -> /contact/
+       background: --color-graphite
+       modifier: --reverse (image right, content left)
+  -->
+  <section class="content-split content-split--reverse" id="start-a-fund">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/community/canal-view-northside-trail.webp" alt="Peaceful creek winding through Teton Valley landscape with fall aspens" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-graphite);">
+      <span class="content-split__eyebrow">Get Started</span>
+      <h2 class="content-split__heading">Start a Memorial Fund</h2>
+      <p class="content-split__text">Create a lasting tribute to someone special while supporting meaningful community programs. Our team will help you establish a memorial fund that reflects the values and passions of your loved one.</p>
+      <ul class="content-split__list">
+        <li>Honor someone special with a named fund</li>
+        <li>Tax-deductible contributions</li>
+        <li>Professional fund management and stewardship</li>
+      </ul>
+      <div class="content-split__buttons">
+        <a href="/contact/" class="theme_btn theme_btn_bg">Contact Us <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: cta-banner
+       heading: "Want to honor a loved one?"
+       accent_word: "honor a loved one" (wrapped in span)
+       content: "Contact us to start a memorial fund in their name."
+       button: "Get in Touch" -> /contact/
+       background: default (--color-dark-pine)
+  -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__heading">Want to <span>honor a loved one</span>?</h2>
+        <p class="cta-banner__text">Contact us to start a memorial fund in their name.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="/contact/" class="theme_btn theme_btn_bg theme_btn--light">Get in Touch <span></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "footer.njk" %}

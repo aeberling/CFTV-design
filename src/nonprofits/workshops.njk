@@ -1,0 +1,117 @@
+---
+layout: base.njk
+title: "Workshops & Training - Community Foundation of Teton Valley"
+description: "Build your nonprofit's capacity with hands-on workshops, networking events, and training opportunities designed for Teton Valley nonprofits."
+permalink: /nonprofits/workshops/
+heroHeading: "Workshops & Training"
+heroText: "Build your capacity with hands-on workshops, networking events, and training opportunities designed specifically for Teton Valley nonprofits."
+heroImage: "/assets/images/community/kids-street-hockey.webp"
+subpageNavItems:
+  - { id: "workshops", label: "Upcoming Workshops" }
+  - { id: "networking", label: "Networking & Roundtables" }
+  - { id: "past", label: "Past Workshops" }
+---
+<!-- PAGE: nonprofits/workshops
+     background: solid-white
+     theme: light
+     notes: Workshops & Training sub-page under Nonprofits. In WordPress, upcoming workshops will integrate with events calendar. Static build shows overview + example events.
+-->
+
+{% include "utility-nav.njk" %}
+{% include "header.njk" %}
+
+<main>
+  {% include "page-hero.njk" %}
+  {% include "subpage-nav.njk" %}
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Upcoming Workshops"
+       content: "The Community Foundation hosts regular workshops and training sessions..." (214 chars)
+       image: community/girl-greenhouse-radish.webp (5:4, object-fit: cover)
+       button: none
+       background: default (--color-dusk)
+       modifier: none (image left, content right)
+       notes: Includes bullet list for upcoming workshop types. In WP, this section will pull from events calendar.
+  -->
+  <section class="content-split" id="workshops">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/community/girl-greenhouse-radish.webp" alt="Young girl proudly holding a radish in a community greenhouse in Teton Valley" loading="lazy">
+    </div>
+    <div class="content-split__content">
+      <span class="content-split__eyebrow">Learn & Grow</span>
+      <h2 class="content-split__heading">Upcoming Workshops</h2>
+      <p class="content-split__text">The Community Foundation hosts regular workshops and training sessions to help Teton Valley nonprofits build capacity, strengthen governance, and grow their impact. All workshops are held at our office or virtually.</p>
+      <ul class="content-split__list">
+        <li>Grant Writing Workshops — prepare strong applications</li>
+        <li>Board Development — governance best practices</li>
+        <li>Nonprofit Management — operations and strategy</li>
+        <li>Tin Cup Challenge Prep — maximize your campaign</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Networking & Roundtables"
+       content: "Join fellow nonprofit leaders for informal roundtable discussions..." (198 chars)
+       image: funds/grants-awards-ceremony.webp (5:4, object-fit: cover)
+       button: "RSVP" -> /contact/
+       background: --color-dark-pine
+       modifier: --reverse (image right, content left)
+  -->
+  <section class="content-split content-split--reverse" id="networking">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/funds/grants-awards-ceremony.webp" alt="Teton Valley nonprofit leaders networking at a Community Foundation event" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-dark-pine);">
+      <span class="content-split__eyebrow">Connect</span>
+      <h2 class="content-split__heading">Networking & Roundtables</h2>
+      <p class="content-split__text">Join fellow nonprofit leaders for informal roundtable discussions. Share ideas, discuss common challenges, and learn from one another. Our Board Member Roundtable series and Executive Director Exchanges bring together experienced leaders from all sectors.</p>
+      <p class="content-split__text">Roundtables are held at the Community Foundation office, 189 N Main St., Suite 112, Driggs. Please RSVP — space is limited.</p>
+      <div class="content-split__buttons">
+        <a href="/contact/" class="theme_btn theme_btn_bg">RSVP <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Past Workshops"
+       content: "Browse our archive of past workshops and training sessions..." (152 chars)
+       image: community/nonprofit-trail-work.webp (5:4, object-fit: cover)
+       button: none
+       background: --color-plum
+       modifier: none (image left, content right)
+       notes: Placeholder for WP past events archive
+  -->
+  <section class="content-split" id="past">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/community/nonprofit-trail-work.webp" alt="Teton Valley nonprofits collaborating on community trail building projects" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-plum);">
+      <span class="content-split__eyebrow">Archive</span>
+      <h2 class="content-split__heading">Past Workshops</h2>
+      <p class="content-split__text">Browse our archive of past workshops and training sessions. Many include downloadable resources, presentation materials, and recordings that remain valuable for nonprofit staff and board members.</p>
+      <p class="content-split__text">The full searchable workshop archive will be available in the WordPress build.</p>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: cta-banner
+       heading: "Have a workshop idea?"
+       accent_word: "workshop idea" (wrapped in span)
+       content: "We're always looking for topics that matter to Teton Valley nonprofits. Let us know what you'd like to learn."
+       button: "Contact Us" -> /contact/
+       background: default (--color-dark-pine)
+  -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__heading">Have a <span>workshop idea</span>?</h2>
+        <p class="cta-banner__text">We're always looking for topics that matter to Teton Valley nonprofits. Let us know what you'd like to learn.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="/contact/" class="theme_btn theme_btn_bg theme_btn--light">Contact Us <span></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "footer.njk" %}

@@ -1,0 +1,157 @@
+---
+layout: base.njk
+title: "Nonprofit Resources - Community Foundation of Teton Valley"
+description: "Access shared resources for Teton Valley nonprofits — conference room, equipment rentals, nonprofit newsgroup, job board, and volunteer bulletin board."
+permalink: /nonprofits/resources/
+heroHeading: "Nonprofit Resources"
+heroText: "Take advantage of shared resources available to local nonprofits through the Community Foundation. Access conference rooms, equipment, job boards, and more."
+heroImage: "/assets/images/community/tcc-moose-hurdle.webp"
+subpageNavItems:
+  - { id: "conference", label: "Conference Room" }
+  - { id: "equipment", label: "Equipment Rentals" }
+  - { id: "newsgroup", label: "Nonprofit Newsgroup" }
+  - { id: "post-needs", label: "Post a Need" }
+---
+<!-- PAGE: nonprofits/resources
+     background: solid-white
+     theme: light
+     notes: Nonprofit Resources sub-page under Nonprofits. Conference room, equipment rentals, nonprofit newsgroup/listserv, and job/volunteer posting tools.
+-->
+
+{% include "utility-nav.njk" %}
+{% include "header.njk" %}
+
+<main>
+  {% include "page-hero.njk" %}
+  {% include "subpage-nav.njk" %}
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Conference Room"
+       content: "The Community Foundation offers a conference room available to local nonprofits..." (186 chars)
+       image: community/hikers-trail.webp (5:4, object-fit: cover)
+       button: "Reserve a Room" -> /contact/
+       background: default (--color-dusk)
+       modifier: none (image left, content right)
+  -->
+  <section class="content-split" id="conference">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/community/hikers-trail.webp" alt="Hikers on a trail through lush greenery in Teton Valley" loading="lazy">
+    </div>
+    <div class="content-split__content">
+      <span class="content-split__eyebrow">Shared Space</span>
+      <h2 class="content-split__heading">Conference Room</h2>
+      <p class="content-split__text">The Community Foundation offers a conference room available to local nonprofits for board meetings, planning sessions, and small gatherings. Located at 189 N Main St., Suite 112, Driggs.</p>
+      <ul class="content-split__list">
+        <li>Available to qualifying Teton Valley nonprofits</li>
+        <li>Projector and screen available</li>
+        <li>Contact us to check availability and reserve</li>
+      </ul>
+      <div class="content-split__buttons">
+        <a href="/nonprofits/resources/rentals-reservations/" class="theme_btn theme_btn_bg">Reserve a Room <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Equipment Rentals"
+       content: "The Community Foundation maintains a collection of event equipment available to nonprofits..." (196 chars)
+       image: community/tcc-moose-hurdle.webp (5:4, object-fit: cover)
+       button: "View Equipment" -> /contact/
+       background: --color-dark-pine
+       modifier: --reverse (image right, content left)
+       notes: Includes bullet list for available equipment types
+  -->
+  <section class="content-split content-split--reverse" id="equipment">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/community/tcc-moose-hurdle.webp" alt="Community event setup with tents and equipment available for Teton Valley nonprofit rentals" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-dark-pine);">
+      <span class="content-split__eyebrow">Event Support</span>
+      <h2 class="content-split__heading">Equipment Rentals</h2>
+      <p class="content-split__text">The Community Foundation maintains a collection of event equipment available to nonprofits at affordable rates. From tents and tables to coolers and chairs — we've got you covered for your next event.</p>
+      <ul class="content-split__list">
+        <li>Tents — 20x20 frame, 20x20 pole, 20x40 pole</li>
+        <li>Tables — 4ft, 6ft, 8ft rectangle, cocktail</li>
+        <li>Chairs — metal folding, plastic folding</li>
+        <li>Coolers, projector & screen, trash/recycling pop-ups</li>
+      </ul>
+      <div class="content-split__buttons">
+        <a href="/nonprofits/resources/rentals-reservations/" class="theme_btn theme_btn_bg">View Equipment <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Nonprofit Newsgroup"
+       content: "The Community Foundation administers the Nonprofit Newsgroup mailing list..." (218 chars)
+       image: funds/grants-awards-ceremony.webp (5:4, object-fit: cover)
+       button: "Subscribe" -> /contact/
+       background: --color-plum
+       modifier: none (image left, content right)
+       notes: Includes bullet list for appropriate newsgroup postings
+  -->
+  <section class="content-split" id="newsgroup">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/funds/grants-awards-ceremony.webp" alt="Teton Valley nonprofit community members collaborating and sharing resources" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-plum);">
+      <span class="content-split__eyebrow">Stay Connected</span>
+      <h2 class="content-split__heading">Nonprofit Newsgroup</h2>
+      <p class="content-split__text">The Community Foundation administers the Nonprofit Newsgroup mailing list as a way to share resources and increase collaboration among Teton Valley's nonprofit community. Staff, board, volunteers, and donors are eligible to subscribe.</p>
+      <ul class="content-split__list">
+        <li>Share event announcements and resources</li>
+        <li>Post job and volunteer opportunities</li>
+        <li>Request information and feedback from peers</li>
+        <li>Non-religious, non-political, professionally appropriate content</li>
+      </ul>
+      <div class="content-split__buttons">
+        <a href="/contact/" class="theme_btn theme_btn_bg">Subscribe <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Post a Need"
+       content: "The Community Foundation welcomes all nonprofits to post their job openings and volunteer opportunities..." (186 chars)
+       image: community/nonprofit-trail-work.webp (5:4, object-fit: cover)
+       button_1: "Post a Job" -> /get-involved/job-board/
+       button_2: "Post Volunteer Need" -> /get-involved/volunteer/
+       background: --color-graphite
+       modifier: --reverse (image right, content left)
+  -->
+  <section class="content-split content-split--reverse" id="post-needs">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/community/nonprofit-trail-work.webp" alt="Teton Valley nonprofit volunteers working together on community projects" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-graphite);">
+      <span class="content-split__eyebrow">Recruit & Engage</span>
+      <h2 class="content-split__heading">Post a Need</h2>
+      <p class="content-split__text">The Community Foundation welcomes all nonprofits to post their job openings and volunteer opportunities. Reach our engaged community of mission-driven professionals and volunteers looking to make a difference in Teton Valley.</p>
+      <div class="content-split__buttons">
+        <a href="/get-involved/job-board/" class="theme_btn theme_btn_bg">Post a Job <span></span></a>
+        <a href="/get-involved/volunteer/" class="theme_btn theme_btn_bg">Post Volunteer Need <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: cta-banner
+       heading: "Need a resource we don't have?"
+       accent_word: "resource" (wrapped in span)
+       content: "Let us know — we're always looking for ways to better support Teton Valley nonprofits."
+       button: "Contact Us" -> /contact/
+       background: default (--color-dark-pine)
+  -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__heading">Need a <span>resource</span> we don't have?</h2>
+        <p class="cta-banner__text">Let us know — we're always looking for ways to better support Teton Valley nonprofits.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="/contact/" class="theme_btn theme_btn_bg theme_btn--light">Contact Us <span></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "footer.njk" %}

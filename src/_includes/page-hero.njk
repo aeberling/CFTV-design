@@ -1,0 +1,16 @@
+<!-- IMPLEMENTATION: page-hero
+     layout: Full-width color background with diagonal shape and centered text
+     fields: heading, description text
+     background: Light purple with teal diagonal accent
+-->
+<section class="page-hero">
+  <div class="page-hero__diagonal"></div>
+  <div class="container">
+    <div class="page-hero__content">
+      <h1 class="page-hero__heading">{{ heroHeading }}</h1>
+      {% if heroText %}
+        <p class="page-hero__text">{{ heroText }}</p>
+      {% endif %}
+    </div>
+  </div>
+</section>

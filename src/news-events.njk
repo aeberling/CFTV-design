@@ -1,0 +1,181 @@
+---
+layout: base.njk
+title: "News & Events - Community Foundation of Teton Valley"
+description: "Stay up to date with the latest news, announcements, and upcoming events from the Community Foundation of Teton Valley."
+permalink: /news-events/
+heroHeading: "News & Events"
+heroText: "Stay connected with the latest from the Community Foundation — grant announcements, community stories, upcoming events, and more."
+heroImage: "/assets/images/give/tin-cup-event-crowd.webp"
+subpageNavItems:
+  - { id: "news", label: "News" }
+  - { id: "events", label: "Events" }
+  - { id: "community-calendar", label: "Community Calendar" }
+---
+<!-- PAGE: news-events
+     background: solid-white
+     theme: light
+     notes: Combined News & Events listing page. In WordPress, News = Posts (category-based), Events = Custom Post Type or The Events Calendar plugin. Both query into a single page with tab-style inner nav.
+-->
+
+{% include "utility-nav.njk" %}
+{% include "header.njk" %}
+
+<main>
+  {% include "page-hero.njk" %}
+  {% include "subpage-nav.njk" %}
+
+  <!-- IMPLEMENTATION: post-grid (News)
+       wordpress_query: WP_Query for Posts (category != 'events'), orderby date DESC, posts_per_page 6
+       card_fields: featured_image, category (tag), title, excerpt, date
+       pagination: Show More button (JS reveals 6 at a time), WordPress AJAX in production
+       background: white
+       anchor: enabled | id: "news" | label: "News"
+  -->
+  <section class="post-grid" id="news">
+    <div class="container">
+      <div class="post-grid__header">
+        <h2 class="post-grid__heading">Latest News</h2>
+        <p class="post-grid__text">Grant announcements, community stories, and foundation updates.</p>
+      </div>
+      <div class="post-grid__cards" id="news-card-list">
+        {% for post in collections.newsPosts %}
+        <a href="{{ post.url }}" class="post-card" aria-label="{{ post.data.title | replace(' - Community Foundation of Teton Valley', '') }}">
+          <div class="post-card__image">
+            <img src="{{ post.data.newsImage }}" alt="" loading="lazy">
+          </div>
+          <div class="post-card__body">
+            <span class="post-card__tag">{{ post.data.newsTag }}</span>
+            <h3 class="post-card__title">{{ post.data.title | replace(' - Community Foundation of Teton Valley', '') }}</h3>
+            <p class="post-card__excerpt">{{ post.data.newsExcerpt }}</p>
+            <span class="post-card__date">{{ post.data.date | formatDate }}</span>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+      <div class="post-grid__status sr-only" aria-live="polite"></div>
+      <div class="post-grid__action">
+        <button class="theme_btn theme_btn_bg post-grid__show-more" aria-expanded="false" aria-controls="news-card-list">Show More <span aria-hidden="true"></span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: post-grid (Events)
+       wordpress_query: The Events Calendar upcoming events query, orderby event_date ASC
+       card_fields: featured_image, title, event_date, event_time, venue/location
+       pagination: "View All Events" link to /get-involved/calendar/ or calendar widget
+       background: --color-grey-bg
+       notes: Events remain hardcoded placeholders in the static build. In WordPress, this section queries The Events Calendar CPT.
+       anchor: enabled | id: "events" | label: "Events"
+  -->
+  <section class="post-grid post-grid--alt" id="events">
+    <div class="container">
+      <div class="post-grid__header">
+        <h2 class="post-grid__heading">Upcoming Events</h2>
+        <p class="post-grid__text">Workshops, community gatherings, and foundation events.</p>
+      </div>
+      <div class="post-grid__cards">
+
+        <a href="/news-events/nonprofit-workshop-grant-writing/" class="post-card post-card--event" aria-label="Grant Writing Workshop — April 12">
+          <div class="post-card__image">
+            <img src="/assets/images/home/make-a-difference.webp" alt="" loading="lazy">
+            <div class="post-card__date-badge" aria-hidden="true">
+              <span class="post-card__date-badge-day">12</span>
+              <span class="post-card__date-badge-month">Apr</span>
+            </div>
+          </div>
+          <div class="post-card__body">
+            <h3 class="post-card__title">Grant Writing Workshop</h3>
+            <div class="post-card__meta">
+              <span class="post-card__meta-item"><i class="far fa-clock" aria-hidden="true"></i> 10:00 AM – 12:00 PM</span>
+              <span class="post-card__meta-item"><i class="far fa-map-marker-alt" aria-hidden="true"></i> CFTV Office, Driggs</span>
+            </div>
+            <p class="post-card__excerpt">A hands-on workshop for local nonprofits to strengthen their grant applications. Open to all Teton Valley organizations.</p>
+          </div>
+        </a>
+
+        <a href="/news-events/tin-cup-challenge-kickoff-2025/" class="post-card post-card--event" aria-label="Tin Cup Challenge Kickoff — July 1">
+          <div class="post-card__image">
+            <img src="/assets/images/give/tin-cup-event-runners.webp" alt="" loading="lazy">
+            <div class="post-card__date-badge" aria-hidden="true">
+              <span class="post-card__date-badge-day">1</span>
+              <span class="post-card__date-badge-month">Jul</span>
+            </div>
+          </div>
+          <div class="post-card__body">
+            <h3 class="post-card__title">Tin Cup Challenge Kickoff</h3>
+            <div class="post-card__meta">
+              <span class="post-card__meta-item"><i class="far fa-clock" aria-hidden="true"></i> 9:00 AM</span>
+              <span class="post-card__meta-item"><i class="far fa-map-marker-alt" aria-hidden="true"></i> Driggs City Center</span>
+            </div>
+            <p class="post-card__excerpt">The annual Tin Cup Challenge begins! Join us for the kickoff celebration and learn how to support your favorite nonprofits.</p>
+          </div>
+        </a>
+
+        <a href="/news-events/annual-celebration-dinner/" class="post-card post-card--event" aria-label="Annual Celebration Dinner — October 18">
+          <div class="post-card__image">
+            <img src="/assets/images/community/kids-street-hockey.webp" alt="Kids playing street hockey at a Teton Valley community event" loading="lazy">
+            <div class="post-card__date-badge" aria-hidden="true">
+              <span class="post-card__date-badge-day">18</span>
+              <span class="post-card__date-badge-month">Oct</span>
+            </div>
+          </div>
+          <div class="post-card__body">
+            <h3 class="post-card__title">Annual Celebration Dinner</h3>
+            <div class="post-card__meta">
+              <span class="post-card__meta-item"><i class="far fa-clock" aria-hidden="true"></i> 6:00 PM – 9:00 PM</span>
+              <span class="post-card__meta-item"><i class="far fa-map-marker-alt" aria-hidden="true"></i> Teton Springs Lodge</span>
+            </div>
+            <p class="post-card__excerpt">Celebrate the year's impact with fellow donors, nonprofit leaders, and community members at our annual gathering.</p>
+          </div>
+        </a>
+
+      </div>
+      <div class="post-grid__action">
+        <a href="#community-calendar" class="theme_btn theme_btn_bg">View Full Calendar <span aria-hidden="true"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: community-calendar
+       heading: "Community Calendar"
+       content: Embedded iframe from Welcome Teton Valley
+       background: white
+       anchor: enabled | id: "community-calendar" | label: "Community Calendar"
+  -->
+  <section class="community-calendar" id="community-calendar">
+    <div class="container">
+      <div class="community-calendar__header">
+        <h2 class="community-calendar__heading">Community Calendar</h2>
+        <p class="community-calendar__text">Explore events happening across Teton Valley.</p>
+      </div>
+      <div class="community-calendar__embed">
+        <iframe
+          src="https://welcometetonvalley.org/events/"
+          title="Teton Valley Community Calendar"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: cta-banner
+       heading: "Stay in the loop"
+       accent_word: "in the loop" (wrapped in span)
+       content: "Subscribe to our newsletter for grant announcements, event invites, and community stories."
+       button: "Subscribe" -> /subscribe/
+       background: default (--color-dark-pine)
+  -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__heading">Stay <span>in the loop</span></h2>
+        <p class="cta-banner__text">Subscribe to our newsletter for grant announcements, event invites, and community stories.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="/get-involved/subscribe/" class="theme_btn theme_btn_bg theme_btn--light">Subscribe <span aria-hidden="true"></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "footer.njk" %}

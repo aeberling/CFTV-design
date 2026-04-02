@@ -1,0 +1,17 @@
+<!-- IMPLEMENTATION: subpage-nav
+     layout: Full-width horizontal bar with centered anchor links
+     wordpress_block: "Subpage Navigation" — auto-populates by scanning sibling blocks on the page
+     behavior: Loops through all blocks below it that have "Show in Page Navigation" enabled
+     fields: None — this block has no manual fields. It inherits anchor_id and anchor_label from sibling blocks.
+     rendering: Only renders if 1+ sibling blocks have navigation anchors enabled. Outputs nothing if no anchors found.
+     notes: In static build, uses subpageNavItems array from page front matter. In WordPress, this becomes dynamic.
+-->
+<nav class="subpage-nav">
+  <div class="container">
+    <ul class="subpage-nav__list">
+      {% for item in subpageNavItems %}
+        <li><a href="#{{ item.id }}">{{ item.label }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

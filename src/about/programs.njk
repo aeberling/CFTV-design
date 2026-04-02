@@ -1,0 +1,170 @@
+---
+layout: base.njk
+title: "Programs - Community Foundation of Teton Valley"
+description: "Explore the Community Foundation's signature programs — Competitive Grants, Youth Philanthropy, Tin Cup Challenge, and the Opportunity Fund."
+permalink: /about/programs/
+heroHeading: "Our Programs"
+heroText: "The Community Foundation invests in Teton Valley through four signature programs that provide direct funding, youth leadership development, community-wide giving, and emergency support."
+heroImage: "/assets/images/about/hero-about.webp"
+subpageNavItems:
+  - { id: "competitive-grants", label: "Competitive Grants" }
+  - { id: "youth-philanthropy", label: "Youth Philanthropy" }
+  - { id: "tin-cup", label: "Tin Cup Challenge" }
+  - { id: "opportunity-fund", label: "Opportunity Fund" }
+---
+<!-- PAGE: about/programs
+     background: solid-white
+     theme: light
+     notes: Programs overview page under About. Each program gets a content-split with links to apply/donate.
+-->
+
+{% include "utility-nav.njk" %}
+{% include "header.njk" %}
+
+<main>
+  {% include "page-hero.njk" %}
+  {% include "subpage-nav.njk" %}
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Competitive Grants"
+       content: "Our Competitive Grants program provides annual funding..." (253 chars)
+       image: scholarship.webp (5:4, object-fit: cover)
+       button_1: "Support This Program" -> /give/
+       button_2: "Apply for Grants" -> /nonprofits/#grants
+       background: default (--color-dusk)
+       modifier: none (image left, content right)
+       notes: Includes bullet list (content-split__list) for eligibility details
+       anchor: enabled | id: "competitive-grants" | label: "Competitive Grants"
+  -->
+  <section class="content-split" id="competitive-grants">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/hero/scholarship.webp" alt="Teton Valley nonprofit leaders receiving competitive grant awards from the Community Foundation" loading="lazy">
+    </div>
+    <div class="content-split__content">
+      <span class="content-split__eyebrow">Program</span>
+      <h2 class="content-split__heading">Competitive Grants</h2>
+      <p class="content-split__text">Our Competitive Grants program provides annual funding to local nonprofits addressing critical community needs. Awards are determined through a thorough application and review process, ensuring funds are directed where they can make the greatest impact.</p>
+      <ul class="content-split__list">
+        <li>Open to 501(c)(3) nonprofits serving Teton Valley</li>
+        <li>Awards based on community need and organizational capacity</li>
+        <li>Annual grant cycle with published deadlines</li>
+      </ul>
+      <div class="content-split__buttons">
+        <a href="/give/" class="theme_btn theme_btn_bg">Support This Program <span></span></a>
+        <a href="/nonprofits/#grants" class="theme_btn theme_btn_bg">Apply for Grants <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Youth Philanthropy"
+       content: "Our Youth Philanthropy program empowers local young people..." (261 chars)
+       image: tincupplaceholder.webp (5:4, object-fit: cover)
+       button: "Support This Program" -> /give/
+       background: --color-dark-pine
+       modifier: --reverse (image right, content left)
+       notes: Includes bullet list (content-split__list) for program highlights
+       anchor: enabled | id: "youth-philanthropy" | label: "Youth Philanthropy"
+  -->
+  <section class="content-split content-split--reverse" id="youth-philanthropy">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/home/tincupplaceholder.webp" alt="Teton Valley youth participating in the Youth Philanthropy leadership program" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-dark-pine);">
+      <span class="content-split__eyebrow">Program</span>
+      <h2 class="content-split__heading">Youth Philanthropy</h2>
+      <p class="content-split__text">Our Youth Philanthropy program empowers local young people to learn about community needs, evaluate nonprofit organizations, and make real grant decisions. Students develop leadership skills while directly investing in the organizations that serve Teton Valley.</p>
+      <ul class="content-split__list">
+        <li>Students learn about grantmaking and community leadership</li>
+        <li>Youth review applications and award grants</li>
+        <li>Builds the next generation of community philanthropists</li>
+      </ul>
+      <div class="content-split__buttons">
+        <a href="/give/" class="theme_btn theme_btn_bg">Support This Program <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Tin Cup Challenge"
+       content: "The Tin Cup Challenge is Teton Valley's premier community giving event..." (248 chars)
+       image: tin-cup-challenge.webp (5:4, object-fit: cover)
+       button_1: "Become a Challenger" -> /give/
+       button_2: "Register Your Nonprofit" -> /nonprofits/#tcc
+       background: --color-cirrus
+       modifier: none (image left, content right)
+       notes: Eyebrow uses --color-dusk, heading/text/list use --color-graphite inline overrides for contrast on pink bg. Includes bullet list.
+       anchor: enabled | id: "tin-cup" | label: "Tin Cup Challenge"
+  -->
+  <section class="content-split" id="tin-cup">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/home/tin-cup-challenge.webp" alt="Runners and community members at the annual Tin Cup Challenge Fun Run in Teton Valley" loading="lazy">
+    </div>
+    <div class="content-split__content content-split__content--light-bg">
+      <span class="content-split__eyebrow">Program</span>
+      <h2 class="content-split__heading">Tin Cup Challenge</h2>
+      <p class="content-split__text">The Tin Cup Challenge is Teton Valley's premier community giving event — an 8-week campaign that coordinates donations to local nonprofits, culminating in the Tin Cup Challenge Fun Run. Community Challengers match donations to amplify every gift.</p>
+      <ul class="content-split__list">
+        <li>8-week community giving campaign</li>
+        <li>Community Challengers match donations</li>
+        <li>Culminates in the Tin Cup Challenge Fun Run</li>
+      </ul>
+      <div class="content-split__buttons">
+        <a href="/give/" class="theme_btn theme_btn_bg">Become a Challenger <span></span></a>
+        <a href="/nonprofits/#tcc" class="theme_btn theme_btn_bg">Register Your Nonprofit <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Opportunity Fund"
+       content: "The Opportunity Fund provides flexible, year-round support..." (245 chars)
+       image: make-a-difference.webp (5:4, object-fit: cover)
+       button_1: "Support This Fund" -> /give/
+       button_2: "Apply for Funding" -> /nonprofits/#grants
+       background: --color-graphite
+       modifier: --reverse (image right, content left)
+       notes: Includes bullet list (content-split__list) for fund details
+       anchor: enabled | id: "opportunity-fund" | label: "Opportunity Fund"
+  -->
+  <section class="content-split content-split--reverse" id="opportunity-fund">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/home/make-a-difference.webp" alt="Community Foundation supporting Teton Valley families through the Opportunity Fund" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-graphite);">
+      <span class="content-split__eyebrow">Program</span>
+      <h2 class="content-split__heading">Opportunity Fund</h2>
+      <p class="content-split__text">The Opportunity Fund provides flexible, year-round support for critical and emergent community needs. When unexpected challenges arise in Teton Valley, this fund enables a rapid response to help nonprofits and community members when they need it most.</p>
+      <ul class="content-split__list">
+        <li>Rolling applications accepted year-round</li>
+        <li>Rapid response to emergent community needs</li>
+        <li>Flexible funding for critical situations</li>
+      </ul>
+      <div class="content-split__buttons">
+        <a href="/give/" class="theme_btn theme_btn_bg">Support This Fund <span></span></a>
+        <a href="/nonprofits/#grants" class="theme_btn theme_btn_bg">Apply for Funding <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: cta-banner
+       heading: "Want to support these programs?"
+       accent_word: "support" (wrapped in span)
+       content: "Your donation directly funds grants, scholarships, youth leadership, and community support in Teton Valley."
+       button: "Give Now" -> /give/
+       background: default (--color-dark-pine)
+  -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__heading">Want to <span>support</span> these programs?</h2>
+        <p class="cta-banner__text">Your donation directly funds grants, scholarships, youth leadership, and community support in Teton Valley.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="/give/" class="theme_btn theme_btn_bg theme_btn--light">Give Now <span></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "footer.njk" %}

@@ -1,0 +1,141 @@
+---
+layout: base.njk
+title: "Funds & Scholarships - Community Foundation of Teton Valley"
+description: "Explore fund options and scholarships at the Community Foundation of Teton Valley. Create a fund aligned with your passions or support students pursuing education."
+permalink: /funds-scholarships/
+heroHeading: "Funds & Scholarships"
+heroText: "Make your giving last. Work with the Community Foundation to create a fund that aligns with your passions and supports the Teton Valley community now and into the future."
+heroImage: "/assets/images/funds/grants-awards-ceremony.webp"
+subpageNavItems:
+  - { id: "fund-options", label: "Fund Options" }
+  - { id: "fund-types", label: "Fund Types" }
+  - { id: "memorial-funds", label: "Memorial Funds" }
+  - { id: "scholarships", label: "Scholarships" }
+---
+<!-- PAGE: funds-scholarships
+     background: solid-white
+     theme: light
+     notes: Funds & Scholarships primary page with fund options overview, fund types via fund-spotlight include, and links to Memorial Funds and Scholarships sub-pages.
+-->
+
+{% include "utility-nav.njk" %}
+{% include "header.njk" %}
+
+<main>
+  {% include "page-hero.njk" %}
+  {% include "subpage-nav.njk" %}
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Explore Fund Options"
+       content: "Work with the Community Foundation to create a fund that aligns with your passions..." (214 chars)
+       image: grants-awards-ceremony.webp (5:4, object-fit: cover)
+       button: "Start a Fund" -> /give/start-a-fund/
+       background: default (--color-dusk)
+       modifier: none (image left, content right)
+       notes: Includes bullet list (content-split__list) for 3 reasons to create a fund
+       anchor: enabled | id: "fund-options" | label: "Fund Options"
+  -->
+  <section class="content-split" id="fund-options">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/funds/grants-awards-ceremony.webp" alt="Teton Valley community gathered at the Community Foundation grants awards ceremony" loading="lazy">
+    </div>
+    <div class="content-split__content">
+      <span class="content-split__eyebrow">Your Giving</span>
+      <h2 class="content-split__heading">Explore Fund Options</h2>
+      <p class="content-split__text">Work with the Community Foundation to create a fund that aligns with your passions and supports the Teton Valley community now and into the future. We provide professional stewardship so your philanthropic vision makes a lasting impact.</p>
+      <ul class="content-split__list">
+        <li>Tailor your giving to your passions — education, environment, arts, health, and more</li>
+        <li>Support nonprofits, scholarships, and community initiatives with professional stewardship</li>
+        <li>Build a lasting legacy that reflects your values</li>
+      </ul>
+      <div class="content-split__buttons">
+        <a href="/give/start-a-fund/" class="theme_btn theme_btn_bg">Start a Fund <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: fund-spotlight
+       heading: "Explore Fund Types"
+       testimonial: Donor quote about fund creation experience
+       fund_types: 7 (Donor-Advised, Scholarship, Memorial/Named, Agency, Designated, Competitive Grant, Affinity/Collaborative)
+       background: default (white)
+       notes: Reused fund-spotlight include — testimonial quote left, fund type list right with arrow links
+       anchor: enabled | id: "fund-types" | label: "Fund Types"
+  -->
+  <section id="fund-types">
+    {% include "fund-spotlight.njk" %}
+  </section>
+
+  <!-- IMPLEMENTATION: quick-links
+       eyebrow: "Explore"
+       heading: "Memorial Funds & Scholarships"
+       cards: 2 (Memorial Funds, Scholarships)
+       card_fields: image (4:3), title, description text
+       background: --color-grey-bg
+       notes: Links to sub-pages. Uses 2-card layout within 3-column grid (third slot empty).
+       anchor: enabled | id: "memorial-funds" | label: "Memorial Funds"
+       anchor_note: The subpage-nav also has a "Scholarships" item (id="scholarships") but no matching ID exists on this page — both nav items effectively scroll to this section. In WordPress, either: (a) add a second anchor on the Scholarships card, or (b) keep one anchor for the combined section and remove the separate "Scholarships" nav label.
+  -->
+  <section class="quick-links" id="memorial-funds">
+    <div class="container">
+      <p class="quick-links__eyebrow">Explore</p>
+      <h2 class="quick-links__heading">Memorial Funds & Scholarships</h2>
+      <div class="quick-links__grid">
+        <a href="/funds-scholarships/memorial-funds/" class="quick-links__card">
+          <div class="quick-links__card-image">
+            <img src="/assets/images/funds/trails-pathways-grant.webp" alt="Teton Valley Trails and Pathways project supported by Community Foundation memorial fund" loading="lazy">
+          </div>
+          <div class="quick-links__card-bottom">
+            <div>
+              <h3 class="quick-links__card-title">Memorial Funds</h3>
+              <p class="quick-links__card-text">Honor loved ones by supporting nonprofits in their memory.</p>
+            </div>
+          </div>
+        </a>
+        <a href="/funds-scholarships/scholarships/" class="quick-links__card">
+          <div class="quick-links__card-image">
+            <img src="/assets/images/funds/blake-chapman-scholarship.webp" alt="Blake Chapman Aviation Scholarship student pilot in Teton Valley" loading="lazy">
+          </div>
+          <div class="quick-links__card-bottom">
+            <div>
+              <h3 class="quick-links__card-title">Scholarships</h3>
+              <p class="quick-links__card-text">Support students pursuing education and career goals.</p>
+            </div>
+          </div>
+        </a>
+        <a href="/give/start-a-fund/" class="quick-links__card">
+          <div class="quick-links__card-image">
+            <img src="/assets/images/community/couple-dancing-festival.webp" alt="Couple dancing at a Teton Valley community festival" loading="lazy">
+          </div>
+          <div class="quick-links__card-bottom">
+            <div>
+              <h3 class="quick-links__card-title">Start Your Own Fund</h3>
+              <p class="quick-links__card-text">Create a fund aligned with your charitable goals.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: cta-banner
+       heading: "Want to create a fund?"
+       accent_word: "create a fund" (wrapped in span)
+       content: "Contact us to explore the fund type that's right for you."
+       button: "Get in Touch" -> /contact/
+       background: default (--color-dark-pine)
+  -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__heading">Want to <span>create a fund</span>?</h2>
+        <p class="cta-banner__text">Contact us to explore the fund type that's right for you.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="/contact/" class="theme_btn theme_btn_bg theme_btn--light">Get in Touch <span></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "footer.njk" %}

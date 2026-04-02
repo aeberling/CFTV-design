@@ -1,0 +1,97 @@
+---
+layout: base.njk
+title: "Annual Reports - Community Foundation of Teton Valley"
+description: "Review annual reports and financial statements from the Community Foundation of Teton Valley. Transparency and accountability in everything we do."
+permalink: /about/annual-reports/
+heroHeading: "Annual Reports"
+heroText: "We are committed to transparency and accountability. Review our annual reports and financial statements to see how your generous contributions are making a difference."
+heroImage: "/assets/images/about/hero-about.webp"
+subpageNavItems:
+  - { id: "current", label: "Current Report" }
+  - { id: "financials", label: "Financials" }
+---
+<!-- PAGE: about/annual-reports
+     background: solid-white
+     theme: light
+     notes: Annual Reports sub-page under About with current report feature, past reports archive grid, and financials/accreditation
+-->
+
+{% include "utility-nav.njk" %}
+{% include "header.njk" %}
+
+<main>
+  {% include "page-hero.njk" %}
+  {% include "subpage-nav.njk" %}
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "2025 Annual Report"
+       content: "Our 2025 Annual Impact Report highlights the grants awarded..." (189 chars)
+       image: annual-report-cover.webp (--contain modifier, object-fit: contain)
+       button: "Download PDF" -> #
+       background: default (--color-dusk)
+       modifier: none (image left, content right) + --contain image modifier
+       notes: Image uses --contain modifier with --color-grey-bg inline background.
+  -->
+  <section class="content-split" id="current">
+    <div class="content-split__image content-split__image--contain" style="background: var(--color-grey-bg);">
+      <img src="/assets/images/about/annual-report-cover.webp" alt="2025 Community Foundation of Teton Valley annual impact report cover" loading="lazy">
+    </div>
+    <div class="content-split__content">
+      <span class="content-split__eyebrow">Latest Report</span>
+      <h2 class="content-split__heading">2025 Annual Report</h2>
+      <p class="content-split__text">Our 2025 Annual Impact Report highlights the grants awarded, programs supported, and the growing impact of community generosity across Teton Valley. See how your contributions are making a difference.</p>
+      <div class="content-split__buttons">
+        <a href="/assets/documents/impact-report-2025.pdf" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg">Download PDF <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Financials & Accreditation"
+       content: "The Community Foundation is in good standing with the Council on Foundations..." (236 chars)
+       image: accreditation-badge.webp (--badge modifier, fixed 195px width)
+       button: "Request Documents" -> /contact/
+       background: --color-graphite
+       modifier: --reverse (image right, content left) + --badge image modifier
+       notes: Includes bullet list (content-split__list) for financial document types. Uses --badge modifier to center small accreditation seal.
+  -->
+  <section class="content-split content-split--reverse" id="financials">
+    <div class="content-split__image content-split__image--badge">
+      <img src="/assets/images/about/accreditation-badge.webp" alt="Council on Foundations national standards accreditation badge" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-graphite);">
+      <span class="content-split__eyebrow">Accountability</span>
+      <h2 class="content-split__heading">Financials & Accreditation</h2>
+      <p class="content-split__text">The Community Foundation is in good standing with the Council on Foundations National Standards, having completed a rigorous peer review of our organizational and financial policies. Our audited financial statements and 990 are available upon request.</p>
+      <ul class="content-split__list">
+        <li>Audited financial statements available</li>
+        <li>990 available upon request</li>
+        <li>Council on Foundations accredited</li>
+      </ul>
+      <div class="content-split__buttons">
+        <a href="/contact/" class="theme_btn theme_btn_bg">Request Documents <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: cta-banner
+       heading: "Questions about our financials?"
+       accent_word: "financials" (wrapped in span)
+       content: "We're committed to transparency. Contact us for any financial documents or questions."
+       button: "Contact Us" -> /contact/
+       background: default (--color-dark-pine)
+  -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__heading">Questions about our <span>financials</span>?</h2>
+        <p class="cta-banner__text">We're committed to transparency. Contact us for any financial documents or questions.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="/contact/" class="theme_btn theme_btn_bg theme_btn--light">Contact Us <span></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "footer.njk" %}

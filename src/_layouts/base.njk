@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title | default("Community Foundation of Teton Valley") }}</title>
+  <meta name="description" content="{{ description | default('Connecting generosity to the causes, nonprofits, and people who make Teton Valley thrive.') }}">
+  <link rel="icon" href="/assets/images/logo/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=DM+Serif+Display&family=DM+Serif+Text:ital@0;1&family=Karla:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/vendor/all-fontawesome.min.css">
+  <link rel="stylesheet" href="/assets/css/vendor/flaticon.css">
+  <link rel="stylesheet" href="/assets/css/vendor/animate.css">
+  <link rel="stylesheet" href="/assets/css/vendor/slick.css">
+  <link rel="stylesheet" href="/assets/css/vendor/style.css">
+
+  <!-- CFTV Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css?v={{ pkg.version | default('1.0.0') }}">
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader text-center">
+    <div class="la-ball-scale-multiple la-2x">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  {{ content | safe }}
+
+  <!-- Login Panel -->
+  {% include "login-panel.njk" %}
+
+  <!-- Body Overlay -->
+  <div class="body-overlay"></div>
+
+  <!-- Vendor JS -->
+  <script src="/assets/js/vendor/jquery-3.7.1.min.js"></script>
+  <script src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/vendor/slick.min.js"></script>
+  <script src="/assets/js/vendor/wow.min.js"></script>
+  <script src="/assets/js/vendor/jquery.counterup.min.js"></script>
+  <script src="/assets/js/vendor/waypoints.min.js"></script>
+
+  <!-- CFTV Custom JS -->
+  <script src="/assets/js/main.js?v={{ pkg.version | default('1.0.0') }}"></script>
+</body>
+</html>

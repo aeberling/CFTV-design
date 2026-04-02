@@ -1,0 +1,145 @@
+---
+layout: base.njk
+title: "Leave a Legacy - Community Foundation of Teton Valley"
+description: "Create a lasting legacy through bequests, life income gifts, gifts of appreciated securities, or planned giving with the Community Foundation of Teton Valley."
+permalink: /give/leave-a-legacy/
+heroHeading: "Leave a Legacy"
+heroText: "Create a lasting legacy through planned giving. Your gift ensures that the causes you care about in Teton Valley are supported for generations to come."
+heroImage: "/assets/images/give/tin-cup-event-crowd.webp"
+subpageNavItems:
+  - { id: "planned-giving", label: "Planned Giving" }
+  - { id: "bequests", label: "Bequests" }
+  - { id: "life-insurance", label: "Life Insurance" }
+  - { id: "securities", label: "Appreciated Securities" }
+---
+<!-- PAGE: give/leave-a-legacy
+     background: solid-white
+     theme: light
+     notes: Leave a Legacy sub-page under Give. Covers planned giving overview, bequests, life insurance, life income gifts, memorial funds, and gifts of appreciated securities.
+-->
+
+{% include "utility-nav.njk" %}
+{% include "header.njk" %}
+
+<main>
+  {% include "page-hero.njk" %}
+  {% include "subpage-nav.njk" %}
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Planned Giving"
+       content: "Grow your legacy with a long-term investment in the community you love..." (253 chars)
+       image: tin-cup-event-crowd.webp (5:4, object-fit: cover)
+       button: "Start a Legacy Gift" -> /contact/
+       background: default (--color-dusk)
+       modifier: none (image left, content right)
+  -->
+  <section class="content-split" id="planned-giving">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/give/tin-cup-event-crowd.webp" alt="Teton Valley community members at a Community Foundation event celebrating generosity" loading="lazy">
+    </div>
+    <div class="content-split__content">
+      <span class="content-split__eyebrow">Your Legacy</span>
+      <h2 class="content-split__heading">Planned Giving</h2>
+      <p class="content-split__text">Grow your legacy with a long-term investment in the community you love. Planned giving enables donors a powerful way to continue their philanthropic impact beyond their lifetime. The Community Foundation accepts a variety of planned gifts left by generous individuals who are committed to the future of Teton Valley.</p>
+      <div class="content-split__buttons">
+        <a href="/contact/" class="theme_btn theme_btn_bg">Start a Legacy Gift <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Bequests"
+       content: "Bequests allow you to establish a legacy that benefits causes close to your heart..." (260 chars)
+       image: community/canal-view-northside-trail.webp (5:4, object-fit: cover)
+       button: none
+       background: --color-dark-pine
+       modifier: --reverse (image right, content left)
+  -->
+  <section class="content-split content-split--reverse" id="bequests">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/community/canal-view-northside-trail.webp" alt="Peaceful creek winding through fall aspens and snow along the Northside Trail in Teton Valley" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-dark-pine);">
+      <span class="content-split__eyebrow">Legacy Giving</span>
+      <h2 class="content-split__heading">Bequests</h2>
+      <p class="content-split__text">Bequests allow you to establish a legacy that benefits causes close to your heart — and enable you to keep assets during your lifetime. Bequests can take a variety of forms including specific dollar amounts or particular assets.</p>
+      <p class="content-split__text">Leave a legacy while retaining your assets during your lifetime. This is one of the simplest and most popular forms of planned giving.</p>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Life Insurance"
+       content: "You can gift life insurance and secure an estate tax deduction..." (296 chars)
+       image: tin-cup-awards.webp (5:4, object-fit: cover)
+       button: none
+       background: --color-plum
+       modifier: none (image left, content right)
+       notes: Includes bullet list (content-split__list) for life insurance giving options
+  -->
+  <section class="content-split" id="life-insurance">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/give/tin-cup-awards.webp" alt="Community Foundation of Teton Valley team supporting donors with planned giving options" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-plum);">
+      <span class="content-split__eyebrow">Legacy Giving</span>
+      <h2 class="content-split__heading">Life Insurance & Life Income Gifts</h2>
+      <p class="content-split__text">Gift life insurance to secure an estate tax deduction by naming the Community Foundation as a beneficiary. Or donate either a paid-in-full policy or one for which premiums remain to be paid for a current tax deduction.</p>
+      <ul class="content-split__list">
+        <li>Name the Foundation as a beneficiary for an estate tax deduction</li>
+        <li>Donate a policy for a current tax deduction</li>
+        <li>Life Income Gifts provide income to you while leaving a lasting legacy</li>
+        <li>Immediate tax deduction with removal of assets from taxable estate</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Gifts of Appreciated Securities"
+       content: "Gifts of appreciated securities you have owned for over a year can be especially beneficial..." (328 chars)
+       image: tin-cup-event-runners.webp (5:4, object-fit: cover)
+       button: "Wire & Stock Form" -> #
+       background: --color-graphite
+       modifier: --reverse (image right, content left)
+       notes: Includes bullet list (content-split__list) for tax benefits of securities gifts
+  -->
+  <section class="content-split content-split--reverse" id="securities">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/give/tin-cup-event-runners.webp" alt="Teton Valley community celebrating the impact of generous donors" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-graphite);">
+      <span class="content-split__eyebrow">Legacy Giving</span>
+      <h2 class="content-split__heading">Gifts of Appreciated Securities</h2>
+      <p class="content-split__text">Gifts of appreciated securities you have owned for over a year can be especially beneficial in terms of your tax liability. These securities are deductible at fair market value up to 30 percent of your Adjusted Gross Income, with excess deductible for five additional years.</p>
+      <ul class="content-split__list">
+        <li>Deductible at fair market value (up to 30% of AGI)</li>
+        <li>Avoid long-term capital gains tax on increased value</li>
+        <li>We also accept non-marketable securities on a case-by-case basis</li>
+        <li>Excess amounts may be deducted for five additional years</li>
+      </ul>
+      <div class="content-split__buttons">
+        <a href="/assets/documents/cftv-cash-and-stock-transfer-memorandum-2026.pdf" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg">Wire & Stock Form <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: cta-banner
+       heading: "Ready to plan your legacy?"
+       accent_word: "plan your legacy" (wrapped in span)
+       content: "Contact Executive Director Bonnie Self to explore the planned giving option that's right for you."
+       button: "Get in Touch" -> /contact/
+       background: default (--color-dark-pine)
+  -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__heading">Ready to <span>plan your legacy</span>?</h2>
+        <p class="cta-banner__text">Contact Executive Director Bonnie Self to explore the planned giving option that's right for you.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="/contact/" class="theme_btn theme_btn_bg theme_btn--light">Get in Touch <span></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "footer.njk" %}

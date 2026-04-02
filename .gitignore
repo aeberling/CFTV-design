@@ -1,0 +1,16 @@
+.DS_Store
+.claude
+.gitmodules
+node_modules/
+_site/
+.env
+*.log
+
+# Reference files (not part of build)
+carelax-theme/
+Branding Docs/
+sitemap/
+Akoyago-Project-Analysis.md
+wireframe-homepage.html
+wireframe-nonprofits.html
+newsitemap.html

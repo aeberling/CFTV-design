@@ -1,0 +1,640 @@
+{
+  "total": 63,
+  "sectors": [
+    {
+      "id": 718,
+      "name": "Sports & Recreation",
+      "count": 18
+    },
+    {
+      "id": 719,
+      "name": "Health & Human Services",
+      "count": 8
+    },
+    {
+      "id": 720,
+      "name": "Conservation & Environment",
+      "count": 6
+    },
+    {
+      "id": 721,
+      "name": "Education",
+      "count": 11
+    },
+    {
+      "id": 722,
+      "name": "Civic & Service",
+      "count": 7
+    },
+    {
+      "id": 723,
+      "name": "Arts & Culture",
+      "count": 8
+    },
+    {
+      "id": 724,
+      "name": "Animal Rescue",
+      "count": 5
+    }
+  ],
+  "nonprofits": [
+    {
+      "name": "Above & Beyond The Classroom",
+      "sector": "Education",
+      "address": "481 N. Main Street Driggs, ID 83422",
+      "website": "https://abctetonvalley.org",
+      "tax_id": "83-1954130",
+      "detail_url": "https://cftetonvalley.org/nonprofits/above-beyond-the-classroom/",
+      "slug": "above-beyond-the-classroom",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1920/h:1029/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/nonprofits/abc-logo-trans-1.png"
+    },
+    {
+      "name": "ACT Foundation",
+      "sector": "Arts & Culture",
+      "address": "30E Wallace Ave. Driggs, ID 83422",
+      "website": "https://www.actfoundationtvi.org",
+      "tax_id": "85-122249",
+      "detail_url": "https://cftetonvalley.org/nonprofits/act-foundation/",
+      "slug": "act-foundation",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1920/h:668/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/nonprofits/act_logo-05.png"
+    },
+    {
+      "name": "Aska\u2019s Animals",
+      "sector": "Animal Rescue",
+      "address": "1984 W 7000 S Victor, ID 83455",
+      "website": "https://askasanimals.org",
+      "tax_id": "85-4363017",
+      "detail_url": "https://cftetonvalley.org/nonprofits/askas-animals/",
+      "slug": "askas-animals",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1920/h:1034/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/Askas_color_multi_Logo_notag-01-1.jpg"
+    },
+    {
+      "name": "B on 33: Beautifying Our Byways",
+      "sector": "Conservation & Environment",
+      "address": "126 Elm Street Victor, ID 83455",
+      "website": "https://bon33tv.org/",
+      "tax_id": "82-0506420",
+      "detail_url": "https://cftetonvalley.org/nonprofits/b-on-33/",
+      "slug": "b-on-33",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:481/h:481/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/B33circle.png"
+    },
+    {
+      "name": "Big Hole Brawlers",
+      "sector": "Sports & Recreation",
+      "website": "https://www.bigholebrawlers.com",
+      "tax_id": "33-1668100",
+      "detail_url": "https://cftetonvalley.org/nonprofits/big-hole-brawlers/",
+      "slug": "big-hole-brawlers",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:585/h:585/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/image0.jpeg"
+    },
+    {
+      "name": "Blake Chapman Scholarship",
+      "sector": "Education",
+      "detail_url": "https://cftetonvalley.org/nonprofits/blake-chapman-young-eagles-scholarship/",
+      "slug": "blake-chapman-young-eagles-scholarship",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:905/h:905/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/nonprofits/YE_logo_color-jpeg.jpg"
+    },
+    {
+      "name": "Civil Air Patrol",
+      "sector": "Education",
+      "address": "510 N First St E., Driggs, Idaho 83422",
+      "website": "https://idwg.cap.gov",
+      "tax_id": "75-6037853",
+      "detail_url": "https://cftetonvalley.org/nonprofits/civil-air-patrol/",
+      "slug": "civil-air-patrol",
+      "logo_url": "https://cftetonvalley.org/wp-content/uploads/Civil_Air_Patrol_2022_logo.svg"
+    },
+    {
+      "name": "Community Foundation of Teton Valley",
+      "sector": "Civic & Service",
+      "address": "189 N. Main Street, Suite 112 Driggs, ID 83422",
+      "website": "https://cftetonvalley.org",
+      "tax_id": "83-0308856",
+      "detail_url": "https://cftetonvalley.org/nonprofits/community-foundation-of-tetonvalley/",
+      "slug": "community-foundation-of-tetonvalley",
+      "logo_url": "https://cftetonvalley.org/wp-content/uploads/cftv-logos/cftv-logo-stacked-full-color-rgb.svg"
+    },
+    {
+      "name": "Community Resource Center",
+      "sector": "Health & Human Services",
+      "address": "1420 N. Highway 33, Suite 204 Driggs, Idaho 83422",
+      "website": "https://crctv.org",
+      "tax_id": "47-5152204",
+      "detail_url": "https://cftetonvalley.org/nonprofits/community-resource-center/",
+      "slug": "community-resource-center",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:772/h:300/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/CRC_Logo_RGB_Hz_SM.png"
+    },
+    {
+      "name": "Downtown Driggs Association",
+      "sector": "Arts & Culture",
+      "website": "https://downtowndriggs.org/",
+      "tax_id": "46-3110846",
+      "detail_url": "https://cftetonvalley.org/nonprofits/downtown-driggs-association/",
+      "slug": "downtown-driggs-association",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1861/h:1200/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/nonprofits/dda-logo-2018.png"
+    },
+    {
+      "name": "Earthfire Institute",
+      "sector": "Animal Rescue",
+      "website": "https://earthfireinstitute.org",
+      "tax_id": "82-0525968",
+      "detail_url": "https://cftetonvalley.org/nonprofits/earthfire-institute/",
+      "slug": "earthfire-institute",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1503/h:612/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/Earthfire_Reconnections_combined_logos-FINAL-RECOLORED.png"
+    },
+    {
+      "name": "Eastern Idaho Ninety-Nines",
+      "sector": "Education",
+      "website": "https://www.idaho99s.org/eastern",
+      "tax_id": "23-7441804",
+      "detail_url": "https://cftetonvalley.org/nonprofits/eastern-idaho-ninety-nines/",
+      "slug": "eastern-idaho-ninety-nines",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1920/h:1920/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/EI99s_Logo.jpg"
+    },
+    {
+      "name": "Education Foundation of Teton Valley",
+      "sector": "Education",
+      "address": "481 N. Main Street Driggs, ID 83422",
+      "website": "https://www.tetoneducation.org",
+      "tax_id": "54-2181870",
+      "detail_url": "https://cftetonvalley.org/nonprofits/education-foundation-of-teton-valley-2/",
+      "slug": "education-foundation-of-teton-valley-2",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:463/h:329/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/eftv_logo_color-1.jpg"
+    },
+    {
+      "name": "Family Safety Network",
+      "sector": "Health & Human Services",
+      "address": "120 N. 1st E. Driggs, ID 83422",
+      "website": "https://www.familysafetynetwork.org/",
+      "tax_id": "82-0481737",
+      "detail_url": "https://cftetonvalley.org/nonprofits/family-safety-network/",
+      "slug": "family-safety-network",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1481/h:230/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/Logo_2color_internal.jpg"
+    },
+    {
+      "name": "Friends of the Teton River",
+      "sector": "Conservation & Environment",
+      "address": "18 N Main St, Suite 310 Driggs, ID 83422",
+      "website": "https://www.tetonwater.org/",
+      "tax_id": "82-0527505",
+      "detail_url": "https://cftetonvalley.org/nonprofits/friends-of-the-teton-river/",
+      "slug": "friends-of-the-teton-river",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1000/h:831/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/nonprofits/ftr-logo_transparent-background-2.png"
+    },
+    {
+      "name": "Grand Targhee Avalanche Dogs",
+      "sector": "Health & Human Services",
+      "website": "http://gtk9.betterworld.org/",
+      "tax_id": "46-4122899",
+      "detail_url": "https://cftetonvalley.org/nonprofits/grand-targhee-avalanche-dogs/",
+      "slug": "grand-targhee-avalanche-dogs",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1142/h:1155/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/GTAD2.jpg"
+    },
+    {
+      "name": "Grand Targhee Ski & Snowboard Foundation",
+      "sector": "Sports & Recreation",
+      "address": "60 East Little Avenue Driggs, ID 83422",
+      "website": "https://gtssf.org/",
+      "tax_id": "82-0442518",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-valley-ski-education-foundation/",
+      "slug": "teton-valley-ski-education-foundation",
+      "logo_url": "https://cftetonvalley.org/wp-content/uploads/nonprofits/gtssf/grand-targhee-ski-snowboard-foundation_snowflake-logo.svg"
+    },
+    {
+      "name": "HAPI Trails Horse Rescue",
+      "sector": "Animal Rescue",
+      "address": "308 Teton Saddleback Vistas Driggs, ID 83422",
+      "website": "https://hapitrails.org",
+      "tax_id": "27-0510651",
+      "detail_url": "https://cftetonvalley.org/nonprofits/education-foundation-of-teton-valley/",
+      "slug": "education-foundation-of-teton-valley",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1280/h:367/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/HAPI_Logo_2022-01.png"
+    },
+    {
+      "name": "Hispanic Resource Center of Teton Valley",
+      "sector": "Arts & Culture",
+      "address": "76 N Main St, Ste 204 Driggs, ID 83422",
+      "website": "https://www.hrctv.org",
+      "tax_id": "82-3329578",
+      "detail_url": "https://cftetonvalley.org/nonprofits/hispanic-resource-center-of-teton-valley/",
+      "slug": "hispanic-resource-center-of-teton-valley",
+      "logo_url": "https://cftetonvalley.org/wp-content/uploads/hispanic-resource-center.svg"
+    },
+    {
+      "name": "Learning Academy of Teton Valley, The",
+      "sector": "Education",
+      "address": "1480 S. 500 W. Driggs, ID 83422",
+      "website": "https://learningacademyschool.com/",
+      "tax_id": "20-2635105",
+      "detail_url": "https://cftetonvalley.org/nonprofits/learning-academy-of-teton-valley/",
+      "slug": "learning-academy-of-teton-valley",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1920/h:1031/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/la.png"
+    },
+    {
+      "name": "Lone Wolf Wrestling Club",
+      "sector": "Sports & Recreation",
+      "tax_id": "86-3747127",
+      "detail_url": "https://cftetonvalley.org/nonprofits/lone-wolf-wrestling-club/",
+      "slug": "lone-wolf-wrestling-club",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:500/h:500/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/Lone-Wolf-Wrestling-Club-Logo.jpg"
+    },
+    {
+      "name": "Mental Health Coalition of Teton Valley",
+      "sector": "Health & Human Services",
+      "address": "76 N. Main St, Ste 206 Driggs, ID 83422",
+      "website": "https://tetonvalleymentalhealth.com/",
+      "tax_id": "46-2634094",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-valley-mental-health-coalition/",
+      "slug": "teton-valley-mental-health-coalition",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:523/h:479/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/Screen-Shot-2022-06-07-at-12.44.28-PM.jpg"
+    },
+    {
+      "name": "Mountain Academy of Teton Science Schools",
+      "sector": "Education",
+      "address": "192 W. Birch St. Victor, ID 83455",
+      "website": "https://www.tetonscience.org/",
+      "tax_id": "83-0219163",
+      "detail_url": "https://cftetonvalley.org/nonprofits/mountain-academy-teton-valley-campus/",
+      "slug": "mountain-academy-teton-valley-campus",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1854/h:878/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/MA_Logo_Tag_Clr.png"
+    },
+    {
+      "name": "Mountain Bike the Tetons",
+      "sector": "Sports & Recreation",
+      "address": "60 E. Little Ave. Driggs, ID 83422",
+      "website": "https://www.mountainbiketetons.org/",
+      "tax_id": "46-2310200",
+      "detail_url": "https://cftetonvalley.org/nonprofits/mountain-bike-the-tetons/",
+      "slug": "mountain-bike-the-tetons",
+      "logo_url": "https://cftetonvalley.org/wp-content/uploads/Mountain-Bike-The-Tetons_Logo-Shield.svg"
+    },
+    {
+      "name": "Mountain Roots Education",
+      "sector": "Education",
+      "address": "91 E Little Ave Driggs, ID 83422",
+      "website": "https://www.mountainrootseducation.org/",
+      "tax_id": "45-3120239",
+      "detail_url": "https://cftetonvalley.org/nonprofits/mountain-roots-education/",
+      "slug": "mountain-roots-education",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1200/h:1200/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/nonprofits/mtn_roots_logo_color_large.jpg"
+    },
+    {
+      "name": "PAWS \u2013  Providing Animal Welfare Services",
+      "sector": "Animal Rescue",
+      "address": "15 South 1750 East Driggs, ID 83422",
+      "website": "https://www.pawshelpspets.org/",
+      "tax_id": "83-0326768",
+      "detail_url": "https://cftetonvalley.org/nonprofits/paws-of-teton-valley/",
+      "slug": "paws-of-teton-valley",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:600/h:218/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/PAWS-DH-Logo-tagline-color_600px-1.jpg"
+    },
+    {
+      "name": "Rotary Club of Teton Valley",
+      "sector": "Civic & Service",
+      "website": "https://portal.clubrunner.ca/5267",
+      "tax_id": "82-0330777",
+      "detail_url": "https://cftetonvalley.org/nonprofits/rotary-club-of-teton-valley/",
+      "slug": "rotary-club-of-teton-valley",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:960/h:960/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/TV-Rotary-Logo.jpg"
+    },
+    {
+      "name": "Seniors West of the Tetons",
+      "sector": "Health & Human Services",
+      "address": "60 S. Main St. Driggs, ID 83422",
+      "website": "https://www.tetonseniors.org/",
+      "tax_id": "82-0330777",
+      "detail_url": "https://cftetonvalley.org/nonprofits/seniors-west-of-the-tetons/",
+      "slug": "seniors-west-of-the-tetons",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:670/h:670/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/swotlogocircle.jpg"
+    },
+    {
+      "name": "St. Francis of the Tetons Episcopal Church",
+      "sector": "Civic & Service",
+      "address": "20 Alta School Road Alta, WY 83414",
+      "website": "https://www.stfrancisofthetetons.org",
+      "tax_id": "82-0458495",
+      "detail_url": "https://cftetonvalley.org/nonprofits/st-francis-of-the-tetons-episcopal-church/",
+      "slug": "st-francis-of-the-tetons-episcopal-church",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:300/h:300/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/nonprofits/st.francis.jpg"
+    },
+    {
+      "name": "Subs for Santa",
+      "sector": "Civic & Service",
+      "address": "30 E. Wallace Driggs, ID 83422",
+      "tax_id": "46-1514834",
+      "detail_url": "https://cftetonvalley.org/nonprofits/subs-for-santa-2/",
+      "slug": "subs-for-santa-2",
+      "logo_url": "https://cftetonvalley.org/wp-content/uploads/subs-for-santa_stacked-logo-red.svg"
+    },
+    {
+      "name": "Teton Arts",
+      "sector": "Arts & Culture",
+      "address": "110 Rodeo Dr. Driggs, ID 83422",
+      "website": "https://www.tetonarts.org/",
+      "tax_id": "2-0457157",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-arts/",
+      "slug": "teton-arts",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1920/h:1501/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/tetonarts_logo_color.png"
+    },
+    {
+      "name": "Teton County 4-H",
+      "sector": "Civic & Service",
+      "address": "445 N. Main St Driggs, ID 83422",
+      "website": "https://www.uidaho.edu/extension/county/teton",
+      "tax_id": "23-7098404",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-county-4-h/",
+      "slug": "teton-county-4-h",
+      "logo_url": "https://cftetonvalley.org/wp-content/uploads/nonprofits/4-h_teton-county_clover-logo.svg"
+    },
+    {
+      "name": "Teton County Fairgrounds",
+      "sector": "Arts & Culture",
+      "website": "https://www.tetoncountyfairgrounds.com/",
+      "tax_id": "82-6000317",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-county-fairgrounds/",
+      "slug": "teton-county-fairgrounds",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1500/h:1546/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/logo_new-31.png"
+    },
+    {
+      "name": "Teton County Idaho Search And Rescue (TCISAR)",
+      "sector": "Civic & Service",
+      "website": "https://www.tcisar.org",
+      "tax_id": "82-0471455",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-county-idaho-search-and-rescue-tcisar/",
+      "slug": "teton-county-idaho-search-and-rescue-tcisar",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:600/h:600/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/TCSAR_Logo_RGB_2-In.png"
+    },
+    {
+      "name": "Teton FC Soccer Club",
+      "sector": "Sports & Recreation",
+      "website": "https://tetonfc.org/",
+      "tax_id": "82-0533820",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-soccer-club/",
+      "slug": "teton-soccer-club",
+      "logo_url": "https://cftetonvalley.org/wp-content/uploads/teton-valley-youth-soccer-club-01.svg"
+    },
+    {
+      "name": "Teton High School Booster Club",
+      "sector": "Sports & Recreation",
+      "website": "https://tetontimberwolvesbooster.godaddysites.com/",
+      "tax_id": "13-4305305",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-high-school-booster-club/",
+      "slug": "teton-high-school-booster-club",
+      "logo_url": "https://cftetonvalley.org/wp-content/uploads/teton-valley-high-school_teton-timberwolves_booster-club_logo-stacked.svg"
+    },
+    {
+      "name": "Teton Regional Land Trust",
+      "sector": "Conservation & Environment",
+      "address": "1520 S. 500 W. Driggs, ID 83422",
+      "website": "https://tetonlandtrust.org",
+      "tax_id": "94-3146525",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-regional-land-trust/",
+      "slug": "teton-regional-land-trust",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1871/h:608/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/nonprofits/TRLT_RGB_green.jpg"
+    },
+    {
+      "name": "Teton Rock Gym",
+      "sector": "Sports & Recreation",
+      "address": "60 S. Main St., Ste. #350 Driggs, ID 83422",
+      "website": "https://tetonrockgym.org",
+      "tax_id": "37-1798462",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-rock-gym/",
+      "slug": "teton-rock-gym",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1501/h:1920/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/TRGLogo2023-1.png"
+    },
+    {
+      "name": "Teton Valley Aquatics",
+      "sector": "Sports & Recreation",
+      "website": "https://www.tetonvalleyaquatics.org/",
+      "tax_id": "81-4138396",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-valley-aquatics/",
+      "slug": "teton-valley-aquatics",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:525/h:525/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/Teton-Valley-Aquatics_logo.jpg"
+    },
+    {
+      "name": "Teton Valley Back Country Horsemen",
+      "sector": "Conservation & Environment",
+      "website": "https://ttbch.org",
+      "tax_id": "85-0597359",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-valley-backcountry-horsemen/",
+      "slug": "teton-valley-backcountry-horsemen",
+      "logo_url": "https://cftetonvalley.org/wp-content/uploads/teton-valley-backcountry-horsemen_logo-01.svg"
+    },
+    {
+      "name": "Teton Valley Balloon Rally",
+      "sector": "Sports & Recreation",
+      "website": "https://tetonvalleyballoonrally.org/",
+      "tax_id": "47-3778699",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-valley-balloon-rally/",
+      "slug": "teton-valley-balloon-rally",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:500/h:385/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/nonprofits/teton-valley-balloon-rally.png"
+    },
+    {
+      "name": "Teton Valley Chamber Music Festival",
+      "sector": "Arts & Culture",
+      "website": "https://www.tetonvalleycmf.com/",
+      "tax_id": "93-4160825",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-valley-chamber-music-festiva/",
+      "slug": "teton-valley-chamber-music-festiva",
+      "logo_url": "https://cftetonvalley.org/wp-content/uploads/nonprofits/teton-valley-chamber-music-fesival_logo-stacked.svg"
+    },
+    {
+      "name": "Teton Valley Collaborative for Early Learning",
+      "sector": "Education",
+      "website": "https://www.tvcel.org",
+      "tax_id": "46-3831150",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-valley-collaborative-for-early-learning/",
+      "slug": "teton-valley-collaborative-for-early-learning",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:500/h:500/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/nonprofits/teton-valley-collaborative-for-early-learning_logo.png"
+    },
+    {
+      "name": "Teton Valley Community Recycling",
+      "sector": "Education",
+      "website": "https://tetonrecycling.org",
+      "tax_id": "82-0453908",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-valley-community-recycling/",
+      "slug": "teton-valley-community-recycling",
+      "logo_url": "https://cftetonvalley.org/wp-content/uploads/nonprofits/teton-valley-community-recycling_logo.svg"
+    },
+    {
+      "name": "Teton Valley Composite Mountain Bike Team",
+      "sector": "Sports & Recreation",
+      "website": "https://www.tvcmtb.com/",
+      "tax_id": "92-2756650",
+      "detail_url": "https://cftetonvalley.org/nonprofits/16790-2/",
+      "slug": "16790-2",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1920/h:1451/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/TVCLogo24GreyCenter.png"
+    },
+    {
+      "name": "Teton Valley Farmers Market",
+      "sector": "Arts & Culture",
+      "website": "https://www.tetonvalleyfarmersmarket.org/",
+      "tax_id": "87-4077484",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-valley-farmers-market/",
+      "slug": "teton-valley-farmers-market",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1500/h:1500/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/nonprofits/teton-valley-farmers-market_logo.png"
+    },
+    {
+      "name": "Teton Valley Food Pantry",
+      "sector": "Health & Human Services",
+      "address": "481 N. Main Street Driggs, Idaho 83422",
+      "website": "https://www.tvfoodpantry.com",
+      "tax_id": "45-4252391",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-valley-food-pantry/",
+      "slug": "teton-valley-food-pantry",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1661/h:1920/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/Food-Pantry.jpg"
+    },
+    {
+      "name": "Teton Valley Foundation",
+      "sector": "Sports & Recreation",
+      "address": "380 S. Agate Victor, ID 83455",
+      "website": "https://tetonvalleyfoundation.org",
+      "tax_id": "87-0766886",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-valley-foundation/",
+      "slug": "teton-valley-foundation",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1051/h:526/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/nonprofits/tvf_logo-01.jpg"
+    },
+    {
+      "name": "Teton Valley Health Care",
+      "sector": "Health & Human Services",
+      "website": "https://tvhcare.org",
+      "tax_id": "45-4551946",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-valley-health/",
+      "slug": "teton-valley-health",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1500/h:1500/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/nonprofits/teton-valley-health-care_logo.png"
+    },
+    {
+      "name": "Teton Valley Housing",
+      "sector": "Health & Human Services",
+      "website": "https://tetonvalleyhousing.org",
+      "tax_id": "86-2506254",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-county-joint-housing-authority/",
+      "slug": "teton-county-joint-housing-authority",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:398/h:251/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/Teton-Housing-Logo_Color-100.jpg"
+    },
+    {
+      "name": "Teton Valley Museum",
+      "sector": "Arts & Culture",
+      "address": "137 ID-33 Scenic Driggs, ID 83422",
+      "website": "https://tetonmuseum.com",
+      "tax_id": "82-0475102",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-valley-museum-foundation/",
+      "slug": "teton-valley-museum-foundation",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1920/h:1440/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/nonprofits/teton-valley-museum/teton-valley-museum.jpg"
+    },
+    {
+      "name": "Teton Valley Skijoring",
+      "sector": "Sports & Recreation",
+      "website": "https://tetonskijor.org/",
+      "tax_id": "88-1598586",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-valley-skijoring/",
+      "slug": "teton-valley-skijoring",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1500/h:1500/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/nonprofits/teton-valley-skijoring/tvskijoring_logo_neonfinal_wh.png"
+    },
+    {
+      "name": "Teton Valley Trails & Pathways",
+      "sector": "Sports & Recreation",
+      "address": "189 North Main St., Suite #115 Driggs, ID 83422",
+      "website": "https://tvtap.org",
+      "tax_id": "82-0506420",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-valley-trails-and-pathways/",
+      "slug": "teton-valley-trails-and-pathways",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1000/h:1000/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/Trails-Pathways-Logo-med-1.png"
+    },
+    {
+      "name": "Teton Valley Trout Unlimited",
+      "sector": "Conservation & Environment",
+      "website": "https://www.tu.org/chapters/idaho/teton-valley/",
+      "tax_id": "82-0528838",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-valley-trout-unlimited/",
+      "slug": "teton-valley-trout-unlimited",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:422/h:414/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/tulogo.jpg"
+    },
+    {
+      "name": "Teton Valley Youth Lacrosse Association",
+      "sector": "Sports & Recreation",
+      "website": "https://tetonlax.leagueapps.com/",
+      "tax_id": "81-2826228",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-valley-youth-lacrosse-association/",
+      "slug": "teton-valley-youth-lacrosse-association",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1354/h:1230/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/nonprofits/teton-valley-lacrosse/2020-logo.jpg"
+    },
+    {
+      "name": "Teton Wildlife Rehabilitation Center",
+      "sector": "Animal Rescue",
+      "website": "https://tetonwildlife.org/",
+      "tax_id": "47-3206652",
+      "detail_url": "https://cftetonvalley.org/nonprofits/teton-wildlife-rehabilitation-center/",
+      "slug": "teton-wildlife-rehabilitation-center",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1536/h:1920/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/twcr.jpg"
+    },
+    {
+      "name": "Valley Adaptive Sports",
+      "sector": "Sports & Recreation",
+      "address": "9290 Edgewood Lane Victor, ID 83455",
+      "website": "https://valleyadaptivesports.org/",
+      "tax_id": "84-5145284",
+      "detail_url": "https://cftetonvalley.org/nonprofits/rein-dance-therapeutic-recreational-riding/",
+      "slug": "rein-dance-therapeutic-recreational-riding",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1659/h:1920/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/nonprofits/valley-adaptive-sports/vas-1.png"
+    },
+    {
+      "name": "Valley Advocates for Responsible Development",
+      "sector": "Conservation & Environment",
+      "address": "85 Depot Street Suite 2 Driggs, ID 83422",
+      "website": "https://tetonvalleyadvocates.org/",
+      "tax_id": "82-0537849",
+      "detail_url": "https://cftetonvalley.org/nonprofits/valley-advocates-for-responsible-development/",
+      "slug": "valley-advocates-for-responsible-development",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1920/h:1865/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/nonprofits/valley-advocates-for-responsible-development/vard_hzb_cmyk_lg.jpg"
+    },
+    {
+      "name": "Valley of the Tetons Library Foundation & Friends",
+      "sector": "Education",
+      "address": "79 N. Main St. Driggs, Idaho 83422",
+      "website": "https://valleyofthetetonslibrary.org/",
+      "tax_id": "48-1275799",
+      "detail_url": "https://cftetonvalley.org/nonprofits/valley-of-the-tetons-library/",
+      "slug": "valley-of-the-tetons-library",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:360/h:180/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/VTL_Friends-Logo_Color.png"
+    },
+    {
+      "name": "Victor Rock Park",
+      "sector": "Sports & Recreation",
+      "website": "https://victorrockpark.org",
+      "tax_id": "33-3588674",
+      "detail_url": "https://cftetonvalley.org/nonprofits/victor-rock-park/",
+      "slug": "victor-rock-park",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1035/h:1134/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/VictorRockParkLogoLg.png"
+    },
+    {
+      "name": "Victor Skate Park Foundation",
+      "sector": "Sports & Recreation",
+      "address": "Sherman Park 180 Elm Street Victor ID 83455",
+      "website": "http://www.victorskatepark.org/",
+      "tax_id": "93-2265914",
+      "detail_url": "https://cftetonvalley.org/nonprofits/38679-2/",
+      "slug": "38679-2",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:313/h:206/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/VSF-decal-Copy.jpg"
+    },
+    {
+      "name": "Yoga Source, The",
+      "sector": "Sports & Recreation",
+      "address": "89 North Main Street, Suite 201 Driggs, ID 83422",
+      "website": "https://www.theyogasource.org/",
+      "tax_id": "92-0259828",
+      "detail_url": "https://cftetonvalley.org/nonprofits/yoga-source/",
+      "slug": "yoga-source",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1500/h:1500/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/nonprofits/yoga-source/the-yoga-source_logo_2.png"
+    },
+    {
+      "name": "Young Life of Teton Valley",
+      "sector": "Civic & Service",
+      "website": "https://tetonvalley.younglife.org",
+      "tax_id": "84-0385934",
+      "detail_url": "https://cftetonvalley.org/nonprofits/young-life-of-teton-valley/",
+      "slug": "young-life-of-teton-valley",
+      "logo_url": "https://mlkzvchgqxko.i.optimole.com/cb:Sz1N.d644/w:1920/h:1920/q:60/g:sm/f:best/https://cftetonvalley.org/wp-content/uploads/young-life-scaled.png"
+    }
+  ]
+}

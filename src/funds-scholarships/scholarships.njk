@@ -1,0 +1,145 @@
+---
+layout: base.njk
+title: "Scholarships - Community Foundation of Teton Valley"
+description: "The Community Foundation supports students pursuing education through scholarships including the Blake Chapman Aviation Scholarship. Apply or start your own scholarship fund."
+permalink: /funds-scholarships/scholarships/
+heroHeading: "Scholarships"
+heroText: "The Community Foundation of Teton Valley is honored to support students in continuing education. Explore current scholarship opportunities or start your own scholarship fund."
+heroImage: "/assets/images/funds/youth-philanthropy-class.webp"
+subpageNavItems:
+  - { id: "about", label: "About Scholarships" }
+  - { id: "blake-chapman", label: "Blake Chapman Scholarship" }
+  - { id: "regional", label: "Regional Resources" }
+  - { id: "start", label: "Start a Scholarship" }
+---
+<!-- PAGE: funds-scholarships/scholarships
+     background: solid-white
+     theme: light
+     notes: Scholarships sub-page under Funds & Scholarships. Features the Blake Chapman Aviation Scholarship, regional resources, and CTA to start your own scholarship fund.
+-->
+
+{% include "utility-nav.njk" %}
+{% include "header.njk" %}
+
+<main>
+  {% include "page-hero.njk" %}
+  {% include "subpage-nav.njk" %}
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Supporting Students in Teton Valley"
+       content: "The Community Foundation is pleased to support students in their post-secondary educational pursuits..." (173 chars)
+       image: youth-philanthropy-class.webp (5:4, object-fit: cover)
+       button: "Apply for Scholarships" -> #
+       background: default (--color-dusk)
+       modifier: none (image left, content right)
+       notes: Overview of scholarship programs with apply and donate CTAs
+  -->
+  <section class="content-split" id="about">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/funds/youth-philanthropy-class.webp" alt="Teton High School students at the Youth Philanthropy awards assembly" loading="lazy">
+    </div>
+    <div class="content-split__content">
+      <span class="content-split__eyebrow">Education</span>
+      <h2 class="content-split__heading">Supporting Students in Teton Valley</h2>
+      <p class="content-split__text">The Community Foundation is pleased to support students in their post-secondary educational pursuits. We hold scholarship funds for community members and are always seeking donors who want to invest in the next generation.</p>
+      <div class="content-split__buttons">
+        <a href="mailto:bthysell@cftetonvalley.org" class="theme_btn theme_btn_bg">Email to Apply <span></span></a>
+        <a href="/give/" class="theme_btn theme_btn_bg">Support This Program <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Blake Chapman Aviation Scholarship"
+       content: "The Blake Chapman Aviation Scholarship was created by a group of individuals who wanted to give students..." (372 chars)
+       image: blake-chapman-scholarship.webp (5:4, object-fit: cover)
+       button: "Scholarship Application" -> #
+       background: --color-dark-pine
+       modifier: --reverse (image right, content left)
+       notes: Up to $12,000 toward Private Pilot Certificate. Open to Teton area high school juniors/seniors age 17+. Summer training commitment required.
+  -->
+  <section class="content-split content-split--reverse" id="blake-chapman">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/funds/blake-chapman-scholarship.webp" alt="Blake Chapman Aviation Scholarship student learning to fly at Teton Aviation in Driggs Idaho" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-dark-pine);">
+      <span class="content-split__eyebrow">Current Scholarship</span>
+      <h2 class="content-split__heading">Blake Chapman Aviation Scholarship</h2>
+      <p class="content-split__text">The Blake Chapman Aviation Scholarship was created by a group of individuals who wanted to give students in Teton County, ID, the opportunity to learn how to fly. This scholarship provides up to $12,000 towards the cost of a Private Pilot Certificate — including instruction, flight time, and books.</p>
+      <ul class="content-split__list">
+        <li>Open to Teton area students (ID & WY), high school juniors or seniors, age 17+</li>
+        <li>Must demonstrate good academic standing and community involvement</li>
+        <li>Available June through end of August, 4–5 days a week for training</li>
+      </ul>
+      <div class="content-split__buttons">
+        <a href="/assets/documents/blake-chapman-scholarship-application-2026.docx" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg">Scholarship Application <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Regional Scholarship Resources"
+       content: "Explore additional scholarship opportunities available to Teton Valley students..." (148 chars)
+       image: grants-awards-ceremony.webp (5:4, object-fit: cover)
+       button: none
+       background: --color-cirrus
+       modifier: none (image left, content right)
+       notes: Eyebrow uses --color-dusk, heading/text use --color-graphite inline overrides for contrast on pink bg. Placeholder for future regional resources.
+  -->
+  <section class="content-split" id="regional">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/funds/grants-awards-ceremony.webp" alt="Teton Valley community celebrating education and scholarship awards" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-cirrus);">
+      <span class="content-split__eyebrow" style="color: var(--color-dusk);">Resources</span>
+      <h2 class="content-split__heading" style="color: var(--color-graphite);">Regional Scholarship Resources</h2>
+      <p class="content-split__text" style="color: var(--color-graphite);">Explore additional scholarship opportunities available to Teton Valley students from regional foundations and organizations. We are building a comprehensive directory of resources to help students find the right fit for their educational goals.</p>
+      <p class="content-split__text" style="color: var(--color-graphite);">Check back soon for a complete list of regional scholarship resources, or contact Program Manager Brian Thysell for guidance.</p>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Start Your Own Scholarship"
+       content: "Help students pursue education and career goals with a scholarship in your name..." (161 chars)
+       image: community/kids-street-hockey.webp (5:4, object-fit: cover)
+       button_1: "Start a Scholarship" -> /give/start-a-fund/
+       button_2: "Dates & Deadlines" -> /nonprofits/#dates
+       background: --color-graphite
+       modifier: --reverse (image right, content left)
+  -->
+  <section class="content-split content-split--reverse" id="start">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/community/kids-street-hockey.webp" alt="Kids playing street hockey at a Teton Valley community event" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-graphite);">
+      <span class="content-split__eyebrow">Your Impact</span>
+      <h2 class="content-split__heading">Start Your Own Scholarship</h2>
+      <p class="content-split__text">Help students pursue education and career goals with a scholarship in your name. The Community Foundation provides professional stewardship to manage your scholarship fund and ensure awards are distributed to deserving students.</p>
+      <div class="content-split__buttons">
+        <a href="/give/start-a-fund/" class="theme_btn theme_btn_bg">Start a Scholarship <span></span></a>
+        <a href="/nonprofits/#dates" class="theme_btn theme_btn_bg">Dates & Deadlines <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: cta-banner
+       heading: "Questions about scholarships?"
+       accent_word: "scholarships" (wrapped in span)
+       content: "Contact Program Manager Brian Thysell for guidance on applying or creating a scholarship fund."
+       button: "Contact Us" -> /contact/
+       background: default (--color-dark-pine)
+  -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__heading">Questions about <span>scholarships</span>?</h2>
+        <p class="cta-banner__text">Contact Program Manager Brian Thysell for guidance on applying or creating a scholarship fund.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="/contact/" class="theme_btn theme_btn_bg theme_btn--light">Contact Us <span></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "footer.njk" %}

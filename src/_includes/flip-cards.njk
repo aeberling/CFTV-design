@@ -1,0 +1,72 @@
+<!-- IMPLEMENTATION: flip-cards
+     cards: 3 (For Donors, For Nonprofits, For Community)
+     interaction: Hover on desktop, tap on mobile, focus-within for a11y
+     each card has icon, title, subtitle on front; title + 3 CTA buttons on back
+-->
+<section class="flip-cards-area">
+  <div class="container">
+    <div class="row">
+
+      <!-- For Donors -->
+      <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp2 animated" data-wow-delay=".1s">
+        <div class="flip-card" tabindex="0">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="card-icon"><i class="fas fa-hand-holding-heart"></i></div>
+              <h3>For Donors</h3>
+              <p>Give, invest, and leave a legacy</p>
+
+            </div>
+            <div class="flip-card__back">
+              <h4>For Donors</h4>
+              <a href="/give/" class="flip-btn">Give Now</a>
+              <a href="/funds-scholarships/" class="flip-btn">Create a Fund</a>
+              <a href="/give/leave-a-legacy/" class="flip-btn">Leave a Legacy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- For Nonprofits -->
+      <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp2 animated" data-wow-delay=".3s">
+        <div class="flip-card" tabindex="0">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
+              <h3>For Nonprofits</h3>
+              <p>Workshops, resources, and grants</p>
+
+            </div>
+            <div class="flip-card__back">
+              <h4>For Nonprofits</h4>
+              <a href="/nonprofits/#workshops" class="flip-btn">Workshops & Networking</a>
+              <a href="/nonprofits/#resources" class="flip-btn">Access Resources</a>
+              <a href="/nonprofits/#grants" class="flip-btn">Apply for Grants</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- For Community -->
+      <div class="col-xl-4 col-lg-4 col-md-6 wow fadeInUp2 animated" data-wow-delay=".5s">
+        <div class="flip-card" tabindex="0">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="card-icon"><i class="fas fa-users"></i></div>
+              <h3>For Community</h3>
+              <p>Volunteer, events, and connect</p>
+
+            </div>
+            <div class="flip-card__back">
+              <h4>For Community</h4>
+              <a href="/get-involved/#volunteer" class="flip-btn">Volunteer</a>
+              <a href="/get-involved/#calendar" class="flip-btn">Attend Events</a>
+              <a href="/get-involved/subscribe/" class="flip-btn">Stay Connected</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

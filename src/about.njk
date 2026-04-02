@@ -1,0 +1,210 @@
+---
+layout: base.njk
+title: "About - Community Foundation of Teton Valley"
+description: "Learn about the Community Foundation of Teton Valley — our mission, impact, team, and commitment to elevating lives through the power of generosity."
+permalink: /about/
+heroHeading: "About Us"
+heroText: "The Community Foundation of Teton Valley connects generosity to the causes, nonprofits, and people who make Teton Valley thrive. We elevate lives through the power of generosity."
+heroImage: "/assets/images/about/hero-about.webp"
+subpageNavItems:
+  - { id: "mission", label: "Mission & Values" }
+  - { id: "impact", label: "Our Impact" }
+  - { id: "team", label: "Staff & Board" }
+  - { id: "reports", label: "Annual Reports" }
+  - { id: "strategic-plan", label: "Strategic Plan" }
+---
+<!-- PAGE: about
+     background: solid-white
+     theme: light
+     notes: Main About page with page-hero, subpage-nav, content-splits, team grid, and CTA banner. Sub-pages for Mission & Values, Staff & Board, Annual Reports, and Strategic Plan will have deeper content.
+-->
+
+{% include "utility-nav.njk" %}
+{% include "header.njk" %}
+
+<main>
+  {% include "page-hero.njk" %}
+  {% include "subpage-nav.njk" %}
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Mission & Values"
+       content: Mission statement and core pillars
+       image: hero-about.webp (5:4, object-fit: cover)
+       button: "Learn More" -> /about/mission-values/
+       background: default (--color-dusk)
+       modifier: none (image left, content right)
+       anchor: enabled | id: "mission" | label: "Mission & Values"
+  -->
+  <section class="content-split" id="mission">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/about/hero-about.webp" alt="Community Foundation of Teton Valley team at a local grant award ceremony" loading="lazy">
+    </div>
+    <div class="content-split__content">
+      <span class="content-split__eyebrow">Our Foundation</span>
+      <h2 class="content-split__heading">Mission & Values</h2>
+      <p class="content-split__text">Our mission is to enhance lives through philanthropic leadership by providing excellent donor services, making impactful grants to benefit the community, ensuring sustainability within the philanthropic sector, and serving as a leader, catalyst, and resource.</p>
+      <ul class="content-split__list">
+        <li>Championing nonprofits serving Teton Valley</li>
+        <li>Empowering donors to maximize their impact</li>
+        <li>Promoting a culture of giving in our community</li>
+        <li>Serving as a catalyst for positive change</li>
+      </ul>
+      <div class="content-split__buttons">
+        <a href="/about/mission-values/" class="theme_btn theme_btn_bg">Learn More <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Our Impact"
+       content: Overview of community impact and programs
+       image: areas-of-impact-chart.webp (5:4, object-fit: contain)
+       button: "View Programs" -> /about/programs/
+       background: --color-dark-pine
+       modifier: --reverse (image right, content left)
+       anchor: enabled | id: "impact" | label: "Our Impact"
+  -->
+  <section class="content-split content-split--reverse" id="impact">
+    <div class="content-split__image content-split__image--contain">
+      <img src="/assets/images/about/areas-of-impact-chart.webp" alt="2024 Community Foundation of Teton Valley areas of impact chart showing grant distribution" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-dark-pine);">
+      <span class="content-split__eyebrow">Community Impact</span>
+      <h2 class="content-split__heading">Our Impact</h2>
+      <p class="content-split__text">The Community Foundation provides comprehensive support including annual nonprofit grantmaking awards, education for nonprofit staff and board members, workshops, networking events, and learning opportunities. We manage community assets and coordinate community-wide giving to strengthen Teton Valley.</p>
+      <div class="content-split__buttons">
+        <a href="/about/programs/" class="theme_btn theme_btn_bg">View Programs <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: impact-stats (reused from homepage) -->
+  {% include "impact-stats.njk" %}
+
+  <!-- IMPLEMENTATION: team-preview
+       heading: "Staff & Board"
+       content: Preview of team with photo grid
+       background: --color-grey-bg
+       cards: 4 staff members
+       button: "Meet the Full Team" -> /about/staff-board/
+       anchor: enabled | id: "team" | label: "Staff & Board"
+  -->
+  <section class="team-preview" id="team">
+    <div class="container">
+      <div class="team-preview__header">
+        <span class="team-preview__eyebrow">Our People</span>
+        <h2 class="team-preview__heading">Staff & Board</h2>
+        <p class="team-preview__text">Get to know the dedicated team overseeing donations, fund management, volunteer opportunities, and nonprofit workshops that strengthen our community.</p>
+      </div>
+      <div class="team-preview__grid">
+        <div class="team-preview__card">
+          <div class="team-preview__card-image">
+            <img src="/assets/images/about/team/bonnie-self.webp" alt="Bonnie Self, Executive Director of Community Foundation of Teton Valley" loading="lazy">
+          </div>
+          <div class="team-preview__card-info">
+            <h3 class="team-preview__card-name">Bonnie Self</h3>
+            <p class="team-preview__card-role">Executive Director</p>
+          </div>
+        </div>
+        <div class="team-preview__card">
+          <div class="team-preview__card-image">
+            <img src="/assets/images/about/team/claire-vitucci.webp" alt="Claire Vitucci, Marketing and Communications at Community Foundation of Teton Valley" loading="lazy">
+          </div>
+          <div class="team-preview__card-info">
+            <h3 class="team-preview__card-name">Claire Vitucci</h3>
+            <p class="team-preview__card-role">Marketing & Communications</p>
+          </div>
+        </div>
+        <div class="team-preview__card">
+          <div class="team-preview__card-image">
+            <img src="/assets/images/about/team/suzanne-rees.webp" alt="Suzanne Rees, Development and Operations at Community Foundation of Teton Valley" loading="lazy">
+          </div>
+          <div class="team-preview__card-info">
+            <h3 class="team-preview__card-name">Suzanne Rees</h3>
+            <p class="team-preview__card-role">Development & Operations</p>
+          </div>
+        </div>
+        <div class="team-preview__card">
+          <div class="team-preview__card-image">
+            <img src="/assets/images/about/team/brian-thysell.webp" alt="Brian Thysell, Program Manager at Community Foundation of Teton Valley" loading="lazy">
+          </div>
+          <div class="team-preview__card-info">
+            <h3 class="team-preview__card-name">Brian Thysell</h3>
+            <p class="team-preview__card-role">Program Manager</p>
+          </div>
+        </div>
+      </div>
+      <div class="team-preview__action">
+        <a href="/about/staff-board/" class="theme_btn theme_btn_bg">Meet the Full Team <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Annual Reports"
+       content: Reports and financial information
+       image: annual-report-cover.webp (5:4, object-fit: contain)
+       button: "View All Reports" -> /about/annual-reports/
+       background: --color-plum
+       modifier: none (image left, content right)
+       anchor: enabled | id: "reports" | label: "Annual Reports"
+  -->
+  <section class="content-split" id="reports">
+    <div class="content-split__image content-split__image--contain" style="background: var(--color-grey-bg);">
+      <img src="/assets/images/about/annual-report-cover.webp" alt="2024 Community Foundation of Teton Valley annual impact report cover" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-plum);">
+      <span class="content-split__eyebrow">Transparency</span>
+      <h2 class="content-split__heading">Annual Reports</h2>
+      <p class="content-split__text">Review our annual reports and financial statements to see how your generous contributions are making a difference across Teton Valley. We are committed to transparency and accountability in everything we do.</p>
+      <div class="content-split__buttons">
+        <a href="/about/annual-reports/" class="theme_btn theme_btn_bg">View All Reports <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Strategic Plan"
+       content: Strategic direction and accreditation
+       image: accreditation-badge.webp
+       button: "View Strategic Plan" -> /about/strategic-plan/
+       background: --color-graphite
+       modifier: --reverse (image right, content left)
+       notes: Uses accreditation badge as image; content-split__image--badge modifier centers small image
+       anchor: enabled | id: "strategic-plan" | label: "Strategic Plan"
+  -->
+  <section class="content-split content-split--reverse" id="strategic-plan">
+    <div class="content-split__image content-split__image--badge">
+      <img src="/assets/images/about/accreditation-badge.webp" alt="Council on Foundations national standards accreditation badge for Community Foundation of Teton Valley" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-graphite);">
+      <span class="content-split__eyebrow">Looking Ahead</span>
+      <h2 class="content-split__heading">Strategic Plan</h2>
+      <p class="content-split__text">The Community Foundation is in good standing with the Council on Foundations National Standards, having completed a rigorous peer review of our organizational and financial policies. Our strategic plan guides our commitment to strengthening Teton Valley for years to come.</p>
+      <div class="content-split__buttons">
+        <a href="/about/strategic-plan/" class="theme_btn theme_btn_bg">View Strategic Plan <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: cta-banner
+       heading: "Have questions? We'd love to hear from you."
+       accent_word: "love to hear" (wrapped in span)
+       content: "Our staff is always available to assist you."
+       button: "Contact Us" -> /contact/
+       background: default (--color-dark-pine)
+  -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__heading">Have questions? We'd <span>love to hear</span> from you.</h2>
+        <p class="cta-banner__text">Our staff is always available to assist you. Reach out anytime.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="/contact/" class="theme_btn theme_btn_bg theme_btn--light">Contact Us <span></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "footer.njk" %}

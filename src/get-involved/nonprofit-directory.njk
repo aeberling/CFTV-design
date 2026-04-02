@@ -1,0 +1,118 @@
+---
+layout: base.njk
+title: "Nonprofit Directory - Community Foundation of Teton Valley"
+description: "Browse 60+ Teton Valley nonprofit organizations. Find causes aligned with your passions, connect with local nonprofits, and support your community."
+permalink: /get-involved/nonprofit-directory/
+heroHeading: "Nonprofit Directory"
+heroText: "The Community Foundation's Nonprofit Directory connects community members, donors, and volunteers with local organizations serving Teton Valley."
+heroImage: "/assets/images/community/tcc-moose-hurdle.webp"
+subpageNavItems:
+  - { id: "about", label: "About the Directory" }
+  - { id: "nonprofits", label: "View Nonprofits" }
+  - { id: "join", label: "Join the Directory" }
+---
+<!-- PAGE: get-involved/nonprofit-directory
+     background: solid-white
+     theme: light
+     notes: Nonprofit Directory sub-page. In WordPress, this will be a dynamic searchable/filterable directory. Static build shows overview content and placeholder for the directory listing.
+-->
+
+{% include "utility-nav.njk" %}
+{% include "header.njk" %}
+
+<main>
+  {% include "page-hero.njk" %}
+  {% include "subpage-nav.njk" %}
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Teton Valley Nonprofit Directory"
+       content: "The Community Foundation of Teton Valley's Nonprofit Directory is a resource for organized, local nonprofits..." (252 chars)
+       image: community/tcc-moose-hurdle.webp (5:4, object-fit: cover)
+       button: none
+       background: default (--color-dusk)
+       modifier: none (image left, content right)
+       notes: Includes bullet list for directory key features
+  -->
+  <section class="content-split" id="about">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/community/tcc-moose-hurdle.webp" alt="Teton Valley community members at the annual Tin Cup Challenge celebration" loading="lazy">
+    </div>
+    <div class="content-split__content">
+      <span class="content-split__eyebrow">Community Resource</span>
+      <h2 class="content-split__heading">Teton Valley Nonprofit Directory</h2>
+      <p class="content-split__text">The Community Foundation's Nonprofit Directory is a resource for local nonprofits in Teton Valley. It offers community members, donors, and volunteers easy access to information about each organization's mission, contact details, and upcoming needs or opportunities.</p>
+      <ul class="content-split__list">
+        <li>Connects and amplifies local nonprofits, promoting collaboration and visibility</li>
+        <li>Engages volunteers through the Volunteer Bulletin Board</li>
+        <li>Supports informed giving, helping donors find causes aligned with their passions</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "60+ Local Organizations"
+       content: "Browse the full directory of Teton Valley nonprofit organizations..." (186 chars)
+       image: funds/grants-awards-ceremony.webp (5:4, object-fit: cover)
+       button: none
+       background: --color-dark-pine
+       modifier: --reverse (image right, content left)
+       notes: Placeholder for dynamic directory. In WordPress this will be a searchable/filterable listing powered by WP Job Manager or similar.
+  -->
+  <section class="content-split content-split--reverse" id="nonprofits">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/funds/grants-awards-ceremony.webp" alt="Teton Valley nonprofits gathered at Community Foundation awards ceremony" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-dark-pine);">
+      <span class="content-split__eyebrow">Directory</span>
+      <h2 class="content-split__heading">60+ Local Organizations</h2>
+      <p class="content-split__text">Browse the full directory of Teton Valley nonprofit organizations serving education, environment, health, arts, recreation, social services, and more. Each listing includes mission details, contact information, and links to get involved.</p>
+      <p class="content-split__text">The full searchable directory will be available in the WordPress build. Contact us to connect with a specific organization.</p>
+      <div class="content-split__buttons">
+        <a href="/contact/" class="theme_btn theme_btn_bg">Contact Us <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Join the Nonprofit Directory"
+       content: "Are you a Teton Valley nonprofit? Join our directory to increase your visibility..." (178 chars)
+       image: community/hikers-trail.webp (5:4, object-fit: cover)
+       button: "Request to Join" -> /contact/
+       background: --color-graphite
+       modifier: none (image left, content right)
+  -->
+  <section class="content-split" id="join">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/community/hikers-trail.webp" alt="Hikers on a trail through lush greenery in Teton Valley" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-graphite);">
+      <span class="content-split__eyebrow">Nonprofits</span>
+      <h2 class="content-split__heading">Join the Nonprofit Directory</h2>
+      <p class="content-split__text">Are you a Teton Valley nonprofit? Join our directory to increase your visibility, connect with donors and volunteers, and post opportunities. The directory is free for all qualifying 501(c)(3) organizations serving Teton Valley.</p>
+      <div class="content-split__buttons">
+        <a href="/contact/" class="theme_btn theme_btn_bg">Request to Join <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: cta-banner
+       heading: "Looking for a specific nonprofit?"
+       accent_word: "specific nonprofit" (wrapped in span)
+       content: "Contact us and we'll connect you directly."
+       button: "Contact Us" -> /contact/
+       background: default (--color-dark-pine)
+  -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__heading">Looking for a <span>specific nonprofit</span>?</h2>
+        <p class="cta-banner__text">Contact us and we'll connect you directly.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="/contact/" class="theme_btn theme_btn_bg theme_btn--light">Contact Us <span></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "footer.njk" %}

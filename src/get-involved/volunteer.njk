@@ -1,0 +1,62 @@
+---
+layout: base.njk
+title: "Volunteer Opportunities - Community Foundation of Teton Valley"
+description: "Search and post volunteer opportunities with Teton Valley nonprofits. Lend your time, energy, and talents where they're needed most in our community."
+permalink: /get-involved/volunteer/
+heroHeading: "Volunteer Opportunities"
+heroText: "Looking to make a difference in Teton Valley? Browse current volunteer needs below or post an opportunity for your nonprofit."
+heroImage: "/assets/images/community/nonprofit-trail-work.webp"
+---
+<!-- PAGE: get-involved/volunteer
+     background: solid-white
+     theme: light
+     notes: Volunteer Opportunities — iframe embed from cftetonvalley.org with intro section.
+-->
+
+{% include "utility-nav.njk" %}
+{% include "header.njk" %}
+
+<main>
+  {% include "page-hero.njk" %}
+
+  <section class="content-split" id="volunteer-intro">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/community/nonprofit-trail-work.webp" alt="Volunteers building mountain bike trails in Teton Valley" loading="lazy">
+    </div>
+    <div class="content-split__content">
+      <span class="content-split__eyebrow">Get Involved</span>
+      <h2 class="content-split__heading">Find or Post Opportunities</h2>
+      <p class="content-split__text">Browse current volunteer needs from Teton Valley nonprofits below, or post an opportunity to reach community members looking to make a difference.</p>
+      <p class="content-split__text">Whether you have an hour or a season to give, there's a place for you. Search the listings below to find your fit.</p>
+      <div class="content-split__buttons">
+        <a href="/contact/" class="theme_btn theme_btn_bg">Post an Opportunity <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="iframe-embed" id="volunteer-board">
+    <div class="container">
+      <div class="iframe-embed__wrapper">
+        <iframe
+          src="https://cftetonvalley.org/community-impact/nonprofit-support-opportunities/"
+          title="Teton Valley Volunteer Opportunities"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__heading">Want to <span>volunteer</span>?</h2>
+        <p class="cta-banner__text">Contact Brian Thysell to connect with current volunteer opportunities in Teton Valley.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="/contact/" class="theme_btn theme_btn_bg theme_btn--light">Get in Touch <span></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "footer.njk" %}

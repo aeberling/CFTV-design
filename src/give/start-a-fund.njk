@@ -1,0 +1,142 @@
+---
+layout: base.njk
+title: "Start a Fund - Community Foundation of Teton Valley"
+description: "Create a fund aligned with your passions — from donor-advised funds to scholarships, memorials, and agency funds. The Community Foundation manages it all."
+permalink: /give/start-a-fund/
+heroHeading: "Start a Fund"
+heroText: "Work with the Community Foundation to create a fund that aligns with your passions and supports the Teton Valley community now and into the future."
+heroImage: "/assets/images/community/couple-dancing-festival.webp"
+subpageNavItems:
+  - { id: "why-create", label: "Why Create a Fund" }
+  - { id: "fund-types", label: "Fund Types" }
+  - { id: "process", label: "The Process" }
+  - { id: "management", label: "Fund Management" }
+---
+<!-- PAGE: give/start-a-fund
+     background: solid-white
+     theme: light
+     notes: Start a Fund sub-page under Give. Explains why to create a fund, fund types, the giving process, and fund management/investment details.
+-->
+
+{% include "utility-nav.njk" %}
+{% include "header.njk" %}
+
+<main>
+  {% include "page-hero.njk" %}
+  {% include "subpage-nav.njk" %}
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Why Create a Fund"
+       content: "Make your giving last by creating a fund through the Community Foundation..." (214 chars)
+       image: community/girl-greenhouse-radish.webp (5:4, object-fit: cover)
+       button: "Contact Us to Start" -> /contact/
+       background: default (--color-dusk)
+       modifier: none (image left, content right)
+       notes: Includes bullet list (content-split__list) for 4 benefits of creating a fund
+  -->
+  <section class="content-split" id="why-create">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/community/girl-greenhouse-radish.webp" alt="Young girl proudly holding a radish in a community greenhouse funded by the Community Foundation" loading="lazy">
+    </div>
+    <div class="content-split__content">
+      <span class="content-split__eyebrow">Your Legacy</span>
+      <h2 class="content-split__heading">Why Create a Fund</h2>
+      <p class="content-split__text">Make your giving last by creating a fund through the Community Foundation. We provide professional stewardship and investment management so your philanthropic vision can grow and make a lasting impact on Teton Valley.</p>
+      <ul class="content-split__list">
+        <li>Tailor your giving to your passions — education, environment, arts, health, and more</li>
+        <li>Support nonprofits, scholarships, and community initiatives with professional stewardship</li>
+        <li>Build a lasting legacy that reflects your values</li>
+        <li>For funds over $1M, donors may recommend investment advisors</li>
+      </ul>
+      <div class="content-split__buttons">
+        <a href="/contact/" class="theme_btn theme_btn_bg">Contact Us to Start <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: fund-spotlight
+       heading: "Explore Fund Types"
+       testimonial: Quote from donor about fund creation experience
+       fund_types: 7 (Donor-Advised, Scholarship, Memorial/Named, Agency, Designated, Competitive Grant, Affinity/Collaborative)
+       background: default (white)
+       notes: Reused from homepage fund-spotlight include with same fund type list
+  -->
+  <section id="fund-types">
+    {% include "fund-spotlight.njk" %}
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "The Giving Process"
+       content: "Starting a fund is simple. Our experienced team guides you through every step..." (156 chars)
+       image: tin-cup-awards.webp (5:4, object-fit: cover)
+       button: none
+       background: --color-plum
+       modifier: none (image left, content right)
+       notes: Includes numbered bullet list (content-split__list) for 3-step giving process
+  -->
+  <section class="content-split" id="process">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/give/tin-cup-awards.webp" alt="Community Foundation of Teton Valley donors and staff celebrating philanthropic partnerships" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-plum);">
+      <span class="content-split__eyebrow">Getting Started</span>
+      <h2 class="content-split__heading">The Giving Process</h2>
+      <p class="content-split__text">Starting a fund is simple. Our experienced team guides you through every step to ensure your charitable goals are met.</p>
+      <ul class="content-split__list">
+        <li>Define your charitable goals — identify the causes you care about and your desired involvement</li>
+        <li>Determine financial objectives — explore tax strategies and estate planning benefits</li>
+        <li>Establish or contribute to a fund — we'll help align your giving with the right fund type</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Fund Management"
+       content: "Contributions of all sizes to funds held at the Community Foundation help to empower thoughtful philanthropic investment..." (253 chars)
+       image: tin-cup-event-crowd.webp (5:4, object-fit: cover)
+       button: "Fundholder Portal" -> #
+       background: --color-graphite
+       modifier: --reverse (image right, content left)
+       notes: Includes bullet list (content-split__list) for investment management details
+  -->
+  <section class="content-split content-split--reverse" id="management">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/give/tin-cup-event-crowd.webp" alt="Teton Valley community members at the annual Tin Cup Challenge celebration" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-graphite);">
+      <span class="content-split__eyebrow">Professional Stewardship</span>
+      <h2 class="content-split__heading">Fund Management</h2>
+      <p class="content-split__text">Contributions of all sizes to funds held at the Community Foundation help to empower thoughtful philanthropic investment. Since 2007, donors have trusted us to manage and allocate charitable resources responsibly and intelligently.</p>
+      <ul class="content-split__list">
+        <li>Strategy: Preserve principal, manage risk, and provide sustainable support</li>
+        <li>Advisor: Canterbury Consulting</li>
+        <li>Oversight: Local Investment Committee and board-approved policies</li>
+        <li>Management Fees: Averaging around 1% of assets under management</li>
+      </ul>
+      <div class="content-split__buttons">
+        <a href="https://www.grantinterface.com/Home/Logon?urlkey=cftetonvalley" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg">Fundholder Portal <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: cta-banner
+       heading: "Ready to start your fund?"
+       accent_word: "start your fund" (wrapped in span)
+       content: "Contact Executive Director Bonnie Self to discuss the fund type that's right for you."
+       button: "Get in Touch" -> /contact/
+       background: default (--color-dark-pine)
+  -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__heading">Ready to <span>start your fund</span>?</h2>
+        <p class="cta-banner__text">Contact Executive Director Bonnie Self to discuss the fund type that's right for you.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="/contact/" class="theme_btn theme_btn_bg theme_btn--light">Get in Touch <span></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "footer.njk" %}

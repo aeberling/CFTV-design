@@ -1,0 +1,216 @@
+---
+layout: base.njk
+title: "Staff & Board - Community Foundation of Teton Valley"
+description: "Meet the dedicated team and board of directors who guide the Community Foundation of Teton Valley's mission to elevate lives through the power of generosity."
+permalink: /about/staff-board/
+heroHeading: "Staff & Board"
+heroText: "Get to know the dedicated team and volunteer board members who guide the Community Foundation's mission, manage community assets, and support Teton Valley's nonprofits."
+heroImage: "/assets/images/about/hero-about.webp"
+subpageNavItems:
+  - { id: "staff", label: "Our Staff" }
+  - { id: "board", label: "Board of Directors" }
+---
+<!-- PAGE: about/staff-board
+     background: solid-white
+     theme: light
+     notes: Full Staff & Board page under About with team grids for staff (5 members) and board of directors (9 members)
+-->
+
+{% include "utility-nav.njk" %}
+{% include "header.njk" %}
+
+<main>
+  {% include "page-hero.njk" %}
+  {% include "subpage-nav.njk" %}
+
+  <!-- IMPLEMENTATION: team-preview
+       heading: "Meet Our Staff"
+       eyebrow: "Our Team"
+       content: "Our staff oversees donations, fund management..." (115 chars)
+       cards: 5 (Bonnie Self, Claire Vitucci, Suzanne Rees, Brian Thysell, Sterling Boin)
+       card_fields: photo (1:1, object-fit: cover), name, role
+       background: --color-grey-bg
+       modifier: none (default light theme)
+       notes: 5-card grid wraps naturally — 4+1 on desktop, 2+2+1 on tablet, 1-column on mobile
+  -->
+  <section class="team-preview" id="staff">
+    <div class="container">
+      <div class="team-preview__header">
+        <span class="team-preview__eyebrow">Our Team</span>
+        <h2 class="team-preview__heading">Meet Our Staff</h2>
+        <p class="team-preview__text">Our staff oversees donations, fund management, volunteer opportunities, and nonprofit workshops that strengthen the Teton Valley community.</p>
+      </div>
+      <div class="team-preview__grid">
+        <div class="team-preview__card">
+          <div class="team-preview__card-image">
+            <img src="/assets/images/about/team/bonnie-self.webp" alt="Bonnie Self, Executive Director of Community Foundation of Teton Valley" loading="lazy">
+          </div>
+          <div class="team-preview__card-info">
+            <h3 class="team-preview__card-name">Bonnie Self</h3>
+            <p class="team-preview__card-role">Executive Director</p>
+          </div>
+        </div>
+        <div class="team-preview__card">
+          <div class="team-preview__card-image">
+            <img src="/assets/images/about/team/claire-vitucci.webp" alt="Claire Vitucci, Marketing and Communications at Community Foundation of Teton Valley" loading="lazy">
+          </div>
+          <div class="team-preview__card-info">
+            <h3 class="team-preview__card-name">Claire Vitucci</h3>
+            <p class="team-preview__card-role">Marketing & Communications</p>
+          </div>
+        </div>
+        <div class="team-preview__card">
+          <div class="team-preview__card-image">
+            <img src="/assets/images/about/team/suzanne-rees.webp" alt="Suzanne Rees, Development and Operations at Community Foundation of Teton Valley" loading="lazy">
+          </div>
+          <div class="team-preview__card-info">
+            <h3 class="team-preview__card-name">Suzanne Rees</h3>
+            <p class="team-preview__card-role">Development & Operations</p>
+          </div>
+        </div>
+        <div class="team-preview__card">
+          <div class="team-preview__card-image">
+            <img src="/assets/images/about/team/brian-thysell.webp" alt="Brian Thysell, Program Manager at Community Foundation of Teton Valley" loading="lazy">
+          </div>
+          <div class="team-preview__card-info">
+            <h3 class="team-preview__card-name">Brian Thysell</h3>
+            <p class="team-preview__card-role">Program Manager</p>
+          </div>
+        </div>
+        <div class="team-preview__card">
+          <div class="team-preview__card-image">
+            <img src="/assets/images/about/team/sterling-boin.webp" alt="Sterling Boin, Finance and Operations at Community Foundation of Teton Valley" loading="lazy">
+          </div>
+          <div class="team-preview__card-info">
+            <h3 class="team-preview__card-name">Sterling Boin</h3>
+            <p class="team-preview__card-role">Finance & Operations</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: team-preview
+       heading: "Board of Directors"
+       eyebrow: "Leadership"
+       content: "Our volunteer board provides strategic oversight..." (124 chars)
+       cards: 9 (Scott Pierson, Muffy Mead, Dean Scofield, Thad Nosal, Stella Martin, Jeannette Chiari, Ben Turner, Marie Zolezzi, Gene Marcowka)
+       card_fields: photo (1:1, object-fit: cover), name, role
+       background: --color-graphite
+       modifier: --dark (dark background with white text headings, pink eyebrow, light-blue body text)
+       notes: 9-card grid wraps 4+4+1 on desktop, 2-column on tablet, 1-column on mobile. White cards on dark bg.
+  -->
+  <section class="team-preview team-preview--dark" id="board">
+    <div class="container">
+      <div class="team-preview__header">
+        <span class="team-preview__eyebrow">Leadership</span>
+        <h2 class="team-preview__heading">Board of Directors</h2>
+        <p class="team-preview__text">Our volunteer board provides strategic oversight and ensures the Foundation fulfills its mission to strengthen Teton Valley through philanthropy.</p>
+      </div>
+      <div class="team-preview__grid">
+        <div class="team-preview__card">
+          <div class="team-preview__card-image">
+            <img src="/assets/images/about/team/scott-pierson.webp" alt="Scott Pierson, Board Chair of Community Foundation of Teton Valley" loading="lazy">
+          </div>
+          <div class="team-preview__card-info">
+            <h3 class="team-preview__card-name">Scott Pierson</h3>
+            <p class="team-preview__card-role">Board Chair</p>
+          </div>
+        </div>
+        <div class="team-preview__card">
+          <div class="team-preview__card-image">
+            <img src="/assets/images/about/team/muffy-mead.webp" alt="Muffy Mead, Vice Chair of Community Foundation of Teton Valley" loading="lazy">
+          </div>
+          <div class="team-preview__card-info">
+            <h3 class="team-preview__card-name">Muffy Mead</h3>
+            <p class="team-preview__card-role">Vice Chair</p>
+          </div>
+        </div>
+        <div class="team-preview__card">
+          <div class="team-preview__card-image">
+            <img src="/assets/images/about/team/dean-scofield.webp" alt="Dean Scofield, Treasurer and Finance Chair of Community Foundation of Teton Valley" loading="lazy">
+          </div>
+          <div class="team-preview__card-info">
+            <h3 class="team-preview__card-name">Dean Scofield</h3>
+            <p class="team-preview__card-role">Treasurer & Finance Chair</p>
+          </div>
+        </div>
+        <div class="team-preview__card">
+          <div class="team-preview__card-image">
+            <img src="/assets/images/about/team/thad-nosal.webp" alt="Thad Nosal, Secretary of Community Foundation of Teton Valley" loading="lazy">
+          </div>
+          <div class="team-preview__card-info">
+            <h3 class="team-preview__card-name">Thad Nosal</h3>
+            <p class="team-preview__card-role">Secretary</p>
+          </div>
+        </div>
+        <div class="team-preview__card">
+          <div class="team-preview__card-image">
+            <img src="/assets/images/about/team/stella-martin.webp" alt="Stella Martin, Development and Outreach Chair of Community Foundation of Teton Valley" loading="lazy">
+          </div>
+          <div class="team-preview__card-info">
+            <h3 class="team-preview__card-name">Stella Martin</h3>
+            <p class="team-preview__card-role">Development & Outreach Chair</p>
+          </div>
+        </div>
+        <div class="team-preview__card">
+          <div class="team-preview__card-image">
+            <img src="/assets/images/about/team/jeannette-chiari.webp" alt="Jeannette Chiari, Board Member of Community Foundation of Teton Valley" loading="lazy">
+          </div>
+          <div class="team-preview__card-info">
+            <h3 class="team-preview__card-name">Jeannette Chiari</h3>
+            <p class="team-preview__card-role">Board Member</p>
+          </div>
+        </div>
+        <div class="team-preview__card">
+          <div class="team-preview__card-image">
+            <img src="/assets/images/about/team/ben-turner.webp" alt="Ben Turner, Board Member of Community Foundation of Teton Valley" loading="lazy">
+          </div>
+          <div class="team-preview__card-info">
+            <h3 class="team-preview__card-name">Ben Turner</h3>
+            <p class="team-preview__card-role">Board Member</p>
+          </div>
+        </div>
+        <div class="team-preview__card">
+          <div class="team-preview__card-image">
+            <img src="/assets/images/about/team/marie-zolezzi.webp" alt="Marie Zolezzi, Board Member of Community Foundation of Teton Valley" loading="lazy">
+          </div>
+          <div class="team-preview__card-info">
+            <h3 class="team-preview__card-name">Marie Zolezzi</h3>
+            <p class="team-preview__card-role">Board Member</p>
+          </div>
+        </div>
+        <div class="team-preview__card">
+          <div class="team-preview__card-image">
+            <img src="/assets/images/about/team/gene-marcowka.webp" alt="Gene Marcowka, Board Member Emeritus of Community Foundation of Teton Valley" loading="lazy">
+          </div>
+          <div class="team-preview__card-info">
+            <h3 class="team-preview__card-name">Gene Marcowka</h3>
+            <p class="team-preview__card-role">Emeritus</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: cta-banner
+       heading: "Have questions? We'd love to hear from you."
+       accent_word: "We'd love" (wrapped in span)
+       content: "Our staff is always available to assist you. Reach out anytime."
+       button: "Contact Us" -> /contact/
+       background: default (--color-dark-pine)
+  -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__heading">Have questions? <span>We'd love</span> to hear from you.</h2>
+        <p class="cta-banner__text">Our staff is always available to assist you. Reach out anytime.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="/contact/" class="theme_btn theme_btn_bg theme_btn--light">Contact Us <span></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "footer.njk" %}

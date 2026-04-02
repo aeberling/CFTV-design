@@ -1,0 +1,113 @@
+# Example GitHub Actions Workflow for Projects Using SiteBuild Agents
+#
+# This is an EXAMPLE workflow for projects that use these agents.
+# Copy this to your project's .github/workflows/ directory and customize.
+#
+# To use in your project:
+# 1. Copy to your-project/.github/workflows/quality-check.yml
+# 2. Remove .example extension
+# 3. Customize for your framework and needs
+
+name: Quality Checks
+
+on:
+  pull_request:
+    branches: [ main, develop ]
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build & Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Run tests
+        run: npm test
+        continue-on-error: true
+
+  # Note: Claude Code agents are designed for interactive use
+  # You can adapt their logic for CI/CD, but they're best used locally
+
+  lint:
+    name: Lint & Format Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Check for trailing whitespace
+        run: |
+          if grep -r " $" src/ --include="*.{html,css,js,jsx,ts,tsx}" ; then
+            echo "Found trailing whitespace"
+            exit 1
+          fi
+
+      - name: Check for console.log statements
+        run: |
+          if grep -r "console\.log" src/ --include="*.{js,jsx,ts,tsx}" ; then
+            echo "Found console.log statements"
+            exit 1
+          fi
+        continue-on-error: true
+
+  # Example: Check for common accessibility issues
+  accessibility:
+    name: Basic Accessibility Checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Check for images without alt
+        run: |
+          if grep -r "<img" src/ | grep -v "alt=" ; then
+            echo "Found images without alt attributes"
+            exit 1
+          fi
+        continue-on-error: true
+
+# Tips for adapting agent checks to CI/CD:
+#
+# 1. Responsive Testing:
+#    - Use Puppeteer/Playwright for screenshot testing
+#    - Compare against baselines
+#
+# 2. ADA Compliance:
+#    - Use axe-core for automated testing
+#    - Run Lighthouse CI
+#
+# 3. SEO Validation:
+#    - Check for meta tags in built HTML
+#    - Verify robots.txt exists
+#    - Check for broken links
+#
+# 4. Cleanup:
+#    - Check code formatting (Prettier)
+#    - Run linters (ESLint, Stylelint)
+#    - Check for TODO comments
+#
+# The agents are best used interactively with Claude Code,
+# but you can script their checks for automated validation.

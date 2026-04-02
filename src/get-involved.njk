@@ -1,0 +1,175 @@
+---
+layout: base.njk
+title: "Get Involved - Community Foundation of Teton Valley"
+description: "Connect with Teton Valley's nonprofit community. Find volunteer opportunities, browse the nonprofit directory, explore job openings, and stay connected."
+permalink: /get-involved/
+heroHeading: "Get Involved"
+heroText: "There are many ways to connect with Teton Valley's nonprofit community. Volunteer your time, find a job with a local nonprofit, or simply stay informed about the amazing work happening in our valley."
+heroImage: "/assets/images/community/volunteer-trail-view.webp"
+subpageNavItems:
+  - { id: "directory", label: "Nonprofit Directory" }
+  - { id: "volunteer", label: "Volunteer" }
+  - { id: "jobs", label: "Job Board" }
+  - { id: "stay-connected", label: "Stay Connected" }
+---
+<!-- PAGE: get-involved
+     background: solid-white
+     theme: light
+     notes: Get Involved primary page with overview of ways to engage — nonprofit directory, volunteer, job board, subscribe, and calendar. Each section links to its sub-page.
+-->
+
+{% include "utility-nav.njk" %}
+{% include "header.njk" %}
+
+<main>
+  {% include "page-hero.njk" %}
+  {% include "subpage-nav.njk" %}
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Nonprofit Directory"
+       content: "Explore Teton Valley's nonprofit community. Our directory connects donors, volunteers, and community members..." (198 chars)
+       image: community/tcc-moose-hurdle.webp (5:4, object-fit: cover)
+       button: "Browse Directory" -> /nonprofit-directory/
+       background: default (--color-dusk)
+       modifier: none (image left, content right)
+       notes: Includes bullet list for directory features
+       anchor: enabled | id: "directory" | label: "Nonprofit Directory"
+  -->
+  <section class="content-split" id="directory">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/community/tcc-moose-hurdle.webp" alt="Teton Valley community members at a Tin Cup Challenge event with moose hurdle" loading="lazy">
+    </div>
+    <div class="content-split__content">
+      <span class="content-split__eyebrow">Connect</span>
+      <h2 class="content-split__heading">Nonprofit Directory</h2>
+      <p class="content-split__text">Explore Teton Valley's nonprofit community. Our directory connects donors, volunteers, and community members with 60+ local organizations serving education, environment, health, arts, and more.</p>
+      <ul class="content-split__list">
+        <li>Browse 60+ local nonprofit organizations</li>
+        <li>Find causes aligned with your passions</li>
+        <li>Connect directly with organizations</li>
+      </ul>
+      <div class="content-split__buttons">
+        <a href="/nonprofit-directory/" class="theme_btn theme_btn_bg">Browse Directory <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Volunteer Opportunities"
+       content: "Looking to make a difference in Teton Valley? Explore volunteer opportunities..." (178 chars)
+       image: community/nonprofit-trail-work.webp (5:4, object-fit: cover)
+       button: "Find Opportunities" -> /get-involved/volunteer/
+       background: --color-dark-pine
+       modifier: --reverse (image right, content left)
+       anchor: enabled | id: "volunteer" | label: "Volunteer"
+  -->
+  <section class="content-split content-split--reverse" id="volunteer">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/community/nonprofit-trail-work.webp" alt="Volunteers building trails in Teton Valley through Mountain Bike the Tetons nonprofit" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-dark-pine);">
+      <span class="content-split__eyebrow">Give Your Time</span>
+      <h2 class="content-split__heading">Volunteer Opportunities</h2>
+      <p class="content-split__text">Looking to make a difference in Teton Valley? Explore volunteer opportunities and find a cause that inspires you. Connect directly with local nonprofits and lend your time, energy, and talents where they're needed most.</p>
+      <div class="content-split__buttons">
+        <a href="/get-involved/volunteer/" class="theme_btn theme_btn_bg">Find Opportunities <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Nonprofit Job Board"
+       content: "Looking to build a career that makes a difference? Browse job openings at Teton Valley nonprofits..." (163 chars)
+       image: community/volunteer-trail-view.webp (5:4, object-fit: cover)
+       button: "View Job Board" -> /get-involved/job-board/
+       background: --color-cirrus
+       modifier: none (image left, content right)
+       notes: Eyebrow uses --color-dusk, heading/text use --color-graphite inline overrides for contrast on pink bg.
+       anchor: enabled | id: "jobs" | label: "Job Board"
+  -->
+  <section class="content-split" id="jobs">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/community/volunteer-trail-view.webp" alt="Teton Valley trails and natural landscape that nonprofits work to preserve" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-cirrus);">
+      <span class="content-split__eyebrow" style="color: var(--color-dusk);">Careers</span>
+      <h2 class="content-split__heading" style="color: var(--color-graphite);">Nonprofit Job Board</h2>
+      <p class="content-split__text" style="color: var(--color-graphite);">Looking to build a career that makes a difference? Browse job openings at Teton Valley nonprofits. From executive leadership to hands-on fieldwork, find a role that connects your expertise with your community.</p>
+      <div class="content-split__buttons">
+        <a href="/get-involved/job-board/" class="theme_btn theme_btn_bg">View Job Board <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: quick-links
+       eyebrow: "Stay Connected"
+       heading: "More Ways to Engage"
+       cards: 3 (Subscribe to News, Community Calendar, Contact Us)
+       card_fields: image (4:3), title, description text
+       background: --color-grey-bg
+       notes: Links to subscribe, calendar, and contact sub-pages
+       anchor: enabled | id: "stay-connected" | label: "Stay Connected"
+  -->
+  <section class="quick-links" id="stay-connected">
+    <div class="container">
+      <p class="quick-links__eyebrow">Stay Connected</p>
+      <h2 class="quick-links__heading">More Ways to Engage</h2>
+      <div class="quick-links__grid">
+        <a href="/get-involved/subscribe/" class="quick-links__card">
+          <div class="quick-links__card-image">
+            <img src="/assets/images/give/tin-cup-awards.webp" alt="Community Foundation staff sharing nonprofit news and updates" loading="lazy">
+          </div>
+          <div class="quick-links__card-bottom">
+            <div>
+              <h3 class="quick-links__card-title">Subscribe to Nonprofit News</h3>
+              <p class="quick-links__card-text">Stay in the loop with announcements, events, and more.</p>
+            </div>
+          </div>
+        </a>
+        <a href="/news-events/#community-calendar" class="quick-links__card">
+          <div class="quick-links__card-image">
+            <img src="/assets/images/give/tin-cup-event-runners.webp" alt="Teton Valley community event with runners at the Tin Cup Challenge" loading="lazy">
+          </div>
+          <div class="quick-links__card-bottom">
+            <div>
+              <h3 class="quick-links__card-title">Community Calendar</h3>
+              <p class="quick-links__card-text">Find upcoming events, workshops, and gatherings.</p>
+            </div>
+          </div>
+        </a>
+        <a href="/contact/" class="quick-links__card">
+          <div class="quick-links__card-image">
+            <img src="/assets/images/community/couple-dancing-festival.webp" alt="Couple dancing at a Teton Valley community festival" loading="lazy">
+          </div>
+          <div class="quick-links__card-bottom">
+            <div>
+              <h3 class="quick-links__card-title">Contact Us</h3>
+              <p class="quick-links__card-text">Questions? Our team is here to help.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: cta-banner
+       heading: "Ready to get involved?"
+       accent_word: "get involved" (wrapped in span)
+       content: "Whether you volunteer, donate, or simply spread the word — every action strengthens Teton Valley."
+       button: "Contact Us" -> /contact/
+       background: default (--color-dark-pine)
+  -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__heading">Ready to <span>get involved</span>?</h2>
+        <p class="cta-banner__text">Whether you volunteer, donate, or simply spread the word — every action strengthens Teton Valley.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="/contact/" class="theme_btn theme_btn_bg theme_btn--light">Contact Us <span></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "footer.njk" %}

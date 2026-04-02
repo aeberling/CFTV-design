@@ -1,0 +1,62 @@
+---
+layout: base.njk
+title: "Rentals & Reservations - Community Foundation of Teton Valley"
+description: "Reserve conference rooms and rent event equipment from the Community Foundation of Teton Valley. Affordable resources for local nonprofits."
+permalink: /nonprofits/resources/rentals-reservations/
+heroHeading: "Rentals & Reservations"
+heroText: "Reserve conference space or rent event equipment for your nonprofit. Browse availability and submit your request below."
+heroImage: "/assets/images/community/tcc-moose-hurdle.webp"
+---
+<!-- PAGE: nonprofits/rentals-reservations
+     background: solid-white
+     theme: light
+     notes: Rentals & Reservations — iframe embed from cftetonvalley.org. Child page of /nonprofits/resources/.
+-->
+
+{% include "utility-nav.njk" %}
+{% include "header.njk" %}
+
+<main>
+  {% include "page-hero.njk" %}
+
+  <section class="content-split" id="rentals-intro">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/community/tcc-moose-hurdle.webp" alt="Community event setup with tents and equipment available for Teton Valley nonprofit rentals" loading="lazy">
+    </div>
+    <div class="content-split__content">
+      <span class="content-split__eyebrow">Nonprofit Resources</span>
+      <h2 class="content-split__heading">Reserve Space & Equipment</h2>
+      <p class="content-split__text">The Community Foundation offers conference room reservations and event equipment rentals for local nonprofits. Browse availability and submit your request using the form below.</p>
+      <p class="content-split__text">From tents and tables to projectors and chairs — we've got you covered for your next meeting or event.</p>
+      <div class="content-split__buttons">
+        <a href="/contact/" class="theme_btn theme_btn_bg">Contact Us <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="iframe-embed" id="rentals-reservations">
+    <div class="container">
+      <div class="iframe-embed__wrapper">
+        <iframe
+          src="https://cftetonvalley.org/rentals-reservations/"
+          title="Community Foundation Rentals and Reservations"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__heading">Questions about <span>rentals</span>?</h2>
+        <p class="cta-banner__text">Contact us for availability, pricing, and details about our conference room and equipment.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="/contact/" class="theme_btn theme_btn_bg theme_btn--light">Contact Us <span></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "footer.njk" %}

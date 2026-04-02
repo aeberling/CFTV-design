@@ -1,0 +1,14 @@
+{
+  "name": "cftv-website",
+  "version": "1.0.0",
+  "description": "Community Foundation of Teton Valley - Website",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "puppeteer": "^24.40.0"
+  }
+}
