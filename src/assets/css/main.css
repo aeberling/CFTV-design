@@ -20,6 +20,7 @@
   --color-dark-pine: #164154;
   --color-pine: #415e68;
   --color-nimbus: #415e68;
+  --color-poppy-dark: #c4665e;
   /* Functional Aliases */
   --color-primary: var(--color-poppy);
   --color-secondary: var(--color-dark-pine);
@@ -292,7 +293,7 @@ a {
 }
 
 .login-panel__close a:hover {
-  color: var(--color-primary);
+  color: var(--color-plum);
 }
 
 .login-panel__links {
@@ -315,8 +316,8 @@ a {
 }
 
 .login-panel__links a:hover {
-  color: var(--color-primary);
-  border-bottom-color: var(--color-primary);
+  color: var(--color-plum);
+  border-bottom-color: var(--color-plum);
 }
 
 .login-panel__contact {
@@ -341,7 +342,7 @@ a {
 }
 
 .login-panel__btn--email {
-  background: var(--color-primary);
+  background: var(--color-dusk);
   color: #fff;
 }
 
@@ -420,13 +421,12 @@ a {
 /* ---- 5. Hero Split ---- */
 .hero-split {
   display: flex;
-  min-height: 550px;
 }
 
 .hero-split__static {
   width: 50%;
   background: var(--color-dark-bg);
-  padding: 80px 60px;
+  padding: 40px 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -434,21 +434,21 @@ a {
 }
 
 .hero-split__static h1 {
-  font-size: 85px;
+  font-size: 48px;
   font-weight: 700;
   font-family: var(--font-heading);
   color: var(--color-white);
   line-height: 1;
   letter-spacing: -0.3px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .hero-split__static p {
-  font-size: 18px;
+  font-size: 16px;
   font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.8);
-  line-height: 28px;
-  margin-bottom: 35px;
+  line-height: 24px;
+  margin-bottom: 20px;
 }
 
 .hero-split__buttons {
@@ -462,7 +462,7 @@ a {
   width: 50%;
   position: relative;
   overflow: hidden;
-  min-height: 550px;
+  min-height: 350px;
 }
 
 .hero-split__image {
@@ -488,25 +488,25 @@ a {
 
 .hero-split__right-content {
   position: absolute;
-  bottom: 60px;
-  right: 120px;
+  bottom: 30px;
+  right: 60px;
   text-align: right;
-  max-width: 320px;
+  max-width: 280px;
   z-index: 2;
 }
 
 .hero-split__right-content h2 {
-  font-size: 42px;
+  font-size: 32px;
   font-weight: 700;
   font-family: var(--font-heading);
   color: var(--color-white);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .hero-split__right-content p {
-  font-size: 18px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .hero-split__right-content .theme_btn {
@@ -536,7 +536,7 @@ a {
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 550px;
+  min-height: 350px;
 }
 
 .hero-split__buttons {
@@ -796,6 +796,44 @@ a {
 }
 
 .fund-testimonial .attribution {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+/* Standalone Testimonial Section */
+.testimonial-section {
+  padding: 60px 0;
+}
+
+.testimonial-card {
+  background: var(--color-sand);
+  border-radius: var(--radius-card);
+  padding: 40px 50px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonial-card .quote-icon {
+  font-size: 48px;
+  color: var(--color-plum);
+  font-family: Georgia, serif;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+
+.testimonial-card blockquote {
+  font-size: 22px;
+  font-style: italic;
+  color: var(--color-graphite);
+  font-family: var(--ff-body);
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+}
+
+.testimonial-card .attribution {
   font-size: 16px;
   font-weight: 700;
   color: var(--color-dark);
@@ -1286,12 +1324,13 @@ a {
 
 .quick-links__card-bottom {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   padding: 20px 24px;
   background: var(--color-graphite);
   text-align: left;
   position: relative;
+  flex: 1;
 }
 
 .quick-links__card-bottom::after {
@@ -1301,7 +1340,7 @@ a {
   right: 0;
   width: 0;
   height: 0;
-  border-bottom: 50px solid var(--color-primary);
+  border-bottom: 50px solid var(--color-poppy-dark);
   border-left: 50px solid transparent;
 }
 
@@ -1323,7 +1362,7 @@ a {
 /* ---- 17b. Community Calendar ---- */
 .community-calendar {
   padding: 80px 0;
-  background: var(--color-sand);
+  background: var(--color-white);
 }
 
 .community-calendar__header {
@@ -1407,6 +1446,52 @@ a {
     height: 1600px;
     margin-top: -550px;
   }
+}
+
+
+/* ---- Past Reports ---- */
+.past-reports {
+  padding: 40px 0 50px;
+}
+
+.past-reports__heading {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-dusk);
+  margin-bottom: 16px;
+}
+
+.past-reports__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.past-reports__list li + li {
+  margin-top: 10px;
+}
+
+.past-reports__list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-dark-pine);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.past-reports__list a:hover {
+  color: var(--color-poppy);
+}
+
+.past-reports__list svg {
+  flex-shrink: 0;
 }
 
 
@@ -1661,7 +1746,7 @@ a {
 
 .content-split__image--contain img {
   position: static;
-  width: 85%;
+  width: 55%;
   height: auto;
   object-fit: contain;
 }
@@ -1716,6 +1801,10 @@ a {
 .post-grid__action {
   text-align: center;
   margin-top: 40px;
+}
+
+.post-grid__show-more {
+  border: none;
 }
 
 /* Post Card */
@@ -2011,15 +2100,15 @@ a {
   }
 
   .hero-split__static {
-    padding: 60px 40px;
+    padding: 35px 40px;
   }
 
   .hero-split__static h1 {
-    font-size: 60px;
+    font-size: 40px;
   }
 
   .hero-split__right {
-    min-height: 400px;
+    min-height: 300px;
   }
 
   .hero-split__buttons .theme_btn {
@@ -2093,11 +2182,11 @@ a {
   }
 
   .hero-split__static {
-    padding: 50px 35px;
+    padding: 30px 35px;
   }
 
   .hero-split__static h1 {
-    font-size: 40px;
+    font-size: 32px;
   }
 
   .hero-split__static p {
@@ -2114,7 +2203,7 @@ a {
   }
 
   .hero-split__right {
-    min-height: 350px;
+    min-height: 280px;
   }
 
   .hero-split__right-content {
@@ -2260,6 +2349,15 @@ a {
 
   .fund-testimonial blockquote {
     font-size: 20px;
+  }
+
+  /* Standalone Testimonial */
+  .testimonial-card {
+    padding: 25px 25px;
+  }
+
+  .testimonial-card blockquote {
+    font-size: 18px;
   }
 
   .fund-types {
@@ -2683,8 +2781,25 @@ a {
   align-items: center;
   justify-content: center;
   background: var(--color-sand);
-  color: var(--color-primary);
+  color: var(--color-white);
   font-size: 20px;
+}
+
+/* Each icon box gets a different brand color */
+.contact-info__item:nth-child(1) .contact-info__icon {
+  background: var(--color-dusk);
+}
+
+.contact-info__item:nth-child(2) .contact-info__icon {
+  background: var(--color-poppy-dark);
+}
+
+.contact-info__item:nth-child(3) .contact-info__icon {
+  background: var(--color-dark-pine);
+}
+
+.contact-info__item:nth-child(4) .contact-info__icon {
+  background: var(--color-plum);
 }
 
 .contact-info__label {

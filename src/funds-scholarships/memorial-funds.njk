@@ -51,7 +51,7 @@ subpageNavItems:
        heading: "Andy Tyson Memorial Fund"
        content: "Tax-deductible contributions to the Andy Tyson Memorial Fund will serve mountain communities..." (304 chars)
        image: grants-awards-ceremony.webp (5:4, object-fit: cover)
-       button: "Donate to This Fund" -> #
+       button: "Give to This Fund" -> #
        background: --color-dark-pine
        modifier: --reverse (image right, content left)
        notes: First of current memorial funds. Andy Tyson (1968-2015).
@@ -65,7 +65,7 @@ subpageNavItems:
       <h2 class="content-split__heading">Andy Tyson Memorial Fund</h2>
       <p class="content-split__text">Tax-deductible contributions to the Andy Tyson Memorial Fund serve mountain communities in the developing world through projects that promote the appreciation of their environment and opportunities for the development of outdoor skills. The goal of this fund is to provide resources for expeditions, training in mountain skills, and to match outside expertise with local interest.</p>
       <div class="content-split__buttons">
-        <a href="https://godonate.akoyago.com/cftetonvalley/fund/community-foundation-of-teton-valley" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg">Donate to This Fund <span></span></a>
+        <a href="https://godonate.akoyago.com/cftetonvalley/fund/community-foundation-of-teton-valley" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg">Give to This Fund <span></span></a>
       </div>
     </div>
   </section>
@@ -74,7 +74,7 @@ subpageNavItems:
        heading: "A.J. Linnell Memorial Trail Fund"
        content: "The A.J. Linnell Memorial Trail Fund supports the construction and maintenance of biking and hiking trails..." (346 chars)
        image: trails-pathways-grant.webp (5:4, object-fit: cover)
-       button: "Donate to This Fund" -> #
+       button: "Give to This Fund" -> #
        background: --color-plum
        modifier: none (image left, content right)
        notes: A.J. Linnell (1975-2015). Fund supports trails connecting neighborhoods with backcountry.
@@ -88,10 +88,14 @@ subpageNavItems:
       <h2 class="content-split__heading">A.J. Linnell Memorial Trail Fund</h2>
       <p class="content-split__text">The A.J. Linnell Memorial Trail Fund supports the construction and maintenance of biking and hiking trails in Teton Valley that connect neighborhoods with the peaks and valleys that A.J. loved. A cyclist, educator, city councilor, mountain guide, and environmentalist, A.J. envisioned a trails system that would provide easy access to the backcountry from downtown Victor, making the quiet and beauty of the wilderness available to all.</p>
       <div class="content-split__buttons">
-        <a href="https://godonate.akoyago.com/cftetonvalley/fund/community-foundation-of-teton-valley" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg">Donate to This Fund <span></span></a>
+        <a href="https://godonate.akoyago.com/cftetonvalley/fund/community-foundation-of-teton-valley" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg">Give to This Fund <span></span></a>
       </div>
     </div>
   </section>
+
+  {% set testimonialQuote = "We created a memorial fund for my late husband AJ Linnell, a supporter of public trails in Teton Valley. Partnering with the Foundation made it easy for family, friends, and community members to donate in AJ's honor and keep his vision alive. We raised over $120K to help local nonprofits implement the Southern Valley Trail System, buy a trail-dozer, and fund new BLM trails east of Victor. The Foundation helped us turn grief into a lasting legacy for AJ and the community." %}
+  {% set testimonialAttribution = "&mdash; Erica Linnell<br>A.J. Linnell Memorial Trail Fund" %}
+  {% include "testimonial.njk" %}
 
   <!-- IMPLEMENTATION: content-split
        heading: "Start a Memorial Fund"

@@ -12,6 +12,16 @@ module.exports = function(eleventyConfig) {
       .sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
   });
 
+  // ISO date filter (for sitemap)
+  eleventyConfig.addFilter("isoDate", function(date) {
+    return new Date(date).toISOString().split('T')[0];
+  });
+
+  // String startsWith filter (for sitemap)
+  eleventyConfig.addFilter("startsWith", function(str, prefix) {
+    return str && str.startsWith(prefix);
+  });
+
   // Date formatting filter
   eleventyConfig.addFilter("formatDate", function(dateStr) {
     const d = new Date(dateStr);

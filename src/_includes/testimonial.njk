@@ -1,0 +1,14 @@
+<!-- IMPLEMENTATION: testimonial
+     quote: Testimonial text (set via `testimonialQuote` variable before include)
+     attribution: Name and title (set via `testimonialAttribution` variable before include)
+     background: Optional background color (set via `testimonialBg` variable, defaults to --color-sand)
+-->
+<section class="testimonial-section">
+  <div class="container">
+    <div class="testimonial-card"{% if testimonialBg %} style="background: var({{ testimonialBg }});"{% endif %}>
+      <div class="quote-icon">&ldquo;</div>
+      <blockquote>{{ testimonialQuote | safe }}</blockquote>
+      <div class="attribution">{{ testimonialAttribution | safe }}</div>
+    </div>
+  </div>
+</section>

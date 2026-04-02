@@ -7,6 +7,33 @@
   <meta name="description" content="{{ description | default('Connecting generosity to the causes, nonprofits, and people who make Teton Valley thrive.') }}">
   <link rel="icon" href="/assets/images/logo/favicon.png">
 
+  <!-- ==========================================================
+       LAUNCH TODO: Uncomment analytics before go-live (see docs/launch-procedures.md)
+       ========================================================== -->
+
+  <!-- [LAUNCH] Google Analytics 4 + Google Ads Conversion Tracking
+  <script src="https://www.googletagmanager.com/gtag/js?id=G-RPLQCMYREV" async></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("set", "linker", {"domains": ["cftetonvalley.org"]});
+    gtag("js", new Date());
+    gtag("config", "G-RPLQCMYREV");
+    gtag("config", "AW-10800163766");
+  </script>
+  -->
+
+  <!-- [LAUNCH] Google Tag Manager (head)
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;
+    j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+    f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PNT8N29');
+  </script>
+  -->
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,6 +51,12 @@
   <link rel="stylesheet" href="/assets/css/main.css?v={{ pkg.version | default('1.0.0') }}">
 </head>
 <body>
+
+  <!-- [LAUNCH] Google Tag Manager (noscript) — uncomment at launch
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PNT8N29" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  -->
 
   <!-- Preloader -->
   <div class="preloader text-center">

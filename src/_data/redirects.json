@@ -1,0 +1,782 @@
+[
+  {
+    "from": "/ways-to-give/",
+    "to": "/give/",
+    "note": "Main giving page renamed"
+  },
+  {
+    "from": "/donate/",
+    "to": "/give/",
+    "note": "Donate page consolidated into give"
+  },
+  {
+    "from": "/grants-scholarships/",
+    "to": "/funds-scholarships/",
+    "note": "Section renamed"
+  },
+  {
+    "from": "/grants-scholarships/tin-cup-challenge/",
+    "to": "/give/tin-cup-challenger/",
+    "note": "Tin Cup moved under give"
+  },
+  {
+    "from": "/grants-scholarships/competitive-grants/",
+    "to": "/nonprofits/apply-for-grants/",
+    "note": "Competitive grants moved under nonprofits"
+  },
+  {
+    "from": "/grants-scholarships/blake-chapman-young-eagles-scholarship/",
+    "to": "/funds-scholarships/scholarships/",
+    "note": "Individual scholarship consolidated into scholarships page"
+  },
+  {
+    "from": "/grants-scholarships/youth-philanthropy/",
+    "to": "/about/programs/",
+    "note": "Youth philanthropy now under programs"
+  },
+  {
+    "from": "/news/",
+    "to": "/news-events/",
+    "note": "News section renamed"
+  },
+  {
+    "from": "/annual-reports/",
+    "to": "/about/annual-reports/",
+    "note": "Annual reports moved under about"
+  },
+  {
+    "from": "/annual-reports/2024-annual-report/",
+    "to": "/about/annual-reports/",
+    "note": "Individual report consolidated"
+  },
+  {
+    "from": "/annual-reports/2023-annual-report/",
+    "to": "/about/annual-reports/",
+    "note": "Individual report consolidated"
+  },
+  {
+    "from": "/annual-reports/2022-annual-report/",
+    "to": "/about/annual-reports/",
+    "note": "Individual report consolidated"
+  },
+  {
+    "from": "/annual-reports/2021-annual-report/",
+    "to": "/about/annual-reports/",
+    "note": "Individual report consolidated"
+  },
+  {
+    "from": "/annual-reports/2020-annual-report/",
+    "to": "/about/annual-reports/",
+    "note": "Individual report consolidated"
+  },
+  {
+    "from": "/fund-types-and-structures/",
+    "to": "/give/start-a-fund/",
+    "note": "Fund types info now on start-a-fund page"
+  },
+  {
+    "from": "/community-impact/",
+    "to": "/about/programs/",
+    "note": "Community impact section consolidated into programs"
+  },
+  {
+    "from": "/nonprofit-resources/",
+    "to": "/nonprofits/resources/",
+    "note": "Nonprofit resources moved under nonprofits section"
+  },
+  {
+    "from": "/calendar/",
+    "to": "/get-involved/calendar/",
+    "note": "Calendar moved under get-involved"
+  },
+  {
+    "from": "/sign-up-for-our-newsletter/",
+    "to": "/get-involved/subscribe/",
+    "note": "Newsletter signup renamed and moved"
+  },
+  {
+    "from": "/stocks-bonds/",
+    "to": "/give/leave-a-legacy/",
+    "note": "Stocks/bonds giving consolidated into legacy giving"
+  },
+  {
+    "from": "/community-emergency-response-fund/",
+    "to": "/give/",
+    "note": "Emergency fund consolidated into main give page"
+  },
+  {
+    "from": "/testimonials/",
+    "to": "/about/",
+    "note": "Testimonials consolidated into about page"
+  },
+  {
+    "from": "/workshops-nonprofit-resources/",
+    "to": "/nonprofits/workshops/",
+    "note": "Workshops page moved under nonprofits"
+  },
+  {
+    "from": "/community-challengers/",
+    "to": "/give/tin-cup-challenger/",
+    "note": "Challengers page consolidated into Tin Cup"
+  },
+  {
+    "from": "/business-challengers/",
+    "to": "/give/tin-cup-challenger/",
+    "note": "Business challengers consolidated into Tin Cup"
+  },
+  {
+    "from": "/in-kind-donors-2/",
+    "to": "/give/tin-cup-challenger/",
+    "note": "In-kind donors consolidated into Tin Cup"
+  },
+  {
+    "from": "/media-kit/",
+    "to": "/about/",
+    "note": "Media kit consolidated into about"
+  },
+  {
+    "from": "/operation-independence/",
+    "to": "/about/programs/",
+    "note": "Operation Independence now under programs"
+  },
+  {
+    "from": "/styleguide/",
+    "to": "/style-guide/",
+    "note": "URL format changed"
+  },
+  {
+    "from": "/newsletter-thank-you/",
+    "to": "/get-involved/subscribe/",
+    "note": "Thank you page redirects to subscribe"
+  },
+  {
+    "from": "/refund_returns/",
+    "to": "/contact/",
+    "note": "Refund page redirects to contact"
+  },
+  {
+    "from": "/terms-conditions/",
+    "to": "/contact/",
+    "note": "Terms page redirects to contact"
+  },
+  {
+    "from": "/consent/",
+    "to": "/contact/",
+    "note": "Consent page redirects to contact"
+  },
+  {
+    "from": "/farmers-market-signup/",
+    "to": "/get-involved/",
+    "note": "Farmers market signup consolidated"
+  },
+  {
+    "from": "/booth-hosting-guidelines/",
+    "to": "/get-involved/",
+    "note": "Booth hosting consolidated"
+  },
+  {
+    "from": "/sports-recreation/",
+    "to": "/nonprofit-directory/",
+    "note": "Sector page redirects to directory"
+  },
+  {
+    "from": "/health-human-services/",
+    "to": "/nonprofit-directory/",
+    "note": "Sector page redirects to directory"
+  },
+  {
+    "from": "/education/",
+    "to": "/nonprofit-directory/",
+    "note": "Sector page redirects to directory"
+  },
+  {
+    "from": "/conservation-environment/",
+    "to": "/nonprofit-directory/",
+    "note": "Sector page redirects to directory"
+  },
+  {
+    "from": "/civic-service/",
+    "to": "/nonprofit-directory/",
+    "note": "Sector page redirects to directory"
+  },
+  {
+    "from": "/arts-culture/",
+    "to": "/nonprofit-directory/",
+    "note": "Sector page redirects to directory"
+  },
+  {
+    "from": "/animal-rescue/",
+    "to": "/nonprofit-directory/",
+    "note": "Sector page redirects to directory"
+  },
+  {
+    "from": "/linktree/",
+    "to": "/",
+    "note": "Linktree redirects to homepage"
+  },
+  {
+    "from": "/sitemap/",
+    "to": "/",
+    "note": "Old sitemap page redirects to homepage"
+  },
+  {
+    "from": "/2025-competitive-grant-program-opens/",
+    "to": "/news-events/2025-competitive-grant-program-opens/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/2025-tin-cup-challenge-shared-social-media-posts-giving-period-event-day/",
+    "to": "/news-events/2025-tin-cup-challenge-shared-social-media-posts-giving-period-event-day/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/annual-tin-cup-challenge-kicks-off-on-march-10/",
+    "to": "/news-events/annual-tin-cup-challenge-kicks-off-on-march-10/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/foundation-welcomes-new-board-members/",
+    "to": "/news-events/foundation-welcomes-new-board-members/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/competitive-grants-to-open-2/",
+    "to": "/news-events/competitive-grants-to-open-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/earn-your-wings-with-the-blake-chapman-aviation-scholarship/",
+    "to": "/news-events/earn-your-wings-with-the-blake-chapman-aviation-scholarship/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/with-your-support-a-record-year-for-teton-valley/",
+    "to": "/news-events/with-your-support-a-record-year-for-teton-valley/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/youth-philanthropists-award-10000-to-local-nonprofits/",
+    "to": "/news-events/youth-philanthropists-award-10000-to-local-nonprofits/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-foundation-welcomes-finance-operations-manager-as-part-of-transition-to-independence/",
+    "to": "/news-events/community-foundation-welcomes-finance-operations-manager-as-part-of-transition-to-independence/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/students-to-award-10000-to-local-nonprofits-through-youth-philanthropy-program/",
+    "to": "/news-events/students-to-award-10000-to-local-nonprofits-through-youth-philanthropy-program/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/finance-operations-manager/",
+    "to": "/news-events/finance-operations-manager/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/tin-cup-challenge-award-checks-for-local-organizations/",
+    "to": "/news-events/tin-cup-challenge-award-checks-for-local-organizations/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-gives-back-record-breaking-3-88-million-raised-through-the-18th-tin-cup-challenge/",
+    "to": "/news-events/community-gives-back-record-breaking-3-88-million-raised-through-the-18th-tin-cup-challenge/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/leading-with-compassion-mental-health-coalitions-executive-director-sara-mckeown-white-recognized-for-outstanding-nonprofit-leadership/",
+    "to": "/news-events/leading-with-compassion-mental-health-coalitions-executive-director-sara-mckeown-white-recognized-for-outstanding-nonprofit-leadership/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/show-your-tin-cup-spirit-run-celebrate-give/",
+    "to": "/news-events/show-your-tin-cup-spirit-run-celebrate-give/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/rooted-in-place-growing-with-purpose-mountain-academys-teton-valley-campus/",
+    "to": "/news-events/rooted-in-place-growing-with-purpose-mountain-academys-teton-valley-campus/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-young-life-of-teton-valley/",
+    "to": "/news-events/community-counts-young-life-of-teton-valley/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/literacy-is-life-building-skills-that-empower-us-every-day/",
+    "to": "/news-events/literacy-is-life-building-skills-that-empower-us-every-day/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/20-years-of-music-ice-and-community-teton-valley-foundation-celebrates-a-milestone-summer/",
+    "to": "/news-events/20-years-of-music-ice-and-community-teton-valley-foundation-celebrates-a-milestone-summer/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/tin-cup-2025-your-support-our-shared-legacy/",
+    "to": "/news-events/tin-cup-2025-your-support-our-shared-legacy/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/with-our-canine-behavior-enrichment-manager-sam/",
+    "to": "/news-events/with-our-canine-behavior-enrichment-manager-sam/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/when-life-throws-a-curveball/",
+    "to": "/news-events/when-life-throws-a-curveball/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-mountain-bike-the-tetons-2/",
+    "to": "/news-events/community-counts-mountain-bike-the-tetons-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/b-on-33-beautifying-our-byway-with-native-wildflowers/",
+    "to": "/news-events/b-on-33-beautifying-our-byway-with-native-wildflowers/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/help-abc-expand-to-empower-more-young-minds-in-teton-valley/",
+    "to": "/news-events/help-abc-expand-to-empower-more-young-minds-in-teton-valley/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/annual-tin-cup-challenge-kicks-off-on-march-11/",
+    "to": "/news-events/annual-tin-cup-challenge-kicks-off-on-march-11/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/join-the-heart-of-teton-valley-18th-annual-tin-cup-challenge-kicks-off-june-13/",
+    "to": "/news-events/join-the-heart-of-teton-valley-18th-annual-tin-cup-challenge-kicks-off-june-13/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/earn-your-wings-with-the-blake-chapman-flight-scholarship/",
+    "to": "/news-events/earn-your-wings-with-the-blake-chapman-flight-scholarship/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/new-board-members-appointed-officers/",
+    "to": "/news-events/new-board-members-appointed-officers/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/a-new-decade-a-new-year-and-a-new-nonprofit-community-space-2/",
+    "to": "/news-events/a-new-decade-a-new-year-and-a-new-nonprofit-community-space-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/13th-annual-tin-cup-challenge-kicks-off-on-march-17th-2/",
+    "to": "/news-events/13th-annual-tin-cup-challenge-kicks-off-on-march-17th-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/covid-19-update-2/",
+    "to": "/news-events/covid-19-update-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-emergency-response-fund-announcement-2/",
+    "to": "/news-events/community-emergency-response-fund-announcement-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/60000-raised-for-the-community-emergency-response-fund-2/",
+    "to": "/news-events/60000-raised-for-the-community-emergency-response-fund-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-foundation-of-teton-valley-awards-competitive-grants-2/",
+    "to": "/news-events/community-foundation-of-teton-valley-awards-competitive-grants-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/foundation-updates-2/",
+    "to": "/news-events/foundation-updates-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/working-remotely-week-5-2/",
+    "to": "/news-events/working-remotely-week-5-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/working-remotely-week-6-2/",
+    "to": "/news-events/working-remotely-week-6-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/working-remotely-week-7-2/",
+    "to": "/news-events/working-remotely-week-7-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/13th-annual-tin-cup-challenge-update-2/",
+    "to": "/news-events/13th-annual-tin-cup-challenge-update-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/working-remotely-week-9-2/",
+    "to": "/news-events/working-remotely-week-9-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/abc-above-beyond-the-classroom-strategic-planning-2/",
+    "to": "/news-events/abc-above-beyond-the-classroom-strategic-planning-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/city-of-driggs-tree-beautification-committee-2/",
+    "to": "/news-events/city-of-driggs-tree-beautification-committee-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/2023-tin-cup-awards-celebration/",
+    "to": "/news-events/2023-tin-cup-awards-celebration/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-resource-center-of-teton-valley-removing-the-language-barrier-2/",
+    "to": "/news-events/community-resource-center-of-teton-valley-removing-the-language-barrier-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/education-foundation-of-teton-valley-gap-program-in-the-middle-school-2/",
+    "to": "/news-events/education-foundation-of-teton-valley-gap-program-in-the-middle-school-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/family-safety-network-laminate-flooring-for-pet-friendly-transitional-housing-2/",
+    "to": "/news-events/family-safety-network-laminate-flooring-for-pet-friendly-transitional-housing-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/emily-bilcher-executive-director-of-family-safety-network-recognized-with-the-dawn-banks-award/",
+    "to": "/news-events/emily-bilcher-executive-director-of-family-safety-network-recognized-with-the-dawn-banks-award/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/youth-philanthropy-in-action-2-2/",
+    "to": "/news-events/youth-philanthropy-in-action-2-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/tip-1/",
+    "to": "/news-events/tip-1/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/leadership-gift-celebrates-10-years-of-tin-cup/",
+    "to": "/news-events/leadership-gift-celebrates-10-years-of-tin-cup/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/tin-cup-challenge-q-a/",
+    "to": "/news-events/tin-cup-challenge-q-a/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/what-goes-into-hosting-the-tin-cup-challenge/",
+    "to": "/news-events/what-goes-into-hosting-the-tin-cup-challenge/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/two-ways-to-give-tin-cup-challenge/",
+    "to": "/news-events/two-ways-to-give-tin-cup-challenge/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/what-it-means-to-be-a-challenger/",
+    "to": "/news-events/what-it-means-to-be-a-challenger/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/what-is-the-tin-cup-challenge-a-brief-history/",
+    "to": "/news-events/what-is-the-tin-cup-challenge-a-brief-history/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/support-our-local-nonprofits/",
+    "to": "/news-events/support-our-local-nonprofits/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/10-years-of-tin-cup-give-run-volunteer/",
+    "to": "/news-events/10-years-of-tin-cup-give-run-volunteer/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-valley-of-the-tetons-library/",
+    "to": "/news-events/community-counts-valley-of-the-tetons-library/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-teton-valley-trails-pathways/",
+    "to": "/news-events/community-counts-teton-valley-trails-pathways/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/tin-cup-spirit-photo-challenge-a-photo-contest/",
+    "to": "/news-events/tin-cup-spirit-photo-challenge-a-photo-contest/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/give-while-its-hot/",
+    "to": "/news-events/give-while-its-hot/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/thank-you-teton-valley/",
+    "to": "/news-events/thank-you-teton-valley/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/we-couldnt-do-it-without-you-thank-you-donors/",
+    "to": "/news-events/we-couldnt-do-it-without-you-thank-you-donors/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/2018-tin-cup-challenge-event-day-2/",
+    "to": "/news-events/2018-tin-cup-challenge-event-day-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/12-7-million-raised-in-11-years-2/",
+    "to": "/news-events/12-7-million-raised-in-11-years-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/why-it-matters-community-resource-center-of-teton-valley-2-2/",
+    "to": "/news-events/why-it-matters-community-resource-center-of-teton-valley-2-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/why-it-matters-friends-of-the-teton-river-2-2/",
+    "to": "/news-events/why-it-matters-friends-of-the-teton-river-2-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/tinny-keeps-tin-cup-running-2/",
+    "to": "/news-events/tinny-keeps-tin-cup-running-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/keep-tinny-fit-2/",
+    "to": "/news-events/keep-tinny-fit-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/why-it-matters-seniors-west-of-the-tetons-2/",
+    "to": "/news-events/why-it-matters-seniors-west-of-the-tetons-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-teton-valley-community-recycling/",
+    "to": "/news-events/community-counts-teton-valley-community-recycling/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/2-ways-to-give/",
+    "to": "/news-events/2-ways-to-give/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-teton-valley-aquatics/",
+    "to": "/news-events/community-counts-teton-valley-aquatics/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-teton-county-idaho-search-rescue/",
+    "to": "/news-events/community-counts-teton-county-idaho-search-rescue/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-teton-arts/",
+    "to": "/news-events/community-counts-teton-arts/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-seniors-west-of-the-tetons/",
+    "to": "/news-events/community-counts-seniors-west-of-the-tetons/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-subs-for-santa/",
+    "to": "/news-events/community-counts-subs-for-santa/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-rotary-club-of-teton-valley/",
+    "to": "/news-events/community-counts-rotary-club-of-teton-valley/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-teton-county-fair-board/",
+    "to": "/news-events/community-counts-teton-county-fair-board/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-teton-regional-land-trust/",
+    "to": "/news-events/community-counts-teton-regional-land-trust/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/a-resource-to-support-nonprofits/",
+    "to": "/news-events/a-resource-to-support-nonprofits/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/competitive-grants-support-our-community/",
+    "to": "/news-events/competitive-grants-support-our-community/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-mountain-bike-the-tetons/",
+    "to": "/news-events/community-counts-mountain-bike-the-tetons/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-the-learning-academy-of-teton-valley/",
+    "to": "/news-events/community-counts-the-learning-academy-of-teton-valley/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-hispanic-resource-center/",
+    "to": "/news-events/community-counts-hispanic-resource-center/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-full-circle-education/",
+    "to": "/news-events/community-counts-full-circle-education/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-teton-valley-health/",
+    "to": "/news-events/community-counts-teton-valley-health/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-family-safety-network/",
+    "to": "/news-events/community-counts-family-safety-network/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-friends-of-the-teton-river/",
+    "to": "/news-events/community-counts-friends-of-the-teton-river/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-education-foundation-of-teton-valley/",
+    "to": "/news-events/community-counts-education-foundation-of-teton-valley/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-earthfire-institute-wildlife-sanctuary-rehabilitation-center/",
+    "to": "/news-events/community-counts-earthfire-institute-wildlife-sanctuary-rehabilitation-center/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-driggs-head-start/",
+    "to": "/news-events/community-counts-driggs-head-start/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-downtown-driggs-association/",
+    "to": "/news-events/community-counts-downtown-driggs-association/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/supporting-the-foundation-of-local-nonprofits/",
+    "to": "/news-events/supporting-the-foundation-of-local-nonprofits/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/joselin-matkins-executive-director-of-the-teton-regional-land-trust-receives-the-dawn-banks-nonprofit-leadership-award/",
+    "to": "/news-events/joselin-matkins-executive-director-of-the-teton-regional-land-trust-receives-the-dawn-banks-nonprofit-leadership-award/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/tin-cup-is-a-foundation-for-our-community/",
+    "to": "/news-events/tin-cup-is-a-foundation-for-our-community/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-teton-valley-mental-health-coalition-2/",
+    "to": "/news-events/community-counts-teton-valley-mental-health-coalition-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-community-resource-center/",
+    "to": "/news-events/community-counts-community-resource-center/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/2020-tin-cup-challenge-awards-ceremony-revised/",
+    "to": "/news-events/2020-tin-cup-challenge-awards-ceremony-revised/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/14th-annual-tin-cup-challenge-kicks-off-on-march-16th/",
+    "to": "/news-events/14th-annual-tin-cup-challenge-kicks-off-on-march-16th/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-mountainside-institute/",
+    "to": "/news-events/community-counts-mountainside-institute/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-blake-chapman-young-eagles-scholarship-2/",
+    "to": "/news-events/community-counts-blake-chapman-young-eagles-scholarship-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-earthfire-institute/",
+    "to": "/news-events/community-counts-earthfire-institute/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-downtown-driggs-association-2/",
+    "to": "/news-events/community-counts-downtown-driggs-association-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-education-foundation-of-teton-valley-2/",
+    "to": "/news-events/community-counts-education-foundation-of-teton-valley-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-teton-valley-ski-education-foundation/",
+    "to": "/news-events/community-counts-teton-valley-ski-education-foundation/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-teton-valley-mental-health-coalition-2-2/",
+    "to": "/news-events/community-counts-teton-valley-mental-health-coalition-2-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-rotary-club-of-teton-valley-2/",
+    "to": "/news-events/community-counts-rotary-club-of-teton-valley-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts/",
+    "to": "/news-events/",
+    "note": "Community Counts series index redirects to news"
+  },
+  {
+    "from": "/community-counts-teton-valley-foundation-2/",
+    "to": "/news-events/community-counts-teton-valley-foundation-2/",
+    "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/community-counts-teton-valley-food-pantry-2/",
+    "to": "/news-events/community-counts-teton-valley-food-pantry-2/",
+    "note": "News post moved to /news-events/"
+  }
+]

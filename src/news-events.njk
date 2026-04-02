@@ -59,79 +59,14 @@ subpageNavItems:
     </div>
   </section>
 
-  <!-- IMPLEMENTATION: post-grid (Events)
-       wordpress_query: The Events Calendar upcoming events query, orderby event_date ASC
-       card_fields: featured_image, title, event_date, event_time, venue/location
-       pagination: "View All Events" link to /get-involved/calendar/ or calendar widget
-       background: --color-grey-bg
-       notes: Events remain hardcoded placeholders in the static build. In WordPress, this section queries The Events Calendar CPT.
-       anchor: enabled | id: "events" | label: "Events"
-  -->
   <section class="post-grid post-grid--alt" id="events">
     <div class="container">
       <div class="post-grid__header">
         <h2 class="post-grid__heading">Upcoming Events</h2>
         <p class="post-grid__text">Workshops, community gatherings, and foundation events.</p>
       </div>
-      <div class="post-grid__cards">
-
-        <a href="/news-events/nonprofit-workshop-grant-writing/" class="post-card post-card--event" aria-label="Grant Writing Workshop — April 12">
-          <div class="post-card__image">
-            <img src="/assets/images/home/make-a-difference.webp" alt="" loading="lazy">
-            <div class="post-card__date-badge" aria-hidden="true">
-              <span class="post-card__date-badge-day">12</span>
-              <span class="post-card__date-badge-month">Apr</span>
-            </div>
-          </div>
-          <div class="post-card__body">
-            <h3 class="post-card__title">Grant Writing Workshop</h3>
-            <div class="post-card__meta">
-              <span class="post-card__meta-item"><i class="far fa-clock" aria-hidden="true"></i> 10:00 AM – 12:00 PM</span>
-              <span class="post-card__meta-item"><i class="far fa-map-marker-alt" aria-hidden="true"></i> CFTV Office, Driggs</span>
-            </div>
-            <p class="post-card__excerpt">A hands-on workshop for local nonprofits to strengthen their grant applications. Open to all Teton Valley organizations.</p>
-          </div>
-        </a>
-
-        <a href="/news-events/tin-cup-challenge-kickoff-2025/" class="post-card post-card--event" aria-label="Tin Cup Challenge Kickoff — July 1">
-          <div class="post-card__image">
-            <img src="/assets/images/give/tin-cup-event-runners.webp" alt="" loading="lazy">
-            <div class="post-card__date-badge" aria-hidden="true">
-              <span class="post-card__date-badge-day">1</span>
-              <span class="post-card__date-badge-month">Jul</span>
-            </div>
-          </div>
-          <div class="post-card__body">
-            <h3 class="post-card__title">Tin Cup Challenge Kickoff</h3>
-            <div class="post-card__meta">
-              <span class="post-card__meta-item"><i class="far fa-clock" aria-hidden="true"></i> 9:00 AM</span>
-              <span class="post-card__meta-item"><i class="far fa-map-marker-alt" aria-hidden="true"></i> Driggs City Center</span>
-            </div>
-            <p class="post-card__excerpt">The annual Tin Cup Challenge begins! Join us for the kickoff celebration and learn how to support your favorite nonprofits.</p>
-          </div>
-        </a>
-
-        <a href="/news-events/annual-celebration-dinner/" class="post-card post-card--event" aria-label="Annual Celebration Dinner — October 18">
-          <div class="post-card__image">
-            <img src="/assets/images/community/kids-street-hockey.webp" alt="Kids playing street hockey at a Teton Valley community event" loading="lazy">
-            <div class="post-card__date-badge" aria-hidden="true">
-              <span class="post-card__date-badge-day">18</span>
-              <span class="post-card__date-badge-month">Oct</span>
-            </div>
-          </div>
-          <div class="post-card__body">
-            <h3 class="post-card__title">Annual Celebration Dinner</h3>
-            <div class="post-card__meta">
-              <span class="post-card__meta-item"><i class="far fa-clock" aria-hidden="true"></i> 6:00 PM – 9:00 PM</span>
-              <span class="post-card__meta-item"><i class="far fa-map-marker-alt" aria-hidden="true"></i> Teton Springs Lodge</span>
-            </div>
-            <p class="post-card__excerpt">Celebrate the year's impact with fellow donors, nonprofit leaders, and community members at our annual gathering.</p>
-          </div>
-        </a>
-
-      </div>
       <div class="post-grid__action">
-        <a href="#community-calendar" class="theme_btn theme_btn_bg">View Full Calendar <span aria-hidden="true"></span></a>
+        <a href="https://cftetonvalley.org/events/" target="_blank" rel="noopener" class="theme_btn theme_btn_bg">View Upcoming Events <span aria-hidden="true"></span></a>
       </div>
     </div>
   </section>

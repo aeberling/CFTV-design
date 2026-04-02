@@ -1,0 +1,31 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- for page in collections.all %}
+  {%- set isExcluded = (page.url == '/sitewide-sections/') or (page.url == '/style-guide/') or (page.url == '/sitemap-january27/') %}
+  {%- set isNewsPost = (page.url | startsWith('/news-events/')) and page.url != '/news-events/' %}
+  {%- set isTopLevel = (page.url == '/news-events/') or (page.url == '/about/') or (page.url == '/give/') or (page.url == '/nonprofits/') or (page.url == '/funds-scholarships/') or (page.url == '/get-involved/') %}
+  {%- if page.url and not isExcluded %}
+  <url>
+    <loc>https://cftetonvalley.org{{ page.url }}</loc>
+    <lastmod>{{ page.date | isoDate }}</lastmod>
+    {%- if page.url == '/' %}
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    {%- elif isNewsPost %}
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    {%- elif isTopLevel %}
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    {%- else %}
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    {%- endif %}
+  </url>
+  {%- endif %}
+  {%- endfor %}
+</urlset>
