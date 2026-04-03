@@ -239,8 +239,9 @@ a {
 
 /* ---- 4. Header Overrides ---- */
 .cftv-logo {
-  height: 69px;
-  width: auto;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
 }
 
 /* Desktop dropdown menu brand color overrides */
