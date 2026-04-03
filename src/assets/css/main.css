@@ -2922,6 +2922,138 @@ button.login-trigger {
   color: var(--color-plum);
 }
 
+/* Mobile menu — submenu toggle button (chevron) */
+.side-mobile-menu .has-dropdown {
+  position: relative;
+}
+
+.side-mobile-menu .submenu-toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  background: none;
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+  padding: 0;
+}
+
+.side-mobile-menu .submenu-toggle:hover {
+  color: var(--color-primary);
+}
+
+.side-mobile-menu .submenu-toggle.is-open i {
+  transform: rotate(180deg);
+}
+
+/* Hide the vendor chevron pseudo-element since we use a button now */
+.side-mobile-menu ul li.has-dropdown > a:after {
+  display: none !important;
+}
+
+/* Ensure parent link doesn't overlap the toggle button */
+.side-mobile-menu ul li.has-dropdown > a {
+  padding-right: 56px;
+}
+
+/* Mobile menu — utility links section */
+.side-mobile-menu__utility {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.side-mobile-menu__utility > a,
+.side-mobile-menu__utility > .has-dropdown > a {
+  padding: 13px 0;
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.side-mobile-menu__utility > a:hover,
+.side-mobile-menu__utility > .has-dropdown > a:hover {
+  color: var(--color-primary);
+}
+
+.side-mobile-menu__utility .has-dropdown {
+  position: relative;
+}
+
+.side-mobile-menu__utility .submenu-toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  background: none;
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.side-mobile-menu__utility .submenu-toggle.is-open i {
+  transform: rotate(180deg);
+}
+
+.side-mobile-menu__utility .mobile-login-links {
+  list-style: none;
+  padding-left: 0;
+}
+
+.side-mobile-menu__utility .mobile-login-links li {
+  padding-left: 15px;
+}
+
+.side-mobile-menu__utility .mobile-login-links li a {
+  padding: 10px 0 10px 15px;
+  display: block;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  text-transform: capitalize;
+  position: relative;
+}
+
+.side-mobile-menu__utility .mobile-login-links li a:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 2px solid var(--color-cirrus);
+  border-radius: 50%;
+}
+
+.side-mobile-menu__utility .mobile-login-links li a:hover {
+  color: var(--color-primary);
+}
+
+.side-mobile-menu__utility .mobile-login-links li a:hover:before {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
 /* Impact Stats — number styling (was h1, now p) */
 .counetrs__number {
   color: white;

@@ -52,13 +52,28 @@
     }
   });
 
-  // Mobile submenu toggle
-  $('.side-mobile-menu .has-dropdown > a').on('click', function (e) {
+  // Mobile submenu toggle — button toggles submenu, link navigates
+  $('.side-mobile-menu .submenu-toggle').on('click', function (e) {
     e.preventDefault();
-    var $li = $(this).parent();
-    var $submenu = $li.children('.submenu');
+    var $parent = $(this).parent();
+    var $submenu = $parent.children('.submenu');
     $submenu.slideToggle(200);
-    $(this).attr('aria-expanded', $submenu.is(':visible'));
+    var isExpanded = $submenu.is(':visible');
+    $(this).attr('aria-expanded', isExpanded);
+    // Rotate chevron
+    $(this).toggleClass('is-open', isExpanded);
+  });
+
+  // Mobile login toggle — opens login links inline instead of panel
+  $('.mobile-login-toggle').on('click', function (e) {
+    e.preventDefault();
+    var $parent = $(this).parent();
+    var $submenu = $parent.children('.submenu');
+    var $toggle = $parent.children('.submenu-toggle');
+    $submenu.slideToggle(200);
+    var isExpanded = $submenu.is(':visible');
+    $toggle.attr('aria-expanded', isExpanded);
+    $toggle.toggleClass('is-open', isExpanded);
   });
 
   // 2b. Login Panel Toggle

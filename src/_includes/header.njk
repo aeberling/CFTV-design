@@ -87,6 +87,7 @@
     <ul>
       <li class="has-dropdown">
         <a href="/give/">Give</a>
+        <button type="button" class="submenu-toggle" aria-expanded="false" aria-label="Show Give submenu"><i class="fas fa-chevron-down"></i></button>
         <ul class="submenu" style="display: none;">
           <li><a href="/give/tin-cup-challenger/">Become a Challenger</a></li>
           <li><a href="/give/start-a-fund/">Start a Fund</a></li>
@@ -95,6 +96,7 @@
       </li>
       <li class="has-dropdown">
         <a href="/funds-scholarships/">Funds & Scholarships</a>
+        <button type="button" class="submenu-toggle" aria-expanded="false" aria-label="Show Funds submenu"><i class="fas fa-chevron-down"></i></button>
         <ul class="submenu" style="display: none;">
           <li><a href="/funds-scholarships/memorial-funds/">Memorial Funds</a></li>
           <li><a href="/funds-scholarships/scholarships/">Scholarships</a></li>
@@ -102,6 +104,7 @@
       </li>
       <li class="has-dropdown">
         <a href="/nonprofits/">Nonprofits</a>
+        <button type="button" class="submenu-toggle" aria-expanded="false" aria-label="Show Nonprofits submenu"><i class="fas fa-chevron-down"></i></button>
         <ul class="submenu" style="display: none;">
           <li><a href="/nonprofits/workshops/">Workshops & Training</a></li>
           <li><a href="/nonprofits/resources/">Nonprofit Resources</a></li>
@@ -113,6 +116,7 @@
       </li>
       <li class="has-dropdown">
         <a href="/get-involved/">Get Involved</a>
+        <button type="button" class="submenu-toggle" aria-expanded="false" aria-label="Show Get Involved submenu"><i class="fas fa-chevron-down"></i></button>
         <ul class="submenu" style="display: none;">
           <li><a href="/nonprofit-directory/">Nonprofit Directory</a></li>
           <li><a href="/get-involved/volunteer/">Volunteer Opportunities</a></li>
@@ -125,6 +129,7 @@
       </li>
       <li class="has-dropdown">
         <a href="/about/">About</a>
+        <button type="button" class="submenu-toggle" aria-expanded="false" aria-label="Show About submenu"><i class="fas fa-chevron-down"></i></button>
         <ul class="submenu" style="display: none;">
           <li><a href="/about/programs/">Programs</a></li>
           <li><a href="/about/mission-values/">Mission & Values</a></li>
@@ -135,5 +140,20 @@
       </li>
       <li><a href="/contact/">Contact</a></li>
     </ul>
+
+    {# Utility links — visible only in mobile menu #}
+    <div class="side-mobile-menu__utility">
+      <a href="/news-events/">News & Events</a>
+      <div class="has-dropdown">
+        <a href="javascript:void(0);" class="mobile-login-toggle">Login</a>
+        <button type="button" class="submenu-toggle" aria-expanded="false" aria-label="Show Login submenu"><i class="fas fa-chevron-down"></i></button>
+        <ul class="submenu mobile-login-links" style="display: none;">
+          <li><a href="https://gofund.akoyago.com/cftetonvalley/" target="_blank" rel="noopener">Fund Holder Login</a></li>
+          <li><a href="https://goapply.akoyago.com/cftetonvalleygrants" target="_blank" rel="noopener">GoApply</a></li>
+          <li><a href="https://goapply.akoyago.com/cftetonvalleygrants" target="_blank" rel="noopener">Grant Committee</a></li>
+          <li><a href="https://cftetonvalley.sharepoint.com/:f:/s/CommunityFoundationofTetonValleyBoardPortal/En9PDO5sRyBJm18nTPXge7sBmGdY0hULerKXgls3dW3oNg?OR=Teams-HL&CT=1760631989781" target="_blank" rel="noopener">Board of Directors</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 </aside>
