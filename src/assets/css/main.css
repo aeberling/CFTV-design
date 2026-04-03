@@ -239,7 +239,7 @@ a {
 
 /* ---- 4. Header Overrides ---- */
 .cftv-logo {
-  max-height: 60px;
+  max-height: 69px;
   width: auto;
 }
 
@@ -1023,6 +1023,7 @@ a {
   width: auto !important;
   height: auto !important;
   object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .cftv-footer .footer__widget h4 {
