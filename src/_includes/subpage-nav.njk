@@ -6,7 +6,7 @@
      rendering: Only renders if 1+ sibling blocks have navigation anchors enabled. Outputs nothing if no anchors found.
      notes: In static build, uses subpageNavItems array from page front matter. In WordPress, this becomes dynamic.
 -->
-<nav class="subpage-nav">
+<nav class="subpage-nav" aria-label="Page sections">
   <div class="container">
     <ul class="subpage-nav__list">
       {% for item in subpageNavItems %}

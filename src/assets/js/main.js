@@ -8,27 +8,48 @@
   });
 
   // 2. Mobile Menu Toggle
-  $('.hamburger-menu > a').on('click', function (e) {
+  var $hamburgerBtn = $('.hamburger-menu > button');
+  $hamburgerBtn.on('click', function (e) {
     e.preventDefault();
     $('.slide-bar').toggleClass('show');
     $('body').addClass('on-side');
     $('.body-overlay').addClass('active');
+    $hamburgerBtn.attr('aria-expanded', 'true');
+    // Move focus into the mobile menu
+    $('.close-mobile-menu > button').focus();
   });
 
-  $('.close-mobile-menu > a').on('click', function (e) {
+  $('.close-mobile-menu > button').on('click', function (e) {
     e.preventDefault();
+    closeMobileMenu();
+  });
+
+  // Helper: close mobile menu
+  function closeMobileMenu() {
     $('.slide-bar').removeClass('show');
     $('body').removeClass('on-side');
     $('.body-overlay').removeClass('active');
-  });
+    $hamburgerBtn.attr('aria-expanded', 'false');
+    $hamburgerBtn.focus();
+  }
+
+  // Helper: close login panel
+  function closeLoginPanel() {
+    $('.login-panel').removeClass('show');
+    $('body').removeClass('on-side');
+    $('.body-overlay').removeClass('active');
+    $('.login-trigger').focus();
+  }
 
   // Close all panels when overlay is clicked
   $('.body-overlay').on('click', function (e) {
     e.preventDefault();
-    $('.slide-bar').removeClass('show');
-    $('.login-panel').removeClass('show');
-    $('body').removeClass('on-side');
-    $('.body-overlay').removeClass('active');
+    if ($('.slide-bar').hasClass('show')) {
+      closeMobileMenu();
+    }
+    if ($('.login-panel').hasClass('show')) {
+      closeLoginPanel();
+    }
   });
 
   // Mobile submenu toggle
@@ -46,13 +67,65 @@
     $('.login-panel').addClass('show');
     $('body').addClass('on-side');
     $('.body-overlay').addClass('active');
+    // Move focus into the login panel
+    $('.login-panel__close button').focus();
   });
 
-  $('.login-panel__close > a').on('click', function (e) {
+  $('.login-panel__close > button').on('click', function (e) {
     e.preventDefault();
-    $('.login-panel').removeClass('show');
-    $('body').removeClass('on-side');
-    $('.body-overlay').removeClass('active');
+    closeLoginPanel();
+  });
+
+  // 2c. ESC key handler for panels
+  $(document).on('keydown', function (e) {
+    if (e.key === 'Escape') {
+      if ($('.login-panel').hasClass('show')) {
+        closeLoginPanel();
+      }
+      if ($('.slide-bar').hasClass('show')) {
+        closeMobileMenu();
+      }
+    }
+  });
+
+  // 2d. Focus trap for login panel
+  $('.login-panel').on('keydown', function (e) {
+    if (e.key !== 'Tab') return;
+    var $focusable = $(this).find('a[href], button, input, [tabindex]:not([tabindex="-1"])').filter(':visible');
+    var $first = $focusable.first();
+    var $last = $focusable.last();
+
+    if (e.shiftKey) {
+      if (document.activeElement === $first[0]) {
+        e.preventDefault();
+        $last.focus();
+      }
+    } else {
+      if (document.activeElement === $last[0]) {
+        e.preventDefault();
+        $first.focus();
+      }
+    }
+  });
+
+  // 2e. Focus trap for mobile menu
+  $('.slide-bar').on('keydown', function (e) {
+    if (e.key !== 'Tab') return;
+    var $focusable = $(this).find('a[href], button, input, [tabindex]:not([tabindex="-1"])').filter(':visible');
+    var $first = $focusable.first();
+    var $last = $focusable.last();
+
+    if (e.shiftKey) {
+      if (document.activeElement === $first[0]) {
+        e.preventDefault();
+        $last.focus();
+      }
+    } else {
+      if (document.activeElement === $last[0]) {
+        e.preventDefault();
+        $first.focus();
+      }
+    }
   });
 
   // 3. Sticky Header
