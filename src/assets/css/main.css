@@ -217,7 +217,8 @@ a {
   gap: 20px;
 }
 
-.utility-links a {
+.utility-links a,
+.utility-links button {
   color: var(--color-graphite);
   font-size: 12px;
   font-weight: 500;
@@ -226,7 +227,8 @@ a {
   text-decoration: none;
 }
 
-.utility-links a:hover {
+.utility-links a:hover,
+.utility-links button:hover {
   opacity: 0.8;
 }
 
