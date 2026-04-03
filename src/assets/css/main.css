@@ -239,7 +239,7 @@ a {
 
 /* ---- 4. Header Overrides ---- */
 .cftv-logo {
-  max-height: 69px;
+  height: 69px;
   width: auto;
 }
 
