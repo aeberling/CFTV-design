@@ -218,8 +218,9 @@ a {
 }
 
 .utility-links a,
-.utility-links button {
+.utility-links button.login-trigger {
   color: var(--color-graphite);
+  font-family: var(--font-body);
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
@@ -228,7 +229,7 @@ a {
 }
 
 .utility-links a:hover,
-.utility-links button:hover {
+.utility-links button.login-trigger:hover {
   opacity: 0.8;
 }
 
