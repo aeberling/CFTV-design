@@ -1020,8 +1020,9 @@ a {
 
 .cftv-footer .footer-logo img {
   max-height: 75px;
-  width: auto !important;
-  height: auto !important;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   object-fit: contain;
   filter: brightness(0) invert(1);
 }
