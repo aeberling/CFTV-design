@@ -7,16 +7,14 @@ heroHeading: "About Us"
 heroText: "The Community Foundation of Teton Valley connects generosity to the causes, nonprofits, and people who make Teton Valley thrive. We elevate lives through the power of generosity."
 heroImage: "/assets/images/about/hero-about.webp"
 subpageNavItems:
-  - { id: "mission", label: "Mission & Values" }
-  - { id: "impact", label: "Our Impact" }
+  - { id: "mission", label: "Mission & Vision" }
   - { id: "team", label: "Staff & Board" }
   - { id: "reports", label: "Annual Reports" }
-  - { id: "strategic-plan", label: "Strategic Plan" }
 ---
 <!-- PAGE: about
      background: solid-white
      theme: light
-     notes: Main About page with page-hero, subpage-nav, content-splits, team grid, and CTA banner. Sub-pages for Mission & Values, Staff & Board, Annual Reports, and Strategic Plan will have deeper content.
+     notes: Main About page with page-hero, subpage-nav, content-splits, team grid, and CTA banner. Sub-pages for Mission & Vision, Staff & Board, Annual Reports, and Strategic Plan will have deeper content.
 -->
 
 {% include "utility-nav.njk" %}
@@ -27,13 +25,13 @@ subpageNavItems:
   {% include "subpage-nav.njk" %}
 
   <!-- IMPLEMENTATION: content-split
-       heading: "Mission & Values"
+       heading: "Mission & Vision"
        content: Mission statement and core pillars
        image: hero-about.webp (5:4, object-fit: cover)
-       button: "Learn More" -> /about/mission-values/
+       button: "Learn More" -> /about/mission-vision/
        background: default (--color-dusk)
        modifier: none (image left, content right)
-       anchor: enabled | id: "mission" | label: "Mission & Values"
+       anchor: enabled | id: "mission" | label: "Mission & Vision"
   -->
   <section class="content-split" id="mission">
     <div class="content-split__image content-split__image--center">
@@ -41,7 +39,7 @@ subpageNavItems:
     </div>
     <div class="content-split__content">
       <span class="content-split__eyebrow">Our Foundation</span>
-      <h2 class="content-split__heading">Mission & Values</h2>
+      <h2 class="content-split__heading">Mission & Vision</h2>
       <p class="content-split__text">Our mission is to enhance lives through philanthropic leadership by providing excellent donor services, making impactful grants to benefit the community, ensuring sustainability within the philanthropic sector, and serving as a leader, catalyst, and resource.</p>
       <ul class="content-split__list">
         <li>Championing nonprofits serving Teton Valley</li>
@@ -50,36 +48,10 @@ subpageNavItems:
         <li>Serving as a catalyst for positive change</li>
       </ul>
       <div class="content-split__buttons">
-        <a href="/about/mission-values/" class="theme_btn theme_btn_bg">Learn More <span></span></a>
+        <a href="/about/mission-vision/" class="theme_btn theme_btn_bg">Learn More <span></span></a>
       </div>
     </div>
   </section>
-
-  <!-- IMPLEMENTATION: content-split
-       heading: "Our Impact"
-       content: Overview of community impact and programs
-       image: areas-of-impact-chart.webp (5:4, object-fit: contain)
-       button: "View Programs" -> /about/programs/
-       background: --color-dark-pine
-       modifier: --reverse (image right, content left)
-       anchor: enabled | id: "impact" | label: "Our Impact"
-  -->
-  <section class="content-split content-split--reverse" id="impact">
-    <div class="content-split__image content-split__image--contain">
-      <img src="/assets/images/about/areas-of-impact-chart.webp" alt="2024 Community Foundation of Teton Valley areas of impact chart showing grant distribution" loading="lazy">
-    </div>
-    <div class="content-split__content" style="background: var(--color-dark-pine);">
-      <span class="content-split__eyebrow">Community Impact</span>
-      <h2 class="content-split__heading">Our Impact</h2>
-      <p class="content-split__text">The Community Foundation provides comprehensive support including annual nonprofit grantmaking awards, education for nonprofit staff and board members, workshops, networking events, and learning opportunities. We manage community assets and coordinate community-wide giving to strengthen Teton Valley.</p>
-      <div class="content-split__buttons">
-        <a href="/about/programs/" class="theme_btn theme_btn_bg">View Programs <span></span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- IMPLEMENTATION: impact-stats (reused from homepage) -->
-  {% include "impact-stats.njk" %}
 
   <!-- IMPLEMENTATION: team-preview
        heading: "Staff & Board"
@@ -163,29 +135,6 @@ subpageNavItems:
     </div>
   </section>
 
-  <!-- IMPLEMENTATION: content-split
-       heading: "Strategic Plan"
-       content: Strategic direction and accreditation
-       image: accreditation-badge.webp
-       button: "View Strategic Plan" -> /about/strategic-plan/
-       background: --color-graphite
-       modifier: --reverse (image right, content left)
-       notes: Uses accreditation badge as image; content-split__image--badge modifier centers small image
-       anchor: enabled | id: "strategic-plan" | label: "Strategic Plan"
-  -->
-  <section class="content-split content-split--reverse" id="strategic-plan">
-    <div class="content-split__image content-split__image--badge">
-      <img src="/assets/images/about/accreditation-badge.webp" alt="Council on Foundations national standards accreditation badge for Community Foundation of Teton Valley" loading="lazy">
-    </div>
-    <div class="content-split__content" style="background: var(--color-graphite);">
-      <span class="content-split__eyebrow">Looking Ahead</span>
-      <h2 class="content-split__heading">Strategic Plan</h2>
-      <p class="content-split__text">The Community Foundation is in good standing with the Council on Foundations National Standards, having completed a rigorous peer review of our organizational and financial policies. Our strategic plan guides our commitment to strengthening Teton Valley for years to come.</p>
-      <div class="content-split__buttons">
-        <a href="/about/strategic-plan/" class="theme_btn theme_btn_bg">View Strategic Plan <span></span></a>
-      </div>
-    </div>
-  </section>
 
   <!-- IMPLEMENTATION: cta-banner
        heading: "Have questions? We'd love to hear from you."

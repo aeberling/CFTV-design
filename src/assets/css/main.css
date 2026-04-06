@@ -810,6 +810,22 @@ a {
   padding: 60px 0;
 }
 
+.testimonial-section--bar {
+  padding: 0;
+  background: var(--color-sand);
+}
+
+.testimonial-section--bar .container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.testimonial-section--bar .testimonial-card {
+  max-width: 100%;
+  border-radius: 0;
+  padding: 50px 15%;
+}
+
 .testimonial-card {
   background: var(--color-sand);
   border-radius: var(--radius-card);
@@ -1255,6 +1271,14 @@ a {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+}
+
+.content-split__note {
+  font-size: 14px;
+  font-style: italic;
+  color: #fff;
+  margin-top: 8px;
+  margin-bottom: 0;
 }
 
 /* Light background modifier — dark text for readability */
@@ -2377,6 +2401,10 @@ a {
   /* Standalone Testimonial */
   .testimonial-card {
     padding: 25px 25px;
+  }
+
+  .testimonial-section--bar .testimonial-card {
+    padding: 30px 8%;
   }
 
   .testimonial-card blockquote {

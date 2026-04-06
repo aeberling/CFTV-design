@@ -1,20 +1,23 @@
 ---
 layout: base.njk
-title: "Mission & Values - Community Foundation of Teton Valley"
+title: "Mission & Vision - Community Foundation of Teton Valley"
 description: "Our mission is to elevate lives through the power of generosity — championing nonprofits, empowering donors, and promoting a culture of giving in Teton Valley."
-permalink: /about/mission-values/
-heroHeading: "Mission & Values"
+permalink: /about/mission-vision/
+heroHeading: "Mission & Vision"
 heroText: "To elevate lives through the power of generosity — championing nonprofits, empowering donors, and serving as a catalyst for positive change in Teton Valley."
 heroImage: "/assets/images/about/hero-about.webp"
 subpageNavItems:
-  - { id: "mission", label: "Our Mission" }
-  - { id: "values", label: "Our Values" }
-  - { id: "history", label: "Our History" }
+  - { id: "mission", label: "Mission" }
+  - { id: "values", label: "Values" }
+  - { id: "history", label: "History" }
+  - { id: "impact", label: "Impact" }
+  - { id: "vision", label: "Vision" }
+  - { id: "priorities", label: "Strategic Priorities" }
 ---
-<!-- PAGE: about/mission-values
+<!-- PAGE: about/mission-vision
      background: solid-white
      theme: light
-     notes: Mission & Values sub-page under About with mission statement, values list, history, and impact stats
+     notes: Mission & Vision sub-page under About with mission statement, values list, history, and impact stats
 -->
 
 {% include "utility-nav.njk" %}
@@ -95,13 +98,76 @@ subpageNavItems:
     </div>
   </section>
 
-  <!-- IMPLEMENTATION: impact-stats
-       stats: 4 (Granted, Nonprofits Supported, Scholarships Awarded, Funds Managed)
-       background: default (--color-dusk)
-       animation: counterUp on scroll
-       note: Reused from homepage — same include
+  <!-- IMPLEMENTATION: content-split
+       heading: "Our Impact"
+       content: Overview of community impact and programs
+       image: areas-of-impact-chart.webp (5:4, object-fit: contain)
+       button: "View Programs" -> /about/programs/
+       background: --color-dark-pine
+       modifier: --reverse (image right, content left)
+       anchor: enabled | id: "impact" | label: "Our Impact"
   -->
-  {% include "impact-stats.njk" %}
+  <section class="content-split content-split--reverse" id="impact">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/about/abc-multi-sport-pe-grant.webp" alt="K-3 students participating in multi-sport PE curriculum through Above & Beyond the Classroom grant program" loading="lazy">
+      <p class="content-split__caption">A competitive grant award to Above & Beyond the Classroom implemented a multi-sport PE curriculum during after-school, summer, and Friday programming for K-3 students.</p>
+    </div>
+    <div class="content-split__content" style="background: var(--color-dark-pine);">
+      <span class="content-split__eyebrow">Community Impact</span>
+      <h2 class="content-split__heading">Our Impact</h2>
+      <p class="content-split__text">The Community Foundation provides comprehensive support including annual nonprofit grantmaking awards, education for nonprofit staff and board members, workshops, networking events, and learning opportunities. We manage community assets and coordinate community-wide giving to strengthen Teton Valley.</p>
+      <div class="content-split__buttons">
+        <a href="/about/programs/" class="theme_btn theme_btn_bg">View Programs <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Our Vision for Teton Valley"
+       content: "The Community Foundation of Teton Valley envisions a thriving community..." (310 chars)
+       image: grant-recipient-handshake-ceremony.webp (5:4, object-fit: cover)
+       button: none
+       background: default (--color-dusk)
+       modifier: none (image left, content right)
+  -->
+  <section class="content-split" id="vision">
+    <div class="content-split__image content-split__image--top">
+      <img src="/assets/images/about/grant-recipient-handshake-ceremony.webp" alt="Community Foundation board member shaking hands with a grant recipient at the Competitive Grant Awards ceremony" loading="lazy">
+    </div>
+    <div class="content-split__content">
+      <span class="content-split__eyebrow">Looking Ahead</span>
+      <h2 class="content-split__heading">Our Vision for Teton Valley</h2>
+      <p class="content-split__text">The Community Foundation of Teton Valley envisions a thriving community where generosity connects people to the causes and organizations that matter most. Our strategic plan charts the course for deepening our impact and expanding our reach.</p>
+      <p class="content-split__text">We are committed to growing as a trusted leader in community philanthropy — ensuring that Teton Valley's nonprofits, donors, and residents have the support they need to flourish.</p>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Strategic Priorities"
+       content: "Our strategic priorities reflect the community's greatest needs..." (97 chars)
+       image: areas-of-impact-chart.webp (--contain modifier, object-fit: contain)
+       button: none
+       background: --color-dark-pine
+       modifier: --reverse (image right, content left) + --contain image modifier
+  -->
+  <section class="content-split content-split--reverse" id="priorities">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/about/teton-valley-aquatics-water-safety.webp" alt="Children learning water safety through Teton Valley Aquatics swim program" loading="lazy">
+      <p class="content-split__caption">A competitive grant award helps Teton Valley Aquatics provide water safety education and fitness classes.</p>
+    </div>
+    <div class="content-split__content" style="background: var(--color-dark-pine);">
+      <span class="content-split__eyebrow">Focus Areas</span>
+      <h2 class="content-split__heading">Strategic Priorities</h2>
+      <p class="content-split__text">Our strategic priorities reflect the community's greatest needs and the Foundation's unique position to address them.</p>
+      <ul class="content-split__list">
+        <li>Grow grantmaking capacity and community investment</li>
+        <li>Strengthen nonprofit organizations through training and resources</li>
+        <li>Expand donor services and planned giving opportunities</li>
+        <li>Deepen community engagement and awareness</li>
+        <li>Ensure organizational sustainability and excellence</li>
+      </ul>
+    </div>
+  </section>
 
   <!-- IMPLEMENTATION: cta-banner
        heading: "Ready to make an impact in Teton Valley?"

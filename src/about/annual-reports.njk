@@ -8,7 +8,6 @@ heroText: "We are committed to transparency and accountability. Review our annua
 heroImage: "/assets/images/about/hero-about.webp"
 subpageNavItems:
   - { id: "current", label: "Current Report" }
-  - { id: "financials", label: "Financials" }
 ---
 <!-- PAGE: about/annual-reports
      background: solid-white
@@ -61,33 +60,6 @@ subpageNavItems:
     </div>
   </section>
 
-  <!-- IMPLEMENTATION: content-split
-       heading: "Financials & Accreditation"
-       content: "The Community Foundation is in good standing with the Council on Foundations..." (236 chars)
-       image: accreditation-badge.webp (--badge modifier, fixed 195px width)
-       button: "Request Documents" -> /contact/
-       background: --color-graphite
-       modifier: --reverse (image right, content left) + --badge image modifier
-       notes: Includes bullet list (content-split__list) for financial document types. Uses --badge modifier to center small accreditation seal.
-  -->
-  <section class="content-split content-split--reverse" id="financials">
-    <div class="content-split__image content-split__image--badge">
-      <img src="/assets/images/about/accreditation-badge.webp" alt="Council on Foundations national standards accreditation badge" loading="lazy">
-    </div>
-    <div class="content-split__content" style="background: var(--color-graphite);">
-      <span class="content-split__eyebrow">Accountability</span>
-      <h2 class="content-split__heading">Financials & Accreditation</h2>
-      <p class="content-split__text">The Community Foundation is in good standing with the Council on Foundations National Standards, having completed a rigorous peer review of our organizational and financial policies. Our audited financial statements and 990 are available upon request.</p>
-      <ul class="content-split__list">
-        <li>Audited financial statements available</li>
-        <li>990 available upon request</li>
-        <li>Council on Foundations accredited</li>
-      </ul>
-      <div class="content-split__buttons">
-        <a href="/contact/" class="theme_btn theme_btn_bg">Request Documents <span></span></a>
-      </div>
-    </div>
-  </section>
 
   <!-- IMPLEMENTATION: cta-banner
        heading: "Questions about our financials?"
