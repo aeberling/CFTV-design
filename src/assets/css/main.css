@@ -880,19 +880,10 @@ a {
   border-bottom: 1px solid #e0e0e0;
   font-size: 18px;
   color: var(--color-dark);
-  transition: color 0.3s ease;
 }
 
 .fund-type-item:last-of-type {
   border-bottom: none;
-}
-
-.fund-type-item:hover {
-  color: var(--color-dark-pine);
-}
-
-.fund-type-item .arrow {
-  color: var(--color-dark-pine);
 }
 
 .fund-cta-btn {
@@ -1415,6 +1406,14 @@ a {
 .community-calendar__header {
   text-align: center;
   margin-bottom: 40px;
+}
+
+.community-calendar__hosted-by {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-body);
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
 }
 
 .community-calendar__heading {
