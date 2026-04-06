@@ -1164,6 +1164,23 @@ a {
   display: block;
 }
 
+/* Image caption overlay */
+.content-split__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 14px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.5;
+  z-index: 1;
+}
+
 /* Image vertical alignment modifiers */
 .content-split__image--top img {
   object-position: center top;
@@ -3102,5 +3119,164 @@ button.login-trigger {
 @media (max-width: 480px) {
   .hero-split__static p {
     max-width: 100%;
+  }
+}
+
+/* ---- Team Bio Modal ---- */
+.team-preview__card[data-bio] {
+  cursor: pointer;
+}
+
+.team-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.team-modal[hidden] {
+  display: none;
+}
+
+.team-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.team-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(29, 41, 46, 0.75);
+}
+
+.team-modal__content {
+  position: relative;
+  background: var(--color-white);
+  max-width: 780px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  transform: translateY(20px);
+  transition: transform 0.3s;
+}
+
+.team-modal.is-open .team-modal__content {
+  transform: translateY(0);
+}
+
+.team-modal__close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  z-index: 1;
+  background: none;
+  border: none;
+  font-size: 32px;
+  line-height: 1;
+  color: var(--color-body);
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color 0.2s;
+}
+
+.team-modal__close:hover {
+  color: var(--color-primary);
+}
+
+.team-modal__inner {
+  display: flex;
+  gap: 0;
+}
+
+.team-modal__image {
+  flex: 0 0 280px;
+  min-height: 280px;
+}
+
+.team-modal__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.team-modal__body {
+  flex: 1;
+  padding: 40px 32px;
+}
+
+.team-modal__name {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 4px;
+}
+
+.team-modal__role {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--color-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.team-modal__bio p {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-body);
+  margin-bottom: 14px;
+}
+
+.team-modal__bio p:last-child {
+  margin-bottom: 0;
+}
+
+/* Team Modal — tablet */
+@media (max-width: 768px) {
+  .team-modal__inner {
+    flex-direction: column;
+  }
+
+  .team-modal__image {
+    flex: none;
+    max-height: 300px;
+    overflow: hidden;
+  }
+
+  .team-modal__body {
+    padding: 28px 24px;
+  }
+
+  .team-modal__name {
+    font-size: 24px;
+  }
+}
+
+/* Team Modal — mobile */
+@media (max-width: 480px) {
+  .team-modal {
+    padding: 12px;
+  }
+
+  .team-modal__content {
+    max-height: 90vh;
+  }
+
+  .team-modal__body {
+    padding: 24px 20px;
+  }
+
+  .team-modal__bio p {
+    font-size: 14px;
   }
 }

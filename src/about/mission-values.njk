@@ -1,10 +1,10 @@
 ---
 layout: base.njk
 title: "Mission & Values - Community Foundation of Teton Valley"
-description: "Our mission is to enhance lives through philanthropic leadership — championing nonprofits, empowering donors, and promoting a culture of giving in Teton Valley."
+description: "Our mission is to elevate lives through the power of generosity — championing nonprofits, empowering donors, and promoting a culture of giving in Teton Valley."
 permalink: /about/mission-values/
 heroHeading: "Mission & Values"
-heroText: "We elevate lives through the power of generosity — championing nonprofits, empowering donors, and serving as a catalyst for positive change in Teton Valley."
+heroText: "To elevate lives through the power of generosity — championing nonprofits, empowering donors, and serving as a catalyst for positive change in Teton Valley."
 heroImage: "/assets/images/about/hero-about.webp"
 subpageNavItems:
   - { id: "mission", label: "Our Mission" }
@@ -14,7 +14,7 @@ subpageNavItems:
 <!-- PAGE: about/mission-values
      background: solid-white
      theme: light
-     notes: Mission & Values sub-page under About with mission statement, values list, history, impact stats, and accreditation
+     notes: Mission & Values sub-page under About with mission statement, values list, history, and impact stats
 -->
 
 {% include "utility-nav.njk" %}
@@ -25,9 +25,9 @@ subpageNavItems:
   {% include "subpage-nav.njk" %}
 
   <!-- IMPLEMENTATION: content-split
-       heading: "Enhancing Lives Through Philanthropic Leadership"
-       content: "Our mission is to enhance lives through philanthropic leadership..." (310 chars)
-       image: hero-about.webp (5:4, object-fit: cover)
+       heading: "Elevating Lives Through the Power of Generosity"
+       content: "Our mission is to elevate lives through the power of generosity..." (310 chars)
+       image: tin-cup-challenge-event.webp (5:4, object-fit: cover)
        button: none
        background: default (--color-dusk)
        modifier: none (image left, content right)
@@ -35,28 +35,29 @@ subpageNavItems:
   -->
   <section class="content-split" id="mission">
     <div class="content-split__image content-split__image--center">
-      <img src="/assets/images/about/girls-with-pony-tin-cup-event.webp" alt="Girls with a pony at the Tin Cup Challenge community event in Teton Valley" loading="lazy">
+      <img src="/assets/images/about/tin-cup-challenge-event.webp" alt="Community members at the Tin Cup Challenge Event Day in Teton Valley" loading="lazy">
     </div>
     <div class="content-split__content">
       <span class="content-split__eyebrow">Our Mission</span>
-      <h2 class="content-split__heading">Enhancing Lives Through Philanthropic Leadership</h2>
-      <p class="content-split__text">Our mission is to enhance lives through philanthropic leadership by providing excellent donor services, making impactful grants to benefit the community, ensuring sustainability within the philanthropic sector, and serving as a leader, catalyst, and resource.</p>
-      <p class="content-split__text">The Foundation manages community assets and coordinates community-wide giving over an 8-week period that culminates in the annual Tin Cup Challenge Fun Run, a major fundraising event for local nonprofits.</p>
+      <h2 class="content-split__heading">Elevating Lives Through the Power of Generosity</h2>
+      <p class="content-split__text">Our mission is to elevate lives through the power of generosity by providing excellent donor services, making impactful grants to benefit the community, ensuring sustainability within the philanthropic sector, and serving as a leader, catalyst, and resource.</p>
+      <p class="content-split__text">The Foundation manages community assets and coordinates community-wide giving over six weeks that culminates in the annual Tin Cup Challenge Event Day, a major fundraising event for local nonprofits.</p>
     </div>
   </section>
 
   <!-- IMPLEMENTATION: content-split
        heading: "What Guides Us"
        content: "Everything we do is rooted in our commitment to Teton Valley..." (155 chars)
-       image: make-a-difference.webp (5:4, object-fit: cover)
+       image: home-meal-delivery-grant.webp (5:4, object-fit: cover)
        button: none
        background: --color-dark-pine
        modifier: --reverse (image right, content left)
-       notes: Includes bullet list (content-split__list) with 5 core values
+       notes: Includes bullet list with 5 core values. Image has caption overlay about grant impact.
   -->
   <section class="content-split content-split--reverse" id="values">
-    <div class="content-split__image content-split__image--center">
-      <img src="/assets/images/funds/scholarship-recipients-group-photo.webp" alt="Scholarship recipients and nonprofit leaders gathered on bleachers at a Teton Valley school awards assembly" loading="lazy">
+    <div class="content-split__image content-split__image--top">
+      <img src="/assets/images/about/home-meal-delivery-grant.webp" alt="Volunteer delivering meals to homebound seniors through a competitive grant program in Teton Valley" loading="lazy">
+      <p class="content-split__caption">A competitive grant award covered weekly meal delivery for five homebound seniors for a year.</p>
     </div>
     <div class="content-split__content" style="background: var(--color-dark-pine);">
       <span class="content-split__eyebrow">Our Values</span>
@@ -75,21 +76,22 @@ subpageNavItems:
   <!-- IMPLEMENTATION: content-split
        heading: "Growing Together Since 2007"
        content: "The Community Foundation of Teton Valley was established..." (337 chars)
-       image: areas-of-impact-chart.webp (--contain modifier, object-fit: contain)
+       image: fairgrounds-arena-grant.webp (5:4, object-fit: cover)
        button: none
        background: --color-plum
-       modifier: none (image left, content right) + --contain image modifier
-       notes: Two paragraph blocks, no button. Image uses --contain modifier for chart display.
+       modifier: none (image left, content right)
+       notes: Two paragraph blocks, no button. Image has caption overlay about grant impact.
   -->
   <section class="content-split" id="history">
-    <div class="content-split__image content-split__image--contain">
-      <img src="/assets/images/about/areas-of-impact-chart.webp" alt="Community Foundation of Teton Valley areas of impact chart showing community investment" loading="lazy">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/about/fairgrounds-arena-grant.webp" alt="Teton County Fairgrounds indoor arena expansion funded by a competitive grant" loading="lazy">
+      <p class="content-split__caption">A competitive grant award helped add 10,000 sq ft to the Teton County Fairgrounds indoor arena.</p>
     </div>
     <div class="content-split__content" style="background: var(--color-plum);">
       <span class="content-split__eyebrow">Our History</span>
       <h2 class="content-split__heading">Growing Together Since 2007</h2>
-      <p class="content-split__text">The Community Foundation of Teton Valley was established to serve as a permanent philanthropic resource for the Teton Valley community. Since our founding, we have grown to manage over 50 funds, support 85+ nonprofits, and distribute millions in grants and scholarships.</p>
-      <p class="content-split__text">As an affiliate of the Community Foundation of Jackson Hole, we bring professional fund management and grantmaking expertise to our community while maintaining a deep local focus on the needs and opportunities unique to Teton Valley.</p>
+      <p class="content-split__text">The Community Foundation of Teton Valley was established to serve as a permanent philanthropic resource for Teton Valley. Since our founding, we have grown to manage over 50 funds, support 64+ nonprofits, and distribute millions in grants and scholarships.</p>
+      <p class="content-split__text">As an established charitable bank, we bring professional fund management and grantmaking expertise to our community while maintaining a deep focus on the needs and opportunities unique to Teton Valley.</p>
     </div>
   </section>
 
@@ -100,26 +102,6 @@ subpageNavItems:
        note: Reused from homepage — same include
   -->
   {% include "impact-stats.njk" %}
-
-  <!-- IMPLEMENTATION: content-split
-       heading: "National Standards Accredited"
-       content: "The Community Foundation is in good standing with the Council on Foundations..." (218 chars)
-       image: accreditation-badge.webp (--badge modifier, fixed 195px width)
-       button: none
-       background: --color-graphite
-       modifier: --reverse (image right, content left) + --badge image modifier
-       notes: Uses --badge modifier to center small accreditation seal in image panel
-  -->
-  <section class="content-split content-split--reverse">
-    <div class="content-split__image content-split__image--badge">
-      <img src="/assets/images/about/accreditation-badge.webp" alt="Council on Foundations national standards accreditation badge" loading="lazy">
-    </div>
-    <div class="content-split__content" style="background: var(--color-graphite);">
-      <span class="content-split__eyebrow">Accreditation</span>
-      <h2 class="content-split__heading">National Standards Accredited</h2>
-      <p class="content-split__text">The Community Foundation is in good standing with the Council on Foundations National Standards. This accreditation reflects our commitment to the highest standards of organizational and financial integrity, achieved through a rigorous peer review process.</p>
-    </div>
-  </section>
 
   <!-- IMPLEMENTATION: cta-banner
        heading: "Ready to make an impact in Teton Valley?"
