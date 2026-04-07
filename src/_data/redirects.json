@@ -90,6 +90,12 @@
     "note": "Calendar moved under get-involved"
   },
   {
+  {
+    "from": "/get-involved/subscribe/",
+    "to": "/sign-up-for-our-newsletter/",
+    "note": "Subscribe page removed, redirect to newsletter signup"
+  },
+  {
     "from": "/stocks-bonds/",
     "to": "/give/leave-a-legacy/",
     "note": "Stocks/bonds giving consolidated into legacy giving"
@@ -125,11 +131,6 @@
     "note": "In-kind donors consolidated into Tin Cup"
   },
   {
-    "from": "/media-kit/",
-    "to": "/about/",
-    "note": "Media kit consolidated into about"
-  },
-  {
     "from": "/operation-independence/",
     "to": "/about/programs/",
     "note": "Operation Independence now under programs"
@@ -141,8 +142,8 @@
   },
   {
     "from": "/newsletter-thank-you/",
-    "to": "/get-involved/subscribe/",
-    "note": "Thank you page redirects to subscribe"
+    "to": "/sign-up-for-our-newsletter/",
+    "note": "Thank you page redirects to newsletter signup"
   },
   {
     "from": "/refund_returns/",

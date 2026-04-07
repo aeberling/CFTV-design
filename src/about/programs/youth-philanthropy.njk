@@ -11,6 +11,7 @@ subpageNavItems:
   - { id: "how-it-works", label: "How It Works" }
   - { id: "impact", label: "Impact" }
   - { id: "get-involved", label: "Get Involved" }
+  - { id: "faq", label: "FAQ" }
 ---
 <!-- PAGE: about/programs/youth-philanthropy
      background: solid-white
@@ -106,6 +107,72 @@ subpageNavItems:
       <div class="content-split__buttons">
         <a href="https://godonate.akoyago.com/cftetonvalley/fund/1e97522b-a7a5-4f27-93e3-1e26d61c38ff" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg">Support This Program <span></span></a>
         <a href="mailto:bself@cftetonvalley.org?subject=Youth%20Philanthropy%20Inquiry" class="theme_btn theme_btn_bg">Contact Us <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: faq-accordion
+       heading: "Frequently Asked Questions"
+       background: white
+  -->
+  <section class="faq-accordion" id="faq">
+    <div class="container">
+      <h2 class="faq-accordion__heading">Frequently Asked Questions</h2>
+      <div class="faq-accordion__list" id="youthPhilanthropyFaq">
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#yp-faq-1" aria-expanded="false" aria-controls="yp-faq-1">
+            <span class="faq-accordion__question">Eligibility</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="yp-faq-1" data-bs-parent="#youthPhilanthropyFaq">
+            <div class="faq-accordion__answer">
+              <p>To be eligible for funding, an organization must be a 501(c)(3), governmental entity, or other IRS-recognized charitable entity serving Teton Valley. Grant funds must be used in Teton Valley, ID, or Alta, WY.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#yp-faq-2" aria-expanded="false" aria-controls="yp-faq-2">
+            <span class="faq-accordion__question">Available Funding</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="yp-faq-2" data-bs-parent="#youthPhilanthropyFaq">
+            <div class="faq-accordion__answer">
+              <p>Applicants may request between $500 and $1,500 in funding.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#yp-faq-3" aria-expanded="false" aria-controls="yp-faq-3">
+            <span class="faq-accordion__question">Program Guidelines</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="yp-faq-3" data-bs-parent="#youthPhilanthropyFaq">
+            <div class="faq-accordion__answer">
+              <p>The Community Foundation encourages applications from nonprofits of all sizes across all fields of interest. A broad cross-section of strong applications enriches the learning experience for participants and increases their awareness of the nonprofits who serve our community and the importance of the work they do.</p>
+              <ul>
+                <li>Students distribute grant checks at an Awards Party.</li>
+                <li>Requests may not exceed $1,500.</li>
+                <li>Grant Presentations may be requested by the students.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#yp-faq-4" aria-expanded="false" aria-controls="yp-faq-4">
+            <span class="faq-accordion__question">Program Appreciation</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="yp-faq-4" data-bs-parent="#youthPhilanthropyFaq">
+            <div class="faq-accordion__answer">
+              <p>The Youth Philanthropy Grants are funded by Tin Cup Business &amp; Community Challengers, individual donors, and endowed funds held at the Community Foundation of Teton Valley.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>

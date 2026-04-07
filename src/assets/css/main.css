@@ -806,30 +806,20 @@ a {
 
 /* Standalone Testimonial Section */
 .testimonial-section {
-  padding: 60px 0;
-}
-
-.testimonial-section--bar {
   padding: 0;
   background: var(--color-sand);
 }
 
-.testimonial-section--bar .container {
+.testimonial-section .container {
   max-width: 100%;
   padding: 0;
-}
-
-.testimonial-section--bar .testimonial-card {
-  max-width: 100%;
-  border-radius: 0;
-  padding: 50px 15%;
 }
 
 .testimonial-card {
   background: var(--color-sand);
-  border-radius: var(--radius-card);
-  padding: 40px 50px;
-  max-width: 800px;
+  max-width: 100%;
+  border-radius: 0;
+  padding: 50px 15%;
   margin: 0 auto;
   text-align: center;
 }
@@ -1297,7 +1287,7 @@ a {
 
 /* ---- 17. Quick Links ---- */
 .quick-links {
-  background: var(--color-sand);
+  background: #fff;
   padding: 80px 0;
   text-align: center;
 }
@@ -2132,6 +2122,143 @@ a {
   border: 0;
 }
 
+/* ---- FAQ Accordion ---- */
+.faq-accordion {
+  padding: 80px 0;
+  background: var(--color-white);
+}
+
+.faq-accordion__heading {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--color-graphite);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-accordion__list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-accordion__item {
+  border-bottom: 1px solid var(--color-fog);
+}
+
+.faq-accordion__item:first-child {
+  border-top: 1px solid var(--color-fog);
+}
+
+.faq-accordion__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  gap: 16px;
+}
+
+.faq-accordion__question {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-graphite);
+  line-height: 1.3;
+}
+
+.faq-accordion__icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.faq-accordion__icon::before,
+.faq-accordion__icon::after {
+  content: '';
+  position: absolute;
+  background: var(--color-poppy);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
+
+.faq-accordion__icon::before {
+  width: 16px;
+  height: 2px;
+}
+
+.faq-accordion__icon::after {
+  width: 2px;
+  height: 16px;
+}
+
+.faq-accordion__button[aria-expanded="true"] .faq-accordion__icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  opacity: 0;
+}
+
+.faq-accordion__button:hover .faq-accordion__question {
+  color: var(--color-dark-pine);
+}
+
+.faq-accordion__answer {
+  padding: 0 0 24px;
+}
+
+.faq-accordion__answer p {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-pine);
+  margin-bottom: 12px;
+}
+
+.faq-accordion__answer p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-accordion__answer ul {
+  list-style: disc;
+  padding-left: 24px;
+  margin-bottom: 12px;
+}
+
+.faq-accordion__answer ul li {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-pine);
+  margin-bottom: 4px;
+}
+
+@media (max-width: 767px) {
+  .faq-accordion {
+    padding: 48px 0;
+  }
+
+  .faq-accordion__heading {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+
+  .faq-accordion__question {
+    font-size: 18px;
+  }
+
+  .faq-accordion__button {
+    padding: 16px 0;
+  }
+}
+
 /* ---- 25. Responsive ---- */
 @media (max-width: 1024px) {
   .hero-split {
@@ -2397,10 +2524,6 @@ a {
 
   /* Standalone Testimonial */
   .testimonial-card {
-    padding: 25px 25px;
-  }
-
-  .testimonial-section--bar .testimonial-card {
     padding: 30px 8%;
   }
 
@@ -3333,5 +3456,166 @@ button.login-trigger {
 
   .team-modal__bio p {
     font-size: 14px;
+  }
+}
+
+/* ================================================
+   Media Kit
+   ================================================ */
+.media-kit__section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.media-kit__heading {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 400;
+  color: var(--color-dusk);
+  margin-bottom: 16px;
+}
+
+.media-kit__text {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-body);
+  max-width: 640px;
+  margin: 0 auto 24px;
+}
+
+.media-kit__text a {
+  color: var(--color-dusk);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.media-kit__text a:hover {
+  color: var(--color-primary);
+}
+
+/* Instructions */
+.media-kit__instructions {
+  text-align: left;
+  max-width: 540px;
+  margin: 24px auto 0;
+  border: 2px solid var(--color-cirrus);
+  padding: 24px 32px;
+}
+
+.media-kit__step {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-body);
+  line-height: 1.7;
+  margin-bottom: 4px;
+}
+
+.media-kit__step:last-child {
+  margin-bottom: 0;
+}
+
+.media-kit__step-number {
+  font-weight: 700;
+  color: var(--color-dusk);
+  margin-right: 6px;
+}
+
+/* Single centered button */
+.media-kit__buttons--single {
+  margin: 28px 0 20px;
+}
+
+/* Button grid */
+.media-kit__buttons--grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.media-kit__btn {
+  display: inline-block;
+  padding: 10px 22px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--color-dusk);
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.media-kit__btn:hover {
+  background: var(--color-plum);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.media-kit__btn--disabled {
+  opacity: 0.45;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Left-aligned text modifier */
+.media-kit__text--left {
+  text-align: left;
+  max-width: 800px;
+}
+
+/* Guidelines list */
+.media-kit__guidelines {
+  list-style: disc;
+  text-align: left;
+  max-width: 800px;
+  margin: 24px auto 0;
+  padding-left: 20px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-body);
+  line-height: 1.7;
+}
+
+.media-kit__guidelines li {
+  margin-bottom: 16px;
+}
+
+.media-kit__guidelines li:last-child {
+  margin-bottom: 0;
+}
+
+/* Media Kit — tablet */
+@media (max-width: 768px) {
+  .media-kit__heading {
+    font-size: 34px;
+  }
+
+  .media-kit__buttons--grid {
+    gap: 10px;
+  }
+
+  .media-kit__btn {
+    padding: 9px 18px;
+    font-size: 13px;
+  }
+}
+
+/* Media Kit — mobile */
+@media (max-width: 480px) {
+  .media-kit__heading {
+    font-size: 28px;
+  }
+
+  .media-kit__buttons--grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .media-kit__btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
   }
 }
