@@ -90,7 +90,6 @@
     "note": "Calendar moved under get-involved"
   },
   {
-  {
     "from": "/get-involved/subscribe/",
     "to": "/sign-up-for-our-newsletter/",
     "note": "Subscribe page removed, redirect to newsletter signup"
