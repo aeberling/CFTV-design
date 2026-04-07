@@ -1,0 +1,156 @@
+---
+layout: base.njk
+title: "Ways to Give - Community Foundation of Teton Valley"
+description: "Explore the many ways to support Teton Valley — cash, check, stock, wire, donor-advised funds, and more. Give to the causes you care about most."
+permalink: /give/ways-to-give/
+heroHeading: "Ways to Give"
+heroText: "The Community Foundation makes it easy to give in the way that works best for you. One gift supports local solutions with tax-deductible giving."
+heroImage: "/assets/images/give/tin-cup-awards.webp"
+subpageNavItems:
+  - { id: "why-give", label: "Why Give Here" }
+  - { id: "how-to-give", label: "How to Give" }
+  - { id: "give-to-purpose", label: "Give to a Purpose" }
+---
+<!-- PAGE: give/ways-to-give
+     background: solid-white
+     theme: light
+     notes: Ways to Give sub-page under Give. Overview of why to give, how to give, and purpose-based giving options.
+-->
+
+{% include "utility-nav.njk" %}
+{% include "header.njk" %}
+
+<main id="main-content">
+  {% include "page-hero.njk" %}
+  {% include "subpage-nav.njk" %}
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Why Give Here"
+       background: default (--color-dusk)
+       modifier: none (image left, content right)
+       anchor: enabled | id: "why-give" | label: "Why Give Here"
+  -->
+  <section class="content-split" id="why-give">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/community/girl-greenhouse-radish.webp" alt="Young girl proudly holding a freshly picked radish in a community greenhouse supported by the Community Foundation" loading="lazy">
+    </div>
+    <div class="content-split__content">
+      <span class="content-split__eyebrow">Make an Impact</span>
+      <h2 class="content-split__heading">Why Give Here</h2>
+      <p class="content-split__text">The Community Foundation of Teton Valley has been a trustworthy local steward since 2007 — connecting your generosity to the causes, nonprofits, and people who make Teton Valley thrive. One gift supports local solutions with tax-deductible giving.</p>
+      <ul class="content-split__list">
+        <li>Trustworthy local steward since 2007</li>
+        <li>Supports community priorities like education, health, conservation, and nonprofit services</li>
+        <li>One gift supports local solutions and tax-deductible giving</li>
+      </ul>
+      <div class="content-split__buttons">
+        <a href="https://godonate.akoyago.com/cftetonvalley/fund/community-foundation-of-teton-valley" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg">Give Now <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "How to Give"
+       background: --color-dark-pine
+       modifier: --reverse (image right, content left)
+       anchor: enabled | id: "how-to-give" | label: "How to Give"
+  -->
+  <section class="content-split content-split--reverse" id="how-to-give">
+    <div class="content-split__image content-split__image--top">
+      <img src="/assets/images/give/donors-celebrating-tin-cup-awards.webp" alt="Four excited donors reacting to their Tin Cup Challenge award at the Community Foundation photo booth" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-dark-pine);">
+      <span class="content-split__eyebrow">Give Today</span>
+      <h2 class="content-split__heading">How to Give</h2>
+      <p class="content-split__text">We accept cash donations as well as a variety of other funding options. We can help you understand the benefits of different types of gifts and the most effective way to apply them.</p>
+      <ul class="content-split__list">
+        <li>Cash & Online — Browse our funds and donate anytime</li>
+        <li>Check — Payable to CFTV, P.O. Box 1523, Driggs, ID 83422</li>
+        <li>Stock, Wire, or Donor-Advised Fund</li>
+        <li>Other Assets — Contact us for details</li>
+      </ul>
+      <div class="content-split__buttons">
+        <a href="https://godonate.akoyago.com/cftetonvalley/fund/community-foundation-of-teton-valley" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg">Give Online <span></span></a>
+        <a href="/assets/documents/cftv-cash-and-stock-transfer-memorandum-2026.pdf" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg">Wire & Stock Form <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: quick-links
+       heading: "Give to a Purpose"
+       cards: 4 (General Fund, Competitive Grants, Youth Philanthropy, Opportunity Fund)
+       background: --color-grey-bg
+       anchor: enabled | id: "give-to-purpose" | label: "Give to a Purpose"
+  -->
+  <section class="quick-links" id="give-to-purpose">
+    <div class="container">
+      <p class="quick-links__eyebrow">Direct Your Gift</p>
+      <h2 class="quick-links__heading">Give to a Purpose</h2>
+      <div class="quick-links__grid">
+        <a href="https://godonate.akoyago.com/cftetonvalley/fund/community-foundation-of-teton-valley" target="_blank" rel="noopener noreferrer" class="quick-links__card">
+          <div class="quick-links__card-image">
+            <img src="/assets/images/community/canal-view-northside-trail.webp" alt="Scenic creek and fall aspens along the Northside Trail in Teton Valley" loading="lazy">
+          </div>
+          <div class="quick-links__card-bottom">
+            <div>
+              <h3 class="quick-links__card-title">General Fund</h3>
+              <p class="quick-links__card-text">Supports community needs today.</p>
+            </div>
+          </div>
+        </a>
+        <a href="/about/programs/#competitive-grants" class="quick-links__card">
+          <div class="quick-links__card-image">
+            <img src="/assets/images/funds/competitive-grants.webp" alt="Competitive Grants funding local nonprofit impact in Teton Valley" loading="lazy">
+          </div>
+          <div class="quick-links__card-bottom">
+            <div>
+              <h3 class="quick-links__card-title">Competitive Grants</h3>
+              <p class="quick-links__card-text">Funds local nonprofit impact.</p>
+            </div>
+          </div>
+        </a>
+        <a href="/about/programs/#youth-philanthropy" class="quick-links__card">
+          <div class="quick-links__card-image">
+            <img src="/assets/images/home/tincupplaceholder.webp" alt="Youth Philanthropy program investing in youth leadership in Teton Valley" loading="lazy">
+          </div>
+          <div class="quick-links__card-bottom">
+            <div>
+              <h3 class="quick-links__card-title">Youth Philanthropy</h3>
+              <p class="quick-links__card-text">Invest in youth leadership.</p>
+            </div>
+          </div>
+        </a>
+        <a href="/about/programs/#opportunity-fund" class="quick-links__card">
+          <div class="quick-links__card-image">
+            <img src="/assets/images/give/community-member-leading-discussion.webp" alt="Community member leading a discussion at a Teton Valley nonprofit meeting" loading="lazy">
+          </div>
+          <div class="quick-links__card-bottom">
+            <div>
+              <h3 class="quick-links__card-title">Opportunity Fund</h3>
+              <p class="quick-links__card-text">Help with critical emergent needs.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: cta-banner
+       heading: "Ready to make your gift?"
+       button: "Contact Us" -> /contact/
+       background: default (--color-dark-pine)
+  -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__heading">Ready to <span>make your gift</span>?</h2>
+        <p class="cta-banner__text">Our staff is here to help you find the giving option that works best for you.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="/contact/" class="theme_btn theme_btn_bg theme_btn--light">Contact Us <span></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "footer.njk" %}

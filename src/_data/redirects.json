@@ -778,5 +778,10 @@
     "from": "/community-counts-teton-valley-food-pantry-2/",
     "to": "/news-events/community-counts-teton-valley-food-pantry-2/",
     "note": "News post moved to /news-events/"
+  },
+  {
+    "from": "/about/strategic-plan/",
+    "to": "/about/mission-vision/#vision",
+    "note": "Strategic plan content merged into Mission & Vision page"
   }
 ]

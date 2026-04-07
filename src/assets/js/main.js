@@ -292,4 +292,109 @@
     });
   }
 
+  // 12. Team Bio Modal
+  var $modal = $('#team-modal');
+  if ($modal.length) {
+    var $overlay = $modal.find('.team-modal__overlay');
+    var $closeBtn = $modal.find('.team-modal__close');
+    var $photo = $('#team-modal-photo');
+    var $name = $('#team-modal-name');
+    var $role = $('#team-modal-role');
+    var $bio = $('#team-modal-bio');
+    var $contact = $('#team-modal-contact');
+    var $lastFocused = null;
+
+    function openBioModal(card) {
+      var $card = $(card);
+      var bioText = $card.attr('data-bio');
+      if (!bioText) return;
+
+      $lastFocused = $card;
+      var imgSrc = $card.find('.team-preview__card-image img').attr('src');
+      var imgAlt = $card.find('.team-preview__card-image img').attr('alt');
+      var nameText = $card.find('.team-preview__card-name').text();
+      var roleText = $card.find('.team-preview__card-role').text();
+      var phone = $card.attr('data-phone');
+      var email = $card.attr('data-email');
+
+      $photo.attr('src', imgSrc).attr('alt', imgAlt);
+      $name.text(nameText);
+      $role.text(roleText);
+
+      // Contact info (staff only)
+      if (phone || email) {
+        var contactHtml = '';
+        if (phone) contactHtml += '<a href="tel:' + phone + '">' + phone + '</a>';
+        if (phone && email) contactHtml += '<span class="team-modal__contact-sep"></span>';
+        if (email) contactHtml += '<a href="mailto:' + email + '">' + email + '</a>';
+        $contact.html(contactHtml).removeAttr('hidden');
+      } else {
+        $contact.attr('hidden', '').empty();
+      }
+
+      // Split on || for paragraphs
+      var paragraphs = bioText.split('||');
+      var html = paragraphs.map(function (p) { return '<p>' + p.trim() + '</p>'; }).join('');
+      $bio.html(html);
+
+      $modal.removeAttr('hidden');
+      // Force reflow before adding class for transition
+      $modal[0].offsetHeight;
+      $modal.addClass('is-open');
+      $('body').css('overflow', 'hidden');
+      $closeBtn.focus();
+    }
+
+    function closeBioModal() {
+      $modal.removeClass('is-open');
+      $('body').css('overflow', '');
+      setTimeout(function () {
+        $modal.attr('hidden', '');
+        if ($lastFocused) $lastFocused.focus();
+      }, 300);
+    }
+
+    // Open on card click
+    $('.team-preview__card[data-bio]').on('click', function () {
+      openBioModal(this);
+    });
+
+    // Open on Enter/Space for keyboard users
+    $('.team-preview__card[data-bio]').on('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openBioModal(this);
+      }
+    });
+
+    // Close handlers
+    $closeBtn.on('click', closeBioModal);
+    $overlay.on('click', closeBioModal);
+
+    $(document).on('keydown', function (e) {
+      if (e.key === 'Escape' && $modal.hasClass('is-open')) {
+        closeBioModal();
+      }
+    });
+
+    // Focus trap
+    $modal.on('keydown', function (e) {
+      if (e.key !== 'Tab') return;
+      var $focusable = $modal.find('button, [href], [tabindex]:not([tabindex="-1"])').filter(':visible');
+      var $first = $focusable.first();
+      var $last = $focusable.last();
+      if (e.shiftKey) {
+        if (document.activeElement === $first[0]) {
+          e.preventDefault();
+          $last.focus();
+        }
+      } else {
+        if (document.activeElement === $last[0]) {
+          e.preventDefault();
+          $first.focus();
+        }
+      }
+    });
+  }
+
 })(jQuery);

@@ -1,0 +1,123 @@
+---
+layout: base.njk
+title: "Competitive Grants - Community Foundation of Teton Valley"
+description: "Learn about the Community Foundation's Competitive Grants program — annual funding for local nonprofits addressing critical community needs in Teton Valley."
+permalink: /about/programs/competitive-grants/
+heroHeading: "Competitive Grants"
+heroText: "Annual funding for local nonprofits addressing critical community needs — awarded through a thorough application and review process to ensure the greatest impact."
+heroImage: "/assets/images/about/hero-about.webp"
+subpageNavItems:
+  - { id: "overview", label: "Overview" }
+  - { id: "eligibility", label: "Eligibility" }
+  - { id: "process", label: "Grant Process" }
+  - { id: "apply", label: "Apply" }
+---
+<!-- PAGE: about/programs/competitive-grants
+     background: solid-white
+     theme: light
+     notes: Competitive Grants detail page under Programs.
+-->
+
+{% include "utility-nav.njk" %}
+{% include "header.njk" %}
+
+<main id="main-content">
+  {% include "page-hero.njk" %}
+  {% include "subpage-nav.njk" %}
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Investing in Teton Valley Nonprofits"
+       background: default (--color-dusk)
+       modifier: none (image left, content right)
+  -->
+  <section class="content-split" id="overview">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/about/competitive-grant-award-reading.webp" alt="Two people reading a competitive grant award letter at the Community Foundation ceremony" loading="lazy">
+    </div>
+    <div class="content-split__content">
+      <span class="content-split__eyebrow">Program Overview</span>
+      <h2 class="content-split__heading">Investing in Teton Valley Nonprofits</h2>
+      <p class="content-split__text">Our Competitive Grants program provides annual funding to local nonprofits addressing critical community needs. Awards are determined through a thorough application and review process, ensuring funds are directed where they can make the greatest impact.</p>
+      <p class="content-split__text">Each year, the Community Foundation distributes grants from its community funds to organizations that demonstrate strong alignment with community priorities, sound organizational management, and clear plans for measurable outcomes.</p>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Eligibility Requirements"
+       background: --color-dark-pine
+       modifier: --reverse (image right, content left)
+  -->
+  <section class="content-split content-split--reverse" id="eligibility">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/give/nonprofit-leaders-planning-session.webp" alt="Nonprofit leaders discussing strategy at a Community Foundation planning session" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-dark-pine);">
+      <span class="content-split__eyebrow">Who Can Apply</span>
+      <h2 class="content-split__heading">Eligibility Requirements</h2>
+      <p class="content-split__text">The Competitive Grants program is open to nonprofit organizations serving the Teton Valley community. Applicants must meet the following criteria:</p>
+      <ul class="content-split__list">
+        <li>Must be a 501(c)(3) nonprofit organization</li>
+        <li>Must serve Teton Valley residents and communities</li>
+        <li>Must demonstrate community need and organizational capacity</li>
+        <li>Previous grant recipients must have submitted required reports</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Grant Process"
+       background: --color-plum
+       modifier: none (image left, content right)
+  -->
+  <section class="content-split" id="process">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/home/youth-philanthropy-classroom.webp" alt="Grant review session at the Community Foundation" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-plum);">
+      <span class="content-split__eyebrow">How It Works</span>
+      <h2 class="content-split__heading">Grant Process</h2>
+      <p class="content-split__text">The Competitive Grants program follows an annual cycle with published deadlines. Applications are reviewed by a volunteer grants committee that evaluates each proposal based on community impact, organizational strength, and project feasibility.</p>
+      <ul class="content-split__list">
+        <li>Applications open annually with published deadlines</li>
+        <li>Volunteer grants committee reviews all proposals</li>
+        <li>Awards announced following committee review</li>
+        <li>Grant recipients submit progress and final reports</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Apply for a Grant"
+       background: --color-cirrus (light bg)
+       modifier: --reverse (image right, content left)
+  -->
+  <section class="content-split content-split--reverse" id="apply">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/home/tin-cup-challenge.webp" alt="Community members at a Teton Valley event" loading="lazy">
+    </div>
+    <div class="content-split__content content-split__content--light-bg">
+      <span class="content-split__eyebrow">Get Started</span>
+      <h2 class="content-split__heading">Apply for a Grant</h2>
+      <p class="content-split__text">Ready to apply? Visit our grants portal to start your application, or check our Dates & Deadlines page for the current grant cycle timeline. Contact us if you have questions about eligibility or the application process.</p>
+      <div class="content-split__buttons">
+        <a href="/nonprofits/apply-for-grants/" class="theme_btn theme_btn_bg">Apply for Grants <span></span></a>
+        <a href="/nonprofits/dates-deadlines/" class="theme_btn theme_btn_bg">Dates & Deadlines <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: cta-banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__heading">Want to <span>support</span> this program?</h2>
+        <p class="cta-banner__text">Your donation helps fund grants for nonprofits addressing critical community needs in Teton Valley.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="https://godonate.akoyago.com/cftetonvalley/fund/10de8cd4-7a4b-4698-a5c6-b04921f4e67b" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg theme_btn--light">Support This Program <span></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "footer.njk" %}

@@ -3,7 +3,7 @@
      attribution: Name and title (set via `testimonialAttribution` variable before include)
      background: Optional background color (set via `testimonialBg` variable, defaults to --color-sand)
 -->
-<section class="testimonial-section">
+<section class="testimonial-section{% if testimonialStyle == 'bar' %} testimonial-section--bar{% endif %}">
   <div class="container">
     <div class="testimonial-card"{% if testimonialBg %} style="background: var({{ testimonialBg }});"{% endif %}>
       <div class="quote-icon">&ldquo;</div>
@@ -12,3 +12,4 @@
     </div>
   </div>
 </section>
+{% set testimonialStyle = null %}

@@ -1,0 +1,127 @@
+---
+layout: base.njk
+title: "Youth Philanthropy - Community Foundation of Teton Valley"
+description: "Discover the Youth Philanthropy program — empowering Teton Valley students to learn about community needs, evaluate nonprofits, and make real grant decisions."
+permalink: /about/programs/youth-philanthropy/
+heroHeading: "Youth Philanthropy"
+heroText: "Empowering local young people to learn about community needs, evaluate nonprofit organizations, and make real grant decisions."
+heroImage: "/assets/images/about/hero-about.webp"
+subpageNavItems:
+  - { id: "overview", label: "Overview" }
+  - { id: "how-it-works", label: "How It Works" }
+  - { id: "impact", label: "Impact" }
+  - { id: "get-involved", label: "Get Involved" }
+---
+<!-- PAGE: about/programs/youth-philanthropy
+     background: solid-white
+     theme: light
+     notes: Youth Philanthropy detail page under Programs.
+-->
+
+{% include "utility-nav.njk" %}
+{% include "header.njk" %}
+
+<main id="main-content">
+  {% include "page-hero.njk" %}
+  {% include "subpage-nav.njk" %}
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Building the Next Generation of Philanthropists"
+       background: default (--color-dusk)
+       modifier: none (image left, content right)
+  -->
+  <section class="content-split" id="overview">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/home/youth-philanthropy-classroom.webp" alt="Teton Valley students raising hands during a Youth Philanthropy classroom session" loading="lazy">
+    </div>
+    <div class="content-split__content">
+      <span class="content-split__eyebrow">Program Overview</span>
+      <h2 class="content-split__heading">Building the Next Generation of Philanthropists</h2>
+      <p class="content-split__text">Our Youth Philanthropy program empowers local young people to learn about community needs, evaluate nonprofit organizations, and make real grant decisions. Students develop leadership skills while directly investing in the organizations that serve Teton Valley.</p>
+      <p class="content-split__text">By putting real dollars in the hands of students, the program teaches the value of thoughtful giving and builds a lifelong commitment to community engagement.</p>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "How the Program Works"
+       background: --color-dark-pine
+       modifier: --reverse (image right, content left)
+  -->
+  <section class="content-split content-split--reverse" id="how-it-works">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/about/competitive-grant-award-reading.webp" alt="Students reviewing grant applications during Youth Philanthropy program" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-dark-pine);">
+      <span class="content-split__eyebrow">The Process</span>
+      <h2 class="content-split__heading">How the Program Works</h2>
+      <p class="content-split__text">Students participate in a structured program where they learn about philanthropy, assess community needs, and evaluate grant applications from local nonprofits. The program culminates in student-led grant decisions.</p>
+      <ul class="content-split__list">
+        <li>Students learn about grantmaking and community leadership</li>
+        <li>Youth review real applications from local nonprofits</li>
+        <li>Classroom discussions build consensus on funding priorities</li>
+        <li>Students award grants and present to recipient organizations</li>
+      </ul>
+    </div>
+  </section>
+
+  {% set testimonialQuote = "I was impressed with the leadership and maturity in our class. It allowed us to discuss and share opinions without judgment and decide, as a class, where the money should go." %}
+  {% set testimonialAttribution = "&mdash; Participating Senior<br>Youth Philanthropy Program" %}
+  {% include "testimonial.njk" %}
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Real Impact, Real Decisions"
+       background: --color-plum
+       modifier: none (image left, content right)
+  -->
+  <section class="content-split" id="impact">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/about/tin-cup-challenge-event.webp" alt="Community celebration at a Youth Philanthropy grant award event" loading="lazy">
+    </div>
+    <div class="content-split__content" style="background: var(--color-plum);">
+      <span class="content-split__eyebrow">Program Impact</span>
+      <h2 class="content-split__heading">Real Impact, Real Decisions</h2>
+      <p class="content-split__text">Youth Philanthropy isn't a simulation — students make real grant decisions with real money. This hands-on experience helps young people understand the complexities of community investment and the importance of strategic giving.</p>
+      <ul class="content-split__list">
+        <li>Students gain practical experience in evaluating proposals</li>
+        <li>Local nonprofits receive meaningful grant funding</li>
+        <li>Participants develop critical thinking and collaboration skills</li>
+        <li>Builds the next generation of community philanthropists</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Get Involved"
+       background: --color-cirrus (light bg)
+       modifier: --reverse (image right, content left)
+  -->
+  <section class="content-split content-split--reverse" id="get-involved">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/give/workshop-presenter-closing-statement.webp" alt="Youth Philanthropy program facilitator leading a session" loading="lazy">
+    </div>
+    <div class="content-split__content content-split__content--light-bg">
+      <span class="content-split__eyebrow">Participate</span>
+      <h2 class="content-split__heading">Get Involved</h2>
+      <p class="content-split__text">Interested in bringing Youth Philanthropy to your classroom, or want to support the program? Contact the Community Foundation to learn about participation opportunities and how you can help empower the next generation of givers.</p>
+      <div class="content-split__buttons">
+        <a href="https://godonate.akoyago.com/cftetonvalley/fund/1e97522b-a7a5-4f27-93e3-1e26d61c38ff" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg">Support This Program <span></span></a>
+        <a href="mailto:bself@cftetonvalley.org?subject=Youth%20Philanthropy%20Inquiry" class="theme_btn theme_btn_bg">Contact Us <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: cta-banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__heading">Want to <span>support</span> youth giving?</h2>
+        <p class="cta-banner__text">Your donation empowers students to make real grant decisions and builds the next generation of Teton Valley philanthropists.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="https://godonate.akoyago.com/cftetonvalley/fund/1e97522b-a7a5-4f27-93e3-1e26d61c38ff" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg theme_btn--light">Support This Program <span></span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "footer.njk" %}
