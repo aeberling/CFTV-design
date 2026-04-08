@@ -25,27 +25,31 @@
       <!-- Column 2: Give -->
       <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp2 animated" data-wow-delay=".3s">
         <div class="footer__widget fot_abot mb-30 pl-40">
+          <nav aria-label="Footer - Give">
           <h5 class="semi-02-title mb-25">Give</h5>
           <ul class="fot-list">
-            <li><a href="https://godonate.akoyago.com/cftetonvalley/fundcatalog" target="_blank" rel="noopener noreferrer"><i class="far fa-angle-double-right"></i> Give Now</a></li>
-            <li><a href="/give/start-a-fund/"><i class="far fa-angle-double-right"></i> Create a Fund</a></li>
-            <li><a href="/give/leave-a-legacy/"><i class="far fa-angle-double-right"></i> Leave a Legacy</a></li>
-            <li><a href="/give/tin-cup-challenger/"><i class="far fa-angle-double-right"></i> Become a Tin Cup Challenger</a></li>
+            <li><a href="https://godonate.akoyago.com/cftetonvalley/fundcatalog" target="_blank" rel="noopener noreferrer"><i class="far fa-angle-double-right" aria-hidden="true"></i> Give Now</a></li>
+            <li><a href="/give/start-a-fund/"><i class="far fa-angle-double-right" aria-hidden="true"></i> Create a Fund</a></li>
+            <li><a href="/give/leave-a-legacy/"><i class="far fa-angle-double-right" aria-hidden="true"></i> Leave a Legacy</a></li>
+            <li><a href="/give/tin-cup-challenger/"><i class="far fa-angle-double-right" aria-hidden="true"></i> Become a Tin Cup Challenger</a></li>
           </ul>
+          </nav>
         </div>
       </div>
 
       <!-- Column 3: Get Involved -->
       <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp2 animated" data-wow-delay=".5s">
         <div class="footer__widget fot_abot mb-30 pl-40">
+          <nav aria-label="Footer - Get Involved">
           <h5 class="semi-02-title mb-25">Get Involved</h5>
           <ul class="fot-list">
-            <li><a href="/nonprofit-directory/"><i class="far fa-angle-double-right"></i> Nonprofit Directory</a></li>
-            <li><a href="/get-involved/#volunteer"><i class="far fa-angle-double-right"></i> Volunteer</a></li>
-            <li><a href="/news-events/#community-calendar"><i class="far fa-angle-double-right"></i> Community Calendar</a></li>
-            <li><a href="/nonprofits/dates-deadlines/"><i class="far fa-angle-double-right"></i> Grant Dates & Deadlines</a></li>
-            <li><a href="/media-kit/"><i class="far fa-angle-double-right"></i> Media Kit</a></li>
+            <li><a href="/nonprofit-directory/"><i class="far fa-angle-double-right" aria-hidden="true"></i> Nonprofit Directory</a></li>
+            <li><a href="/get-involved/#volunteer"><i class="far fa-angle-double-right" aria-hidden="true"></i> Volunteer</a></li>
+            <li><a href="/news-events/#community-calendar"><i class="far fa-angle-double-right" aria-hidden="true"></i> Community Calendar</a></li>
+            <li><a href="/nonprofits/dates-deadlines/"><i class="far fa-angle-double-right" aria-hidden="true"></i> Grant Dates & Deadlines</a></li>
+            <li><a href="/media-kit/"><i class="far fa-angle-double-right" aria-hidden="true"></i> Media Kit</a></li>
           </ul>
+          </nav>
         </div>
       </div>
 
@@ -57,7 +61,7 @@
             <li>
               <div class="widget_address d-flex mb-15">
                 <div class="widget_address__icon mr-15">
-                  <i class="fal fa-map-marker-alt"></i>
+                  <i class="fal fa-map-marker-alt" aria-hidden="true"></i>
                 </div>
                 <div class="widget_address__content">
                   <span>189 N. Main St., Ste. 112<br>Driggs, ID 83422</span>
@@ -67,7 +71,7 @@
             <li>
               <div class="widget_address d-flex mb-15">
                 <div class="widget_address__icon mr-15">
-                  <i class="fal fa-envelope"></i>
+                  <i class="fal fa-envelope" aria-hidden="true"></i>
                 </div>
                 <div class="widget_address__content">
                   <span><a href="mailto:info@cftetonvalley.org">info@cftetonvalley.org</a></span>
@@ -77,7 +81,7 @@
             <li>
               <div class="widget_address d-flex mb-15">
                 <div class="widget_address__icon mr-15">
-                  <i class="fal fa-phone"></i>
+                  <i class="fal fa-phone" aria-hidden="true"></i>
                 </div>
                 <div class="widget_address__content">
                   <span><a href="tel:2083540230">208-354-0230</a></span>
@@ -90,7 +94,7 @@
     </div>
 
     <div class="footer-newsletter">
-      <a href="/sign-up-for-our-newsletter/" class="theme_btn theme_btn_bg">Subscribe to Our Newsletter <span></span></a>
+      <a href="/sign-up-for-our-newsletter/" class="theme_btn theme_btn_bg">Subscribe to Our Newsletter <span aria-hidden="true"></span></a>
     </div>
 
     <!-- Copyright -->
@@ -98,7 +102,7 @@
       <div class="row">
         <div class="col-12 text-center">
           <div class="copyright">
-            <p>&copy; <span id="date"></span> Community Foundation of Teton Valley. All Rights Reserved.</p>
+            <p>&copy; {{ "" | year }} Community Foundation of Teton Valley. All Rights Reserved.</p>
           </div>
           <p class="footer-ein">A 501(c)(3) tax-exempt organization (EIN #39-3669347). Donations are tax-deductible as allowed by law.</p>
         </div>

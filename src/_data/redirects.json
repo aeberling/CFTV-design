@@ -40,34 +40,39 @@
     "note": "News section renamed"
   },
   {
+    "from": "/about/annual-reports/",
+    "to": "/about/impact-reports/",
+    "note": "Annual reports renamed to impact reports"
+  },
+  {
     "from": "/annual-reports/",
-    "to": "/about/annual-reports/",
-    "note": "Annual reports moved under about"
+    "to": "/about/impact-reports/",
+    "note": "Annual reports moved under about and renamed"
   },
   {
     "from": "/annual-reports/2024-annual-report/",
-    "to": "/about/annual-reports/",
-    "note": "Individual report consolidated"
+    "to": "/about/impact-reports/",
+    "note": "Individual report redirected to impact reports"
   },
   {
     "from": "/annual-reports/2023-annual-report/",
-    "to": "/about/annual-reports/",
-    "note": "Individual report consolidated"
+    "to": "/about/impact-reports/",
+    "note": "Individual report redirected to impact reports"
   },
   {
     "from": "/annual-reports/2022-annual-report/",
-    "to": "/about/annual-reports/",
-    "note": "Individual report consolidated"
+    "to": "/about/impact-reports/",
+    "note": "Individual report redirected to impact reports"
   },
   {
     "from": "/annual-reports/2021-annual-report/",
-    "to": "/about/annual-reports/",
-    "note": "Individual report consolidated"
+    "to": "/about/impact-reports/",
+    "note": "Individual report redirected to impact reports"
   },
   {
     "from": "/annual-reports/2020-annual-report/",
-    "to": "/about/annual-reports/",
-    "note": "Individual report consolidated"
+    "to": "/about/impact-reports/",
+    "note": "Individual report redirected to impact reports"
   },
   {
     "from": "/fund-types-and-structures/",

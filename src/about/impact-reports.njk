@@ -1,18 +1,18 @@
 ---
 layout: base.njk
-title: "Annual Reports - Community Foundation of Teton Valley"
-description: "Review annual reports and financial statements from the Community Foundation of Teton Valley. Transparency and accountability in everything we do."
-permalink: /about/annual-reports/
-heroHeading: "Annual Reports"
-heroText: "We are committed to transparency and accountability. Review our annual reports and financial statements to see how your generous contributions are making a difference."
+title: "Impact Reports - Community Foundation of Teton Valley"
+description: "Review impact reports and financial statements from the Community Foundation of Teton Valley. Transparency and accountability in everything we do."
+permalink: /about/impact-reports/
+heroHeading: "Impact Reports"
+heroText: "We are committed to transparency and accountability. Review our impact reports and financial statements to see how your generous contributions are making a difference."
 heroImage: "/assets/images/about/hero-about.webp"
 subpageNavItems:
   - { id: "current", label: "Current Report" }
 ---
-<!-- PAGE: about/annual-reports
+<!-- PAGE: about/impact-reports
      background: solid-white
      theme: light
-     notes: Annual Reports sub-page under About with current report feature, past reports archive grid, and financials/accreditation
+     notes: Impact Reports sub-page under About with current report feature, past reports archive grid, and financials/accreditation
 -->
 
 {% include "utility-nav.njk" %}
@@ -23,8 +23,8 @@ subpageNavItems:
   {% include "subpage-nav.njk" %}
 
   <!-- IMPLEMENTATION: content-split
-       heading: "2025 Annual Report"
-       content: "Our 2025 Annual Impact Report highlights the grants awarded..." (189 chars)
+       heading: "2025 Impact Report"
+       content: "Our 2025 Impact Report highlights the grants awarded..." (189 chars)
        image: annual-report-cover.webp (--contain modifier, object-fit: contain)
        button: "Download PDF" -> #
        background: default (--color-dusk)
@@ -33,14 +33,14 @@ subpageNavItems:
   -->
   <section class="content-split" id="current">
     <div class="content-split__image content-split__image--contain" style="background: var(--color-grey-bg);">
-      <img src="/assets/images/about/annual-report-cover.webp" alt="2025 Community Foundation of Teton Valley annual impact report cover" loading="lazy">
+      <img src="/assets/images/about/annual-report-cover.webp" alt="2025 Community Foundation of Teton Valley impact report cover" loading="lazy">
     </div>
     <div class="content-split__content">
       <span class="content-split__eyebrow">Latest Report</span>
-      <h2 class="content-split__heading">2025 Annual Report</h2>
-      <p class="content-split__text">Our 2025 Annual Impact Report highlights the grants awarded, programs supported, and the growing impact of community generosity across Teton Valley. See how your contributions are making a difference.</p>
+      <h2 class="content-split__heading">2025 Impact Report</h2>
+      <p class="content-split__text">Our 2025 Impact Report highlights the grants awarded, programs supported, and the growing impact of community generosity across Teton Valley. See how your contributions are making a difference.</p>
       <div class="content-split__buttons">
-        <a href="/assets/documents/impact-report-2025.pdf" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg">Download PDF <span></span></a>
+        <a href="/assets/documents/impact-report-2025.pdf" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg">Download PDF <span aria-hidden="true"></span></a>
       </div>
     </div>
   </section>
@@ -52,7 +52,7 @@ subpageNavItems:
       <ul class="past-reports__list">
         <li>
           <a href="/assets/documents/impact-report-2024.pdf" target="_blank" rel="noopener noreferrer">
-            2024 Annual Impact Report
+            2024 Impact Report
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           </a>
         </li>
@@ -75,7 +75,7 @@ subpageNavItems:
         <p class="cta-banner__text">We're committed to transparency. Contact us for any financial documents or questions.</p>
       </div>
       <div class="cta-banner__action">
-        <a href="/contact/" class="theme_btn theme_btn_bg theme_btn--light">Contact Us <span></span></a>
+        <a href="/contact/" class="theme_btn theme_btn_bg theme_btn--light">Contact Us <span aria-hidden="true"></span></a>
       </div>
     </div>
   </section>

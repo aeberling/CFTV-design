@@ -466,7 +466,7 @@ a {
   width: 50%;
   position: relative;
   overflow: hidden;
-  min-height: 350px;
+  min-height: 700px;
 }
 
 .hero-split__image {
@@ -529,7 +529,7 @@ a {
   background: var(--color-cirrus) !important;
 }
 
-/* Hero Split: Slider */
+/* Hero Split: Slider (CSS-only fade rotation) */
 .hero-split__slider {
   width: 100%;
   height: 100%;
@@ -541,6 +541,60 @@ a {
   width: 100%;
   height: 100%;
   min-height: 350px;
+}
+
+.hero-split__slide:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-split__slide {
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 0;
+}
+
+.hero-split__slide.is-active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.hero-split__slide.is-leaving {
+  opacity: 1;
+  z-index: 1;
+  transition: none;
+}
+
+/* Dots navigation */
+.hero-split__dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-split__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s, background 0.3s;
+}
+
+.hero-split__dot.is-active {
+  background: var(--color-white);
+  opacity: 1;
 }
 
 .hero-split__buttons {
@@ -1056,7 +1110,6 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: #ccc;
   border-radius: var(--radius-btn) 0 0 var(--radius-btn);
-  outline: none;
   min-width: 250px;
 }
 
@@ -2289,7 +2342,7 @@ a {
   }
 
   .hero-split__right {
-    min-height: 300px;
+    min-height: 350px;
   }
 
   .hero-split__buttons .theme_btn {
@@ -2299,6 +2352,7 @@ a {
   .hero-split__right-content {
     left: auto;
     right: 40px;
+    bottom: 60px;
     text-align: right;
   }
 
@@ -2307,7 +2361,7 @@ a {
     overflow: hidden;
   }
 
-  .hero-split__slide:not(:first-child) {
+  .hero-split__dots {
     display: none;
   }
 
@@ -2363,7 +2417,7 @@ a {
   }
 
   .hero-split__static {
-    padding: 30px 35px;
+    padding: 50px 35px 30px;
   }
 
   .hero-split__static h1 {
@@ -2371,7 +2425,7 @@ a {
   }
 
   .hero-split__static p {
-    max-width: 60%;
+    max-width: 100%;
   }
 
   .hero-split__buttons {
@@ -2384,12 +2438,13 @@ a {
   }
 
   .hero-split__right {
-    min-height: 280px;
+    min-height: 495px;
   }
 
   .hero-split__right-content {
     left: 40%;
     right: 35px;
+    bottom: 30px;
     text-align: right;
   }
 
@@ -2398,7 +2453,7 @@ a {
     overflow: hidden;
   }
 
-  .hero-split__slide:not(:first-child) {
+  .hero-split__dots {
     display: none;
   }
 
@@ -3061,6 +3116,24 @@ textarea:focus-visible,
   outline-offset: 2px;
 }
 
+/* Desktop nav keyboard accessibility — show submenu on focus-within */
+.main-menu ul li:focus-within > .submenu {
+  top: 100%;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Mobile login toggle — button styled as link */
+button.mobile-login-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+}
+
 /* Button resets for converted a > button elements */
 .hamburger-menu > button,
 .close-mobile-menu > button,
@@ -3273,12 +3346,7 @@ button.login-trigger {
   }
 }
 
-/* ---- Responsive: Hero paragraph max-width fix at small mobile ---- */
-@media (max-width: 480px) {
-  .hero-split__static p {
-    max-width: 100%;
-  }
-}
+/* ---- 480px breakpoint removed: hero paragraph max-width: 100% now set at 767px ---- */
 
 /* ---- Team Bio Modal ---- */
 .team-preview__card[data-bio] {

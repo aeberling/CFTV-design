@@ -1,6 +1,7 @@
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy({ "src/assets/fonts": "assets/css/fonts" });
+  eleventyConfig.addPassthroughCopy({ "src/favicon.ico": "favicon.ico" });
 
   eleventyConfig.addWatchTarget("src/assets/css/");
   eleventyConfig.addWatchTarget("src/assets/js/");
@@ -10,6 +11,11 @@ module.exports = function(eleventyConfig) {
     return collectionApi.getAll()
       .filter(item => item.data.newsPost === true)
       .sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
+  });
+
+  // Current year filter (for copyright)
+  eleventyConfig.addFilter("year", function() {
+    return new Date().getFullYear();
   });
 
   // ISO date filter (for sitemap)
