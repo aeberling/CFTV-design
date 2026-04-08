@@ -9,10 +9,7 @@ heroStyle: "color-diagonal"
 subpageNavItems:
   - { id: "workshops", label: "Workshops & Training" }
   - { id: "resources", label: "Nonprofit Resources" }
-  - { id: "grants", label: "Apply for Grants" }
-  - { id: "dates", label: "Dates & Deadlines" }
-  - { id: "tcc", label: "Tin Cup Registration" }
-  - { id: "agency", label: "Agency Funds" }
+  - { id: "dates", label: "Grant Dates & Deadlines" }
 ---
 <!-- PAGE: nonprofits
      background: solid-white
@@ -61,7 +58,7 @@ subpageNavItems:
   -->
   <section class="content-split content-split--reverse" id="resources">
     <div class="content-split__image content-split__image--center">
-      <img src="/assets/images/nonprofits/tin-cup-race-day-community.webp" alt="Community members and nonprofits with tents and booths at the Tin Cup Race Day event in Driggs" loading="lazy">
+      <img src="/assets/images/nonprofits/nonprofit-resources.webp" alt="Nonprofit resources and community support in Teton Valley" loading="lazy">
     </div>
     <div class="content-split__content" style="background: var(--color-dark-pine);">
       <span class="content-split__eyebrow">Subpage</span>
@@ -74,31 +71,7 @@ subpageNavItems:
   </section>
 
   <!-- IMPLEMENTATION: content-split
-       heading: "Apply for Grants"
-       content: "Find open, upcoming, and rolling grant opportunities..." (162 chars)
-       image: make-a-difference.webp (5:4, object-fit: cover)
-       button: "View All Grants" -> #
-       background: --color-cirrus
-       modifier: none (image left, content right)
-       notes: Eyebrow and heading use dark-purple/dark-teal overrides via inline style
-       anchor: enabled | id: "grants" | label: "Apply for Grants"
-  -->
-  <section class="content-split" id="grants">
-    <div class="content-split__image content-split__image--center">
-      <img src="/assets/images/nonprofits/grant-recipient-handshake.webp" alt="Community Foundation representative shaking hands with a grant recipient at an awards ceremony" loading="lazy">
-    </div>
-    <div class="content-split__content" style="background: var(--color-cirrus);">
-      <span class="content-split__eyebrow" style="color: var(--color-dusk);">Subpage</span>
-      <h2 class="content-split__heading" style="color: var(--color-graphite);">Apply for Grants</h2>
-      <p class="content-split__text" style="color: var(--color-graphite);">Find open, upcoming, and rolling grant opportunities for your nonprofit. Check eligibility and apply before deadlines close.</p>
-      <div class="content-split__buttons">
-        <a href="/nonprofits/apply-for-grants/" class="theme_btn theme_btn_bg">View All Grants <span></span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- IMPLEMENTATION: content-split
-       heading: "Dates & Deadlines"
+       heading: "Grant Dates & Deadlines"
        content: "Stay on top of important dates..." (183 chars)
        image: scholarship.webp (5:4, object-fit: cover)
        button: "View Calendar" -> #
@@ -107,14 +80,14 @@ subpageNavItems:
        notes: Includes bullet list (content-split__list) for grant cycle details
        anchor: enabled | id: "dates" | label: "Dates & Deadlines"
   -->
-  <section class="content-split content-split--reverse" id="dates">
+  <section class="content-split" id="dates">
     <div class="content-split__image content-split__image--center">
-      <img src="/assets/images/nonprofits/canal-view-northside-trail.webp" alt="Scenic creek winding through fall aspens along the Northside Trail in Teton Valley" loading="lazy">
+      <img src="/assets/images/nonprofits/grant-recipient-handshake.webp" alt="Community Foundation representative shaking hands with a grant recipient at an awards ceremony" loading="lazy">
     </div>
     <div class="content-split__content" style="background: var(--color-pine);">
       <span class="content-split__eyebrow">Subpage</span>
-      <h2 class="content-split__heading">Dates & Deadlines</h2>
-      <p class="content-split__text">Stay on top of important dates — grant cycles, workshop schedules, and key deadlines all in one place. This calendar auto-feeds the homepage and Apply for Grants page.</p>
+      <h2 class="content-split__heading">Grant Dates & Deadlines</h2>
+      <p class="content-split__text">Stay on top of important dates — grant cycles, workshop schedules, and key deadlines all in one place.</p>
       <ul class="content-split__list">
         <li>Grant cycles (open / close / awards / reports)</li>
         <li>Competitive, Youth Philanthropy, TCC</li>
@@ -133,33 +106,28 @@ subpageNavItems:
   <!-- IMPLEMENTATION: quick-links
        eyebrow: "Quick Links"
        heading: "More for Nonprofits"
-       cards: 3 (Tin Cup Registration, Agency Funds, Nonprofit Directory)
-       card_1: "Tin Cup Registration" | tin-cup-challenge.webp (4:3) | #
-       card_2: "Agency Funds" | scholarship.webp (4:3) | #
-       card_3: "Nonprofit Directory" | make-a-difference.webp (4:3) | #
+       cards: 2 (Tin Cup Grant Program, Nonprofit Directory)
        background: --color-grey-bg
-       anchor: enabled | id: "tcc" | label: "Tin Cup Registration"
-       notes: Section uses id="tcc" for anchor. Individual cards also carry id="tcc" and id="agency" for deep-linking — these are separate from the section-level anchor.
   -->
-  <section class="quick-links" id="tcc">
+  <section class="quick-links">
     <div class="container">
       <p class="quick-links__eyebrow">Quick Links</p>
       <h2 class="quick-links__heading">More for Nonprofits</h2>
       <div class="quick-links__grid">
-        <a href="/about/programs/#tin-cup" class="quick-links__card" id="tcc">
+        <a href="/about/programs/#tin-cup" class="quick-links__card">
           <div class="quick-links__card-image">
-            <img src="/assets/images/home/tin-cup-challenge.webp" alt="Tin Cup Registration" loading="lazy">
+            <img src="/assets/images/nonprofits/tincup-registration.webp" alt="Tin Cup Challenge registration and nonprofit event" loading="lazy">
           </div>
           <div class="quick-links__card-bottom">
             <div>
-              <h3 class="quick-links__card-title">Tin Cup Registration</h3>
-              <p class="quick-links__card-text">Register your nonprofit and amplify your fundraising.</p>
+              <h3 class="quick-links__card-title">Tin Cup Grant Program</h3>
+              <p class="quick-links__card-text">Apply for your nonprofit and amplify your fundraising.</p>
             </div>
           </div>
         </a>
-        <a href="/give/start-a-fund/" class="quick-links__card" id="agency">
+        <div class="quick-links__card">
           <div class="quick-links__card-image">
-            <img src="/assets/images/nonprofits/development-cycle-workshop.webp" alt="Workshop presenter explaining the nonprofit development cycle to attendees at the Community Foundation" loading="lazy">
+            <img src="/assets/images/nonprofits/agency-fund-event.webp" alt="Tin Cup Challenge event supporting agency funds" loading="lazy">
           </div>
           <div class="quick-links__card-bottom">
             <div>
@@ -167,7 +135,7 @@ subpageNavItems:
               <p class="quick-links__card-text">Long-term endowed support for your nonprofit.</p>
             </div>
           </div>
-        </a>
+        </div>
         <a href="/nonprofit-directory/" class="quick-links__card">
           <div class="quick-links__card-image">
             <img src="/assets/images/nonprofits/girl-with-puppy-community-event.webp" alt="Young girl holding a puppy at a Teton Valley nonprofit community event" loading="lazy">

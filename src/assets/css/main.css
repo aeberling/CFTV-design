@@ -1239,6 +1239,16 @@ a {
   line-height: 1.5;
 }
 
+.content-split__list li a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.content-split__list li a:hover {
+  color: #fff;
+}
+
 .content-split__list li::before {
   content: "—";
   position: absolute;
