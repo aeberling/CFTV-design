@@ -152,16 +152,49 @@
     }
   });
 
-  // 4. Hero Slider (right side)
-  if ($('.hero-slider-active').length) {
-    $('.hero-slider-active').slick({
-      autoplay: true,
-      autoplaySpeed: 5000,
-      dots: true,
-      fade: true,
-      speed: 1000,
-      arrows: false,
-      cssEase: 'linear'
+  // 4. Hero Slider (CSS fade rotation — no Slick)
+  var $heroSlider = $('[data-hero-slider]');
+  if ($heroSlider.length) {
+    var $slides = $heroSlider.find('.hero-split__slide');
+    var $dots = $heroSlider.find('.hero-split__dot');
+    var current = 0;
+    var total = $slides.length;
+
+    function goToSlide(index) {
+      if (index === current) return;
+      var $old = $slides.eq(current);
+      var $next = $slides.eq(index);
+
+      // Clear any previous is-leaving
+      $slides.not($old).removeClass('is-leaving');
+
+      // Old slide: hold visible behind new one
+      $old.removeClass('is-active').addClass('is-leaving');
+
+      // New slide: fade in on top
+      $next.addClass('is-active');
+
+      // After transition, remove is-leaving so old slide goes invisible
+      setTimeout(function() {
+        $old.removeClass('is-leaving');
+      }, 1050);
+
+      $dots.removeClass('is-active').eq(index).addClass('is-active');
+      current = index;
+    }
+
+    // Auto-rotate every 7 seconds
+    var timer = setInterval(function() {
+      goToSlide((current + 1) % total);
+    }, 7000);
+
+    // Click dots to navigate
+    $dots.on('click', function() {
+      clearInterval(timer);
+      goToSlide($(this).index());
+      timer = setInterval(function() {
+        goToSlide((current + 1) % total);
+      }, 7000);
     });
   }
 

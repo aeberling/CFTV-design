@@ -11,6 +11,7 @@ subpageNavItems:
   - { id: "how-it-works", label: "How It Works" }
   - { id: "impact", label: "Impact" }
   - { id: "get-involved", label: "Get Involved" }
+  - { id: "faq", label: "FAQ" }
 ---
 <!-- PAGE: about/programs/youth-philanthropy
      background: solid-white
@@ -49,7 +50,8 @@ subpageNavItems:
   -->
   <section class="content-split content-split--reverse" id="how-it-works">
     <div class="content-split__image content-split__image--center">
-      <img src="/assets/images/about/competitive-grant-award-reading.webp" alt="Students reviewing grant applications during Youth Philanthropy program" loading="lazy">
+      <img src="/assets/images/about/yp-how-it-works.webp" alt="A youth philanthropy grant provided Teton Valley Food Pantry to purchase holiday meats for our neighbors." loading="lazy">
+      <p class="content-split__caption">A youth philanthropy grant provided Teton Valley Food Pantry to purchase holiday meats for our neighbors.</p>
     </div>
     <div class="content-split__content" style="background: var(--color-dark-pine);">
       <span class="content-split__eyebrow">The Process</span>
@@ -75,7 +77,8 @@ subpageNavItems:
   -->
   <section class="content-split" id="impact">
     <div class="content-split__image content-split__image--center">
-      <img src="/assets/images/about/tin-cup-challenge-event.webp" alt="Community celebration at a Youth Philanthropy grant award event" loading="lazy">
+      <img src="/assets/images/about/yp-impact.webp" alt="A youth philanthropy grant helped Teton Valley Health Care to certify multiple clinical staff members as instructors for Pediatric Advanced Life Support (PALS), Advanced Cardiac Life Support (ACLS), and Basic Life Support (BLS)." loading="lazy">
+      <p class="content-split__caption">A youth philanthropy grant helped Teton Valley Health Care to certify multiple clinical staff members as instructors for Pediatric Advanced Life Support (PALS), Advanced Cardiac Life Support (ACLS), and Basic Life Support (BLS).</p>
     </div>
     <div class="content-split__content" style="background: var(--color-plum);">
       <span class="content-split__eyebrow">Program Impact</span>
@@ -97,15 +100,81 @@ subpageNavItems:
   -->
   <section class="content-split content-split--reverse" id="get-involved">
     <div class="content-split__image content-split__image--center">
-      <img src="/assets/images/give/workshop-presenter-closing-statement.webp" alt="Youth Philanthropy program facilitator leading a session" loading="lazy">
+      <img src="/assets/images/about/yp-get-involved.webp" alt="Youth Philanthropy program participants in Teton Valley" loading="lazy">
     </div>
     <div class="content-split__content content-split__content--light-bg">
       <span class="content-split__eyebrow">Participate</span>
       <h2 class="content-split__heading">Get Involved</h2>
-      <p class="content-split__text">Interested in bringing Youth Philanthropy to your classroom, or want to support the program? Contact the Community Foundation to learn about participation opportunities and how you can help empower the next generation of givers.</p>
+      <p class="content-split__text">Interested in supporting Youth Philanthropy? Contact the Community Foundation to learn about participation opportunities and how you can help empower the next generation of givers.</p>
       <div class="content-split__buttons">
-        <a href="https://godonate.akoyago.com/cftetonvalley/fund/1e97522b-a7a5-4f27-93e3-1e26d61c38ff" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg">Support This Program <span></span></a>
-        <a href="mailto:bself@cftetonvalley.org?subject=Youth%20Philanthropy%20Inquiry" class="theme_btn theme_btn_bg">Contact Us <span></span></a>
+        <a href="https://godonate.akoyago.com/cftetonvalley/fund/1e97522b-a7a5-4f27-93e3-1e26d61c38ff" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg">Support This Program <span aria-hidden="true"></span></a>
+        <a href="mailto:bself@cftetonvalley.org?subject=Youth%20Philanthropy%20Inquiry" class="theme_btn theme_btn_bg">Contact Us <span aria-hidden="true"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: faq-accordion
+       heading: "Frequently Asked Questions"
+       background: white
+  -->
+  <section class="faq-accordion" id="faq">
+    <div class="container">
+      <h2 class="faq-accordion__heading">Frequently Asked Questions</h2>
+      <div class="faq-accordion__list" id="youthPhilanthropyFaq">
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#yp-faq-1" aria-expanded="false" aria-controls="yp-faq-1">
+            <span class="faq-accordion__question">Eligibility</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="yp-faq-1" data-bs-parent="#youthPhilanthropyFaq">
+            <div class="faq-accordion__answer">
+              <p>To be eligible for funding, an organization must be a 501(c)(3), governmental entity, or other IRS-recognized charitable entity serving Teton Valley. Grant funds must be used in Teton Valley, ID, or Alta, WY.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#yp-faq-2" aria-expanded="false" aria-controls="yp-faq-2">
+            <span class="faq-accordion__question">Available Funding</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="yp-faq-2" data-bs-parent="#youthPhilanthropyFaq">
+            <div class="faq-accordion__answer">
+              <p>Applicants may request between $500 and $1,500 in funding.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#yp-faq-3" aria-expanded="false" aria-controls="yp-faq-3">
+            <span class="faq-accordion__question">Program Guidelines</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="yp-faq-3" data-bs-parent="#youthPhilanthropyFaq">
+            <div class="faq-accordion__answer">
+              <p>The Community Foundation encourages applications from nonprofits of all sizes across all fields of interest. A broad cross-section of strong applications enriches the learning experience for participants and increases their awareness of the nonprofits who serve our community and the importance of the work they do.</p>
+              <ul>
+                <li>Students distribute grant checks at an Awards Party.</li>
+                <li>Requests may not exceed $1,500.</li>
+                <li>Grant Presentations may be requested by the students.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#yp-faq-4" aria-expanded="false" aria-controls="yp-faq-4">
+            <span class="faq-accordion__question">Program Appreciation</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="yp-faq-4" data-bs-parent="#youthPhilanthropyFaq">
+            <div class="faq-accordion__answer">
+              <p>The Youth Philanthropy Grants are funded by Tin Cup Business &amp; Community Challengers, individual donors, and endowed funds held at the Community Foundation of Teton Valley.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -118,7 +187,7 @@ subpageNavItems:
         <p class="cta-banner__text">Your donation empowers students to make real grant decisions and builds the next generation of Teton Valley philanthropists.</p>
       </div>
       <div class="cta-banner__action">
-        <a href="https://godonate.akoyago.com/cftetonvalley/fund/1e97522b-a7a5-4f27-93e3-1e26d61c38ff" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg theme_btn--light">Support This Program <span></span></a>
+        <a href="https://godonate.akoyago.com/cftetonvalley/fund/1e97522b-a7a5-4f27-93e3-1e26d61c38ff" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg theme_btn--light">Support This Program <span aria-hidden="true"></span></a>
       </div>
     </div>
   </section>

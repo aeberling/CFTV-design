@@ -21,8 +21,8 @@
   },
   {
     "from": "/grants-scholarships/competitive-grants/",
-    "to": "/nonprofits/apply-for-grants/",
-    "note": "Competitive grants moved under nonprofits"
+    "to": "/nonprofits/dates-deadlines/",
+    "note": "Competitive grants redirected to dates & deadlines"
   },
   {
     "from": "/grants-scholarships/blake-chapman-young-eagles-scholarship/",
@@ -40,34 +40,39 @@
     "note": "News section renamed"
   },
   {
+    "from": "/about/annual-reports/",
+    "to": "/about/impact-reports/",
+    "note": "Annual reports renamed to impact reports"
+  },
+  {
     "from": "/annual-reports/",
-    "to": "/about/annual-reports/",
-    "note": "Annual reports moved under about"
+    "to": "/about/impact-reports/",
+    "note": "Annual reports moved under about and renamed"
   },
   {
     "from": "/annual-reports/2024-annual-report/",
-    "to": "/about/annual-reports/",
-    "note": "Individual report consolidated"
+    "to": "/about/impact-reports/",
+    "note": "Individual report redirected to impact reports"
   },
   {
     "from": "/annual-reports/2023-annual-report/",
-    "to": "/about/annual-reports/",
-    "note": "Individual report consolidated"
+    "to": "/about/impact-reports/",
+    "note": "Individual report redirected to impact reports"
   },
   {
     "from": "/annual-reports/2022-annual-report/",
-    "to": "/about/annual-reports/",
-    "note": "Individual report consolidated"
+    "to": "/about/impact-reports/",
+    "note": "Individual report redirected to impact reports"
   },
   {
     "from": "/annual-reports/2021-annual-report/",
-    "to": "/about/annual-reports/",
-    "note": "Individual report consolidated"
+    "to": "/about/impact-reports/",
+    "note": "Individual report redirected to impact reports"
   },
   {
     "from": "/annual-reports/2020-annual-report/",
-    "to": "/about/annual-reports/",
-    "note": "Individual report consolidated"
+    "to": "/about/impact-reports/",
+    "note": "Individual report redirected to impact reports"
   },
   {
     "from": "/fund-types-and-structures/",
@@ -90,9 +95,9 @@
     "note": "Calendar moved under get-involved"
   },
   {
-    "from": "/sign-up-for-our-newsletter/",
-    "to": "/get-involved/subscribe/",
-    "note": "Newsletter signup renamed and moved"
+    "from": "/get-involved/subscribe/",
+    "to": "/sign-up-for-our-newsletter/",
+    "note": "Subscribe page removed, redirect to newsletter signup"
   },
   {
     "from": "/stocks-bonds/",
@@ -130,11 +135,6 @@
     "note": "In-kind donors consolidated into Tin Cup"
   },
   {
-    "from": "/media-kit/",
-    "to": "/about/",
-    "note": "Media kit consolidated into about"
-  },
-  {
     "from": "/operation-independence/",
     "to": "/about/programs/",
     "note": "Operation Independence now under programs"
@@ -146,8 +146,8 @@
   },
   {
     "from": "/newsletter-thank-you/",
-    "to": "/get-involved/subscribe/",
-    "note": "Thank you page redirects to subscribe"
+    "to": "/sign-up-for-our-newsletter/",
+    "note": "Thank you page redirects to newsletter signup"
   },
   {
     "from": "/refund_returns/",

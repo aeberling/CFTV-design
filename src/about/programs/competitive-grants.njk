@@ -11,6 +11,7 @@ subpageNavItems:
   - { id: "eligibility", label: "Eligibility" }
   - { id: "process", label: "Grant Process" }
   - { id: "apply", label: "Apply" }
+  - { id: "faq", label: "FAQ" }
 ---
 <!-- PAGE: about/programs/competitive-grants
      background: solid-white
@@ -32,7 +33,8 @@ subpageNavItems:
   -->
   <section class="content-split" id="overview">
     <div class="content-split__image content-split__image--center">
-      <img src="/assets/images/about/competitive-grant-award-reading.webp" alt="Two people reading a competitive grant award letter at the Community Foundation ceremony" loading="lazy">
+      <img src="/assets/images/about/comp-grants-overview.webp" alt="A competitive grant allowed Teton Valley Foundation to purchase adequate fencing for their park venue to ensure safety and security at Music on Main." loading="lazy">
+      <p class="content-split__caption">A competitive grant allowed Teton Valley Foundation to purchase adequate fencing for their park venue to ensure safety and security at Music on Main.</p>
     </div>
     <div class="content-split__content">
       <span class="content-split__eyebrow">Program Overview</span>
@@ -49,7 +51,8 @@ subpageNavItems:
   -->
   <section class="content-split content-split--reverse" id="eligibility">
     <div class="content-split__image content-split__image--center">
-      <img src="/assets/images/give/nonprofit-leaders-planning-session.webp" alt="Nonprofit leaders discussing strategy at a Community Foundation planning session" loading="lazy">
+      <img src="/assets/images/about/search-rescue-swiftwater.webp" alt="A competitive grant allowed 14 Search & Rescue members to participate and certify as Swiftwater Rescue Technicians." loading="lazy">
+      <p class="content-split__caption">A competitive grant allowed 14 Search &amp; Rescue members to participate and certify as Swiftwater Rescue Technicians.</p>
     </div>
     <div class="content-split__content" style="background: var(--color-dark-pine);">
       <span class="content-split__eyebrow">Who Can Apply</span>
@@ -71,7 +74,7 @@ subpageNavItems:
   -->
   <section class="content-split" id="process">
     <div class="content-split__image content-split__image--center">
-      <img src="/assets/images/home/youth-philanthropy-classroom.webp" alt="Grant review session at the Community Foundation" loading="lazy">
+      <img src="/assets/images/about/comp-grants-process.webp" alt="Competitive grants process at the Community Foundation" loading="lazy">
     </div>
     <div class="content-split__content" style="background: var(--color-plum);">
       <span class="content-split__eyebrow">How It Works</span>
@@ -93,15 +96,135 @@ subpageNavItems:
   -->
   <section class="content-split content-split--reverse" id="apply">
     <div class="content-split__image content-split__image--center">
-      <img src="/assets/images/home/tin-cup-challenge.webp" alt="Community members at a Teton Valley event" loading="lazy">
+      <img src="/assets/images/about/comp-grants-apply.webp" alt="A competitive grant allowed the Education Foundation to carry out their annual Teton Valley Cares back-to-school-readiness program." loading="lazy">
+      <p class="content-split__caption">A competitive grant allowed the Education Foundation to carry out their annual Teton Valley Cares back-to-school-readiness program.</p>
     </div>
     <div class="content-split__content content-split__content--light-bg">
       <span class="content-split__eyebrow">Get Started</span>
       <h2 class="content-split__heading">Apply for a Grant</h2>
-      <p class="content-split__text">Ready to apply? Visit our grants portal to start your application, or check our Dates & Deadlines page for the current grant cycle timeline. Contact us if you have questions about eligibility or the application process.</p>
+      <p class="content-split__text">Ready to apply? Check our Grant Dates & Deadlines page for the current grant cycle timeline and eligibility requirements. Contact us if you have questions about the application process.</p>
       <div class="content-split__buttons">
-        <a href="/nonprofits/apply-for-grants/" class="theme_btn theme_btn_bg">Apply for Grants <span></span></a>
-        <a href="/nonprofits/dates-deadlines/" class="theme_btn theme_btn_bg">Dates & Deadlines <span></span></a>
+        <a href="/nonprofits/dates-deadlines/" class="theme_btn theme_btn_bg">Grant Dates & Deadlines <span aria-hidden="true"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: faq-accordion
+       heading: "Frequently Asked Questions"
+       background: white
+  -->
+  <section class="faq-accordion" id="faq">
+    <div class="container">
+      <h2 class="faq-accordion__heading">Frequently Asked Questions</h2>
+      <div class="faq-accordion__list" id="competitiveGrantsFaq">
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1" aria-expanded="false" aria-controls="faq-1">
+            <span class="faq-accordion__question">Program Description</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="faq-1" data-bs-parent="#competitiveGrantsFaq">
+            <div class="faq-accordion__answer">
+              <p>The Community Foundation offers a Competitive Grant Program to qualifying 501(c)(3) Public Charities, government agencies, and school districts in Teton Valley, designed to provide funding for projects addressing critical needs in the community. Grant applications will be considered on an annual basis and funds will be made available in a single spring application.</p>
+              <p>The size of grants awarded range from a few hundred dollars to thousands. The Community Foundation considers larger grant requests for exceptional projects or those involving collaboration amongst multiple organizations. All grant awards will be determined by the Foundation's Grant Committee and must demonstrate the applicant's ability to positively impact a compelling community need.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2" aria-expanded="false" aria-controls="faq-2">
+            <span class="faq-accordion__question">Eligibility</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="faq-2" data-bs-parent="#competitiveGrantsFaq">
+            <div class="faq-accordion__answer">
+              <ul>
+                <li>Applicant must be a 501(c)(3) nonprofit, government entity, or other IRS-recognized charitable organization serving Teton Valley, ID and/or Alta, WY, OR be fiscally-sponsored by an entity that meets these requirements.</li>
+                <li>Grant funds must be used exclusively in Teton Valley, ID &amp; Alta, WY.</li>
+                <li>Funds may not be used for debt retirement or religious or political activities.</li>
+                <li>Applicant's work must not be primarily focused on influencing legislation.</li>
+                <li>Grant funds may not be used for a project or training that has already been completed.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3" aria-expanded="false" aria-controls="faq-3">
+            <span class="faq-accordion__question">Guidelines</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="faq-3" data-bs-parent="#competitiveGrantsFaq">
+            <div class="faq-accordion__answer">
+              <p>The Community Foundation supports a wide variety of proposals. Ideas for addressing issues in the arts, environment, social services, education, recreation, animal, and civic arenas are all welcome. Applicants may request funding to support new or existing programs, capital projects, professional development, strategic planning, new or existing projects, pilot projects, equipment purchases, general operations, and capacity building.</p>
+              <p>Should your request be approved, your proposal is used as the basis for a grant contract, and funds may only be used for the purpose described in the grant application unless otherwise approved. It is the applicant's responsibility to keep a copy of the proposal and to track all fund expenditures.</p>
+              <p>Organizations awarded grant funding must send an authorized representative to the Awards Party to execute the Grant Contract, receive the grant check, and pose for a photo.</p>
+              <p>If grant funds have not been fully spent during the allotted 12 months, or the project is incomplete, organizations must contact the Community Foundation of Teton Valley to request an extension. In general, extensions of up to 6 months from the original due date of the grant report may be considered. If an extension is not granted, any unused funds must be returned promptly to the Community Foundation of Teton Valley.</p>
+              <p><strong>Restrictions:</strong> The Community Foundation does not provide support for the following: religious activity, debt retirement, political activity, organizations/projects working primarily to influence legislation, and scholarships. The Community Foundation does not fund work retroactively.</p>
+              <p>Organizations demonstrating a failure to comply with IRS regulations will be deemed ineligible to apply for funding from any Community Foundation program. Organizations that have received a grant from the Community Foundation and have overdue grant reports are not eligible for new grant funding. If you have questions about your organization's reporting status, please contact our office at (208) 354-0230.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4" aria-expanded="false" aria-controls="faq-4">
+            <span class="faq-accordion__question">Application &amp; Timeline</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="faq-4" data-bs-parent="#competitiveGrantsFaq">
+            <div class="faq-accordion__answer">
+              <p><strong>What Does the Review Committee Look for in Applications?</strong></p>
+              <ul>
+                <li>A clear and compelling community need.</li>
+                <li>A well-developed program that will address the stated need.</li>
+                <li>A rational methodology for meaningful program evaluation.</li>
+                <li>A reasonable, comprehensive project budget.</li>
+              </ul>
+              <p><strong>When is the Application Deadline and When Will Money be Available?</strong></p>
+              <p>Applications must be submitted online in February. Funding is subsequently available in early April, upon receipt of grant contracts for approved requests. If you have questions, please email Brian Thysell or call (208) 354-0230.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-5" aria-expanded="false" aria-controls="faq-5">
+            <span class="faq-accordion__question">Reporting Requirements</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="faq-5" data-bs-parent="#competitiveGrantsFaq">
+            <div class="faq-accordion__answer">
+              <p>All grant recipients are required to submit a grant report to the Community Foundation of Teton Valley. Grant reports must be received within 60 days post project completion or by January 31st, the following year granted, whichever comes first.</p>
+              <p>For more information or to submit your report, contact Brian Thysell at (208) 354-0230.</p>
+              <p>Photographs of your project are encouraged. To include photographs, send them as electronic files attached to your email when you send your report or during your project. Send photographs to Claire Vitucci.</p>
+              <p>Grant reports are distributed to our Grants Committee for review. Reports may factor into future grant awards.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-6" aria-expanded="false" aria-controls="faq-6">
+            <span class="faq-accordion__question">Recognition</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="faq-6" data-bs-parent="#competitiveGrantsFaq">
+            <div class="faq-accordion__answer">
+              <p>Grantees must adhere to the Foundation's Communication Requirements For Grant Recipients.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-7" aria-expanded="false" aria-controls="faq-7">
+            <span class="faq-accordion__question">Funding Sources</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="faq-7" data-bs-parent="#competitiveGrantsFaq">
+            <div class="faq-accordion__answer">
+              <p>Competitive Grants are funded by Tin Cup Business &amp; Community Challengers, individual donors, and endowed funds held at the Community Foundation of Teton Valley.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -114,7 +237,7 @@ subpageNavItems:
         <p class="cta-banner__text">Your donation helps fund grants for nonprofits addressing critical community needs in Teton Valley.</p>
       </div>
       <div class="cta-banner__action">
-        <a href="https://godonate.akoyago.com/cftetonvalley/fund/10de8cd4-7a4b-4698-a5c6-b04921f4e67b" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg theme_btn--light">Support This Program <span></span></a>
+        <a href="https://godonate.akoyago.com/cftetonvalley/fund/10de8cd4-7a4b-4698-a5c6-b04921f4e67b" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg theme_btn--light">Support This Program <span aria-hidden="true"></span></a>
       </div>
     </div>
   </section>

@@ -5,7 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title | default("Community Foundation of Teton Valley") }}</title>
   <meta name="description" content="{{ description | default('Connecting generosity to the causes, nonprofits, and people who make Teton Valley thrive.') }}">
-  <link rel="icon" href="/assets/images/logo/favicon.ico">
+  <link rel="canonical" href="https://cftetonvalley.org{{ page.url }}">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Community Foundation of Teton Valley">
+  <meta property="og:title" content="{{ title | default('Community Foundation of Teton Valley') }}">
+  <meta property="og:description" content="{{ description | default('Connecting generosity to the causes, nonprofits, and people who make Teton Valley thrive.') }}">
+  <meta property="og:url" content="https://cftetonvalley.org{{ page.url }}">
+  <meta property="og:image" content="https://cftetonvalley.org/assets/images/logo/cftv-og-image.webp">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title | default('Community Foundation of Teton Valley') }}">
+  <meta name="twitter:description" content="{{ description | default('Connecting generosity to the causes, nonprofits, and people who make Teton Valley thrive.') }}">
+  <meta name="twitter:image" content="https://cftetonvalley.org/assets/images/logo/cftv-og-image.webp">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" href="/assets/images/logo/favicon.png">
 
   <!-- ==========================================================
        LAUNCH TODO: Uncomment analytics before go-live (see docs/launch-procedures.md)
@@ -49,6 +67,34 @@
 
   <!-- CFTV Custom CSS -->
   <link rel="stylesheet" href="/assets/css/main.css?v={{ pkg.version | default('1.0.0') }}">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NonprofitOrganization",
+    "name": "Community Foundation of Teton Valley",
+    "url": "https://cftetonvalley.org",
+    "logo": "https://cftetonvalley.org/assets/images/logo/cftv-logo-horizontal-full-color-rgb.svg",
+    "description": "Connecting generosity to the causes, nonprofits, and people who make Teton Valley thrive.",
+    "telephone": "+1-208-354-0230",
+    "email": "info@cftetonvalley.org",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "189 N. Main St., Ste. 112",
+      "addressLocality": "Driggs",
+      "addressRegion": "ID",
+      "postalCode": "83422",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://www.facebook.com/TetonValleyNonprofitHub",
+      "https://www.instagram.com/cftetonvalley/",
+      "https://www.linkedin.com/company/community-foundation-of-teton-valley/",
+      "https://www.youtube.com/@communityfoundationofteton4347/videos"
+    ]
+  }
+  </script>
 </head>
 <body>
 

@@ -5,10 +5,10 @@ eleventyExcludeFromCollections: true
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {%- for page in collections.all %}
-  {%- set isExcluded = (page.url == '/sitewide-sections/') or (page.url == '/style-guide/') or (page.url == '/sitemap-january27/') %}
+  {%- set isExcluded = (page.url == '/sitewide-sections/') or (page.url == '/style-guide/') or (page.url == '/sitemap-january27/') or (page.url == '/assets/fonts/Flaticon/') or (page.url == '/get-involved/calendar/') or (page.url == '/iframe-test/') or (page.url == '/event/late-payment/') or (page.url == '/services-rentals/20x20-pole-tent/') or (page.url == '/event/dynamic/') %}
   {%- set isNewsPost = (page.url | startsWith('/news-events/')) and page.url != '/news-events/' %}
   {%- set isTopLevel = (page.url == '/news-events/') or (page.url == '/about/') or (page.url == '/give/') or (page.url == '/nonprofits/') or (page.url == '/funds-scholarships/') or (page.url == '/get-involved/') %}
-  {%- if page.url and not isExcluded %}
+  {%- if page.url and not isExcluded and not isNewsPost %}
   <url>
     <loc>https://cftetonvalley.org{{ page.url }}</loc>
     <lastmod>{{ page.date | isoDate }}</lastmod>

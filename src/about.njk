@@ -9,7 +9,7 @@ heroImage: "/assets/images/about/hero-about.webp"
 subpageNavItems:
   - { id: "mission", label: "Mission & Vision" }
   - { id: "team", label: "Staff & Board" }
-  - { id: "reports", label: "Annual Reports" }
+  - { id: "reports", label: "Impact Reports" }
 ---
 <!-- PAGE: about
      background: solid-white
@@ -48,7 +48,7 @@ subpageNavItems:
         <li>Serving as a catalyst for positive change</li>
       </ul>
       <div class="content-split__buttons">
-        <a href="/about/mission-vision/" class="theme_btn theme_btn_bg">Learn More <span></span></a>
+        <a href="/about/mission-vision/" class="theme_btn theme_btn_bg">Learn More <span aria-hidden="true"></span></a>
       </div>
     </div>
   </section>
@@ -71,7 +71,7 @@ subpageNavItems:
       <div class="team-preview__grid">
         <div class="team-preview__card">
           <div class="team-preview__card-image">
-            <img src="/assets/images/about/team/bonnie-self.webp" alt="Bonnie Self, Executive Director of Community Foundation of Teton Valley" loading="lazy">
+            <img src="/assets/images/about/team/zoe-self-bio.webp" alt="Bonnie Self, Executive Director of Community Foundation of Teton Valley" loading="lazy">
           </div>
           <div class="team-preview__card-info">
             <h3 class="team-preview__card-name">Bonnie Self</h3>
@@ -107,30 +107,30 @@ subpageNavItems:
         </div>
       </div>
       <div class="team-preview__action">
-        <a href="/about/staff-board/" class="theme_btn theme_btn_bg">Meet the Full Team <span></span></a>
+        <a href="/about/staff-board/" class="theme_btn theme_btn_bg">Meet the Full Team <span aria-hidden="true"></span></a>
       </div>
     </div>
   </section>
 
   <!-- IMPLEMENTATION: content-split
-       heading: "Annual Reports"
+       heading: "Impact Reports"
        content: Reports and financial information
        image: annual-report-cover.webp (5:4, object-fit: contain)
-       button: "View All Reports" -> /about/annual-reports/
+       button: "View All Reports" -> /about/impact-reports/
        background: --color-plum
        modifier: none (image left, content right)
-       anchor: enabled | id: "reports" | label: "Annual Reports"
+       anchor: enabled | id: "reports" | label: "Impact Reports"
   -->
   <section class="content-split" id="reports">
     <div class="content-split__image content-split__image--contain" style="background: var(--color-grey-bg);">
-      <img src="/assets/images/about/annual-report-cover.webp" alt="2024 Community Foundation of Teton Valley annual impact report cover" loading="lazy">
+      <img src="/assets/images/about/annual-report-cover.webp" alt="2024 Community Foundation of Teton Valley impact report cover" loading="lazy">
     </div>
     <div class="content-split__content" style="background: var(--color-plum);">
       <span class="content-split__eyebrow">Transparency</span>
-      <h2 class="content-split__heading">Annual Reports</h2>
-      <p class="content-split__text">Review our annual reports and financial statements to see how your generous contributions are making a difference across Teton Valley. We are committed to transparency and accountability in everything we do.</p>
+      <h2 class="content-split__heading">Impact Reports</h2>
+      <p class="content-split__text">Review our impact reports and financial statements to see how your generous contributions are making a difference across Teton Valley. We are committed to transparency and accountability in everything we do.</p>
       <div class="content-split__buttons">
-        <a href="/about/annual-reports/" class="theme_btn theme_btn_bg">View All Reports <span></span></a>
+        <a href="/about/impact-reports/" class="theme_btn theme_btn_bg">View All Reports <span aria-hidden="true"></span></a>
       </div>
     </div>
   </section>
@@ -150,7 +150,7 @@ subpageNavItems:
         <p class="cta-banner__text">Our staff is always available to assist you. Reach out anytime.</p>
       </div>
       <div class="cta-banner__action">
-        <a href="/contact/" class="theme_btn theme_btn_bg theme_btn--light">Contact Us <span></span></a>
+        <a href="/contact/" class="theme_btn theme_btn_bg theme_btn--light">Contact Us <span aria-hidden="true"></span></a>
       </div>
     </div>
   </section>

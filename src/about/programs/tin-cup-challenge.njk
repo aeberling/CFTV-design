@@ -11,6 +11,7 @@ subpageNavItems:
   - { id: "how-it-works", label: "How It Works" }
   - { id: "challengers", label: "Challengers" }
   - { id: "nonprofits", label: "For Nonprofits" }
+  - { id: "faq", label: "FAQ" }
 ---
 <!-- PAGE: about/programs/tin-cup-challenge
      background: solid-white
@@ -32,12 +33,12 @@ subpageNavItems:
   -->
   <section class="content-split" id="overview">
     <div class="content-split__image content-split__image--center">
-      <img src="/assets/images/home/tin-cup-challenge.webp" alt="Runners and community members at the annual Tin Cup Challenge Fun Run in Teton Valley" loading="lazy">
+      <img src="/assets/images/about/tcc-overview.webp" alt="Tin Cup Challenge celebration in Teton Valley" loading="lazy">
     </div>
     <div class="content-split__content">
       <span class="content-split__eyebrow">Program Overview</span>
       <h2 class="content-split__heading">Teton Valley's Premier Giving Event</h2>
-      <p class="content-split__text">The Tin Cup Challenge is Teton Valley's premier community giving event — a six-week campaign that coordinates donations to local nonprofits, culminating in <a href="/news-events/" style="color: inherit; text-decoration: underline;">Tin Cup Event Day</a>. Challengers match donations to amplify every gift.</p>
+      <p class="content-split__text">The Tin Cup Challenge is Teton Valley's premier community giving event — a six-week campaign that coordinates donations to local nonprofits, culminating in <a href="https://tincupchallenge.org/event-day/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Tin Cup Event Day</a>. Challengers match donations to amplify every gift.</p>
       <p class="content-split__text">Since its inception, the Tin Cup Challenge has channeled millions of dollars to Teton Valley nonprofits, making it one of the most impactful community giving events in the region.</p>
     </div>
   </section>
@@ -49,7 +50,7 @@ subpageNavItems:
   -->
   <section class="content-split content-split--reverse" id="how-it-works">
     <div class="content-split__image content-split__image--center">
-      <img src="/assets/images/about/tin-cup-challenge-event.webp" alt="Community members celebrating at Tin Cup Challenge Event Day" loading="lazy">
+      <img src="/assets/images/about/tcc-how-it-works.webp" alt="Tin Cup Challenge giving event in Teton Valley" loading="lazy">
     </div>
     <div class="content-split__content" style="background: var(--color-dark-pine);">
       <span class="content-split__eyebrow">The Campaign</span>
@@ -59,7 +60,7 @@ subpageNavItems:
         <li>Six-week community giving campaign</li>
         <li>Donations matched by Challengers</li>
         <li>Participating nonprofits receive amplified funding</li>
-        <li>Culminates in <a href="/news-events/" style="color: inherit; text-decoration: underline;">Tin Cup Event Day</a> celebration</li>
+        <li>Culminates in <a href="https://tincupchallenge.org/event-day/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Tin Cup Event Day</a> celebration</li>
       </ul>
     </div>
   </section>
@@ -71,7 +72,7 @@ subpageNavItems:
   -->
   <section class="content-split" id="challengers">
     <div class="content-split__image content-split__image--center">
-      <img src="/assets/images/give/nonprofit-leaders-planning-session.webp" alt="Community leaders discussing Tin Cup Challenge strategy" loading="lazy">
+      <img src="/assets/images/about/tcc-challengers.webp" alt="Tin Cup Challengers at a community event" loading="lazy">
     </div>
     <div class="content-split__content content-split__content--light-bg">
       <span class="content-split__eyebrow">Match Donations</span>
@@ -83,7 +84,7 @@ subpageNavItems:
         <li>Join a community of dedicated local philanthropists</li>
       </ul>
       <div class="content-split__buttons">
-        <a href="/give/tin-cup-challenger/" class="theme_btn theme_btn_bg">Become a Challenger <span></span></a>
+        <a href="/give/tin-cup-challenger/" class="theme_btn theme_btn_bg">Become a Challenger <span aria-hidden="true"></span></a>
       </div>
     </div>
   </section>
@@ -95,7 +96,7 @@ subpageNavItems:
   -->
   <section class="content-split content-split--reverse" id="nonprofits">
     <div class="content-split__image content-split__image--center">
-      <img src="/assets/images/give/workshop-presenter-closing-statement.webp" alt="Nonprofit leaders at a Tin Cup Challenge information session" loading="lazy">
+      <img src="/assets/images/about/tcc-nonprofits.webp" alt="Nonprofits participating in the Tin Cup Challenge" loading="lazy">
     </div>
     <div class="content-split__content" style="background: var(--color-graphite);">
       <span class="content-split__eyebrow">Participate</span>
@@ -108,8 +109,141 @@ subpageNavItems:
         <li>Registration required — check Dates & Deadlines</li>
       </ul>
       <div class="content-split__buttons">
-        <a href="/nonprofits/dates-deadlines/" class="theme_btn theme_btn_bg">Dates & Deadlines <span></span></a>
-        <a href="mailto:bself@cftetonvalley.org?subject=Tin%20Cup%20Challenge%20Nonprofit%20Inquiry" class="theme_btn theme_btn_bg">Contact Us <span></span></a>
+        <a href="/nonprofits/dates-deadlines/" class="theme_btn theme_btn_bg">Dates & Deadlines <span aria-hidden="true"></span></a>
+        <a href="mailto:bself@cftetonvalley.org?subject=Tin%20Cup%20Challenge%20Nonprofit%20Inquiry" class="theme_btn theme_btn_bg">Contact Us <span aria-hidden="true"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: plain text bar
+       content: Attribution text linking to CFTV
+       background: --color-dark-pine
+  -->
+  <section class="cta-banner" style="background: var(--color-dark-pine);">
+    <div class="container">
+      <div class="cta-banner__content" style="max-width: 100%; text-align: center;">
+        <p class="cta-banner__text" style="margin: 0;">Behind the Tin Cup Challenge is the <a href="/" style="color: var(--color-poppy); text-decoration: underline;">Community Foundation of Teton Valley</a>, bringing donors, nonprofits, and matching funds together into one simple, powerful giving experience that strengthens the entire community.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: faq-accordion
+       heading: "Frequently Asked Questions"
+       background: white
+  -->
+  <section class="faq-accordion" id="faq">
+    <div class="container">
+      <h2 class="faq-accordion__heading">Frequently Asked Questions</h2>
+      <div class="faq-accordion__list" id="tinCupFaq">
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#tc-faq-1" aria-expanded="false" aria-controls="tc-faq-1">
+            <span class="faq-accordion__question">Nonprofit Application &amp; Requirements</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="tc-faq-1" data-bs-parent="#tinCupFaq">
+            <div class="faq-accordion__answer">
+              <p>Qualifying nonprofit organizations in Teton County, ID, and Alta, WY, are invited to participate in the Tin Cup Challenge. See Eligibility details in the Rules &amp; Procedures and download the Important Dates.</p>
+              <p>The Community Foundation provides a secure webpage for your organization to view your Tin Cup donations.</p>
+              <p>During the Giving Period, your organization's designated Tin Cup contact will receive an email with your user ID, as well as guidance on reviewing donations. The Community Foundation staff processes gifts steadily from the start of the Giving Period through mid-August.</p>
+              <p>All gifts are reviewed prior to posting, including online donations, which creates a delay between gift receipt and when gifts are visible. Note that almost two-thirds of donations arrive in the last week of the Giving Period. You will be notified when all gifts have been processed. We appreciate your patience!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#tc-faq-2" aria-expanded="false" aria-controls="tc-faq-2">
+            <span class="faq-accordion__question">Matching Funds &mdash; Who, What, Why?</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="tc-faq-2" data-bs-parent="#tinCupFaq">
+            <div class="faq-accordion__answer">
+              <p>The Foundation's generous Challengers fund the Match Grant percentage that varies annually based on the total amount of Challenger dollars raised and the total amount of designated contributions. The first $25,000 of each nonprofit's designated gifts are eligible for a Match Grant. In recent years, the Match Grant on these gifts has been approximately 50%. This means the Match Grant for qualifying nonprofits is approximately $12,500, depending on the year's match percentage.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#tc-faq-3" aria-expanded="false" aria-controls="tc-faq-3">
+            <span class="faq-accordion__question">Event Day Details</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="tc-faq-3" data-bs-parent="#tinCupFaq">
+            <div class="faq-accordion__answer">
+              <p>Join us on the third Saturday in July at 9am at the Driggs City Park. The Tin Cup Challenge includes interactive nonprofit booths highlighting participating nonprofits, competitive 10K, 5K, and Fun Run/Walk, as well as a highly competitive Diaper Derby, and free snacks and beverages. Winners of each race receive prize money to donate to their favorite nonprofits in the spirit of the day.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#tc-faq-4" aria-expanded="false" aria-controls="tc-faq-4">
+            <span class="faq-accordion__question">Tin Cup Logo &amp; Graphics</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="tc-faq-4" data-bs-parent="#tinCupFaq">
+            <div class="faq-accordion__answer">
+              <p>Participating organizations are encouraged to use the Tin Cup logo leading up to and throughout the Giving Period. Download the logo files and refer to the Tin Cup Rules and Procedures and Brand Guide for branding and logo usage information. Contact Claire Vitucci with any questions.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#tc-faq-5" aria-expanded="false" aria-controls="tc-faq-5">
+            <span class="faq-accordion__question">Marketing Tips &amp; Tricks for Nonprofits</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="tc-faq-5" data-bs-parent="#tinCupFaq">
+            <div class="faq-accordion__answer">
+              <p>The Marketing Guide, available in the Media Kit, is your one-stop shop for key dates, social media handles, hashtags, marketing tips and tricks, logos, booth information, and more.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#tc-faq-6" aria-expanded="false" aria-controls="tc-faq-6">
+            <span class="faq-accordion__question">Community Involvement</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="tc-faq-6" data-bs-parent="#tinCupFaq">
+            <div class="faq-accordion__answer">
+              <ul>
+                <li>Donate during the Giving Period.</li>
+                <li>Register to Run/Walk or have crawlers participate in the Diaper Derby.</li>
+                <li>Volunteer before or during Event Day.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#tc-faq-7" aria-expanded="false" aria-controls="tc-faq-7">
+            <span class="faq-accordion__question">Community Foundation's Role</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="tc-faq-7" data-bs-parent="#tinCupFaq">
+            <div class="faq-accordion__answer">
+              <ul>
+                <li>Receive and process all gifts to Tin Cup Fun Run and provide tax receipts to donors.</li>
+                <li>Provide promotional and marketing presence for Tin Cup and Event Day.</li>
+                <li>Solicit Challengers to provide a Match Grant.</li>
+                <li>Produce and execute Tin Cup Event Day with the help of community volunteers.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-accordion__item">
+          <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#tc-faq-8" aria-expanded="false" aria-controls="tc-faq-8">
+            <span class="faq-accordion__question">Program Thanks</span>
+            <span class="faq-accordion__icon" aria-hidden="true"></span>
+          </button>
+          <div class="collapse" id="tc-faq-8" data-bs-parent="#tinCupFaq">
+            <div class="faq-accordion__answer">
+              <p>Tin Cup Challengers make this program and associated Match Grants, Competitive Grants, and Youth Philanthropy Grants possible.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -118,11 +252,11 @@ subpageNavItems:
   <section class="cta-banner">
     <div class="container">
       <div class="cta-banner__content">
-        <h2 class="cta-banner__heading">Ready to <span>give</span> during Tin Cup?</h2>
-        <p class="cta-banner__text">Donate to your favorite Teton Valley nonprofits and watch your gift grow with matching funds from Challengers.</p>
+        <h2 class="cta-banner__heading">Ready to <span>participate</span> in the Tin Cup Challenge?</h2>
+        <p class="cta-banner__text">Support the causes that make Teton Valley thrive during the Giving Period or year-round as a Challenger.</p>
       </div>
       <div class="cta-banner__action">
-        <a href="/give/" class="theme_btn theme_btn_bg theme_btn--light">Give Now <span></span></a>
+        <a href="https://tincupchallenge.org/" target="_blank" rel="noopener noreferrer" class="theme_btn theme_btn_bg theme_btn--light">Visit the Tin Cup Challenge <span aria-hidden="true"></span></a>
       </div>
     </div>
   </section>
