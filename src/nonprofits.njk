@@ -10,6 +10,7 @@ subpageNavItems:
   - { id: "workshops", label: "Workshops & Training" }
   - { id: "resources", label: "Nonprofit Resources" }
   - { id: "dates", label: "Grant Dates & Deadlines" }
+  - { id: "agency-funds", label: "Agency Funds" }
 ---
 <!-- PAGE: nonprofits
      background: solid-white
@@ -38,7 +39,7 @@ subpageNavItems:
       <img src="/assets/images/nonprofits/nonprofit-workshop-session.webp" alt="Nonprofit leaders gathered around a conference table during a Community Foundation training workshop" loading="lazy">
     </div>
     <div class="content-split__content">
-      <span class="content-split__eyebrow">Subpage</span>
+      <span class="content-split__eyebrow">Training</span>
       <h2 class="content-split__heading">Workshops & Networking/Training</h2>
       <p class="content-split__text">Build your capacity with hands-on workshops, networking events, and training opportunities designed specifically for Teton Valley nonprofits. Connect with peers, learn best practices, and grow your organization's effectiveness.</p>
       <div class="content-split__buttons">
@@ -61,7 +62,7 @@ subpageNavItems:
       <img src="/assets/images/nonprofits/nonprofit-resources.webp" alt="Nonprofit resources and community support in Teton Valley" loading="lazy">
     </div>
     <div class="content-split__content" style="background: var(--color-dark-pine);">
-      <span class="content-split__eyebrow">Subpage</span>
+      <span class="content-split__eyebrow">Shared Resources</span>
       <h2 class="content-split__heading">Nonprofit Resources</h2>
       <p class="content-split__text">Take advantage of shared resources available to local nonprofits through the Community Foundation. Access conference rooms, equipment, job boards, and more.</p>
       <div class="content-split__buttons">
@@ -85,7 +86,7 @@ subpageNavItems:
       <img src="/assets/images/nonprofits/grant-recipient-handshake.webp" alt="Community Foundation representative shaking hands with a grant recipient at an awards ceremony" loading="lazy">
     </div>
     <div class="content-split__content" style="background: var(--color-pine);">
-      <span class="content-split__eyebrow">Subpage</span>
+      <span class="content-split__eyebrow">Key Dates</span>
       <h2 class="content-split__heading">Grant Dates & Deadlines</h2>
       <p class="content-split__text">Stay on top of important dates — grant cycles, workshop schedules, and key deadlines all in one place.</p>
       <ul class="content-split__list">
@@ -95,6 +96,29 @@ subpageNavItems:
       </ul>
       <div class="content-split__buttons">
         <a href="/nonprofits/dates-deadlines/" class="theme_btn theme_btn_bg">View Calendar <span aria-hidden="true"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPLEMENTATION: content-split
+       heading: "Agency Funds"
+       content: Agency funds partnership value prop
+       image: agency-fund-trailer.webp (placeholder — swap with ACT Foundation trailer photo)
+       background: default (--color-dusk)
+       modifier: none (image left, content right)
+       anchor: enabled | id: "agency-funds" | label: "Agency Funds"
+  -->
+  <section class="content-split content-split--reverse" id="agency-funds">
+    <div class="content-split__image content-split__image--center">
+      <img src="/assets/images/nonprofits/act-foundation-trailer.webp" alt="ACT Foundation cargo trailer purchased through a competitive grant, used to store and transport props and costumes between venues" loading="lazy">
+      <p class="content-split__caption">A competitive grant purchased a cargo trailer for the ACT Foundation to store and readily access props and costumes across venues.</p>
+    </div>
+    <div class="content-split__content">
+      <span class="content-split__eyebrow">Partner with Us</span>
+      <h2 class="content-split__heading">Agency Funds</h2>
+      <p class="content-split__text">Agency funds offer a simple, effective way to strengthen your nonprofit's financial management. Partnering with the Community Foundation provides your organization with professional oversight, experienced investment management, and access to a diversified portfolio that individual nonprofits often can't achieve on their own. Through an agency fund, your organization can build long-term financial stability — creating a permanent source of operating income while also maintaining professionally managed "rainy day" reserves for future needs.</p>
+      <div class="content-split__buttons">
+        <a href="/contact/" class="theme_btn theme_btn_bg">Get in Touch <span aria-hidden="true"></span></a>
       </div>
     </div>
   </section>
@@ -125,17 +149,17 @@ subpageNavItems:
             </div>
           </div>
         </a>
-        <div class="quick-links__card">
+        <a href="/nonprofits/resources/#post-needs" class="quick-links__card">
           <div class="quick-links__card-image">
-            <img src="/assets/images/nonprofits/agency-fund-event.webp" alt="Tin Cup Challenge event supporting agency funds" loading="lazy">
+            <img src="/assets/images/nonprofits/agency-fund-event.webp" alt="Nonprofit volunteers at a Teton Valley community event" loading="lazy">
           </div>
           <div class="quick-links__card-bottom">
             <div>
-              <h3 class="quick-links__card-title">Agency Funds</h3>
-              <p class="quick-links__card-text">Long-term endowed support for your nonprofit.</p>
+              <h3 class="quick-links__card-title">Post a Need</h3>
+              <p class="quick-links__card-text">Post nonprofit job openings and volunteer opportunities.</p>
             </div>
           </div>
-        </div>
+        </a>
         <a href="/nonprofit-directory/" class="quick-links__card">
           <div class="quick-links__card-image">
             <img src="/assets/images/nonprofits/girl-with-puppy-community-event.webp" alt="Young girl holding a puppy at a Teton Valley nonprofit community event" loading="lazy">

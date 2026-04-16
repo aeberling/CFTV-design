@@ -243,7 +243,7 @@
     } else {
       // December - April: Year End Giving
       data = {
-        heading: 'Give Before December 31',
+        heading: 'Power Local Impact',
         text: 'Make a tax-deductible gift to support the causes you care about in Teton Valley.',
         cta: 'Donate Now',
         link: '/give/'
