@@ -1,6 +1,6 @@
 {
   "name": "cftv-website",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "description": "Community Foundation of Teton Valley - Website",
   "scripts": {
     "start": "eleventy --serve",

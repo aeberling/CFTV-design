@@ -233,6 +233,23 @@ a {
   opacity: 0.8;
 }
 
+.utility-links__icon {
+  display: inline-flex;
+  align-items: center;
+  margin: -10px 0;
+  padding: 0;
+}
+
+.utility-links__icon img {
+  height: 32px;
+  width: auto;
+  display: block;
+}
+
+.utility-links__icon:hover {
+  opacity: 0.85;
+}
+
 .utility-donate {
   font-weight: 700;
 }
