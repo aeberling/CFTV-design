@@ -1047,6 +1047,23 @@
       "email": "skate@victorskatepark.org"
     },
     {
+      "name": "Wild Spirit Mustangs",
+      "slug": "wild-spirit-mustangs",
+      "sector": "Animal Rescue",
+      "address": "",
+      "website": "http://www.wildspiritmustangs.org",
+      "taxId": "33-2141972",
+      "logo": "/assets/images/nonprofits/wild-spirit-mustangs.webp",
+      "phone": "307-699-7015",
+      "facebook": "https://www.facebook.com/wildspiritmustangs",
+      "instagram": "https://www.instagram.com/wildspiritmustangs/",
+      "linkedin": "",
+      "twitter": "",
+      "youtube": "https://www.youtube.com/@WildSpiritMustangs",
+      "guidestar": "https://www.guidestar.org/profile/33-2141972",
+      "email": "jeskegrave@gmail.com"
+    },
+    {
       "name": "Yoga Source, The",
       "slug": "yoga-source",
       "sector": "Sports & Recreation",
