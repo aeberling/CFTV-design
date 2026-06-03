@@ -47,6 +47,7 @@ eleventyExcludeFromCollections: true
         <a href="#cta">CTA</a>
         <a href="#forms">Forms</a>
         <a href="#navigation">Navigation</a>
+        <a href="#overlays">Overlays</a>
       </nav>
     </div>
   </header>
@@ -258,8 +259,10 @@ eleventyExcludeFromCollections: true
         <h3>.impact-story-area</h3>
         <p>Full-width 50/50 split with edge-to-edge image on one side and text content on the other. Used for featured impact stories. If any field (eyebrow, button, etc.) is not filled out, that element is hidden on the front end.</p>
         <dl class="sitewide-sections__meta">
+          <dt>Fields:</dt>
+          <dd>Eyebrow (optional), Heading (req), Body (req, rich text), CTA button (optional), Image (req)</dd>
           <dt>Image:</dt>
-          <dd>Full-height column (object-fit: cover)</dd>
+          <dd>Full-height column (object-fit: cover), 960x640+</dd>
           <dt>Modifiers:</dt>
           <dd>--reverse (image right, content left)</dd>
           <dt>Optional:</dt>
@@ -326,6 +329,8 @@ eleventyExcludeFromCollections: true
         <h3>.fund-spotlight</h3>
         <p>Two-column layout with a donor testimonial quote on the left and a list of fund types with arrow links on the right. Section heading centered above. Right column uses a repeater field for listing items (title + URL each). If any field is empty, that element is hidden.</p>
         <dl class="sitewide-sections__meta">
+          <dt>Fields:</dt>
+          <dd>Section heading (req), Testimonial quote (optional), Attribution (optional), List heading (optional), Fund types (repeater: title + URL), CTA button (optional)</dd>
           <dt>Children:</dt>
           <dd>.fund-testimonial, .fund-types, .fund-type-item</dd>
           <dt>Right Column:</dt>
@@ -383,6 +388,80 @@ eleventyExcludeFromCollections: true
       </div>
     </article>
 
+    <!-- ============================================
+         SECTION: Contact Info
+         Category: Layout
+         Description: Two-column contact details + map embed
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.contact-info</h3>
+        <p>Two-column section: contact details on the left (heading, intro, icon list of address/phone/email/hours) and an embedded map on the right. Each list item has a choosable icon, a label, and rich content (supports tel:/mailto: links). If any optional field is empty, that element is hidden.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Fields:</dt>
+          <dd>Heading (req), Intro text (optional), Contact items (repeater)</dd>
+          <dt>Per contact item:</dt>
+          <dd>Icon (FontAwesome class), Label, Content (rich text — tel:/mailto: supported)</dd>
+          <dt>Map:</dt>
+          <dd>Embed URL (Google Maps iframe), titled, loading="lazy"</dd>
+          <dt>Layout:</dt>
+          <dd>Details left (col-lg-5), map right (col-lg-6) — stacks on mobile</dd>
+          <dt>Conditional:</dt>
+          <dd>Intro + any empty item field — hidden if empty</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        <section class="contact-info pt-80 pb-80">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-5 col-md-6 mb-40">
+                <div class="contact-info__details">
+                  <h2 class="contact-info__heading">Get in Touch</h2>
+                  <p class="contact-info__text">Short intro sentence describing how to reach the organization.</p>
+                  <ul class="contact-info__list">
+                    <li class="contact-info__item">
+                      <div class="contact-info__icon"><i class="fal fa-map-marker-alt"></i></div>
+                      <div class="contact-info__content">
+                        <h3 class="contact-info__label">Visit Us</h3>
+                        <p>189 N. Main St., Ste. 112<br>Driggs, ID 83422</p>
+                      </div>
+                    </li>
+                    <li class="contact-info__item">
+                      <div class="contact-info__icon"><i class="fal fa-phone"></i></div>
+                      <div class="contact-info__content">
+                        <h3 class="contact-info__label">Call Us</h3>
+                        <p><a href="tel:2083540230">208-354-0230</a></p>
+                      </div>
+                    </li>
+                    <li class="contact-info__item">
+                      <div class="contact-info__icon"><i class="fal fa-envelope"></i></div>
+                      <div class="contact-info__content">
+                        <h3 class="contact-info__label">Email Us</h3>
+                        <p><a href="mailto:info@cftetonvalley.org">info@cftetonvalley.org</a></p>
+                      </div>
+                    </li>
+                    <li class="contact-info__item">
+                      <div class="contact-info__icon"><i class="fal fa-clock"></i></div>
+                      <div class="contact-info__content">
+                        <h3 class="contact-info__label">Office Hours</h3>
+                        <p>Monday &ndash; Friday<br>8:30 AM &ndash; 4:30 PM</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-6 offset-lg-1 col-md-6">
+                <div class="contact-info__map">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='450' viewBox='0 0 600 450'%3E%3Crect fill='%23cccccc' width='600' height='450'/%3E%3Ctext fill='%23999999' font-family='sans-serif' font-size='24' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3EMap Embed (iframe)%3C/text%3E%3C/svg%3E" alt="Map embed placeholder" loading="lazy" style="width:100%;height:auto;">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+
   </section>
 
   {# ============================================
@@ -406,6 +485,10 @@ eleventyExcludeFromCollections: true
         <h3>.quick-links</h3>
         <p>Section with eyebrow, heading, and a 3-column grid of image cards. Each card has a photo, dark teal bottom bar with title, description, and arrow link. Grey background with hover lift effect. If any field is not filled out, that element is hidden.</p>
         <dl class="sitewide-sections__meta">
+          <dt>Fields:</dt>
+          <dd>Eyebrow (optional), Heading (req), Cards (repeater)</dd>
+          <dt>Per card:</dt>
+          <dd>Image (600x450, 4:3), Title, Description (optional), Link URL</dd>
           <dt>Cards:</dt>
           <dd>3 (responsive: stacks on mobile)</dd>
           <dt>Image:</dt>
@@ -560,6 +643,10 @@ eleventyExcludeFromCollections: true
         <h3>.programs-area</h3>
         <p>Three-column card grid showcasing signature programs. Each card has an image, linked title, and description text.</p>
         <dl class="sitewide-sections__meta">
+          <dt>Fields:</dt>
+          <dd>Section heading (req), Cards (repeater)</dd>
+          <dt>Per card:</dt>
+          <dd>Image (600x400, 3:2), Title + link URL, Description</dd>
           <dt>Cards:</dt>
           <dd>3 (responsive: stacks on mobile)</dd>
           <dt>Image:</dt>
@@ -699,6 +786,169 @@ eleventyExcludeFromCollections: true
       </div>
     </article>
 
+    <!-- ============================================
+         SECTION: Post Grid (News & Events)
+         Category: Cards
+         Description: Card grid for News (Posts) and Events with Show More
+         Modifiers: --alt (Events variant)
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.post-grid / .post-grid--alt</h3>
+        <p>Header (heading + intro) above a responsive grid of post cards. Each card links to a post and shows featured image, category tag, title, excerpt, and date. A "Show More" button reveals cards 6 at a time (WordPress AJAX/pagination in production). Use <code>--alt</code> for the Events variant. In WordPress: News = Posts (Query Loop), Events = Events CPT or The Events Calendar.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Fields:</dt>
+          <dd>Heading (req), Intro text (optional), Query source (Posts/Events)</dd>
+          <dt>Per card:</dt>
+          <dd>Featured image (600x400, 3:2), Category tag, Title, Excerpt, Date</dd>
+          <dt>Query:</dt>
+          <dd>orderby date DESC, 6 per page; Show More loads next 6</dd>
+          <dt>Modifiers:</dt>
+          <dd>--alt (Events variant / alternate background)</dd>
+          <dt>Pagination:</dt>
+          <dd>Show More button — aria-expanded + aria-controls, aria-live status region</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        <section class="post-grid pt-80 pb-80">
+          <div class="container">
+            <div class="post-grid__header">
+              <h2 class="post-grid__heading">Latest News</h2>
+              <p class="post-grid__text">Grant announcements, community stories, and foundation updates.</p>
+            </div>
+            <div class="post-grid__cards">
+              <a href="#" class="post-card" aria-label="Sample news post title">
+                <div class="post-card__image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect fill='%23cccccc' width='600' height='400'/%3E%3Ctext fill='%23999999' font-family='sans-serif' font-size='24' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3E600 x 400%3C/text%3E%3C/svg%3E" alt="" loading="lazy">
+                </div>
+                <div class="post-card__body">
+                  <span class="post-card__tag">Category</span>
+                  <h3 class="post-card__title">Sample News Post Title</h3>
+                  <p class="post-card__excerpt">A short excerpt describing the post in roughly one to two lines of text.</p>
+                  <span class="post-card__date">June 1, 2026</span>
+                </div>
+              </a>
+              <a href="#" class="post-card" aria-label="Sample news post title">
+                <div class="post-card__image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect fill='%23cccccc' width='600' height='400'/%3E%3Ctext fill='%23999999' font-family='sans-serif' font-size='24' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3E600 x 400%3C/text%3E%3C/svg%3E" alt="" loading="lazy">
+                </div>
+                <div class="post-card__body">
+                  <span class="post-card__tag">Category</span>
+                  <h3 class="post-card__title">Sample News Post Title</h3>
+                  <p class="post-card__excerpt">A short excerpt describing the post in roughly one to two lines of text.</p>
+                  <span class="post-card__date">May 24, 2026</span>
+                </div>
+              </a>
+              <a href="#" class="post-card" aria-label="Sample news post title">
+                <div class="post-card__image">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect fill='%23cccccc' width='600' height='400'/%3E%3Ctext fill='%23999999' font-family='sans-serif' font-size='24' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3E600 x 400%3C/text%3E%3C/svg%3E" alt="" loading="lazy">
+                </div>
+                <div class="post-card__body">
+                  <span class="post-card__tag">Category</span>
+                  <h3 class="post-card__title">Sample News Post Title</h3>
+                  <p class="post-card__excerpt">A short excerpt describing the post in roughly one to two lines of text.</p>
+                  <span class="post-card__date">May 12, 2026</span>
+                </div>
+              </a>
+            </div>
+            <div class="post-grid__status sr-only" aria-live="polite"></div>
+            <div class="post-grid__action">
+              <button class="theme_btn theme_btn_bg post-grid__show-more" aria-expanded="false">Show More <span aria-hidden="true"></span></button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <!-- ============================================
+         SECTION: Nonprofit Directory
+         Category: Cards
+         Description: Sector-filtered card grid (CPT-driven)
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.np-directory</h3>
+        <p>Filterable directory of nonprofit organizations. Sector filter bar above a responsive card grid (3-col desktop / 2-col tablet / 1-col mobile). Each card shows a logo (200x200, contain), name, sector badge, and a row of contact/social icon links — each icon hidden if its field is empty. WordPress: CPT <code>nonprofits</code> + taxonomy <code>sector</code>, AJAX filtering (or FacetWP).</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Section fields:</dt>
+          <dd>Eyebrow, Heading, Count label</dd>
+          <dt>Per nonprofit (CPT/ACF):</dt>
+          <dd>Logo (200x200 contain), Name, Sector (taxonomy), Website URL, Email, Phone, Address, Tax ID/EIN, Facebook, Instagram, LinkedIn, Twitter/X, YouTube, GuideStar — all optional except Name + Sector</dd>
+          <dt>Filter:</dt>
+          <dd>Buttons from sector terms; "All" resets; AJAX/query-param by term slug</dd>
+          <dt>Card link:</dt>
+          <dd>Whole card links to Website (if set); social icons layered separately</dd>
+          <dt>Conditional:</dt>
+          <dd>Each icon/field — hidden if empty; placeholder heart icon if no logo</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        <section class="np-directory pt-80 pb-80">
+          <div class="container">
+            <div class="np-directory__header">
+              <span class="np-directory__eyebrow">Browse by Sector</span>
+              <h2 class="np-directory__heading">Local Organizations</h2>
+            </div>
+            <div class="np-directory__filters" role="group" aria-label="Filter nonprofits by sector">
+              <button class="np-directory__filter is-active" data-filter="all">All</button>
+              <button class="np-directory__filter" data-filter="arts-culture">Arts &amp; Culture</button>
+              <button class="np-directory__filter" data-filter="education">Education</button>
+              <button class="np-directory__filter" data-filter="environment">Environment</button>
+            </div>
+            <div class="np-directory__grid">
+              <div class="np-directory__card" data-sector="education">
+                <a href="#" class="np-directory__card-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Sample Nonprofit website">
+                  <div class="np-directory__card-logo">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect fill='%23e8e5e3' width='200' height='200'/%3E%3Ctext fill='%23999999' font-family='sans-serif' font-size='16' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3ELogo%3C/text%3E%3C/svg%3E" alt="Sample Nonprofit logo" loading="lazy" width="200" height="200">
+                  </div>
+                  <div class="np-directory__card-info">
+                    <h3 class="np-directory__card-name">Sample Nonprofit</h3>
+                    <span class="np-directory__card-sector">Education</span>
+                  </div>
+                </a>
+                <div class="np-directory__card-social">
+                  <a href="#" class="np-directory__social-icon" aria-label="Email Sample Nonprofit"><i class="fal fa-envelope"></i></a>
+                  <a href="#" class="np-directory__social-icon" aria-label="Sample Nonprofit website"><i class="fal fa-link"></i></a>
+                  <a href="#" class="np-directory__social-icon" aria-label="Sample Nonprofit on Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+              </div>
+              <div class="np-directory__card" data-sector="arts-culture">
+                <a href="#" class="np-directory__card-link" target="_blank" rel="noopener noreferrer" aria-label="Visit Sample Nonprofit website">
+                  <div class="np-directory__card-logo">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect fill='%23e8e5e3' width='200' height='200'/%3E%3Ctext fill='%23999999' font-family='sans-serif' font-size='16' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3ELogo%3C/text%3E%3C/svg%3E" alt="Sample Nonprofit logo" loading="lazy" width="200" height="200">
+                  </div>
+                  <div class="np-directory__card-info">
+                    <h3 class="np-directory__card-name">Arts Collective</h3>
+                    <span class="np-directory__card-sector">Arts &amp; Culture</span>
+                  </div>
+                </a>
+                <div class="np-directory__card-social">
+                  <a href="#" class="np-directory__social-icon" aria-label="Arts Collective website"><i class="fal fa-link"></i></a>
+                  <a href="#" class="np-directory__social-icon" aria-label="Arts Collective on Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+              <div class="np-directory__card" data-sector="environment">
+                <div class="np-directory__card-link np-directory__card-link--no-url">
+                  <div class="np-directory__card-logo">
+                    <div class="np-directory__card-placeholder"><i class="flaticon-heart"></i></div>
+                  </div>
+                  <div class="np-directory__card-info">
+                    <h3 class="np-directory__card-name">Trails Alliance</h3>
+                    <span class="np-directory__card-sector">Environment</span>
+                  </div>
+                </div>
+                <div class="np-directory__card-social">
+                  <a href="#" class="np-directory__social-icon" aria-label="Call Trails Alliance"><i class="fal fa-phone"></i></a>
+                </div>
+              </div>
+            </div>
+            <p class="np-directory__count-label"><span class="np-directory__visible-count">3</span> of 3 organizations shown</p>
+          </div>
+        </section>
+      </div>
+    </article>
+
   </section>
 
   {# ============================================
@@ -741,6 +991,99 @@ eleventyExcludeFromCollections: true
       </div>
     </article>
 
+    <!-- ============================================
+         SECTION: Testimonial
+         Category: Content
+         Description: Standalone centered testimonial card
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.testimonial-section</h3>
+        <p>Full-width section with a centered testimonial card: large quote mark, blockquote text, and attribution. Card background color is optional/configurable (defaults to --color-sand). Set via variables before include: <code>testimonialQuote</code>, <code>testimonialAttribution</code>, <code>testimonialBg</code>.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Fields:</dt>
+          <dd>Quote (req, rich text), Attribution (optional — name + title), Background color (optional, palette — default --color-sand)</dd>
+          <dt>Children:</dt>
+          <dd>.testimonial-card, .quote-icon, blockquote, .attribution</dd>
+          <dt>Conditional:</dt>
+          <dd>Attribution + custom background — hidden/default if empty</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        {% set testimonialQuote = "This foundation connected our family's giving to the causes we care about most. The team made it simple, personal, and meaningful." %}
+        {% set testimonialAttribution = "&mdash; Sample Donor, Teton Valley" %}
+        {% include "testimonial.njk" %}
+      </div>
+    </article>
+
+    <!-- ============================================
+         SECTION: Media Kit
+         Category: Content
+         Description: Resource hub — download buttons, instructions, thumbnails
+         Modifiers: button layout --single / --grid
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.media-kit</h3>
+        <p>A resource hub built from stacked, centered sections (one per topic, e.g. Logos, Guidelines, Tin Cup Challenge). Each section has a heading (also its anchor id), optional rich text, and any of: download buttons, numbered instructions, or a grid of downloadable image thumbnails. Repeat the section block as needed.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Per section:</dt>
+          <dd>Heading (req, = anchor id), Body text (optional, supports mailto:/file links)</dd>
+          <dt>Buttons:</dt>
+          <dd>Repeater — layout --single (one primary CTA) or --grid (file links, PDF icon)</dd>
+          <dt>Instructions:</dt>
+          <dd>Repeater — numbered steps (optional)</dd>
+          <dt>Thumbnails:</dt>
+          <dd>Gallery — 240x240 PNG, each a download link with label (optional)</dd>
+          <dt>Conditional:</dt>
+          <dd>Any of body/buttons/instructions/thumbnails — hidden if empty</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        <section class="media-kit pt-80 pb-60">
+          <div class="container">
+            <div class="media-kit__section text-center">
+              <h2 class="media-kit__heading">Logos</h2>
+              <p class="media-kit__text">Brand logo package with full-color, white, and black variants.</p>
+              <div class="media-kit__buttons media-kit__buttons--single">
+                <a href="#" class="theme_btn theme_btn_bg">All Logos <span aria-hidden="true"></span></a>
+              </div>
+              <div class="media-kit__instructions">
+                <p class="media-kit__step"><span class="media-kit__step-number">1.</span> Choose Full Color, White, or Black from the left.</p>
+                <p class="media-kit__step"><span class="media-kit__step-number">2.</span> Then choose print or web to get the correct file type.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="media-kit pb-80">
+          <div class="container">
+            <div class="media-kit__section text-center">
+              <h2 class="media-kit__heading">Tin Cup Challenge</h2>
+              <div class="media-kit__buttons media-kit__buttons--grid">
+                <a href="#" class="media-kit__btn"><i class="fal fa-file-pdf" aria-hidden="true"></i>2026 Marketing Guide</a>
+                <a href="#" class="media-kit__btn"><i class="fal fa-file-pdf" aria-hidden="true"></i>Marketing Presentation</a>
+              </div>
+              <div class="media-kit__thumbs">
+                <a href="#" class="media-kit__thumb" aria-label="Download TCC Giving Period graphic">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Crect fill='%23cccccc' width='240' height='240'/%3E%3Ctext fill='%23999999' font-family='sans-serif' font-size='18' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3E240 x 240%3C/text%3E%3C/svg%3E" alt="TCC social graphic" loading="lazy" width="240" height="240">
+                  <span class="media-kit__thumb-label">TCC Giving Period</span>
+                </a>
+                <a href="#" class="media-kit__thumb" aria-label="Download TCC Giving Closes graphic">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Crect fill='%23cccccc' width='240' height='240'/%3E%3Ctext fill='%23999999' font-family='sans-serif' font-size='18' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3E240 x 240%3C/text%3E%3C/svg%3E" alt="TCC social graphic" loading="lazy" width="240" height="240">
+                  <span class="media-kit__thumb-label">TCC Giving Closes</span>
+                </a>
+                <a href="#" class="media-kit__thumb" aria-label="Download TCC Event graphic">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Crect fill='%23cccccc' width='240' height='240'/%3E%3Ctext fill='%23999999' font-family='sans-serif' font-size='18' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3E240 x 240%3C/text%3E%3C/svg%3E" alt="TCC social graphic" loading="lazy" width="240" height="240">
+                  <span class="media-kit__thumb-label">TCC Event</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+
   </section>
 
   {# ============================================
@@ -764,16 +1107,55 @@ eleventyExcludeFromCollections: true
         <h3>.instagram-feed</h3>
         <p>Full-width, edge-to-edge 6-column grid of Instagram images with hover zoom effect. Centered label above the grid. All images link to Instagram profile.</p>
         <dl class="sitewide-sections__meta">
+          <dt>Fields:</dt>
+          <dd>Label (optional), Account (plugin setting), Count (plugin setting, default 6)</dd>
           <dt>Items:</dt>
           <dd>6 images</dd>
           <dt>Image:</dt>
           <dd>Square aspect, WebP format</dd>
+          <dt>WordPress:</dt>
+          <dd>Use an Instagram feed plugin (e.g. Smash Balloon) — not a custom block</dd>
           <dt>Children:</dt>
           <dd>.instagram-feed__label, .instagram-feed__grid, .instagram-feed__item</dd>
         </dl>
       </header>
       <div class="sitewide-sections__example">
         {% include "instagram-feed.njk" %}
+      </div>
+    </article>
+
+    <!-- ============================================
+         SECTION: Community Calendar
+         Category: Media
+         Description: Embedded external community calendar iframe
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.community-calendar</h3>
+        <p>Full-width section with an optional "hosted by" eyebrow, heading, description, and an embedded iframe pulling an external community calendar. URL-driven — the calendar content is owned by the external host.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Fields:</dt>
+          <dd>Hosted-by eyebrow (optional), Heading (req), Description (optional), Embed URL (req)</dd>
+          <dt>Embed:</dt>
+          <dd>iframe — titled, loading="lazy", responsive container</dd>
+          <dt>Conditional:</dt>
+          <dd>Eyebrow + description — hidden if empty</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        <section class="community-calendar pt-80 pb-80">
+          <div class="container">
+            <div class="community-calendar__header">
+              <p class="community-calendar__hosted-by">Hosted by the Downtown Driggs Association</p>
+              <h2 class="community-calendar__heading">Community Calendar</h2>
+              <p class="community-calendar__text">Explore events happening across Teton Valley.</p>
+            </div>
+            <div class="community-calendar__embed">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='500' viewBox='0 0 1200 500'%3E%3Crect fill='%23cccccc' width='1200' height='500'/%3E%3Ctext fill='%23999999' font-family='sans-serif' font-size='28' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3ECalendar Embed (iframe)%3C/text%3E%3C/svg%3E" alt="Calendar embed placeholder" loading="lazy" style="width:100%;height:auto;">
+            </div>
+          </div>
+        </section>
       </div>
     </article>
 
@@ -800,6 +1182,8 @@ eleventyExcludeFromCollections: true
         <h3>.cta-banner</h3>
         <p>Full-width CTA banner with heading (supports accent color span), optional description text, and an outlined button. Heading and button sit side-by-side on desktop, stack on mobile. Background color selectable from style guide palette. If any field (description, button) is not filled out, that element is hidden.</p>
         <dl class="sitewide-sections__meta">
+          <dt>Fields:</dt>
+          <dd>Heading (req — wrap accent word(s) in &lt;span&gt; for primary color), Description text (optional), Button (optional: text + URL), Background (select)</dd>
           <dt>Background:</dt>
           <dd>Selectable from style guide colors (default: --color-dark-pine)</dd>
           <dt>Optional:</dt>
@@ -834,10 +1218,12 @@ eleventyExcludeFromCollections: true
         <h3>.seasonal-cta</h3>
         <p>Full-width CTA with centered heading, description, and button. Content rotates seasonally: spring/summer (Tin Cup Challenge), fall (Grant Season), winter (Year-End Giving). Background color selectable from style guide palette. If any field is not filled out, that element is hidden.</p>
         <dl class="sitewide-sections__meta">
+          <dt>Fields:</dt>
+          <dd>Season variants (repeater, 3): each Heading (req), Description (optional), Button (optional: text + URL); Background (select); Active season (auto by date / manual override)</dd>
           <dt>Background:</dt>
           <dd>Selectable from style guide colors (default: --color-plum)</dd>
           <dt>Content:</dt>
-          <dd>Rotates via JS by season</dd>
+          <dd>Rotates via JS by season (spring/summer = Tin Cup, fall = Grant Season, winter = Year-End Giving)</dd>
           <dt>Optional:</dt>
           <dd>Description text, button — hidden if empty</dd>
           <dt>Conditional:</dt>
@@ -860,6 +1246,8 @@ eleventyExcludeFromCollections: true
         <h3>.challenger-banner</h3>
         <p>Compact, single-row CTA banner with heading and button side-by-side. Used for secondary calls to action like "Become a Challenger." Background color selectable from style guide palette. If button is not filled out, it is hidden.</p>
         <dl class="sitewide-sections__meta">
+          <dt>Fields:</dt>
+          <dd>Heading (req), Button (optional: text + URL), Background (select)</dd>
           <dt>Background:</dt>
           <dd>Selectable from style guide colors (default: --color-dark-pine)</dd>
           <dt>Layout:</dt>
@@ -938,6 +1326,8 @@ eleventyExcludeFromCollections: true
         <h3>.subpage-nav</h3>
         <p>Horizontal bar of anchor links for navigating to sections within a subpage. Centered, uppercase labels with hover underline. In WordPress, this section provides a dropdown to select which menu (Appearance &rarr; Menus) it pulls from.</p>
         <dl class="sitewide-sections__meta">
+          <dt>Fields:</dt>
+          <dd>Anchor items (repeater: label + target anchor id) — on static side, set via subpageNavItems front matter</dd>
           <dt>Menu Source:</dt>
           <dd>Dropdown selector: Appearance &rarr; Menus (select which registered menu to display)</dd>
           <dt>Interaction:</dt>
@@ -973,6 +1363,8 @@ eleventyExcludeFromCollections: true
         <h3>.utility-nav</h3>
         <p>Top utility bar with secondary navigation links and a highlighted Donate button. Hidden on mobile. In WordPress, this section provides a dropdown to select which menu (Appearance &rarr; Menus) it pulls from.</p>
         <dl class="sitewide-sections__meta">
+          <dt>Fields:</dt>
+          <dd>Secondary links (menu), Donate button (text + URL), Login trigger (opens .login-panel)</dd>
           <dt>Menu Source:</dt>
           <dd>Dropdown selector: Appearance &rarr; Menus (select which registered menu to display)</dd>
           <dt>Visibility:</dt>
@@ -997,6 +1389,8 @@ eleventyExcludeFromCollections: true
         <h3>#top-menu (header)</h3>
         <p>Main site header with logo, primary navigation, and "Donate Now" CTA button. Includes mobile hamburger menu and slide-out sidebar. In WordPress, this section provides a dropdown to select which menu (Appearance &rarr; Menus) it pulls from for the primary nav.</p>
         <dl class="sitewide-sections__meta">
+          <dt>Fields:</dt>
+          <dd>Logo (image), Primary menu (menu select), "Donate Now" button (text + URL)</dd>
           <dt>Menu Source:</dt>
           <dd>Dropdown selector: Appearance &rarr; Menus (select which registered menu to display)</dd>
           <dt>Logo:</dt>
@@ -1023,6 +1417,8 @@ eleventyExcludeFromCollections: true
         <h3>.cftv-footer</h3>
         <p>Four-column footer with organization info + social links, link columns, and Contact info. Includes centered newsletter form and copyright/EIN line. In WordPress, each link column provides a dropdown to select which menu (Appearance &rarr; Menus) it pulls from.</p>
         <dl class="sitewide-sections__meta">
+          <dt>Fields:</dt>
+          <dd>Org info + logo, Social links (repeater), 2 link columns (menu select each), Contact info, Newsletter form, EIN + copyright line</dd>
           <dt>Menu Source:</dt>
           <dd>Dropdown selector per column: Appearance &rarr; Menus (select which registered menu to display)</dd>
           <dt>Columns:</dt>
@@ -1033,6 +1429,117 @@ eleventyExcludeFromCollections: true
       </header>
       <div class="sitewide-sections__example">
         {% include "footer.njk" %}
+      </div>
+    </article>
+
+  </section>
+
+  {# ============================================
+     CATEGORY: Overlays & Global
+     Dialogs, slide-out panels, and global overlays
+     ============================================ #}
+  <section class="sitewide-sections__category" id="overlays">
+    <div class="container">
+      <h2>Overlays &amp; Global</h2>
+      <p>Dialogs and slide-out panels. These are global/overlay elements — shown here positioned statically for review. Live, they are hidden until triggered.</p>
+    </div>
+
+    <!-- ============================================
+         SECTION: Login Panel
+         Category: Overlays
+         Description: Slide-out dialog with external portal links + contact
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.login-panel</h3>
+        <p>Slide-out dialog (role="dialog", aria-modal) triggered from the utility nav. Contains external portal links, email/phone buttons, physical + mailing addresses, and social icons. All links open external portals. Shown below positioned statically for review (live, it slides in from the right).</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Fields:</dt>
+          <dd>Portal links (repeater: title + URL), Email, Phone, Physical address, Mailing address, Social links (repeater)</dd>
+          <dt>Behavior:</dt>
+          <dd>Toggled from utility nav; close button; Esc to close; focus trap while open</dd>
+          <dt>Children:</dt>
+          <dd>.login-panel__close, .login-panel__links, .login-panel__contact, .login-panel__address, .login-panel__social</dd>
+          <dt>Conditional:</dt>
+          <dd>Social links — hidden if empty</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example sitewide-sections__example--contained">
+        <aside class="login-panel" role="dialog" aria-modal="false" aria-label="Login options" style="position:static; right:auto; width:100%; max-width:400px; height:auto; margin:0 auto; box-shadow:0 0 20px -5px rgba(0,0,0,0.25);">
+          <div class="login-panel__close">
+            <button type="button" aria-label="Close login panel"><i class="fas fa-times"></i></button>
+          </div>
+          <nav class="login-panel__links">
+            <a href="#">Fund Holder Login</a>
+            <a href="#">Grant Portal</a>
+            <a href="#">Board of Directors</a>
+            <a href="#">Tin Cup Gift Report</a>
+            <a href="#">Scholarships</a>
+          </nav>
+          <div class="login-panel__contact">
+            <a href="mailto:info@cftetonvalley.org" class="login-panel__btn login-panel__btn--email">info@cftetonvalley.org</a>
+            <a href="tel:2083540230" class="login-panel__btn login-panel__btn--phone">Phone: 208-354-0230</a>
+          </div>
+          <div class="login-panel__address">
+            <p>Community Foundation of Teton Valley</p>
+            <p>189 N. Main St., Ste. 112</p>
+            <p>Driggs, ID 83422</p>
+          </div>
+          <hr class="login-panel__divider">
+          <div class="login-panel__address">
+            <p class="login-panel__address-label">Mailing Address</p>
+            <p>P.O. Box 1523</p>
+            <p>Driggs, ID 83422</p>
+          </div>
+          <div class="login-panel__social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </aside>
+      </div>
+    </article>
+
+    <!-- ============================================
+         SECTION: Team Bio Modal
+         Category: Overlays
+         Description: Bio dialog populated from a Team CPT card
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.team-modal</h3>
+        <p>Bio dialog (role="dialog", aria-modal) populated when a team card is clicked, showing photo, name, role, optional contact, and full bio. Content comes from the Team CPT. Shown below statically for review (live, a full-screen overlay backs it and it is hidden until opened).</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Fields (from Team CPT):</dt>
+          <dd>Photo, Name, Role, Contact (optional — email/phone), Bio (rich text)</dd>
+          <dt>Behavior:</dt>
+          <dd>Opens from team card; overlay/close/Esc to dismiss; focus trap; returns focus to trigger</dd>
+          <dt>Children:</dt>
+          <dd>.team-modal__overlay, .team-modal__content, .team-modal__close, .team-modal__image, .team-modal__body</dd>
+          <dt>Conditional:</dt>
+          <dd>Contact block — hidden if empty</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example sitewide-sections__example--contained">
+        <div class="team-modal" role="dialog" aria-modal="false" aria-labelledby="catalog-team-modal-name" style="position:static; opacity:1; visibility:visible; inset:auto; padding:0;">
+          <div class="team-modal__content" style="transform:none; max-width:640px; margin:0 auto;">
+            <button class="team-modal__close" aria-label="Close bio">&times;</button>
+            <div class="team-modal__inner">
+              <div class="team-modal__image">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Crect fill='%23cccccc' width='400' height='400'/%3E%3Ccircle cx='200' cy='160' r='60' fill='%23999'/%3E%3Cellipse cx='200' cy='340' rx='100' ry='80' fill='%23999'/%3E%3C/svg%3E" alt="">
+              </div>
+              <div class="team-modal__body">
+                <h3 class="team-modal__name" id="catalog-team-modal-name">Team Member Name</h3>
+                <p class="team-modal__role">Executive Director</p>
+                <div class="team-modal__contact"><a href="mailto:info@cftetonvalley.org">name@cftetonvalley.org</a></div>
+                <div class="team-modal__bio"><p>Full biography text describing the team member's background, role, and connection to Teton Valley.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </article>
 
