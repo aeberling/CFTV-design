@@ -435,6 +435,23 @@
       "email": "hayes@mountainrootseducation.org"
     },
     {
+      "name": "NOLS Teton Valley",
+      "slug": "nols-teton-valley",
+      "sector": "Education",
+      "address": "",
+      "website": "http://www.nols.edu/courses/location/teton/index.shtml",
+      "taxId": "",
+      "logo": "/assets/images/nonprofits/nols-teton-valley.webp",
+      "phone": "",
+      "facebook": "https://www.facebook.com/NOLSTetonValley/",
+      "instagram": "https://www.instagram.com/nols_tetonvalley/",
+      "linkedin": "",
+      "twitter": "",
+      "youtube": "https://www.youtube.com/user/nols1965",
+      "guidestar": "",
+      "email": ""
+    },
+    {
       "name": "PAWS –  Providing Animal Welfare Services",
       "slug": "paws-of-teton-valley",
       "sector": "Animal Rescue",
