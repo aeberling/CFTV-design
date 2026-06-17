@@ -158,7 +158,6 @@
     var $slides = $heroSlider.find('.hero-split__slide');
     var $dots = $heroSlider.find('.hero-split__dot');
     var current = 0;
-    var total = $slides.length;
 
     function goToSlide(index) {
       if (index === current) return;
@@ -183,18 +182,12 @@
       current = index;
     }
 
-    // Auto-rotate every 7 seconds
-    var timer = setInterval(function() {
-      goToSlide((current + 1) % total);
-    }, 7000);
+    // No auto-rotate — slider lands on the first slide (Tin Cup Challenge)
+    // and only advances when the user clicks the dots.
 
     // Click dots to navigate
     $dots.on('click', function() {
-      clearInterval(timer);
       goToSlide($(this).index());
-      timer = setInterval(function() {
-        goToSlide((current + 1) % total);
-      }, 7000);
     });
   }
 

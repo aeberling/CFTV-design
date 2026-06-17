@@ -119,6 +119,12 @@ img,
   background: #d45549 !important;
 }
 
+/* Header CTA button — keep long label on one line */
+.main-header-area .quote-btn .theme_btn {
+  white-space: nowrap;
+  text-align: center;
+}
+
 /* btn3 (white buttons) — force to match */
 .theme_btn3 {
   background: var(--color-primary) !important;
@@ -512,12 +518,12 @@ a {
   bottom: 80px;
   right: 120px;
   text-align: right;
-  max-width: 280px;
+  max-width: 320px;
   z-index: 2;
 }
 
 .hero-split__right-content h2 {
-  font-size: 32px;
+  font-size: 44px;
   font-weight: 700;
   font-family: var(--font-heading);
   color: var(--color-white);
@@ -525,7 +531,7 @@ a {
 }
 
 .hero-split__right-content p {
-  font-size: 16px;
+  font-size: 21px;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 15px;
 }
