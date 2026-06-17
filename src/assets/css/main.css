@@ -1024,6 +1024,130 @@ a {
   background: var(--color-cirrus) !important;
 }
 
+/* ---- 12b. Tin Cup Challenge Banner ---- */
+.tcc-banner {
+  position: relative;
+  padding: 55px 0;
+  background: #f0b94a;
+  overflow: hidden;
+}
+
+.tcc-banner__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.tcc-banner__content {
+  flex: 1 1 auto;
+  text-align: left;
+}
+
+.tcc-banner__cta {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.tcc-banner__media {
+  flex: 0 0 auto;
+}
+
+.tcc-banner__media img {
+  display: block;
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+}
+
+.tcc-banner__heading {
+  font-family: var(--font-display);
+  color: var(--color-graphite);
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 16px;
+}
+
+.tcc-banner__content p {
+  color: var(--color-graphite);
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 620px;
+}
+
+.tcc-banner .theme_btn {
+  background: var(--color-graphite) !important;
+  color: var(--color-white) !important;
+}
+
+.tcc-banner .theme_btn span {
+  background: transparent !important;
+  overflow: hidden !important;
+}
+
+.tcc-banner .theme_btn:hover,
+.tcc-banner .theme_btn.theme_btn_bg:hover {
+  background: var(--color-dusk) !important;
+}
+
+.tcc-banner .theme_btn:hover::before,
+.tcc-banner .theme_btn.theme_btn_bg:hover::before,
+.tcc-banner .theme_btn.theme_btn_bg::before {
+  background: var(--color-dusk) !important;
+}
+
+/* Tablet + mobile: stack so the content gets full width (container is narrow here) */
+@media (max-width: 991px) {
+  .tcc-banner {
+    padding: 45px 0;
+  }
+
+  .tcc-banner__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .tcc-banner__content {
+    max-width: 100%;
+  }
+
+  .tcc-banner__heading {
+    font-size: 40px;
+  }
+
+  .tcc-banner__cta {
+    justify-content: flex-start;
+    gap: 30px;
+  }
+
+  .tcc-banner__media img {
+    width: 140px;
+  }
+}
+
+@media (max-width: 575px) {
+  .tcc-banner__heading {
+    font-size: 32px;
+  }
+
+  .tcc-banner__cta {
+    gap: 16px;
+  }
+
+  .tcc-banner .theme_btn {
+    white-space: nowrap;
+  }
+
+  .tcc-banner__media img {
+    width: 100px;
+  }
+}
+
 /* ---- 13. Instagram Feed ---- */
 .instagram-feed {
   padding: 10px 0 0;
@@ -2480,6 +2604,11 @@ a {
   }
 
   .hero-split__right {
+    min-height: 495px;
+  }
+
+  /* Slides must fill the right panel so no empty white space appears below the slider */
+  .hero-split__slide {
     min-height: 495px;
   }
 
