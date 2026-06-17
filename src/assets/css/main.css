@@ -1063,11 +1063,12 @@ a {
 }
 
 .tcc-banner__heading {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   color: var(--color-graphite);
-  font-size: 48px;
-  font-weight: 400;
-  line-height: 1.1;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.3px;
   margin: 0 0 16px;
 }
 
@@ -1079,26 +1080,7 @@ a {
   max-width: 620px;
 }
 
-.tcc-banner .theme_btn {
-  background: var(--color-graphite) !important;
-  color: var(--color-white) !important;
-}
-
-.tcc-banner .theme_btn span {
-  background: transparent !important;
-  overflow: hidden !important;
-}
-
-.tcc-banner .theme_btn:hover,
-.tcc-banner .theme_btn.theme_btn_bg:hover {
-  background: var(--color-dusk) !important;
-}
-
-.tcc-banner .theme_btn:hover::before,
-.tcc-banner .theme_btn.theme_btn_bg:hover::before,
-.tcc-banner .theme_btn.theme_btn_bg::before {
-  background: var(--color-dusk) !important;
-}
+/* Button uses the site's default orange theme_btn styling (matches the hero buttons) */
 
 /* Tablet + mobile: stack so the content gets full width (container is narrow here) */
 @media (max-width: 991px) {
@@ -1117,7 +1099,7 @@ a {
   }
 
   .tcc-banner__heading {
-    font-size: 40px;
+    font-size: 48px;
   }
 
   .tcc-banner__cta {
@@ -1132,15 +1114,11 @@ a {
 
 @media (max-width: 575px) {
   .tcc-banner__heading {
-    font-size: 32px;
+    font-size: 36px;
   }
 
   .tcc-banner__cta {
     gap: 16px;
-  }
-
-  .tcc-banner .theme_btn {
-    white-space: nowrap;
   }
 
   .tcc-banner__media img {
