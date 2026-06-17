@@ -2542,6 +2542,36 @@ a {
   }
 }
 
+/* Tablet: keep the hero slider text inside the teal triangle */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hero-split__right {
+    min-height: 560px;
+  }
+
+  /* Slides must fill the taller panel so no white gap appears below the slider */
+  .hero-split__slide {
+    min-height: 560px;
+  }
+
+  .hero-split__right-content {
+    right: 30px;
+    bottom: 45px;
+    max-width: 340px;
+  }
+
+  .hero-split__right-content h2 {
+    font-size: 36px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+
+  .hero-split__right-content p {
+    font-size: 17px;
+    line-height: 1.4;
+    margin-bottom: 14px;
+  }
+}
+
 @media (max-width: 767px) {
   body {
     overflow-x: hidden;
@@ -2581,20 +2611,34 @@ a {
     margin-bottom: 10px;
   }
 
+  /* Keep the diagonal split on phones; size the teal text so it stays inside the triangle */
   .hero-split__right {
-    min-height: 495px;
+    min-height: 700px;
   }
 
   /* Slides must fill the right panel so no empty white space appears below the slider */
   .hero-split__slide {
-    min-height: 495px;
+    min-height: 700px;
   }
 
   .hero-split__right-content {
-    left: 40%;
-    right: 35px;
+    left: auto;
+    right: 22px;
     bottom: 30px;
+    max-width: 60%;
     text-align: right;
+  }
+
+  .hero-split__right-content h2 {
+    font-size: 30px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .hero-split__right-content p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 12px;
   }
 
   .hero-split__slider {
