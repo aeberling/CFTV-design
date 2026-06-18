@@ -711,23 +711,25 @@ eleventyExcludeFromCollections: true
          SECTION: Team Preview
          Category: Cards
          Description: 4-column team member photo grid with name and role
-         Modifiers: none
+         Modifiers: --dark (dark background variant)
          ============================================ -->
     <article class="sitewide-sections__item">
       <header class="sitewide-sections__item-header">
-        <h3>.team-preview</h3>
-        <p>Section with eyebrow, heading, description, and a 4-column grid of team member cards. Each card has a square photo, name, and role/title. Grey background with white cards and hover lift effect. Used on the About page as a preview linking to a full Staff &amp; Board page. If any field is not filled out, that element is hidden.</p>
+        <h3>.team-preview / .team-preview--dark</h3>
+        <p>Section with eyebrow, heading, description, and a 4-column grid of team member cards. Each card has a square photo, name, and role/title. Grey background with white cards and hover lift effect. Used on the About page as a preview linking to a full Staff &amp; Board page. Add <code>--dark</code> for the graphite-background variant (used for the Board grid on Staff &amp; Board): dark section background with white heading, poppy eyebrow, and cirrus body text; cards stay white. If any field is not filled out, that element is hidden.</p>
         <dl class="sitewide-sections__meta">
           <dt>Cards:</dt>
           <dd>4-column grid (responsive: 2-column on tablet/mobile)</dd>
           <dt>Image:</dt>
           <dd>Square aspect (1:1), object-fit: cover</dd>
+          <dt>Modifier:</dt>
+          <dd><code>--dark</code> — graphite section background (--color-graphite) with light text; same card markup. Implemented as a block style variation in WordPress (no separate block).</dd>
           <dt>Fields per card:</dt>
           <dd>Photo, name, role/title — each hidden if empty</dd>
           <dt>Section fields:</dt>
           <dd>Eyebrow, heading, description text, CTA button — each hidden if empty</dd>
           <dt>Background:</dt>
-          <dd>Section: --color-grey-bg, Cards: white</dd>
+          <dd>Default: --color-grey-bg, Cards: white. <code>--dark</code>: --color-graphite section, white cards</dd>
           <dt>Mobile:</dt>
           <dd>2-column grid, reduced padding and font sizes</dd>
         </dl>
@@ -1084,6 +1086,104 @@ eleventyExcludeFromCollections: true
       </div>
     </article>
 
+    <!-- ============================================
+         SECTION: FAQ Accordion
+         Category: Content
+         Description: Collapsible question/answer list (Bootstrap collapse)
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.faq-accordion</h3>
+        <p>Heading above a list of collapsible question/answer items. Each item is a button (the question) that expands to reveal a rich-text answer. Built on Bootstrap collapse with a single-open accordion group (<code>data-bs-parent</code>). Each answer supports multiple paragraphs. Used on the program subpages (Tin Cup Challenge, Competitive Grants, Youth Philanthropy).</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Fields:</dt>
+          <dd>Heading (req); Items (repeater): each Question (req) + Answer (rich text, req)</dd>
+          <dt>Background:</dt>
+          <dd>White</dd>
+          <dt>Behavior:</dt>
+          <dd>Single-open accordion (opening one closes the others); chevron icon rotates on expand</dd>
+          <dt>Accessibility:</dt>
+          <dd>Button toggles with <code>aria-expanded</code> / <code>aria-controls</code>; icon is <code>aria-hidden</code>; keyboard operable</dd>
+          <dt>WordPress:</dt>
+          <dd>Group of <code>core/details</code> blocks (native accordion, no custom block) — heading + repeated details/summary</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        <section class="faq-accordion">
+          <div class="container">
+            <h2 class="faq-accordion__heading">Frequently Asked Questions</h2>
+            <div class="faq-accordion__list" id="catalogFaq">
+              <div class="faq-accordion__item">
+                <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#catalog-faq-1" aria-expanded="false" aria-controls="catalog-faq-1">
+                  <span class="faq-accordion__question">First question goes here?</span>
+                  <span class="faq-accordion__icon" aria-hidden="true"></span>
+                </button>
+                <div class="collapse" id="catalog-faq-1" data-bs-parent="#catalogFaq">
+                  <div class="faq-accordion__answer">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="faq-accordion__item">
+                <button class="faq-accordion__button" type="button" data-bs-toggle="collapse" data-bs-target="#catalog-faq-2" aria-expanded="false" aria-controls="catalog-faq-2">
+                  <span class="faq-accordion__question">Second question goes here?</span>
+                  <span class="faq-accordion__icon" aria-hidden="true"></span>
+                </button>
+                <div class="collapse" id="catalog-faq-2" data-bs-parent="#catalogFaq">
+                  <div class="faq-accordion__answer">
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <!-- ============================================
+         SECTION: Past Reports
+         Category: Content
+         Description: Simple archive list of downloadable past report PDFs
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.past-reports</h3>
+        <p>Compact archive list of downloadable past report PDFs, used under the current Impact Report on the Impact Reports page. Each list item is a link to a PDF with a download arrow icon appended. Heading is an <code>h3</code> (follows the <code>h2</code> of the report above it).</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Fields:</dt>
+          <dd>Heading (req); List (repeater): each Label (req) + PDF file</dd>
+          <dt>Links:</dt>
+          <dd>Open in new tab; download arrow SVG is decorative (<code>aria-hidden</code>)</dd>
+          <dt>WordPress:</dt>
+          <dd><code>core/list</code> with linked items, or repeated <code>core/file</code> — no custom block</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        <section class="past-reports">
+          <div class="container">
+            <h3 class="past-reports__heading">Past Reports</h3>
+            <ul class="past-reports__list">
+              <li>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  2024 Impact Report
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  2023 Impact Report
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </article>
+
   </section>
 
   {# ============================================
@@ -1258,6 +1358,34 @@ eleventyExcludeFromCollections: true
       </header>
       <div class="sitewide-sections__example">
         {% include "challenger-banner.njk" %}
+      </div>
+    </article>
+
+    <!-- ============================================
+         SECTION: Tin Cup Challenge Banner
+         Category: CTA
+         Description: Gold promo banner with heading, body text, CTA button, and mascot image
+         Modifiers: none
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.tcc-banner</h3>
+        <p>Gold promo banner that sits directly under the homepage hero (adapted from the Tin Cup Challenge site). Left side holds a left-aligned heading and supporting paragraph; right side groups a single CTA button with the Tinny mascot image (transparent PNG). Used to drive donations to the Tin Cup Challenge. If the body text or button is not filled out, that element is hidden.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Fields:</dt>
+          <dd>Heading (req), Body text (optional), Button (optional: text + URL), Mascot image (optional, transparent PNG)</dd>
+          <dt>Image:</dt>
+          <dd>Transparent PNG mascot (tinny-mascot.png, ~900&times;740), object-fit: contain; decorative-adjacent but carries descriptive alt</dd>
+          <dt>Background:</dt>
+          <dd>Gold/clay promo background (fixed brand treatment)</dd>
+          <dt>Layout:</dt>
+          <dd>Content left, CTA + mascot right on desktop; stacks on mobile</dd>
+          <dt>Conditional:</dt>
+          <dd>Body text, button, mascot — hidden if empty</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        {% include "tcc-banner.njk" %}
       </div>
     </article>
 

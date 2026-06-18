@@ -45,7 +45,16 @@ subpageNavItems:
     </div>
   </section>
 
-  <!-- Past Reports -->
+  <!-- IMPLEMENTATION: past-reports
+       Simple archive list of downloadable past report PDFs.
+       heading: "Past Reports" (h3 — follows the h2 of the report above)
+       list: repeater of links, each = report label + PDF file
+             - label: e.g. "2024 Impact Report"
+             - file: PDF download (opens new tab, download arrow icon appended)
+       Download arrow SVG is decorative (aria-hidden in WP render).
+       WP BLOCK: core/list with linked items, OR core/file repeated.
+                 No custom block — heading + list of file links.
+  -->
   <section class="past-reports">
     <div class="container">
       <h3 class="past-reports__heading">Past Reports</h3>

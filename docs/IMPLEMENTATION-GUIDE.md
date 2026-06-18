@@ -73,7 +73,7 @@ All colors are defined as CSS custom properties in `:root`. In WordPress, regist
 | `--color-body` | `--color-pine` | Body text |
 | `--color-white` | `#ffffff` | Page background |
 
-> ⚠️ **Known bug to fix during migration:** the catalog and `nonprofit-directory.njk` reference `--color-grey-bg`, which is **not defined** in `main.css` — those neutral section backgrounds currently fall back to transparent (or an inline `#e5cec3`). The intended neutral section background is **Sand `#e5cec3`** (or **Fog `#dbdcdd`**). Either define `--color-grey-bg` in `:root` or swap usages to `--color-sand`. In WordPress, expose a single "Light / Neutral" section background option mapped to Sand.
+> ✅ **Resolved:** `--color-grey-bg` is now defined in `:root` in `main.css` as an alias of **Sand (`#e5cec3`)** — the neutral section background behind content-split images, cards, and the team grid. In WordPress, expose this as a single "Light / Neutral" section background option mapped to Sand.
 
 **Section background palette** (the selectable backgrounds offered on `content-split`, `cta-banner`, `impact-stats`, etc.): Dusk (default dark), Plum, Poppy, Dark Pine, Pine, Graphite, Sand (neutral light), White. Text color auto-inverts for contrast on dark backgrounds.
 
@@ -158,7 +158,7 @@ Section rhythm uses pixel-increment utility classes from the theme (Bootstrap-st
 
 | Strategy | Sections | Why |
 |----------|----------|-----|
-| **Core block / pattern** (build with native blocks — no custom code) | `content-split`, `impact-story-area`, `page-hero`, `cta-banner`, `challenger-banner`, `quick-links`, `programs-area`, `testimonial-section`, `contact-info`, `community-calendar`, `media-kit`, `fund-spotlight` | These are layout/content arrangements core blocks (Media & Text, Cover, Columns, Group, Buttons, Quote, File, Gallery, Embed) already cover. Ship them as **block patterns** with locked styles. |
+| **Core block / pattern** (build with native blocks — no custom code) | `content-split`, `impact-story-area`, `page-hero`, `cta-banner`, `challenger-banner`, `tcc-banner`, `quick-links`, `programs-area`, `testimonial-section`, `contact-info`, `community-calendar`, `media-kit`, `fund-spotlight`, `faq-accordion`, `past-reports` | These are layout/content arrangements core blocks (Media & Text, Cover, Columns, Group, Buttons, Quote, File, Gallery, Embed, **Details** for accordions, **List** for archives) already cover. Ship them as **block patterns** with locked styles. |
 | **Core Query Loop** | `post-grid` (News), `post-grid--alt` (Events), `team-preview` | Native Query Loop over Posts / a CPT. "Show More" = Query pagination or a load-more plugin. Do **not** hand-build a card grid. |
 | **Plugin embed** (install, don't build) | `instagram-feed` (Smash Balloon / Instagram Feed), `footer-newsletter` (Mailchimp / WPForms / Gravity Forms), Events data (optional: The Events Calendar) | Maintained plugins handle the API, caching, and spam protection. |
 | **Custom block** (justified) | `cftv/hero-split` (slider + repeater), `cftv/flip-cards` (flip interaction + per-card button repeater), `cftv/impact-stats` (animated counters), `cftv/nonprofit-directory` (CPT + AJAX sector filter), `cftv/seasonal-cta` (season-based content rotation) | Interaction, animation, custom data + filtering, or scheduled logic that core can't express. For `nonprofit-directory`, **FacetWP/SearchWP is an acceptable no-custom-code alternative.** |
@@ -372,6 +372,36 @@ Four-column animated counter row. Each stat: icon, number, suffix modifier, labe
 
 **Responsive:** 4-col → 2-col → 1-col. **A11y:** the final number must be present in the DOM for screen readers (animation is progressive enhancement); icons decorative (`aria-hidden`). **Editorial:** round numbers; keep labels to 2–3 words.
 
+### FAQ Accordion — `.faq-accordion`
+
+**Maps to:** ✅ **Group of `core/details`** blocks (native accordion — no custom block) · **Used on:** about/programs/tin-cup-challenge, about/programs/competitive-grants, about/programs/youth-philanthropy
+
+Heading above a list of collapsible question/answer items. Currently built on Bootstrap collapse as a single-open group (`data-bs-parent`); in WordPress each item becomes a `core/details` block (or a `core/details` group with a "one open at a time" interactivity setting).
+
+| Field | Type | Required | Constraints |
+|-------|------|----------|-------------|
+| Heading | Plain text | Yes | → `<h2>` |
+| Items | Repeater | Yes | each: Question (req) + Answer (rich text, req) |
+| → Question | Plain text | Yes | becomes the `<summary>` / toggle button |
+| → Answer | Rich text | Yes | supports multiple paragraphs |
+
+**Responsive:** full-width at all sizes. **A11y:** toggle exposes `aria-expanded` / `aria-controls`; chevron icon is `aria-hidden`; keyboard operable (native `<details>` is keyboard-accessible by default). **Editorial:** keep questions short and scannable; one topic per item.
+
+### Past Reports — `.past-reports`
+
+**Maps to:** ✅ **Core `core/list`** (linked items) or repeated **`core/file`** — no custom block · **Used on:** about/impact-reports (under the current report)
+
+Compact archive list of downloadable past report PDFs. Heading (`<h3>`, follows the report `<h2>` above) over a list of links, each opening a PDF with a download arrow icon.
+
+| Field | Type | Required | Constraints |
+|-------|------|----------|-------------|
+| Heading | Plain text | Yes | → `<h3>` |
+| List | Repeater | Yes | each: Label (req) + PDF file |
+| → Label | Plain text | Yes | e.g. "2024 Impact Report" |
+| → File | File (PDF) | Yes | opens in new tab |
+
+**Responsive:** full-width single column at all sizes. **A11y:** download arrow SVG is decorative (`aria-hidden`); link text carries the report name. **Editorial:** human-readable labels; newest first.
+
 ---
 
 ## Media
@@ -451,6 +481,21 @@ Compact single-row CTA: heading + button inline, centered.
 
 **Responsive:** inline → stacked. **A11y:** clear link text. **Editorial:** secondary CTAs only ("Become a Challenger").
 
+### Tin Cup Challenge Banner — `.tcc-banner`
+
+**Maps to:** ✅ **Core `group` + `buttons` + image** pattern · **Used on:** Home (`tcc-banner.njk`, directly under the hero)
+
+Gold promo banner adapted from the Tin Cup Challenge site. Left: heading + supporting paragraph (left-aligned). Right: a single CTA button grouped with the Tinny mascot image. No custom block — a two-column Group pattern with a fixed gold background.
+
+| Field | Type | Required | Constraints |
+|-------|------|----------|-------------|
+| Heading | Plain text | Yes | one line → `<h2>` |
+| Body | Rich text | No | 1–2 sentences — hidden if empty |
+| Button | Link (text + URL) | No | hidden if empty (typically external → tincupchallenge.org) |
+| Mascot image | Image | No | transparent PNG (`tinny-mascot.png`, ~900×740), `contain` — hidden if empty |
+
+**Responsive:** content left / CTA + mascot right on desktop; stacks on mobile. **A11y:** descriptive `alt` on the mascot; external link uses `rel="noopener"`. **Editorial:** keep heading short; pair with a single primary CTA only.
+
 ---
 
 ## Forms
@@ -488,7 +533,7 @@ Two-column: contact details (heading, intro, icon list — address, phone, email
 | Contact items | Repeater | Yes | Each: icon, label, content (rich, allows `tel:`/`mailto:` links) |
 | Map embed | Embed/iframe URL | Yes | Google Maps, `loading="lazy"`, titled iframe |
 
-**Responsive:** 2-col → stacked (details above map). **A11y:** iframe needs a `title`; phone/email are real `tel:`/`mailto:` links; the markup currently has mismatched `<h3>…</h5>` tags on the labels — **fix to matching `<h3>` (or `<h4>`) during migration.** **Editorial:** keep to 4 items (visit/call/email/hours).
+**Responsive:** 2-col → stacked (details above map). **A11y:** iframe needs a `title`; phone/email are real `tel:`/`mailto:` links; label tags are matching `<h3>` (the earlier `<h3>…</h5>` mismatch is fixed). **Editorial:** keep to 4 items (visit/call/email/hours).
 
 ### Post Grid — `.post-grid` (News) & `.post-grid--alt` (Events)
 
@@ -672,13 +717,13 @@ Hidden `role="dialog"` populated on click from a team card: photo, name, role, o
 
 ## Handoff Checklist
 
-- [x] All sections have implementation specs in this document (29 sections)
+- [x] All sections have implementation specs in this document (32 sections)
 - [x] Global tokens (colors, fonts, spacing, buttons) match `main.css`
 - [x] Gutenberg block strategy defined (core vs. plugin vs. custom)
-- [ ] All sections cataloged in `sitewide-sections.njk` — **8 page-specific sections still need live examples added** (contact-info, post-grid, community-calendar, np-directory, testimonial-section, media-kit, login-panel, team-modal)
-- [ ] `--color-grey-bg` defined in `:root` (or usages swapped to `--color-sand`)
-- [ ] `contact-info` label tags fixed (`<h3>…</h5>` mismatch)
-- [ ] All pages have implementation comments (mostly done — verify newest pages)
+- [x] All sections cataloged in `sitewide-sections.njk` (all page-specific sections now have live examples; `tcc-banner`, `faq-accordion`, `past-reports`, and the `team-preview--dark` modifier added)
+- [x] `--color-grey-bg` defined in `:root` (alias of `--color-sand`)
+- [x] `contact-info` label tags fixed (`<h3>…</h3>`)
+- [x] All pages have implementation comments (`past-reports` comment added; newest pages verified)
 - [ ] No placeholder content in production pages (catalog uses intentional Lorem ipsum)
 - [ ] All images have dimensions specified
 - [ ] Responsive + accessibility verified per section

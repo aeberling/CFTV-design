@@ -28,6 +28,8 @@
   --color-dark-bg: var(--color-dusk);
   --color-body: var(--color-pine);
   --color-white: #ffffff;
+  /* Neutral section background (light tint behind content-split images, cards) */
+  --color-grey-bg: var(--color-sand);
   /* Typography */
   --font-heading: 'Barlow Condensed', sans-serif;
   --font-body: 'Karla', sans-serif;
