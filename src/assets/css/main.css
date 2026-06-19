@@ -1029,7 +1029,7 @@ a {
 /* ---- 12b. Tin Cup Challenge Banner ---- */
 .tcc-banner {
   position: relative;
-  padding: 55px 0;
+  padding: 36px 0;
   background: #f0b94a;
   overflow: hidden;
 }
@@ -1087,7 +1087,7 @@ a {
 /* Tablet + mobile: stack so the content gets full width (container is narrow here) */
 @media (max-width: 991px) {
   .tcc-banner {
-    padding: 45px 0;
+    padding: 30px 0;
   }
 
   .tcc-banner__inner {
