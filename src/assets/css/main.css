@@ -538,6 +538,16 @@ a {
   margin-bottom: 15px;
 }
 
+/* Long-title slides: smaller heading so text stays inside the teal triangle */
+.hero-split__right-content--long {
+  max-width: 380px;
+}
+
+.hero-split__right-content--long h2 {
+  font-size: 34px;
+  line-height: 1.15;
+}
+
 .hero-split__right-content .theme_btn {
   background: var(--color-white) !important;
   color: var(--color-graphite) !important;
@@ -2588,6 +2598,10 @@ a {
     line-height: 1.4;
     margin-bottom: 14px;
   }
+
+  .hero-split__right-content--long h2 {
+    font-size: 28px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2657,6 +2671,10 @@ a {
     font-size: 14px;
     line-height: 1.4;
     margin-bottom: 12px;
+  }
+
+  .hero-split__right-content--long h2 {
+    font-size: 23px;
   }
 
   .hero-split__slider {
