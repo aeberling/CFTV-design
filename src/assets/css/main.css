@@ -2267,14 +2267,30 @@ a {
   margin-bottom: 20px;
 }
 
+.post-detail__content a,
+.post-detail__content a:hover {
+  text-decoration: underline;
+}
+
 .post-detail__content ul {
   margin-bottom: 20px;
   padding-left: 24px;
 }
 
 .post-detail__content ul li {
+  list-style: disc;
   margin-bottom: 8px;
   line-height: 1.6;
+}
+
+/* Nested lists — circle markers like the press-release sub-bullets */
+.post-detail__content ul ul {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.post-detail__content ul ul li {
+  list-style: circle;
 }
 
 .post-detail__back {
