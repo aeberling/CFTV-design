@@ -1,9 +1,9 @@
 ---
 layout: base.njk
-title: "Grant Dates & Deadlines - Community Foundation of Teton Valley"
+title: "Grant Hub - Community Foundation of Teton Valley"
 description: "Stay on top of important dates — grant cycles, workshop schedules, Tin Cup Challenge, and key deadlines for Teton Valley nonprofits."
 permalink: /nonprofits/dates-deadlines/
-heroHeading: "Grant Dates & Deadlines"
+heroHeading: "Grant Hub"
 heroText: "Stay on top of important dates — grant cycles, workshop schedules, and key deadlines all in one place."
 heroImage: "/assets/images/hero/scholarship.webp"
 subpageNavItems:
@@ -32,7 +32,7 @@ subpageNavItems:
        button: "Apply for Grants" -> /nonprofits/apply-for-grants/
        background: default (--color-dusk)
        modifier: none (image left, content right)
-       notes: Includes bullet list for Competitive Grants schedule
+       notes: Includes grant cycle table (Program / Opens / Deadline / Awards / Status)
   -->
   <section class="content-split" id="grant-calendar">
     <div class="content-split__image content-split__image--center">
@@ -43,12 +43,49 @@ subpageNavItems:
       <span class="content-split__eyebrow">Grant Programs</span>
       <h2 class="content-split__heading">Grant Cycle Calendar</h2>
       <p class="content-split__text">Key dates for the Community Foundation's annual grant programs. Mark your calendar and prepare your applications ahead of deadlines.</p>
-      <ul class="content-split__list">
-        <li><a href="/about/programs/competitive-grants/">Competitive Grants</a> — Applications open January, due mid-February, awards April</li>
-        <li><a href="/about/programs/tin-cup-challenge/">Tin Cup Challenge</a> — Applications open mid-March, due early April, awards August</li>
-        <li><a href="/about/programs/youth-philanthropy/">Youth Philanthropy</a> — Applications open late September, due mid-October, awards November</li>
-        <li><a href="/about/programs/#opportunity-fund">Opportunity Fund</a> — Rolling, year-round applications</li>
-      </ul>
+      <div class="grant-table-wrap">
+        <table class="grant-table">
+          <thead>
+            <tr>
+              <th scope="col">Program</th>
+              <th scope="col">Opens</th>
+              <th scope="col">Deadline</th>
+              <th scope="col">Awards</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="/about/programs/competitive-grants/">Competitive Grants</a></td>
+              <td>Jan</td>
+              <td>Feb</td>
+              <td>Apr</td>
+              <td><span class="grant-table__dot grant-table__dot--closed" aria-hidden="true"></span>Closed</td>
+            </tr>
+            <tr>
+              <td><a href="/about/programs/tin-cup-challenge/">Tin Cup Challenge</a></td>
+              <td>Mar</td>
+              <td>Apr</td>
+              <td>Aug</td>
+              <td><span class="grant-table__dot grant-table__dot--closed" aria-hidden="true"></span>Closed</td>
+            </tr>
+            <tr>
+              <td><a href="/about/programs/youth-philanthropy/">Youth Philanthropy</a></td>
+              <td>Sept</td>
+              <td>Oct</td>
+              <td>Nov</td>
+              <td><span class="grant-table__dot grant-table__dot--soon" aria-hidden="true"></span>Opening Soon</td>
+            </tr>
+            <tr>
+              <td><a href="/about/programs/#opportunity-fund">Opportunity Fund</a></td>
+              <td>Rolling</td>
+              <td>Rolling</td>
+              <td>Rolling</td>
+              <td><span class="grant-table__dot grant-table__dot--open" aria-hidden="true"></span>Open</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 
@@ -67,7 +104,7 @@ subpageNavItems:
     <div class="content-split__content" style="background: var(--color-dark-pine);">
       <span class="content-split__eyebrow">Training</span>
       <h2 class="content-split__heading">Workshop & Event Dates</h2>
-      <p class="content-split__text">Upcoming workshops, networking events, and training sessions for Teton Valley nonprofits. The full interactive events calendar will be available in the WordPress build.</p>
+      <p class="content-split__text">Upcoming workshop, networking events, and training sessions for Teton Valley nonprofit staff and board members.</p>
       <ul class="content-split__list">
         <li>Grant Writing Workshops — scheduled before each grant cycle</li>
         <li>Board Member Roundtables — quarterly informal gatherings</li>

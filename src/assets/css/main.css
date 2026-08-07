@@ -1503,6 +1503,68 @@ a {
   color: var(--color-dusk);
 }
 
+/* Grant cycle table — borderless, left-aligned (dates-deadlines page) */
+.grant-table-wrap {
+  overflow-x: auto;
+  margin: 0 0 24px;
+}
+
+.grant-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.grant-table th,
+.grant-table td {
+  text-align: left;
+  border: 0;
+  padding: 6px 14px 6px 0;
+  white-space: nowrap;
+}
+
+.grant-table th:last-child,
+.grant-table td:last-child {
+  padding-right: 0;
+}
+
+.grant-table th {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-white);
+}
+
+.grant-table td {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--color-cirrus);
+}
+
+.grant-table td a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.grant-table td a:hover {
+  color: #fff;
+}
+
+.grant-table__dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: -1px;
+}
+
+.grant-table__dot--closed { background: #c0453f; }
+.grant-table__dot--soon { background: #e0a92e; }
+.grant-table__dot--open { background: #3e8e5a; }
+
 /* ---- 17. Quick Links ---- */
 .quick-links {
   background: #fff;
