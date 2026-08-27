@@ -2322,6 +2322,13 @@ a {
   display: block;
 }
 
+.post-detail__content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
 .post-detail__content {
   font-family: var(--font-body);
   font-size: 18px;
@@ -2339,7 +2346,12 @@ a {
   margin-bottom: 16px;
 }
 
+/* Vendor style.css sets p to 15px/#777 — inherit the container's 18px body style
+   so paragraphs match the global body text and the bulleted lists */
 .post-detail__content p {
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
   margin-bottom: 20px;
 }
 
@@ -2356,7 +2368,7 @@ a {
 .post-detail__content ul li {
   list-style: disc;
   margin-bottom: 8px;
-  line-height: 1.6;
+  line-height: inherit;
 }
 
 /* Nested lists — circle markers like the press-release sub-bullets */
