@@ -9,18 +9,18 @@
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph -->
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="{% if newsPost %}article{% else %}website{% endif %}">
   <meta property="og:site_name" content="Community Foundation of Teton Valley">
   <meta property="og:title" content="{{ title | default('Community Foundation of Teton Valley') }}">
   <meta property="og:description" content="{{ description | default('Connecting generosity to the causes, nonprofits, and people who make Teton Valley thrive.') }}">
   <meta property="og:url" content="https://cftetonvalley.org{{ page.url }}">
-  <meta property="og:image" content="https://cftetonvalley.org/assets/images/logo/cftv-og-image.webp">
+  <meta property="og:image" content="https://cftetonvalley.org{{ newsImage | default('/assets/images/logo/cftv-og-image.webp') }}">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ title | default('Community Foundation of Teton Valley') }}">
   <meta name="twitter:description" content="{{ description | default('Connecting generosity to the causes, nonprofits, and people who make Teton Valley thrive.') }}">
-  <meta name="twitter:image" content="https://cftetonvalley.org/assets/images/logo/cftv-og-image.webp">
+  <meta name="twitter:image" content="https://cftetonvalley.org{{ newsImage | default('/assets/images/logo/cftv-og-image.webp') }}">
 
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" href="/assets/images/logo/favicon.png">

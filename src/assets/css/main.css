@@ -2322,6 +2322,38 @@ a {
   display: block;
 }
 
+/* Inline post imagery — safety guard so imported/editor images never overflow the column */
+.post-detail__content img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Standalone figure inside post content (e.g. the results infographic at the end of a post) */
+.post-detail__figure {
+  margin: 40px auto 0;
+  max-width: 100%;
+}
+
+.post-detail__figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.post-detail__figure figcaption {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--color-body);
+  margin-top: 12px;
+  text-align: center;
+}
+
+/* Square infographic reads best capped below the 760px content column */
+.post-detail__figure--stats {
+  max-width: 620px;
+}
+
 .post-detail__content {
   font-family: var(--font-body);
   font-size: 18px;
