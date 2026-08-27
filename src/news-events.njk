@@ -40,7 +40,7 @@ subpageNavItems:
       <div class="post-grid__cards" id="news-card-list">
         {% for post in collections.newsPosts %}
         <a href="{{ post.url }}" class="post-card" aria-label="{{ post.data.title | replace(' - Community Foundation of Teton Valley', '') }}">
-          <div class="post-card__image">
+          <div class="post-card__image{% if post.data.newsImageNatural %} post-card__image--natural{% endif %}">
             <img src="{{ post.data.newsImage }}" alt="" loading="lazy">
           </div>
           <div class="post-card__body">

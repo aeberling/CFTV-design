@@ -2166,6 +2166,15 @@ a {
   transform: scale(1.05);
 }
 
+/* Natural-aspect card image (e.g. square infographics) — full image, no crop or letterbox */
+.post-card__image--natural {
+  aspect-ratio: auto;
+}
+
+.post-card__image--natural img {
+  height: auto;
+}
+
 .post-card__body {
   padding: 24px;
   display: flex;
