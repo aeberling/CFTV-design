@@ -1259,6 +1259,49 @@ eleventyExcludeFromCollections: true
       </div>
     </article>
 
+    <!-- ============================================
+         SECTION: Post Figure
+         Category: Media
+         Description: Standalone captioned image inside post body copy
+         Modifiers: --stats (narrower cap for square infographics)
+         ============================================ -->
+    <article class="sitewide-sections__item">
+      <header class="sitewide-sections__item-header">
+        <h3>.post-detail__figure</h3>
+        <p>A standalone image placed inside a news post's body copy &mdash; used for results infographics, charts, and supporting photos that are not the post's featured image. Centered in the 760px content column with an optional caption below. The <code>--stats</code> modifier caps the width at 620px so square infographics do not overpower the column.</p>
+        <dl class="sitewide-sections__meta">
+          <dt>Fields:</dt>
+          <dd>Image (req), Alt text (req), Caption (optional &mdash; hidden if empty)</dd>
+          <dt>Modifiers:</dt>
+          <dd>.post-detail__figure--stats &mdash; max-width 620px, for square/infographic assets</dd>
+          <dt>Image:</dt>
+          <dd>WebP; photos 1200&times;800 (3:2), infographics up to 960&times;960 (1:1). Always <code>loading="lazy"</code> plus explicit width/height</dd>
+          <dt>A11y:</dt>
+          <dd>Alt text must carry <strong>every</strong> figure shown in an infographic &mdash; the graphic is the only source for image-only data</dd>
+          <dt>WordPress:</dt>
+          <dd>Core <code>core/image</code> with caption; register <code>--stats</code> as a block style</dd>
+          <dt>Children:</dt>
+          <dd>.post-detail__figure img, .post-detail__figure figcaption</dd>
+        </dl>
+      </header>
+      <div class="sitewide-sections__example">
+        <div class="post-detail" style="padding:40px 0;">
+          <div class="container">
+            <div class="post-detail__inner">
+              <div class="post-detail__content">
+                <p>Body copy sits above the figure. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <figure class="post-detail__figure post-detail__figure--stats">
+                  <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='960' height='960' viewBox='0 0 960 960'%3E%3Crect fill='%23cccccc' width='960' height='960'/%3E%3Ctext fill='%23999999' font-family='sans-serif' font-size='40' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3EInfographic 1:1%3C/text%3E%3C/svg%3E" alt="Placeholder infographic showing where every figure from the graphic is restated in alt text" loading="lazy" width="960" height="960">
+                  <figcaption>Optional caption &mdash; omit when the graphic already labels itself.</figcaption>
+                </figure>
+                <p>Body copy continues below the figure.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
   </section>
 
   {# ============================================

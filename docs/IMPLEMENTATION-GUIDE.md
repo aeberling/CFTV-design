@@ -127,12 +127,16 @@ Button markup carries a trailing `<span aria-hidden="true"></span>` used for the
 | Programs card | WebP | 600×400 (3:2) | `cover` | lazy |
 | Team photo | WebP | 400×400 (1:1) | `cover` | lazy |
 | Nonprofit logo | PNG/SVG/WebP | 200×200 | `contain` | lazy |
-| Post / news card | WebP | 600×400 (3:2) | `cover` | lazy |
+| Post / news card | WebP | 600×400 (3:2) min | `cover` (16:10 crop) | lazy |
+| Post featured image | WebP | 1200×800 (3:2) | `width:100%` in 760px column | **eager** (LCP) |
+| Post in-body figure | WebP | 1200×800 (3:2) photo · up to 960×960 (1:1) infographic | `width:100%`, capped 620px with `--stats` | lazy |
 | Media-kit thumbnail | PNG | 240×240 | `cover` | lazy |
 | Logo (header) | WebP/SVG | max-height 60px | — | eager |
 | Icon | SVG / FontAwesome | 24×24 | inline | inline |
 
 **All images require** descriptive `alt` text, explicit `width`/`height`, and `loading="lazy"` below the fold.
+
+A news post's `newsImage` feeds **three** surfaces from one field — the news card (16:10 crop), the post's featured image, and `og:image`/`twitter:image` for social sharing — so it must be large enough for the featured slot and must read well cropped to 16:10. Infographics and other square assets belong in a `.post-detail__figure`, not in this field.
 
 ### Spacing
 
@@ -550,6 +554,41 @@ Header (heading + text) + responsive card grid + "Show More" (reveals 6 at a tim
 
 **Responsive:** 3-col → 2-col → 1-col. **A11y:** card is a single `<a>` with `aria-label`; a visually-hidden `aria-live` region announces newly loaded cards (already in markup as `.post-grid__status`). **Editorial:** excerpts ~120 chars; ensure every post has a featured image + category.
 
+### Post Detail — `.post-detail`
+
+**Maps to:** ✅ **Core single-post template** (`single.html`) — no custom block · **Used on:** every news post (`news-events/*.njk`)
+
+The single news post template: category tag + date, title, featured image, body copy, an optional in-body figure, and a back link. Front matter (`newsImage`, `newsTag`, `newsExcerpt`, `date`) drives both this page and the post's card in `.post-grid`, so one image field feeds the card, the featured image, and the social preview.
+
+| Field | Type | Required | Constraints |
+|-------|------|----------|-------------|
+| Title | Plain text | Yes | → `<h1 class="post-detail__title">` |
+| Category tag | Taxonomy | Yes | → `.post-card__tag` (shared style with the card) |
+| Date | Date | Yes | display format "August 25, 2026" |
+| Featured image | Image (WebP) | Yes | 1200×800 (3:2); **eager** + explicit width/height — it is the LCP element |
+| `newsImage` | Image (WebP) | Yes | same asset; also feeds the news card (16:10 crop) and `og:image` |
+| `newsImageCropTop` | Boolean | No | top-anchors the **card** crop; only for square/portrait assets — omit for 3:2 photos |
+| Body | Rich text | Yes | 18px / 29px line-height, 760px column |
+| Figure | `.post-detail__figure` | No | see below |
+| Back link | Button | Yes | returns to `/news-events/` |
+
+**Responsive:** single 760px column, full-width below 992px. **A11y:** featured-image `alt` describes the photo (not the headline); the page currently renders **two `<h1>`s** — the page-hero "News & Events" plus the post title — and post body copy jumps `<h1>` → `<h3>`; fix both in the WP template (page-hero → `<p>`, About heading → `<h2>`). **Editorial:** excerpt ~120 chars; every post needs a real featured photo, since it is now the social share image.
+
+#### Post Figure — `.post-detail__figure` (+ `--stats`)
+
+**Maps to:** ✅ **Core `core/image`** with caption; register `--stats` as a **block style**
+
+A standalone image inside the body copy — results infographics, charts, supporting photos — as opposed to the featured image at the top. Centered in the content column with an optional caption. `--stats` caps it at 620px so square infographics do not overpower the 760px column.
+
+| Field | Type | Required | Constraints |
+|-------|------|----------|-------------|
+| Image | Image | Yes | WebP; photos 1200×800 (3:2), infographics up to 960×960 (1:1) |
+| Alt text | Plain text | Yes | must restate **every** figure in an infographic (see A11y) |
+| Caption | Plain text | No | hidden if empty; omit when the graphic already labels itself |
+| Style | Block style | No | `--stats` → max-width 620px |
+
+**Responsive:** 620px capped (desktop/tablet) → fills the column below 768px; scales to 296px at 320px wide. **A11y:** an infographic's `alt` is the **only** channel for numbers that appear nowhere in the body copy — restate all of them, or move the figure into body text. **Editorial:** place results graphics at the end of the post so the story leads with a photo of people.
+
 ### Community Calendar — `.community-calendar`
 
 **Maps to:** ✅ **Core `embed` / HTML** (iframe) · **Used on:** news-events
@@ -717,7 +756,7 @@ Hidden `role="dialog"` populated on click from a team card: photo, name, role, o
 
 ## Handoff Checklist
 
-- [x] All sections have implementation specs in this document (32 sections)
+- [x] All sections have implementation specs in this document (33 sections; `post-detail` + `post-detail__figure` added)
 - [x] Global tokens (colors, fonts, spacing, buttons) match `main.css`
 - [x] Gutenberg block strategy defined (core vs. plugin vs. custom)
 - [x] All sections cataloged in `sitewide-sections.njk` (all page-specific sections now have live examples; `tcc-banner`, `faq-accordion`, `past-reports`, and the `team-preview--dark` modifier added)
@@ -730,6 +769,6 @@ Hidden `role="dialog"` populated on click from a team card: photo, name, role, o
 
 ---
 
-**Document Version**: 2.0
-**Last Updated**: 2026-06-03
+**Document Version**: 2.1
+**Last Updated**: 2026-08-27
 **Aligns with**: `src/sitewide-sections.njk` + `src/assets/css/main.css`
