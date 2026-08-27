@@ -2322,13 +2322,6 @@ a {
   display: block;
 }
 
-.post-detail__content img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px;
-}
-
 .post-detail__content {
   font-family: var(--font-body);
   font-size: 18px;
