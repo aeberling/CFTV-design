@@ -2297,6 +2297,13 @@ a {
   margin-bottom: 16px;
 }
 
+/* Tag inside the meta row: cancel the card-context bottom margin and
+   match line-height so tag and date align vertically */
+.post-detail__meta .post-card__tag {
+  margin-bottom: 0;
+  line-height: inherit;
+}
+
 .post-detail__date {
   font-family: var(--font-body);
   font-size: 14px;
