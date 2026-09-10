@@ -2361,6 +2361,38 @@ a {
   max-width: 620px;
 }
 
+/* Photo gallery inside post content: 2-column grid, single column on mobile.
+   Scoped under .post-detail__content to beat the generic body-copy ul/li rules */
+.post-detail__content .post-detail__gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 40px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.post-detail__content .post-detail__gallery li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-detail__gallery img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 575px) {
+  .post-detail__content .post-detail__gallery {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
 .post-detail__content {
   font-family: var(--font-body);
   font-size: 18px;
