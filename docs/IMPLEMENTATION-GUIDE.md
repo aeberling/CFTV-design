@@ -589,6 +589,20 @@ A standalone image inside the body copy — results infographics, charts, suppor
 
 **Responsive:** 620px capped (desktop/tablet) → fills the column below 768px; scales to 296px at 320px wide. **A11y:** an infographic's `alt` is the **only** channel for numbers that appear nowhere in the body copy — restate all of them, or move the figure into body text. **Editorial:** place results graphics at the end of the post so the story leads with a photo of people.
 
+#### Post Gallery — `.post-detail__gallery`
+
+**Maps to:** ✅ **Core `core/gallery`** (2 columns, cropped) · **Used on:** photo-recap posts (e.g. "What Generosity Looks Like")
+
+A grid of event photos inside the body copy, for recap posts that are mostly pictures. Rendered as a `<ul>` with one `<img>` per `<li>`; two equal columns on tablet and desktop, one column on phones. Every image is cropped to 3:2 with `object-fit: cover` so mixed orientations stay aligned.
+
+| Field | Type | Required | Constraints |
+|-------|------|----------|-------------|
+| Images | Gallery (multiple) | Yes | WebP, 1024×683 (3:2), ~80 KB each; any count, 2-column order is left-to-right |
+| Alt text | Plain text per image | Yes | describe the moment, or at minimum "2026 Tin Cup Challenge Awards Celebration, photo N of M" |
+| Group label | Plain text | No | `aria-label` on the list, e.g. "Photos from the 2026 Tin Cup Challenge Awards Celebration" |
+
+**Responsive:** 2 columns with 16px gap (≥576px) → 1 column with 12px gap below 576px; images keep 3:2 at every width. **A11y:** first two images load eagerly, the rest use `loading="lazy"`; all carry explicit `width`/`height` to avoid layout shift. **Editorial:** lead with one short paragraph of thanks, then the gallery; keep the strongest photo first, since the first image also serves as `newsImage` (card + social preview).
+
 ### Community Calendar — `.community-calendar`
 
 **Maps to:** ✅ **Core `embed` / HTML** (iframe) · **Used on:** news-events
